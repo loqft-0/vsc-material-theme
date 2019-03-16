@@ -22,9 +22,11 @@ pink             = "#e57eb3"
 #
 # Editor colors
 #
+popup_color       = "#2c3b4f"
 tab_color         = "#184967"
 found_match_color = "#11729f"
 cursor_color      = "#ff9900"
+
 
 theme = {
   "name" => "XD",
@@ -1679,8 +1681,6 @@ theme = {
       "editorWidget.background"                => background_color,
       "panel.background"                       => background_color,
       "debugToolBar.background"                => background_color,
-      "breadcrumb.background"                  => background_color,
-      "breadcrumbPicker.background"            => background_color,
       "menu.background"                        => background_color,
       "settings.dropdownBackground"            => background_color,
       "settings.numberInputBackground"         => background_color,
@@ -1702,13 +1702,15 @@ theme = {
       # search box border (transparent)
       "contrastBorder" =>                   "#FFFFFF00", # palenight = 282B3C
       # hover color
-      "editorSuggestWidget.border" =>           "#2c3b4f", # palenight = 2B2F40
-      "editorSuggestWidget.background" =>       "#2c3b4f",
-      "list.dropBackground" =>                  "#2c3b4f", # palenight = 2E3245
-      "list.hoverBackground" =>                 "#2c3b4f", # 414863
-      "editorGroup.border" =>                   "#2c3b4f",
-      "peekViewResult.background" =>            "#2c3b4f",
-      "pickerGroup.border" =>                   "#2c3b4f",
+      "breadcrumb.background"                => popup_color,
+      "breadcrumbPicker.background"          => popup_color,
+      "editorSuggestWidget.border"           => popup_color, # palenight = 2B2F40
+      "editorSuggestWidget.background"       => popup_color,
+      "list.dropBackground"                  => popup_color, # palenight = 2E3245
+      "list.hoverBackground"                 => popup_color, # 414863
+      "editorGroup.border"                   => popup_color,
+      "peekViewResult.background"            => popup_color,
+      "pickerGroup.border"                   => popup_color,
       # accent
       "button.hoverBackground" =>                        "#2670a1", # palenight = 7e57c2
       "dropdown.border" =>                               "#2670a1",
