@@ -1,0 +1,147 @@
+/* I put these styles at the top of workbench.main.css */
+
+/*
+Change the relative height of the top bar
+*/
+:root {
+    --height-of-breadcrumbs: 22px;
+    --tab-height: 3rem;
+}
+
+.monaco-workbench>.part.editor>.content .editor-group-container>.title {
+    height: calc(var(--tab-height) + var(--height-of-breadcrumbs));
+}
+.monaco-workbench>.part.editor>.content .editor-group-container>.title.tabs>.tabs-and-actions-container {
+    height: fit-content !important;
+    display: flex;
+    align-items: center;
+}
+.monaco-workbench>.part.editor>.content .editor-group-container>.title .editor-actions {
+    display: flex !important;
+    align-items: center !important;
+}
+.monaco-workbench>.part.editor>.content .editor-group-container>.title .tabs-container {
+    height: fit-content !important;
+}
+.monaco-workbench>.part.editor>.content .editor-group-container>.title .editor-actions {
+    height: fit-content !important;
+}
+.monaco-workbench>.part.editor>.content .editor-group-container>.title .tabs-container>.tab.sizing-fit {
+    height: fit-content !important;
+    padding: 10px;
+}
+.tabs-and-actions-container .monaco-scrollable-element {
+    height: fit-content !important;
+}
+.tabs-container {
+    height: fit-content;
+}
+.tab {
+    min-height: var(--tab-height);
+}
+.tabs-breadcrumbs {
+    padding-top: 2px;
+    min-height: var(--height-of-breadcrumbs);
+}
+.monaco-breadcrumb-item {
+    max-width: 30% !important;
+    font-size: 0.94em !important;
+    text-decoration: underline;
+}
+.monaco-breadcrumb-item:before {
+    opacity: 0.4 !important;
+}
+.monaco-breadcrumb-item .symbol-icon {
+    opacity: 0.5;
+}
+.monaco-breadcrumb-item > .monaco-icon-label::before {
+    opacity: 0.5;
+}
+
+/*
+
+fix the breadcrumbs
+
+*/
+.monaco-breadcrumbs {
+    background-color: transparent !important;
+}
+.title.tabs.show-file-icons.title-border-bottom {
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+
+/*
+shadow to the sidebar/terminal
+*/
+.part.sidebar.right, .part.sidebar.left {
+    box-shadow: -1px -1px 22px rgba(0, 0, 0, 0.38);
+    z-index: 1;
+}
+.part.activitybar.right {
+    z-index: 2;
+}
+.part.panel.bottom {
+    z-index: 2;
+    box-shadow: -25px -11px 18px rgba(0, 0, 0, 0.08);
+}
+.monaco-workbench.nopanel>.part.panel.bottom {
+    display: unset !important;
+    visibility: unset !important;
+}
+.part.statusbar {
+    z-index: 3;
+}
+
+
+/*
+animate sidebar
+*/
+/* #workbench\.parts\.editor,
+.part.sidebar.right, .part.sidebar.left,
+.monaco-scrollable-element,
+.monaco-workbench.nosidebar>.sidebar,
+.monaco-workbench>.part>.content,
+.monaco-editor.mac,
+.part.panel.bottom {
+    transition: all 175ms linear !important;
+} */
+/*
+change the (normally hidden) workbence background color
+*/
+.monaco-workbench {
+    background-color: unset !important;
+}
+
+/*
+add custom fonts
+*/
+.monaco-workbench>.part>.content {
+    font-size: 12px !important;
+}
+
+.monaco-workbench>.part.editor>.content>.one-editor-silo>.container>.title .tabs-container>.tab .tab-label a {
+    font-size: 0.67rem !important;
+}
+
+.type.storage.arrow.function {
+    font-family: 'Fira Code'
+}
+
+/* things with italics */
+/* .mtki {
+    font-family: Petit Formal Script !important;
+    font-size: 0.8rem !important;
+    font-style: normal !important;
+} */
+/* things with bold */
+/* .monaco-editor .view-line .mtkb {
+    font-weight: unset !important;
+    border-radius: 0.4em;
+    border: 0.09em solid rgba(79, 88, 97, 0.7) !important;
+    padding: 0.1em 0.15em;
+    margin-left: -0.24em;   this is the sum of the boarder and the padding
+    margin-right: -0.24em;  this is the sum of the boarder and the padding
+    box-sizing: content-box;
+} */
