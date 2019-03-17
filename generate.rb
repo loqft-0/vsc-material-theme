@@ -785,6 +785,8 @@ theme = {
                     "support.variable.object.process.js",
                     "meta.function-call",
                     "meta.function-call.arguments.python",
+                    "variable.other.readwrite.js",
+                    "meta.var-single-variable.expr.js"
                     ],
                 "settings" => {
                     "foreground" => off_white,
@@ -1044,6 +1046,7 @@ theme = {
             {
                 "name" => "blue underline",
                 "scope" => [
+                    "meta.object-literal.key.js entity.name.function",
                     "variable.other.member", # member ending
                     "entity.name.function.member",
                     "support.variable.property.js", # .__proto__
@@ -1103,6 +1106,8 @@ theme = {
                     "meta.item-access.python punctuation.definition.arguments.begin.python",
                     "meta.item-access.python punctuation.definition.arguments.end.python",
                     "string.regexp",
+                    "meta.objectliteral.js",
+                    "meta.object.member.js",
                     ],
                 "settings" => {
                     "foreground" => dim_green,
@@ -1135,7 +1140,6 @@ theme = {
                     "meta.brace.square.js - meta.var.expr", # js attribute
                     "meta.object-literal.key.js", # javascript key
                     "meta.method.declaration.js meta.brace.square.js",
-                    "meta.var-single-variable.expr.js",
                     "meta.object-literal.key.js variable.other.readwrite.js - meta.var.expr",
                     "meta.array.literal.js variable.other.readwrite.js",
                     "meta.object.member.js",
@@ -1322,6 +1326,7 @@ theme = {
                         "source.cpp storage.modifier",
                         "source.cpp storage.type.return-type",
                         "source.cpp storage.type.primitive",
+                        "source.cpp storage.type.c",
                         "source.cpp storage.type.user-defined",
                         "meta.tag.js", # jsx tags
                         "entity.name.tag.js", # jsx tags
