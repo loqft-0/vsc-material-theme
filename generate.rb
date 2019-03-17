@@ -992,6 +992,7 @@ theme = {
                 "name" => "blue",
                 "scope" => [
                     # functions
+                    "punctuation.section.function",
                     "punctuation.definition.arguments.begin",
                     "punctuation.definition.arguments.end",
                     "punctuation.definition.parameters.begin",
