@@ -1055,9 +1055,6 @@ theme = {
                     "meta.method.declaration.js entity.name.function.js",
                     "support.variable.property.dom.js",
                     "support.function.dom.js",
-                    # built in methods
-                    "support.function.js",
-                    "support.function.math.js"
                 ],
                 "settings" => {
                     "foreground" => blue,
@@ -1136,15 +1133,12 @@ theme = {
                     "variable.other.object",
                     "variable.other.property.js",
                     "variable.other.object.property.js",
-                    "meta.object.member.js", # brackets
                     "meta.brace.square.js - meta.var.expr", # js attribute
                     "meta.object-literal.key.js", # javascript key
                     "meta.method.declaration.js meta.brace.square.js",
                     "meta.object-literal.key.js variable.other.readwrite.js - meta.var.expr",
                     "meta.array.literal.js variable.other.readwrite.js",
-                    "meta.object.member.js",
                     "variable.other.constant.property.js",
-                    "meta.objectliteral.js",
                     "support.variable.property.process.js",
                     # perl variables
                     "variable.other.readwrite.global.perl",
@@ -1350,6 +1344,10 @@ theme = {
                 "name" => "yellow underline",
                 "scope" => [
                     "entity.name.function.constructor.cpp",
+                    "variable.other.positional.shell",
+                    "variable.other.positional.shell punctuation.definition.variable.shell",
+                    "variable.other.special.shell punctuation.definition.variable.shell",
+                    "variable.other.special.shell",
                     ],
                 "settings" => {
                     "foreground" => golden_yellow,
@@ -1416,6 +1414,8 @@ theme = {
             {
                 "name" => "soft red",
                 "scope" =>[
+                    "variable.other.normal.shell",
+                    "variable.other.normal.shell punctuation.definition.variable.shell",
                     "punctuation.definition.tag.haml",
                     # class variables ruby
                     "variable.other.readwrite.instance",
