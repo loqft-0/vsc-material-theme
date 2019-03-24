@@ -994,6 +994,7 @@ theme = {
                 "name" => "blue",
                 "scope" => [
                     # functions
+                    "punctuation.definition.parameters.ruby",
                     "punctuation.section.function",
                     "punctuation.definition.arguments.begin",
                     "punctuation.definition.arguments.end",
@@ -1154,6 +1155,7 @@ theme = {
             {
                 "name" => "green",
                 "scope" => [
+                        "keyword.other.special-method.ruby",
                         "entity.name",
                         # operator overloads
                         "source.python support.function.magic.python",
@@ -1244,6 +1246,7 @@ theme = {
             {
                 "name" => "orange",
                 "scope" => [
+                    "punctuation.separator.variable.ruby",
                     "source.ruby constant.language.symbol punctuation.definition.constant",
                     "source.cpp meta.function.constructor.initializer-list.cpp entity.name.function",
                     "source.cpp meta.function.constructor.initializer-list.cpp punctuation.section.parameters.begin.bracket.round",
