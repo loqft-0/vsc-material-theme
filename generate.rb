@@ -149,7 +149,6 @@ theme = {
       "name" => "Tag",
       "scope"  => [
         "entity.name.tag",
-        "meta.tag.sgml",
         "markup.deleted.git_gutter"
       ],
       "settings" => {
@@ -160,7 +159,6 @@ theme = {
       "name" => "Function, Special Method",
       "scope"  => [
         "entity.name.function",
-        "meta.function-call",
         "variable.function",
         "support.function",
         "keyword.other.special-method"
@@ -245,7 +243,6 @@ theme = {
         "support.type",
         "support.class",
         "support.orther.namespace.use.php",
-        "meta.use.php",
         "support.other.namespace.php",
         "markup.changed.git_gutter",
         "support.type.sys-types"
@@ -726,6 +723,7 @@ theme = {
                     "source.json punctuation.support.type.property-name.end",
                     # namespace scoping in C++
                     "entity.name.namespace.scope-resolution",
+                    "entity.name.type.namespace.scope-resolution",
                     "meta.scope-resolution",
                     "meta.scope-resolution punctuation.separator.comma.template.argument",
                     "meta.scope-resolution entity",
@@ -831,6 +829,7 @@ theme = {
             {
                 "name" =>"light blue",
                 "scope" =>[
+                    "colon punctuation.separator",
                     "meta.brace.round.js",
                     "keyword.other",
                     "punctuation.range-based.cpp",
@@ -878,6 +877,18 @@ theme = {
             {
                 "name" => "pink",
                 "scope" => [
+                    "punctuation.section.block.begin.bracket.curly.namespace",
+                    "punctuation.section.block.begin.bracket.curly.struct",
+                    "punctuation.section.block.begin.bracket.curly.class",
+                    "punctuation.section.block.begin.bracket.curly.enum",
+                    "punctuation.section.block.begin.bracket.curly.union",
+                    "punctuation.section.block.begin.bracket.curly.extern",
+                    "punctuation.section.block.end.bracket.curly.namespace",
+                    "punctuation.section.block.end.bracket.curly.struct",
+                    "punctuation.section.block.end.bracket.curly.class",
+                    "punctuation.section.block.end.bracket.curly.enum",
+                    "punctuation.section.block.end.bracket.curly.union",
+                    "punctuation.section.block.end.bracket.curly.extern",
                     "storage.modifier.lambda",
                     "storage.modifier.async",
                     "storage.type",
@@ -929,6 +940,8 @@ theme = {
             {
                 "name" => "purple",
                 "scope" => [
+                    "punctuation.section.attribute",
+                    "entity.other.attribute",
                     "entity.other",
                     "punctuation.definition.scope.cpp",
                     "keyword.operator",
@@ -994,6 +1007,8 @@ theme = {
                 "name" => "blue",
                 "scope" => [
                     # functions
+                    "punctuation.section.block.begin.bracket.curly.lambda.cpp",
+                    "punctuation.section.block.end.bracket.curly.lambda.cpp",
                     "punctuation.definition.parameters.ruby",
                     "punctuation.section.function",
                     "punctuation.definition.arguments.begin",
@@ -1047,6 +1062,7 @@ theme = {
             {
                 "name" => "blue underline",
                 "scope" => [
+                    "variable.other.property.cpp",
                     "meta.object-literal.key.js entity.name.function",
                     "variable.other.member", # member ending
                     "entity.name.function.member",
@@ -1155,6 +1171,8 @@ theme = {
             {
                 "name" => "green",
                 "scope" => [
+                        "punctuation.definition.string.begin",
+                        "punctuation.definition.string.end",
                         "keyword.other.special-method.ruby",
                         "entity.name",
                         # operator overloads
@@ -1233,6 +1251,8 @@ theme = {
             {
                 "name" => "lime green with underline",
                 "scope" =>[
+                    "source.python string.quoted.single",
+                    "source.python string",
                 ],
                 "settings" => {
                     "foreground" => lime_green,
@@ -1313,6 +1333,7 @@ theme = {
             {
                 "name" => "yellow not cursive",
                 "scope" => [
+                        "storage.type.primitive",
                         "variable.other.readwrite.global.special.perl",
                         "entity.name.type",
                         "meta.angle-brackets.cpp",
