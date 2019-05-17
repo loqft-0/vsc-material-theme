@@ -1106,7 +1106,6 @@ theme = {
             {
                 "name" => "dim green",
                 "scope" =>[
-                    "source.cpp meta.function",
                     "source.cpp keyword.operator.overload",
                     "variable.other.property.coffee",
                     "punctuation.definition.dictionary", # brackets
