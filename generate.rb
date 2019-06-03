@@ -535,7 +535,6 @@ theme = {
         "text.html.markdown meta.dummy.line-break"
       ],
       "settings" => {
-        "foreground" => ""
       }
     },
     {
@@ -602,7 +601,6 @@ theme = {
       ],
       "settings" => {
         "fontStyle"  => "strike",
-        "foreground" => ""
       }
     },
     {
@@ -621,7 +619,6 @@ theme = {
       ],
       "settings" => {
         "fontStyle"  => "italic",
-        "foreground" => ""
       }
     },
     {
@@ -752,7 +749,6 @@ theme = {
                     ],
                 "settings" => {
                     "foreground" => gray,  # palenight = 697098
-                    "fontStyle" => "",
                 },
             },
         #
@@ -765,7 +761,6 @@ theme = {
                     ],
                 "settings" => {
                     "foreground" => pure_white,
-                    "fontStyle" => ""
                 }
             },
         #
@@ -784,11 +779,12 @@ theme = {
                     "meta.function-call",
                     "meta.function-call.arguments.python",
                     "variable.other.readwrite.js",
-                    "meta.var-single-variable.expr.js"
+                    "meta.var-single-variable.expr.js",
+                    "variable.other.constant",
+                    "variable.other.readwrite.ts",
                     ],
                 "settings" => {
                     "foreground" => off_white,
-                    "fontStyle" => ""
                 }
             },
             {
@@ -820,7 +816,6 @@ theme = {
                 ],
                 "settings" => {
                     "foreground" => "#64bac5",
-                    "fontStyle" => ""
                 }
             },
         #
@@ -829,6 +824,9 @@ theme = {
             {
                 "name" =>"light blue",
                 "scope" =>[
+                    "keyword",
+                    "colon punctuation.separator",
+                    "meta.brace.round.ts",
                     "colon punctuation.separator",
                     "meta.brace.round.js",
                     "keyword.other",
@@ -856,7 +854,6 @@ theme = {
                     ],
                 "settings" => {
                     "foreground" => "#89ddff",
-                    "fontStyle" => ""
                 }
             },
             {
@@ -877,6 +874,10 @@ theme = {
             {
                 "name" => "pink",
                 "scope" => [
+                    "punctuation.section.arguments.begin.bracket.round.decltype.cpp",
+                    "punctuation.section.arguments.end.bracket.round.decltype.cpp",
+                    "source.go keyword.function",
+                    "source.go keyword.var",
                     "punctuation.section.block.begin.bracket.curly.namespace",
                     "punctuation.section.block.begin.bracket.curly.struct",
                     "punctuation.section.block.begin.bracket.curly.class",
@@ -909,7 +910,6 @@ theme = {
                 ],
                 "settings" => {
                     "foreground" => pink,
-                    "fontStyle" => ""
                 }
             },
             {
@@ -940,6 +940,8 @@ theme = {
             {
                 "name" => "purple",
                 "scope" => [
+                    "punctuation.section.arguments.begin.bracket.round.operator",
+                    "punctuation.section.arguments.end.bracket.round.operator",
                     "punctuation.section.attribute",
                     "entity.other.attribute",
                     "entity.other",
@@ -963,7 +965,6 @@ theme = {
                     ],
                 "settings" => {
                     "foreground" => purple,
-                    "fontStyle" => ""
                 }
             },
             {
@@ -981,7 +982,6 @@ theme = {
             {
                 "name" => "purple underline",
                 "scope" => [
-
                     ],
                 "settings" => {
                     "foreground" => purple,
@@ -991,7 +991,8 @@ theme = {
             {
                 "name" => "purple bold",
                 "scope" => [
-                        "punctuation.vararg-ellipses"
+                        "entity.name.namespace",
+                        "punctuation.vararg-ellipses",
                     ],
                 "settings" => {
                     "foreground" => purple,
@@ -1006,9 +1007,21 @@ theme = {
             {
                 "name" => "blue",
                 "scope" => [
+                    "punctuation.section.parameters.begin.bracket.round",
+                    "punctuation.section.parameters.end.bracket.round",
+                    "punctuation.section.arguments.begin.bracket.round",
+                    "punctuation.section.arguments.end.bracket.round",
+                    "punctuation.section.block.begin.bracket.curly.function.definition",
+                    "punctuation.section.block.end.bracket.curly.function.definition",
+                    "punctuation.section.arguments.begin.bracket.round.function.member",
+                    "punctuation.section.arguments.end.bracket.round.function.member",
+                    "source.cpp entity.name.function",
+                    "source.go punctuation.other.period",
+                    "source.go punctuation.definition.begin.bracket.round",
+                    "source.go punctuation.definition.end.bracket.round",
                     # functions
-                    "punctuation.section.block.begin.bracket.curly.lambda.cpp",
-                    "punctuation.section.block.end.bracket.curly.lambda.cpp",
+                    "punctuation.section.block.begin.bracket.curly.lambda",
+                    "punctuation.section.block.end.bracket.curly.lambda",
                     "punctuation.definition.parameters.ruby",
                     "punctuation.section.function",
                     "punctuation.definition.arguments.begin",
@@ -1056,7 +1069,6 @@ theme = {
                     ],
                 "settings" => {
                     "foreground" => blue,
-                    "fontStyle" => ""
                 }
             },
             {
@@ -1106,6 +1118,9 @@ theme = {
             {
                 "name" => "dim green",
                 "scope" =>[
+                    "meta.brace.curly.coffee",
+                    "meta.brace.square.ts",
+                    "source.cpp meta.block variable.other",
                     "source.cpp keyword.operator.overload",
                     "variable.other.property.coffee",
                     "punctuation.definition.dictionary", # brackets
@@ -1124,12 +1139,14 @@ theme = {
                     ],
                 "settings" => {
                     "foreground" => dim_green,
-                    "fontStyle" => ""
                 }
             },
             {
                 "name" => "dim green with underline",
                 "scope" => [
+                    "punctuation.separator.dot-access.c",
+                    "variable.other.property.ts",
+                    "punctuation.accessor.ts",
                     "punctuation.accessor.js",
                     "source.ruby constant.language.symbol punctuation.definition.constant.hashkey",
                     "source.ruby constant.language.symbol.hashkey.ruby",
@@ -1162,6 +1179,16 @@ theme = {
                 "settings" => {
                     "foreground" => dim_green,
                     "fontStyle" => "underline"
+                }
+            },
+            {
+                "name" => "dim green with italics",
+                "scope" => [
+                    "variable.other.constant.js",
+                    ],
+                "settings" => {
+                    "foreground" => dim_green,
+                    "fontStyle" => "italic"
                 }
             },
         #
@@ -1244,7 +1271,6 @@ theme = {
                 ],
                 "settings" => {
                     "foreground" => lime_green,
-                    "fontStyle" => ""
                 }
             },
             {
@@ -1290,7 +1316,6 @@ theme = {
                     ],
                 "settings" => {
                     "foreground" => orange,
-                    "fontStyle" => ""
                 }
             },
             {
@@ -1332,6 +1357,13 @@ theme = {
             {
                 "name" => "yellow not cursive",
                 "scope" => [
+                        "support.type.built-in.posix-reserved",
+                        "variable.other.constant.ruby",
+                        "source.go entity.name.package",
+                        "source.go keyword.operator.assignment",
+                        "storage.type.primitive",
+                        "storage.type.built-in.primitive",
+                        "source.go storage.type",
                         "storage.type.primitive",
                         "variable.other.readwrite.global.special.perl",
                         "entity.name.type",
@@ -1360,7 +1392,6 @@ theme = {
                     ],
                 "settings" => {
                     "foreground" => golden_yellow,
-                    "fontStyle" => ""
                 }
             },
             {
@@ -1393,6 +1424,8 @@ theme = {
             {
                 "name" => "Bananna yellow underline",
                 "scope" => [
+                    "variable.other.readwrite.global.ruby",
+                    "variable.other.readwrite.global.ruby punctuation.definition.variable.ruby",
                     "support.variable",
                     "variable.other.readwrite",
                     "source.cpp variable.other",
@@ -1421,7 +1454,6 @@ theme = {
                     ],
                 "settings" => {
                     "foreground" => red,
-                    "fontStyle" => ""
                 }
             },
             {
@@ -1437,6 +1469,8 @@ theme = {
             {
                 "name" => "soft red",
                 "scope" =>[
+                    "variable.other.readwrite.class",
+                    "variable.other.assignment.go",
                     "variable.other.normal.shell",
                     "variable.other.normal.shell punctuation.definition.variable.shell",
                     "punctuation.definition.tag.haml",
@@ -1602,7 +1636,6 @@ theme = {
     "tab.unfocusedActiveBorder"                    => "#546E7A",
     "badge.foreground"                             => "#546E7A",
     "terminal.ansiBrightBlack"                     => "#546E7A",
-    "editorWidget.border"                          => "",
     "inputValidation.warningBorder"                => "#FFCB6B50",
     "editorBracketMatch.border"                    => "#FFCC0050",
     "editor.selectionHighlightBackground"          => "#FFCC0020",
