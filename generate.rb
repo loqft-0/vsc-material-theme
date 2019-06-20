@@ -958,6 +958,7 @@ theme = {
             {
                 "name" => "purple",
                 "scope" => [
+                    "punctuation.accessor.attribute",
                     "entity.name.namespace",
                     "punctuation.section.arguments.begin.bracket.round.operator",
                     "punctuation.section.arguments.end.bracket.round.operator",
@@ -2027,4 +2028,5 @@ new_file = File.open("theme.json", "w")
 new_file.write(JSON.pretty_generate(theme))
 new_file.close
 
+system "git add -A; git commit -m \"commit\"; git push"
 system "vsce publish patch"

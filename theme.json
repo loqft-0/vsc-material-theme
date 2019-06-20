@@ -888,6 +888,7 @@
     {
       "name": "purple",
       "scope": [
+        "punctuation.accessor.attribute",
         "entity.name.namespace",
         "punctuation.section.arguments.begin.bracket.round.operator",
         "punctuation.section.arguments.end.bracket.round.operator",
