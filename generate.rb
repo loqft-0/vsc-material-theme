@@ -710,6 +710,9 @@ theme = {
                 "name" => "gray",
                 "scope" => [
                     "comment",
+                    "support.constant.subsections",
+                    "source.python string.quoted.docstring punctuation.definition.string.begin",
+                    "source.python string.quoted.docstring punctuation.definition.string.end",
                     "comment.line.double-slash", # comment
                     "punctuation.terminator", # semicolons
                     "punctuation.definition.template-expression.begin", # interpolation
@@ -749,6 +752,16 @@ theme = {
                     ],
                 "settings" => {
                     "foreground" => gray,  # palenight = 697098
+                },
+            },
+            {
+                "name" => "gray underline",
+                "scope" => [
+                    "source.shell string.interpolated.dollar"
+                    ],
+                "settings" => {
+                    "foreground" => gray,
+                    "fontStyle" => "underline"
                 },
             },
         #
@@ -825,6 +838,7 @@ theme = {
                 "name" =>"light blue",
                 "scope" =>[
                     "keyword",
+                    "source.shell punctuation.definition.evaluation",
                     "colon punctuation.separator",
                     "meta.brace.round.ts",
                     "colon punctuation.separator",
@@ -874,6 +888,8 @@ theme = {
             {
                 "name" => "pink",
                 "scope" => [
+                    "source.shell punctuation.definition.group.shell",
+                    "keyword.other.typedef",
                     "punctuation.section.arguments.begin.bracket.round.decltype.cpp",
                     "punctuation.section.arguments.end.bracket.round.decltype.cpp",
                     "source.go keyword.function",
@@ -926,7 +942,9 @@ theme = {
             {
                 "name" => "pink bold",
                 "scope" => [
-
+                    "storage.type.asm",
+                    "punctuation.section.parens.begin.bracket.round.assembly",
+                    "punctuation.section.parens.end.bracket.round.assembly",
                 ],
                 "settings" => {
                     "foreground" => pink,
@@ -940,6 +958,7 @@ theme = {
             {
                 "name" => "purple",
                 "scope" => [
+                    "entity.name.namespace",
                     "punctuation.section.arguments.begin.bracket.round.operator",
                     "punctuation.section.arguments.end.bracket.round.operator",
                     "punctuation.section.attribute",
@@ -991,6 +1010,8 @@ theme = {
             {
                 "name" => "purple bold",
                 "scope" => [
+                        "source.shell punctuation.separator.statement",
+                        "source.shell keyword.operator.pipe",
                         "entity.name.namespace",
                         "punctuation.vararg-ellipses",
                     ],
@@ -1007,6 +1028,12 @@ theme = {
             {
                 "name" => "blue",
                 "scope" => [
+                    "meta.embedded.assembly entity.name.function",
+                    "entity.name.command",
+                    "punctuation.definition.arguments.shell",
+                    "meta.asm meta.encoding",
+                    "punctuation.definition.string.begin.assembly",
+                    "punctuation.definition.string.end.assembly",
                     "punctuation.section.parameters.begin.bracket.round",
                     "punctuation.section.parameters.end.bracket.round",
                     "punctuation.section.arguments.begin.bracket.round",
@@ -1104,6 +1131,7 @@ theme = {
             {
                 "name" => "blue italics",
                 "scope" => [
+                    "support.function.builtin",
                 ],
                 "settings" => {
                     "foreground" => blue,
@@ -1197,6 +1225,8 @@ theme = {
             {
                 "name" => "green",
                 "scope" => [
+                        "meta.encoding",
+                        "constant.other.option",
                         "punctuation.definition.string.begin",
                         "punctuation.definition.string.end",
                         "keyword.other.special-method.ruby",
@@ -1239,6 +1269,8 @@ theme = {
                 "name" => "green bold",
                 "scope" => [
                     "keyword.other.unit.user-defined.cpp",
+                    "punctuation.section.parens.begin.bracket.round.assembly.inner",
+                    "punctuation.section.parens.end.bracket.round.assembly.inner",
                 ],
                 "settings" => {
                     "foreground" => "#4ec9b0d0",
@@ -1278,6 +1310,9 @@ theme = {
                 "scope" =>[
                     "source.python string.quoted.single",
                     "source.python string",
+                    "source.shell string.quoted.single",
+                    "source.shell string.unquoted.argument",
+                    "source.shell string.quoted.double",
                 ],
                 "settings" => {
                     "foreground" => lime_green,
@@ -1291,6 +1326,8 @@ theme = {
             {
                 "name" => "orange",
                 "scope" => [
+                    "constant.other",
+                    "constant.other.decimal",
                     "punctuation.separator.variable.ruby",
                     "source.ruby constant.language.symbol punctuation.definition.constant",
                     "source.cpp meta.function.constructor.initializer-list.cpp entity.name.function",
@@ -1321,12 +1358,28 @@ theme = {
             {
                 "name" => "orange underline",
                 "scope" => [
+                    "source.shell variable.parameter.positional.shell",
+                    "source.shell variable.parameter.positional",
+                    "source.shell variable.parameter.positional.shell punctuation.definition.variable.shell",
+                    "source.shell variable.parameter.positional punctuation.definition.variable.shell",
+                    "source.shell punctuation.definition.variable",
+                    "meta.function.method.with-arguments constant.language.symbol.hashkey.parameter.function",
                     "constant.other.character-class.regexp", # regex escape
                     "constant.character.escape", # escaped chars
                     ],
                 "settings" => {
                     "foreground" => orange,
                     "fontStyle" => "underline"
+                }
+            },
+            {
+                "name" => "orange bold",
+                "scope" => [
+                    "source.python constant.language"
+                    ],
+                "settings" => {
+                    "foreground" => orange,
+                    "fontStyle" => "bold"
                 }
             },
 
@@ -1357,6 +1410,13 @@ theme = {
             {
                 "name" => "yellow not cursive",
                 "scope" => [
+                        "source.python constant.other.caps",
+                        "source.python entity.name.function.decorator",
+                        "source.python punctuation.definition.decorator",
+                        "source.python meta.function.decorator punctuation.definition.arguments.begin",
+                        "source.python meta.function.decorator punctuation.definition.arguments.end",
+                        "source.c support.type.posix-reserved",
+                        "source.shell variable.other",
                         "support.type.built-in.posix-reserved",
                         "variable.other.constant.ruby",
                         "source.go entity.name.package",
@@ -1397,6 +1457,8 @@ theme = {
             {
                 "name" => "yellow underline",
                 "scope" => [
+                    "source.shell variable.other.normal.shell",
+                    "variable.other.normal.shell punctuation.definition.variable.shell",
                     "entity.name.function.constructor.cpp",
                     "variable.other.positional.shell",
                     "variable.other.positional.shell punctuation.definition.variable.shell",
@@ -1442,6 +1504,7 @@ theme = {
             {
                 "name" => "red",
                 "scope" =>[
+                    "source.ruby meta.function.method.with-arguments punctuation.definition.constant.hashkey",
                     # assignments
                     "keyword.operator.assignment",
                     # this and self
@@ -1460,6 +1523,19 @@ theme = {
                 "name" => "red bold",
                 "scope" =>[
                     "source.cpp constant.language",
+                    ],
+                "settings" => {
+                    "foreground" => red,
+                    "fontStyle" => "bold"
+                }
+            },
+            {
+                "name" => "red underline",
+                "scope" =>[
+                    "source.shell punctuation.definition.variable",
+                    "source.shell variable.language.special.wildcard",
+                    "source.shell variable.language.special.shell punctuation.definition.variable.shell",
+                    "source.shell variable.language.special.shell",
                     ],
                 "settings" => {
                     "foreground" => red,
@@ -1847,28 +1923,28 @@ theme = {
             "inputOption.activeBorder" =>                 "#eeffffcc",
             "notifications.foreground" =>                 "#eeffffcc",
             "extensionButton.prominentForeground" =>      "#eeffffcc",
-            "contrastActiveBorder" =>                 nil,
-            "tab.unfocusedActiveForeground" =>        nil,
-            "tab.unfocusedInactiveForeground" =>      nil,
-            "editor.findRangeHighlightBackground" =>  nil,
-            "editor.lineHighlightBorder" =>           nil,
-            "editorLink.activeForeground" =>          nil,
-            "editorRuler.foreground" =>               nil,
-            "editorBracketMatch.background" =>        nil,
-            "editorBracketMatch.border" =>            nil,
-            "editorError.border" =>                   nil,
-            "editorWarning.border" =>                 nil,
-            "editorGutter.background" =>              nil,
-            "editorWidget.border" =>                  nil,
-            "merge.currentContentBackground" =>       nil,
-            "merge.incomingContentBackground" =>      nil,
-            "merge.border" =>                         nil,
-            "statusBar.debuggingForeground" =>        nil,
-            "statusBar.noFolderForeground" =>         nil,
-            "titleBar.inactiveBackground" =>          nil,
-            "titleBar.inactiveForeground" =>          nil,
-            "welcomePage.buttonBackground" =>         nil,
-            "welcomePage.buttonHoverBackground" =>    nil,
+            # "contrastActiveBorder" =>                 nil,
+            # "tab.unfocusedActiveForeground" =>        nil,
+            # "tab.unfocusedInactiveForeground" =>      nil,
+            # "editor.findRangeHighlightBackground" =>  nil,
+            # "editor.lineHighlightBorder" =>           nil,
+            # "editorLink.activeForeground" =>          nil,
+            # "editorRuler.foreground" =>               nil,
+            # "editorBracketMatch.background" =>        nil,
+            # "editorBracketMatch.border" =>            nil,
+            # "editorError.border" =>                   nil,
+            # "editorWarning.border" =>                 nil,
+            # "editorGutter.background" =>              nil,
+            # "editorWidget.border" =>                  nil,
+            # "merge.currentContentBackground" =>       nil,
+            # "merge.incomingContentBackground" =>      nil,
+            # "merge.border" =>                         nil,
+            # "statusBar.debuggingForeground" =>        nil,
+            # "statusBar.noFolderForeground" =>         nil,
+            # "titleBar.inactiveBackground" =>          nil,
+            # "titleBar.inactiveForeground" =>          nil,
+            # "welcomePage.buttonBackground" =>         nil,
+            # "welcomePage.buttonHoverBackground" =>    nil,
 
             # still purple-tinted
             "widget.shadow" =>                        "#232635", # palenight = 232635
@@ -1940,5 +2016,5 @@ theme = {
 }
 
 new_file = File.open("theme.json", "w")
-new_file.write(theme.to_json)
+new_file.write(JSON.pretty_generate(theme))
 new_file.close
