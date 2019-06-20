@@ -941,7 +941,6 @@
       "scope": [
         "source.shell punctuation.separator.statement",
         "source.shell keyword.operator.pipe",
-        "entity.name.namespace",
         "punctuation.vararg-ellipses"
       ],
       "settings": {
@@ -1393,7 +1392,7 @@
     {
       "name": "red bold",
       "scope": [
-        "source.cpp constant.language"
+
       ],
       "settings": {
         "foreground": "#ff5572",
@@ -1435,6 +1434,16 @@
       ],
       "settings": {
         "foreground": "#E06C75"
+      }
+    },
+    {
+      "name": "soft red",
+      "scope": [
+        "source.cpp constant.language"
+      ],
+      "settings": {
+        "foreground": "#E06C75",
+        "fontStyle": "bold"
       }
     },
     {

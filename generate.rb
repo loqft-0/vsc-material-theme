@@ -1012,7 +1012,6 @@ theme = {
                 "scope" => [
                         "source.shell punctuation.separator.statement",
                         "source.shell keyword.operator.pipe",
-                        "entity.name.namespace",
                         "punctuation.vararg-ellipses",
                     ],
                 "settings" => {
@@ -1522,7 +1521,6 @@ theme = {
             {
                 "name" => "red bold",
                 "scope" =>[
-                    "source.cpp constant.language",
                     ],
                 "settings" => {
                     "foreground" => red,
@@ -1567,6 +1565,16 @@ theme = {
                     ],
                 "settings" => {
                     "foreground" => soft_red,
+                }
+            },
+            {
+                "name" => "soft red",
+                "scope" =>[
+                    "source.cpp constant.language"
+                    ],
+                "settings" => {
+                    "foreground" => soft_red,
+                    "fontStyle" => "bold",
                 }
             },
         #
@@ -2018,3 +2026,5 @@ theme = {
 new_file = File.open("theme.json", "w")
 new_file.write(JSON.pretty_generate(theme))
 new_file.close
+
+system "vsce publish patch"
