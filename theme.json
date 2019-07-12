@@ -18,43 +18,15 @@
         "text.html.markdown markup.inline.raw.markdown punctuation.definition.raw.markdown",
         "markup.quote punctuation.definition.blockquote.markdown",
         "variable.language.fenced.markdown",
-        "comment",
-        "support.constant.subsections",
-        "source.python string.quoted.docstring punctuation.definition.string.begin",
-        "source.python string.quoted.docstring punctuation.definition.string.end",
-        "comment.line.double-slash",
+        "meta.paragraph.markdown",
         "punctuation.terminator",
-        "punctuation.definition.template-expression.begin",
-        "punctuation.definition.template-expression.end",
-        "punctuation.section.embedded.end",
-        "punctuation.section.embedded.begin",
+        "constant.character.escape.line-continuation",
         "source.json punctuation.support.type.property-name.begin",
         "source.json punctuation.support.type.property-name.end",
-        "entity.name.namespace.scope-resolution",
-        "entity.name.type.namespace.scope-resolution",
-        "meta.scope-resolution",
-        "meta.scope-resolution punctuation.separator.comma.template.argument",
-        "meta.scope-resolution entity",
-        "meta.scope-resolution punctuation.separator.namespace.access",
-        "meta.scope-resolution storage.type.user-defined",
-        "meta.scope-resolution storage.type.primitive",
-        "meta.scope-resolution keyword.operator.comparison",
-        "meta.scope-resolution storage.type",
-        "meta.scope-resolution constant.numeric",
         "punctuation.definition.lambda.return-type",
-        "meta.lambda.capture",
-        "meta.lambda.capture punctuation.separator.delimiter",
-        "meta.lambda.capture variable.parameter.defaulted",
-        "meta.lambda.capture variable.other.object",
-        "meta.lambda.capture constant.numeric",
-        "meta.lambda.capture keyword",
-        "meta.lambda.capture keyword.operator",
-        "meta.lambda.capture keyword.operator.assignment",
-        "meta.lambda.capture punctuation.definition.begin.bracket.square",
-        "meta.lambda.capture punctuation.definition.end.bracket.square",
-        "punctuation.definition.capture.begin.lambda",
-        "punctuation.definition.capture.end.lambda",
-        "meta.paragraph.markdown"
+        "punctuation.separator.scope-resolution",
+        "punctuation.definition.capture",
+        "meta.lambda.capture punctuation.separator.delimiter.comma"
       ],
       "settings": {
         "fontStyle": "normal",
@@ -65,8 +37,8 @@
       "name": "#546E7A italic",
       "scope": [
         "comment",
-        "punctuation.definition.comment",
-        "string.quoted.docstring"
+        "comment.line.double-slash",
+        "punctuation.definition.comment"
       ],
       "settings": {
         "fontStyle": "italic",
@@ -86,7 +58,7 @@
     {
       "name": "#546E7A underline",
       "scope": [
-        "source.shell string.interpolated.dollar"
+
       ],
       "settings": {
         "fontStyle": "underline",
@@ -96,33 +68,27 @@
     {
       "name": "#c7cbcd normal",
       "scope": [
-        "variable",
-        "string constant.other.placeholder",
         "text.html.markdown",
         "punctuation.definition.list_item.markdown",
         "markup.table",
         "markup.fenced_code.block.markdown",
         "markup.inline.raw.string.markdown",
-        "support.type",
+        "variable",
+        "variable.other",
+        "variable.assignment.coffee",
+        "variable.other.constant",
+        "variable.other.object.js",
+        "variable.other.readwrite.ts",
+        "variable.other.readwrite.js",
+        "variable.other.readwrite.global",
+        "support.variable.object.process.js",
         "source.css support.type.property-name",
         "source.sass support.type.property-name",
         "source.scss support.type.property-name",
         "source.less support.type.property-name",
         "source.stylus support.type.property-name",
         "source.postcss support.type.property-name",
-        "punctuation.section.parens-c",
-        "variable",
-        "source.python",
-        "variable.assignment.coffee",
-        "source.coffee",
-        "meta.brace.round.js",
-        "support.variable.object.process.js",
-        "meta.function-call",
-        "meta.function-call.arguments.python",
-        "variable.other.readwrite.js",
-        "meta.var-single-variable.expr.js",
-        "variable.other.constant",
-        "variable.other.readwrite.ts"
+        "source"
       ],
       "settings": {
         "fontStyle": "normal",
@@ -132,8 +98,7 @@
     {
       "name": "#c7cbcd underline",
       "scope": [
-        "variable.other.object.js",
-        "variable.other.readwrite.global"
+
       ],
       "settings": {
         "fontStyle": "underline",
@@ -143,14 +108,11 @@
     {
       "name": "#fec355 normal",
       "scope": [
-        "constant.other.php",
-        "entity.name",
+        "entity.name.type",
+        "entity.name.type.class",
+        "entity.other.inherited-class",
         "support.type",
         "support.class",
-        "support.orther.namespace.use.php",
-        "support.other.namespace.php",
-        "markup.changed.git_gutter",
-        "support.type.sys-types",
         "entity.other.attribute-name.class",
         "source.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json support.type.property-name.json",
         "constant.other.reference.link.markdown",
@@ -235,8 +197,6 @@
     {
       "name": "#C792EA normal",
       "scope": [
-        "keyword",
-        "storage",
         "markup.changed",
         "source.json meta.structure.dictionary.json support.type.property-name.json",
         "source.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json support.type.property-name.json",
@@ -252,7 +212,8 @@
     {
       "name": "#C792EA italic",
       "scope": [
-        "entity.other.attribute-name"
+        "entity.other.attribute-name",
+        "entity.other.attribute"
       ],
       "settings": {
         "fontStyle": "italic",
@@ -263,8 +224,8 @@
       "name": " italic",
       "scope": [
         "keyword",
-        "storage",
-        "keyword.control",
+        "keyword.other",
+        "source.dockerfile keyword.other.special-method",
         "markup.quote"
       ],
       "settings": {
@@ -277,7 +238,8 @@
       "scope": [
         "*url*",
         "*link*",
-        "*uri*"
+        "*uri*",
+        "meta.scope-resolution"
       ],
       "settings": {
         "fontStyle": "underline",
@@ -317,41 +279,30 @@
     {
       "name": "#89DDFF normal",
       "scope": [
-        "constant.other.color",
-        "punctuation",
-        "punctuation.definition.tag",
-        "punctuation.separator.inheritance.php",
-        "punctuation.definition.tag.html",
-        "punctuation.definition.tag.begin.html",
-        "punctuation.definition.tag.end.html",
-        "punctuation.section.embedded",
-        "keyword.other.template",
-        "keyword.other.substitution",
-        "string.regexp",
-        "constant.character.escape",
         "keyword",
-        "source.shell punctuation.definition.evaluation",
-        "colon punctuation.separator",
-        "meta.brace.round.ts",
-        "colon punctuation.separator",
-        "meta.brace.round.js",
         "keyword.other",
-        "punctuation.range-based.cpp",
-        "source.cpp punctuation.section.parens.begin.bracket.round",
-        "source.cpp punctuation.section.parens.end.bracket.round",
-        "keyword.control.directive",
-        "punctuation.separator.colon.python",
-        "punctuation.section.function.begin.python",
-        "source.cpp punctuation.section.block.begin.bracket.curly",
-        "source.cpp punctuation.section.block.end.bracket.curly",
-        "meta.block.js",
-        "punctuation.definition.block.js",
+        "source.dockerfile keyword.other.special-method",
+        "support.type.object.module",
+        "punctuation",
+        "punctuation.section.embedded",
         "punctuation.section.scope.begin",
         "punctuation.section.scope.end",
-        "support.constant.property-value.css",
-        "keyword.control.flow.alias.yaml",
+        "meta.brace.round.ts",
+        "meta.brace.round.js",
+        "meta.block.js",
+        "punctuation.definition.block.js",
+        "source.cpp punctuation.range-based",
+        "source.cpp punctuation.section.parens.begin.bracket.round",
+        "source.cpp punctuation.section.parens.end.bracket.round",
+        "source.cpp punctuation.section.block.begin.bracket.curly",
+        "source.cpp punctuation.section.block.end.bracket.curly",
+        "source.shell punctuation.definition.evaluation",
+        "source.python punctuation.separator.colon",
+        "source.python punctuation.section.function.begin",
         "storage.modifier.chomping-indicator.yaml",
-        "support.type.object.module"
+        "punctuation.separator.inheritance.php",
+        "string.regexp",
+        "support.constant.property-value.css"
       ],
       "settings": {
         "fontStyle": "normal",
@@ -363,7 +314,8 @@
       "scope": [
         "keyword.control",
         "keyword.control.conditional",
-        "keyword.control.loop"
+        "keyword.control.loop",
+        "keyword.control.directive"
       ],
       "settings": {
         "fontStyle": "italic",
@@ -376,18 +328,10 @@
         "entity.name.function",
         "variable.function",
         "support.function",
-        "keyword.other.special-method",
-        "meta.class-method.js entity.name.function.js",
-        "variable.function.constructor",
-        "source.sass keyword.control",
-        "source.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json support.type.property-name.json",
-        "string.other.link.title.markdown",
-        "meta.embedded.assembly entity.name.function",
         "entity.name.command",
-        "punctuation.definition.arguments.shell",
-        "meta.asm meta.encoding",
-        "punctuation.definition.string.begin.assembly",
-        "punctuation.definition.string.end.assembly",
+        "keyword.other.special-method",
+        "punctuation.definition.arguments",
+        "source.shell punctuation.definition.group",
         "punctuation.section.parameters.begin.bracket.round",
         "punctuation.section.parameters.end.bracket.round",
         "punctuation.section.arguments.begin.bracket.round",
@@ -396,40 +340,15 @@
         "punctuation.section.block.end.bracket.curly.function.definition",
         "punctuation.section.arguments.begin.bracket.round.function.member",
         "punctuation.section.arguments.end.bracket.round.function.member",
-        "source.cpp entity.name.function",
-        "source.go punctuation.other.period",
-        "source.go punctuation.definition.begin.bracket.round",
-        "source.go punctuation.definition.end.bracket.round",
-        "punctuation.section.block.begin.bracket.curly.lambda",
-        "punctuation.section.block.end.bracket.curly.lambda",
         "punctuation.definition.parameters.ruby",
         "punctuation.section.function",
         "punctuation.definition.arguments.begin",
         "punctuation.definition.arguments.end",
         "punctuation.definition.parameters.begin",
         "punctuation.definition.parameters.end",
-        "source.cpp meta.function-call punctuation.section.arguments.begin.bracket.round",
-        "source.cpp meta.function-call punctuation.section.arguments.end.bracket.round",
-        "source.cpp entity.name.function",
-        "source.cpp meta.initialization variable.other",
-        "source.cpp punctuation.separator.delimiter",
-        "source.cpp punctuation.section.parens.begin.bracket.round.initialization",
-        "source.cpp punctuation.section.parens.end.bracket.round.initialization",
-        "source.cpp punctuation.section.parameters.begin.bracket.round",
-        "source.cpp punctuation.section.parameters.end.bracket.round",
-        "source.cpp meta.function-call.member punctuation.section.arguments.begin.bracket.round.function.member",
-        "source.cpp meta.function-call.member punctuation.section.arguments.end.bracket.round.function.member",
-        "source.cpp meta.function punctuation.section.arguments.begin.bracket.round",
-        "source.cpp meta.function punctuation.section.arguments.end.bracket.round",
-        "source.cpp meta.function punctuation.section.parameters.begin.bracket.round",
-        "source.cpp meta.function punctuation.section.parameters.end.bracket.round",
-        "source.cpp meta.function punctuation.separator.delimiter",
-        "source.cpp punctuation.definition.parameters.begin",
-        "source.cpp punctuation.definition.parameters.end",
-        "entity.name.function",
-        "support.function.dom.js",
-        "support.variable.property.js",
-        "punctuation.definition.group.shell",
+        "source.sass keyword.control",
+        "source.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json support.type.property-name.json",
+        "string.other.link.title.markdown",
         "source.python meta.function-call.generic.python",
         "support.function",
         "entity.other.attribute-name.js",
@@ -440,7 +359,11 @@
         "string.regexp.group punctuation.definition.group",
         "punctuation.definition.character-class",
         "entity.other.attribute-name.class.css",
-        "entity.other.attribute-name.class.pug"
+        "entity.other.attribute-name.class.pug",
+        "punctuation.definition.group",
+        "meta.asm meta.encoding",
+        "punctuation.definition.string.begin.assembly",
+        "punctuation.definition.string.end.assembly"
       ],
       "settings": {
         "fontStyle": "normal",
@@ -450,10 +373,7 @@
     {
       "name": "#82AAFF italic",
       "scope": [
-        "entity.name.method.js",
-        "tag.decorator.js entity.name.tag.js",
-        "tag.decorator.js punctuation.definition.tag.js",
-        "support.function.builtin"
+
       ],
       "settings": {
         "fontStyle": "italic",
@@ -501,21 +421,18 @@
         "source.cpp meta.function.constructor.initializer-list.cpp entity.name.function",
         "source.cpp meta.function.constructor.initializer-list.cpp punctuation.section.parameters.begin.bracket.round",
         "source.cpp meta.function.constructor.initializer-list.cpp punctuation.section.parameters.end.bracket.round",
-        "variable.parameter",
-        "variable.parameter.function",
-        "variable.parameter.function.language.python",
         "keyword.other.unit",
         "variable.other.normal.shell",
-        "variable.parameter.function.coffee",
         "constant.language",
         "constant.language.boolean",
-        "constant.numeric",
-        "constant.numeric.json.comments",
-        "constant.numeric.decimal.js",
         "constant.language.null",
         "constant.language.nil",
         "constant.language.undefined",
-        "constant.language.symbol"
+        "constant.language.symbol",
+        "constant.other.symbol",
+        "constant.other.key",
+        "constant.character.escape",
+        "string constant.other.placeholder"
       ],
       "settings": {
         "fontStyle": "normal",
@@ -532,8 +449,7 @@
         "source.shell variable.parameter.positional punctuation.definition.variable.shell",
         "source.shell punctuation.definition.variable",
         "meta.function.method.with-arguments constant.language.symbol.hashkey.parameter.function",
-        "constant.other.character-class.regexp",
-        "constant.character.escape"
+        "constant.other.character-class.regexp"
       ],
       "settings": {
         "fontStyle": "underline",
@@ -556,6 +472,7 @@
         "markup.inserted",
         "source.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json support.type.property-name.json",
         "markdown.heading",
+        "markup.heading",
         "markup.heading | markup.heading entity.name",
         "markup.heading.markdown punctuation.definition.heading.markdown",
         "string.quoted",
@@ -625,12 +542,14 @@
     {
       "name": "#e57eb3 normal",
       "scope": [
-        "source.shell punctuation.definition.group.shell",
+        "storage.type",
         "keyword.other.typedef",
-        "punctuation.section.arguments.begin.bracket.round.decltype.cpp",
-        "punctuation.section.arguments.end.bracket.round.decltype.cpp",
         "source.go keyword.function",
         "source.go keyword.var",
+        "punctuation.section.angle-brackets.start.template.definition.cpp",
+        "punctuation.section.angle-brackets.end.template.definition.cpp",
+        "punctuation.section.arguments.begin.bracket.round.decltype.cpp",
+        "punctuation.section.arguments.end.bracket.round.decltype.cpp",
         "punctuation.section.block.begin.bracket.curly.namespace",
         "punctuation.section.block.begin.bracket.curly.struct",
         "punctuation.section.block.begin.bracket.curly.class",
@@ -645,17 +564,8 @@
         "punctuation.section.block.end.bracket.curly.extern",
         "storage.modifier.lambda",
         "storage.modifier.async",
-        "storage.type",
         "storage.type.modifier.access.control",
-        "punctuation.section.angle-brackets.start.template.definition.cpp",
-        "punctuation.section.angle-brackets.end.template.definition.cpp",
-        "source.cpp storage.type.union",
-        "source.cpp storage.type.enum",
-        "storage.type",
-        "template.definition meta.template.operator.comma.cpp",
-        "storage.type.template.cpp",
-        "storage.type.modifier.access.cpp",
-        "storage.type.object.cpp",
+        "storage.type.modifier.access",
         "punctuation.section.block.begin.bracket.curly.lambda.cpp",
         "punctuation.section.block.end.bracket.curly.lambda.cpp"
       ],
@@ -689,29 +599,19 @@
     {
       "name": "#c792eaff normal",
       "scope": [
-        "punctuation.accessor.attribute",
         "entity.name.namespace",
+        "support.other.namespace.php",
+        "entity.other.attribute-name",
+        "entity.other.attribute",
+        "keyword.operator",
         "punctuation.section.arguments.begin.bracket.round.operator",
         "punctuation.section.arguments.end.bracket.round.operator",
-        "punctuation.section.attribute",
-        "entity.other.attribute",
-        "entity.other",
-        "punctuation.definition.scope.cpp",
-        "keyword.operator",
-        "keyword.operator.new.js",
-        "keyword.operator.expression",
-        "keyword.operator.logical.python",
-        "storage.modifier",
-        "storage.type.property",
         "storage.type.function.arrow",
-        "storage.type.function.arrow.js",
-        "storage.type.function.arrow.js.jsx",
-        "variable.language.arguments.js",
         "punctuation.separator",
         "punctuation.section.embedded.begin.js",
         "punctuation.section.embedded.end.js",
-        "entity.other.attribute-name.tag.pug",
-        "meta.tag.attributes.js keyword.operator.assignment"
+        "punctuation.accessor.attribute",
+        "punctuation.section.attribute"
       ],
       "settings": {
         "fontStyle": "normal",
@@ -721,8 +621,8 @@
     {
       "name": "#c792eaff italic",
       "scope": [
-        "entity.other.attribute-name",
-        "entity.other.attribute-name.js.jsx"
+        "entity.other.attribute-name.tag.pug",
+        "entity.other.attribute-name.js"
       ],
       "settings": {
         "fontStyle": "italic",
@@ -742,9 +642,9 @@
     {
       "name": "#c792eaff bold",
       "scope": [
+        "punctuation.vararg-ellipses",
         "source.shell punctuation.separator.statement",
-        "source.shell keyword.operator.pipe",
-        "punctuation.vararg-ellipses"
+        "source.shell keyword.operator.pipe"
       ],
       "settings": {
         "fontStyle": "bold",
@@ -856,7 +756,9 @@
         "punctuation.definition.string.template.end",
         "punctuation.support.type.property-name.begin",
         "punctuation.support.type.property-name.end",
-        "variable.parameter.registers"
+        "variable.parameter.registers",
+        "entity.name",
+        "entity.other"
       ],
       "settings": {
         "fontStyle": "normal",
@@ -906,9 +808,6 @@
         "invalid",
         "invalid.illegal",
         "invalid.deprecated",
-        "entity.name.module.js",
-        "variable.import.parameter.js",
-        "variable.other.class.js",
         "markup.deleted",
         "source.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json support.type.property-name.json",
         "source.ruby meta.function.method.with-arguments punctuation.definition.constant.hashkey",
@@ -917,7 +816,10 @@
         "variable.language.self",
         "variable.language.special.self.python",
         "variable.parameter.function.language.special.self.python",
-        "variable.other.alias.yaml"
+        "variable.other.alias.yaml",
+        "keyword.operator.assignment",
+        "source.yaml punctuation.definition.alias",
+        "source.yaml variable.other.alias"
       ],
       "settings": {
         "fontStyle": "normal",
@@ -928,7 +830,9 @@
       "name": "#ff5572 italic",
       "scope": [
         "variable.language",
-        "source.js constant.other.object.key.js string.unquoted.label.js"
+        "variable.language.this",
+        "variable.language.self",
+        "variable.language.super"
       ],
       "settings": {
         "fontStyle": "italic",
@@ -952,13 +856,13 @@
       "name": "#f07178 normal",
       "scope": [
         "entity.name.tag",
-        "markup.deleted.git_gutter",
-        "source.cpp meta.block variable.other",
+        "punctuation.definition.tag",
         "variable.other.constant",
-        "support.other.variable",
+        "constant.other.php",
         "string.other.link",
         "source.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json support.type.property-name.json",
-        "source.cpp constant.language"
+        "source.cpp constant.language",
+        "constant.numeric"
       ],
       "settings": {
         "fontStyle": "normal",

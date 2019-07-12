@@ -1,4 +1,4 @@
-require_relative './theme_maker'
+require_relative './theme_generator_generator'
 
 theme_info = {
     name: 'My Theme',
@@ -406,342 +406,128 @@ invalid_group = [
 ]
 comment_group = [
     "comment",
+    "comment.line.double-slash",
     "punctuation.definition.comment",
-    "string.quoted.docstring",
 ]
-variables_group = [
+normal_variables = [
     "variable",
-    "string constant.other.placeholder",
+    "variable.other",
+    "variable.assignment.coffee",
+    "variable.other.constant",
+    "variable.other.object.js",
+    "variable.other.readwrite.ts",
+    "variable.other.readwrite.js",
+    "variable.other.readwrite.global",
+    "support.variable.object.process.js",
 ]
-function_special_method_group = [
+constants = [
+    "variable.other.constant",
+    "constant.other.php",
+]
+parameter_variables = [
+    "variable.parameter",
+    "variable.parameter.function",
+    "variable.parameter.function.language.python",
+    "variable.parameter.function.coffee",
+]
+middle_property = [
+    "support.variable.property"
+]
+unusual_variables = [
+    # yaml aliases
+    "source.yaml punctuation.definition.alias",
+    "source.yaml variable.other.alias",
+]
+functions = [
     "entity.name.function",
     "variable.function",
     "support.function",
+    "entity.name.command",
     "keyword.other.special-method",
+]
+function_punctuation = [
+    "punctuation.definition.arguments",
+    "source.shell punctuation.definition.group",
+    "punctuation.section.parameters.begin.bracket.round",
+    "punctuation.section.parameters.end.bracket.round",
+    "punctuation.section.arguments.begin.bracket.round",
+    "punctuation.section.arguments.end.bracket.round",
+    "punctuation.section.block.begin.bracket.curly.function.definition",
+    "punctuation.section.block.end.bracket.curly.function.definition",
+    "punctuation.section.arguments.begin.bracket.round.function.member",
+    "punctuation.section.arguments.end.bracket.round.function.member",
+    "punctuation.definition.parameters.ruby",
+    "punctuation.section.function",
+    "punctuation.definition.arguments.begin",
+    "punctuation.definition.arguments.end",
+    "punctuation.definition.parameters.begin",
+    "punctuation.definition.parameters.end",
+]
+anonymous_function_punctuation = [
+    "punctuation.section.block.begin.bracket.curly.lambda.cpp",
+    "punctuation.section.block.end.bracket.curly.lambda.cpp",
+]
+tags = [
+    "entity.name.tag",
+    "punctuation.definition.tag",
+]
+tag_attributes = [
+    "entity.other.attribute-name.tag.pug",
+    "entity.other.attribute-name.js",
 ]
 number_literals = [
     "constant.numeric",
+]
+strings = [
+    "string"
+]
+docstring = [
+    "string.quoted.docstring",
+    "source.python string.quoted.docstring punctuation.definition.string.begin",
+    "source.python string.quoted.docstring punctuation.definition.string.end",
+]
+escape_characters_group = [
+    "constant.character.escape",
+    "string constant.other.placeholder",
+]
+regular_expressions_group = [
+    "string.regexp",
+]
+language_literals = [
+    "constant.other.symbol", # ruby symbols
+    "constant.other.key", # java keys inside of annotations
+]
+special_variables = [
+    "variable.language",
+    "variable.language.this",
+    "variable.language.self",
+    "variable.language.super",
 ]
 control_flow = [
     "keyword.control",
     "keyword.control.conditional",
     "keyword.control.loop",
-]
-
-php_constants_group = [
-    "constant.other.php",
-]
-colors_group = [
-    "constant.other.color",
-]
-
-keyword_storage_group = [
-    "keyword",
-    "storage",
-]
-operator_misc_group = [
-    "constant.other.color",
-    "punctuation",
-    "punctuation.definition.tag",
-    "punctuation.separator.inheritance.php",
-    "punctuation.definition.tag.html",
-    "punctuation.definition.tag.begin.html",
-    "punctuation.definition.tag.end.html",
-    "punctuation.section.embedded",
-    "keyword.other.template",
-    "keyword.other.substitution",
-]
-tag_group = [
-    "entity.name.tag",
-    "markup.deleted.git_gutter",
-]
-
-c_related_block_level_variables_group = [
-    "source.cpp meta.block variable.other",
-]
-variables_constant_group = [
-    "variable.other.constant",
-]
-other_variable_string_link_group = [
-    "support.other.variable",
-    "string.other.link",
-]
-string_symbols_inherited_class_markup_heading_group = [
-    "string",
-    "constant.other.symbol",
-    "constant.other.key",
-    "entity.other.inherited-class",
-    "markup.heading",
-    "markup.inserted.git_gutter",
-    "meta.group.braces.curly constant.other.object.key.js string.unquoted.label.js",
-]
-class_support_group = [
-    "entity.name",
-    "support.type",
-    "support.class",
-    "support.orther.namespace.use.php",
-    "support.other.namespace.php",
-    "markup.changed.git_gutter",
-    "support.type.sys-types",
-]
-entity_types_group = [
-    "support.type",
-]
-css_class_and_support_group = [
-    "source.css support.type.property-name",
-    "source.sass support.type.property-name",
-    "source.scss support.type.property-name",
-    "source.less support.type.property-name",
-    "source.stylus support.type.property-name",
-    "source.postcss support.type.property-name",
-]
-sub_methods_group = [
-    "entity.name.module.js",
-    "variable.import.parameter.js",
-    "variable.other.class.js",
-]
-language_methods_group = [
-    "variable.language",
-]
-entitynamemethodjs_group = [
-    "entity.name.method.js",
-]
-metamethodjs_group = [
-    "meta.class-method.js entity.name.function.js",
-    "variable.function.constructor",
-]
-attributes_group = [
-    "entity.other.attribute-name",
-]
-css_classes_group = [
-    "entity.other.attribute-name.class",
-]
-css_ids_group = [
-    "source.sass keyword.control",
-]
-inserted_group = [
-    "markup.inserted",
-]
-deleted_group = [
-    "markup.deleted",
-]
-changed_group = [
-    "markup.changed",
-]
-regular_expressions_group = [
-    "string.regexp",
-]
-escape_characters_group = [
-    "constant.character.escape",
-]
-url_group = [
-    "*url*",
-    "*link*",
-    "*uri*",
-]
-decorators_group = [
-    "tag.decorator.js entity.name.tag.js",
-    "tag.decorator.js punctuation.definition.tag.js",
-]
-es7_bind_operator_group = [
-    "source.js constant.other.object.key.js string.unquoted.label.js",
-]
-json_key___level_0_group = [
-    "source.json meta.structure.dictionary.json support.type.property-name.json",
-]
-json_key___level_1_group = [
-    "source.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json support.type.property-name.json",
-]
-json_key___level_2_group = [
-    "source.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json support.type.property-name.json",
-]
-json_key___level_3_group = [
-    "source.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json support.type.property-name.json",
-]
-json_key___level_4_group = [
-    "source.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json support.type.property-name.json",
-]
-json_key___level_5_group = [
-    "source.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json support.type.property-name.json",
-]
-json_key___level_6_group = [
-    "source.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json support.type.property-name.json",
-]
-json_key___level_7_group = [
-    "source.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json support.type.property-name.json",
-]
-json_key___level_8_group = [
-    "source.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json support.type.property-name.json",
-]
-markdown___plain_group = [
-    "text.html.markdown",
-    "punctuation.definition.list_item.markdown",
-]
-markdown___markup_raw_inline_group = [
-    "text.html.markdown markup.inline.raw.markdown",
-]
-markdown___markup_raw_inline_punctuation_group = [
-    "text.html.markdown markup.inline.raw.markdown punctuation.definition.raw.markdown",
-]
-markdown___line_break_group = [
-    "text.html.markdown meta.dummy.line-break",
-]
-markdown___heading_group = [
-    "markdown.heading",
-    "markup.heading | markup.heading entity.name",
-    "markup.heading.markdown punctuation.definition.heading.markdown",
-]
-markup___italic_group = [
-    "markup.italic",
-]
-markup___bold_group = [
-    "markup.bold",
-    "markup.bold string",
-]
-markup___bold_italic_group = [
-    "markup.bold markup.italic",
-    "markup.italic markup.bold",
-    "markup.quote markup.bold",
-    "markup.bold markup.italic string",
-    "markup.italic markup.bold string",
-    "markup.quote markup.bold string",
-]
-markup___underline_group = [
-    "markup.underline",
-]
-markup___strike_group = [
-    "markup.strike",
-]
-markdown___blockquote_group = [
-    "markup.quote punctuation.definition.blockquote.markdown",
-]
-markup___quote_group = [
-    "markup.quote",
-]
-markdown___link_group = [
-    "string.other.link.title.markdown",
-]
-markdown___link_description_group = [
-    "string.other.link.description.title.markdown",
-]
-markdown___link_anchor_group = [
-    "constant.other.reference.link.markdown",
-]
-markup___raw_block_group = [
-    "markup.raw.block",
-]
-markdown___fenced_bode_block_variable_group = [
-    "markup.fenced_code.block.markdown",
-    "markup.inline.raw.string.markdown",
-]
-markdown___fenced_language_group = [
-    "variable.language.fenced.markdown",
-]
-markdown___separator_group = [
-    "meta.separator",
-]
-markup___table_group = [
-    "markup.table",
-]
-gray_group = [
-    "comment",
-    "support.constant.subsections",
-    "source.python string.quoted.docstring punctuation.definition.string.begin",
-    "source.python string.quoted.docstring punctuation.definition.string.end",
-    "comment.line.double-slash",
-    "punctuation.terminator",
-    "punctuation.definition.template-expression.begin",
-    "punctuation.definition.template-expression.end",
-    "punctuation.section.embedded.end",
-    "punctuation.section.embedded.begin",
-    "source.json punctuation.support.type.property-name.begin",
-    "source.json punctuation.support.type.property-name.end",
-    "entity.name.namespace.scope-resolution",
-    "entity.name.type.namespace.scope-resolution",
-    "meta.scope-resolution",
-    "meta.scope-resolution punctuation.separator.comma.template.argument",
-    "meta.scope-resolution entity",
-    "meta.scope-resolution punctuation.separator.namespace.access",
-    "meta.scope-resolution storage.type.user-defined",
-    "meta.scope-resolution storage.type.primitive",
-    "meta.scope-resolution keyword.operator.comparison",
-    "meta.scope-resolution storage.type",
-    "meta.scope-resolution constant.numeric",
-    "punctuation.definition.lambda.return-type",
-    "meta.lambda.capture",
-    "meta.lambda.capture punctuation.separator.delimiter",
-    "meta.lambda.capture variable.parameter.defaulted",
-    "meta.lambda.capture variable.other.object",
-    "meta.lambda.capture constant.numeric",
-    "meta.lambda.capture keyword",
-    "meta.lambda.capture keyword.operator",
-    "meta.lambda.capture keyword.operator.assignment",
-    "meta.lambda.capture punctuation.definition.begin.bracket.square",
-    "meta.lambda.capture punctuation.definition.end.bracket.square",
-    "punctuation.definition.capture.begin.lambda",
-    "punctuation.definition.capture.end.lambda",
-    "meta.paragraph.markdown",
-]
-gray_underline_group = [
-    "source.shell string.interpolated.dollar",
-]
-pure_white_group = [
-]
-off_white_group = [
-    "punctuation.section.parens-c",
-    "variable",
-    "source.python",
-    "variable.assignment.coffee",
-    "source.coffee",
-    "meta.brace.round.js",
-    "support.variable.object.process.js",
-    "meta.function-call",
-    "meta.function-call.arguments.python",
-    "variable.other.readwrite.js",
-    "meta.var-single-variable.expr.js",
-    "variable.other.constant",
-    "variable.other.readwrite.ts",
-]
-off_white_with_underline_group = [
-    "variable.other.object.js",
-    "variable.other.readwrite.global",
-]
-slate_bold_group = [
-]
-slate_group = [
-]
-light_blue_group = [
-    "keyword",
-    "source.shell punctuation.definition.evaluation",
-    "colon punctuation.separator",
-    "meta.brace.round.ts",
-    "colon punctuation.separator",
-    "meta.brace.round.js",
-    "keyword.other",
-    "punctuation.range-based.cpp",
-    "source.cpp punctuation.section.parens.begin.bracket.round",
-    "source.cpp punctuation.section.parens.end.bracket.round",
     "keyword.control.directive",
-    "punctuation.separator.colon.python",
-    "punctuation.section.function.begin.python",
-    "source.cpp punctuation.section.block.begin.bracket.curly",
-    "source.cpp punctuation.section.block.end.bracket.curly",
-    "meta.block.js",
-    "punctuation.definition.block.js",
-    "punctuation.section.scope.begin",
-    "punctuation.section.scope.end",
-    "support.constant.property-value.css",
-    "keyword.control.flow.alias.yaml",
-    "storage.modifier.chomping-indicator.yaml",
-    "support.type.object.module",
 ]
-pink_group = [
-    "source.shell punctuation.definition.group.shell",
+keywords = [
+    "keyword",
+    "keyword.other",
+    "source.dockerfile keyword.other.special-method",
+]
+import_export_keywords = [
+    "support.type.object.module", # module keyword
+]
+storage_types = [
+    "storage.type",
     "keyword.other.typedef",
-    "punctuation.section.arguments.begin.bracket.round.decltype.cpp",
-    "punctuation.section.arguments.end.bracket.round.decltype.cpp",
     "source.go keyword.function",
     "source.go keyword.var",
+]
+storage_type_punctuation = [
+    "punctuation.section.angle-brackets.start.template.definition.cpp",
+    "punctuation.section.angle-brackets.end.template.definition.cpp",
+    "punctuation.section.arguments.begin.bracket.round.decltype.cpp",
+    "punctuation.section.arguments.end.bracket.round.decltype.cpp",
     "punctuation.section.block.begin.bracket.curly.namespace",
     "punctuation.section.block.begin.bracket.curly.struct",
     "punctuation.section.block.begin.bracket.curly.class",
@@ -754,114 +540,255 @@ pink_group = [
     "punctuation.section.block.end.bracket.curly.enum",
     "punctuation.section.block.end.bracket.curly.union",
     "punctuation.section.block.end.bracket.curly.extern",
+]
+storage_modifiers = [
     "storage.modifier.lambda",
     "storage.modifier.async",
-    "storage.type",
     "storage.type.modifier.access.control",
-    "punctuation.section.angle-brackets.start.template.definition.cpp",
-    "punctuation.section.angle-brackets.end.template.definition.cpp",
-    "source.cpp storage.type.union",
-    "source.cpp storage.type.enum",
-    "storage.type",
-    "template.definition meta.template.operator.comma.cpp",
-    "storage.type.template.cpp",
-    "storage.type.modifier.access.cpp",
-    "storage.type.object.cpp",
-    "punctuation.section.block.begin.bracket.curly.lambda.cpp",
-    "punctuation.section.block.end.bracket.curly.lambda.cpp",
+    "storage.type.modifier.access",
 ]
-pink_underline_group = [
+types = [
+    "entity.name.type",
+    "entity.name.type.class",
+    "entity.other.inherited-class",
+    "support.type",
+    "support.class",
 ]
-pink_bold_group = [
-    "storage.type.asm",
-    "punctuation.section.parens.begin.bracket.round.assembly",
-    "punctuation.section.parens.end.bracket.round.assembly",
-]
-purple_group = [
-    "punctuation.accessor.attribute",
+namespace = [
     "entity.name.namespace",
+    "support.other.namespace.php",
+]
+attributes = [
+    "entity.other.attribute-name",
+    "entity.other.attribute",
+]
+unknown_entites = [
+    "entity.name",
+    "entity.other",
+]
+assignment_operators = [
+    "keyword.operator.assignment"
+]
+operators = [
+    "keyword.operator",
+    # function-like operators
     "punctuation.section.arguments.begin.bracket.round.operator",
     "punctuation.section.arguments.end.bracket.round.operator",
-    "punctuation.section.attribute",
-    "entity.other.attribute",
-    "entity.other",
-    "punctuation.definition.scope.cpp",
-    "keyword.operator",
-    "keyword.operator.new.js",
-    "keyword.operator.expression",
-    "keyword.operator.logical.python",
-    "storage.modifier",
-    "storage.type.property",
-    "storage.type.function.arrow",
-    "storage.type.function.arrow.js",
-    "storage.type.function.arrow.js.jsx",
-    "variable.language.arguments.js",
-    "punctuation.separator",
+]
+normal_punctuation = [
+    "punctuation",
+    "punctuation.section.embedded",
+    "punctuation.section.scope.begin",
+    "punctuation.section.scope.end",
+    "meta.brace.round.ts",
+    "meta.brace.round.js",
+    "meta.block.js",
+    "punctuation.definition.block.js",
+    "source.cpp punctuation.range-based",
+    "source.cpp punctuation.section.parens.begin.bracket.round",
+    "source.cpp punctuation.section.parens.end.bracket.round",
+    "source.cpp punctuation.section.block.begin.bracket.curly",
+    "source.cpp punctuation.section.block.end.bracket.curly",
+    "source.shell punctuation.definition.evaluation",
+    "source.python punctuation.separator.colon",
+    "source.python punctuation.section.function.begin",
+    "storage.modifier.chomping-indicator.yaml", # the | used for multiline blocks
+    "punctuation.separator.inheritance.php",
+]
+secondary_punctuation = [
+    "storage.type.function.arrow", # arrow functions
+    "punctuation.separator", # commas
+    # punctuation for embedding javascript inside jsx
     "punctuation.section.embedded.begin.js",
     "punctuation.section.embedded.end.js",
-    "entity.other.attribute-name.tag.pug",
-    "meta.tag.attributes.js keyword.operator.assignment",
+    # gcc attributes
+    "punctuation.accessor.attribute",
+    "punctuation.section.attribute",
 ]
-purple_cursive_group = [
-    "entity.other.attribute-name",
-    "entity.other.attribute-name.js.jsx",
-]
-purple_underline_group = [
-]
-purple_bold_group = [
-    "source.shell punctuation.separator.statement",
-    "source.shell keyword.operator.pipe",
+special_punctuation = [
     "punctuation.vararg-ellipses",
 ]
+boring_punctuation = [
+    # the semicolon
+    "punctuation.terminator",
+    # the line-continuation
+    "constant.character.escape.line-continuation",
+    # the ""'s in json
+    "source.json punctuation.support.type.property-name.begin",
+    "source.json punctuation.support.type.property-name.end",
+    # the -> in the lambda return type
+    "punctuation.definition.lambda.return-type",
+    # the ::'s
+    "punctuation.separator.scope-resolution",
+    # lambda capture
+    "punctuation.definition.capture",
+    "meta.lambda.capture punctuation.separator.delimiter.comma",
+    # everything leading up to a scope resolution
+]
+interpolated_punctuation = [
+    "punctuation.definition.template-expression.begin",
+    "punctuation.definition.template-expression.end",
+    "punctuation.section.embedded.end",
+    "punctuation.section.embedded.begin",
+]
+colors_group = [ # like css/html colors
+    "constant.other.color",
+]
+default_text_color = [
+    "source"
+]
+
+
+# C++
+    cpp = {
+        assembly_function: [
+            "storage.type.asm",
+            "punctuation.section.parens.begin.bracket.round.assembly",
+            "punctuation.section.parens.end.bracket.round.assembly",
+        ],
+        assembly_punctuation: [
+            "meta.asm meta.encoding",
+            "punctuation.definition.string.begin.assembly",
+            "punctuation.definition.string.end.assembly",
+        ]
+    }
+# shell
+    shell = {
+        seperator: [
+            "source.shell punctuation.separator.statement",
+            "source.shell keyword.operator.pipe",
+        ]
+    }
+# regex
+    regex = {
+        group: [
+            "punctuation.definition.group"
+        ]
+    }
+# css
+    css_properties = [
+        "source.css support.type.property-name",
+        "source.sass support.type.property-name",
+        "source.scss support.type.property-name",
+        "source.less support.type.property-name",
+        "source.stylus support.type.property-name",
+        "source.postcss support.type.property-name",
+    ]
+    css_property_value = [
+        "support.constant.property-value.css",
+    ]
+    css_classes_group = [
+        "entity.other.attribute-name.class",
+    ]
+    css_ids_group = [
+        "source.sass keyword.control",
+    ]
+    url_group = [
+        "*url*",
+        "*link*",
+        "*uri*",
+    ]
+# Json keys
+    json_key_level_0_group = [ "source.json meta.structure.dictionary.json support.type.property-name.json", ]
+    json_key_level_1_group = [ "source.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json support.type.property-name.json", ]
+    json_key_level_2_group = [ "source.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json support.type.property-name.json",]
+    json_key_level_3_group = [ "source.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json support.type.property-name.json",]
+    json_key_level_4_group = [ "source.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json support.type.property-name.json",]
+    json_key_level_5_group = [ "source.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json support.type.property-name.json",]
+    json_key_level_6_group = [ "source.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json support.type.property-name.json",]
+    json_key_level_7_group = [ "source.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json support.type.property-name.json",]
+    json_key_level_8_group = [ "source.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json support.type.property-name.json",]
+# markdown
+    markdown = {
+        paragraph: "meta.paragraph.markdown",
+    }
+    inserted_group = [
+        "markup.inserted",
+    ]
+    deleted_group = [
+        "markup.deleted",
+    ]
+    changed_group = [
+        "markup.changed",
+    ]
+    markdown___link = [
+        "string.other.link",
+    ]
+    markdown___plain_group = [
+        "text.html.markdown",
+        "punctuation.definition.list_item.markdown",
+    ]
+    markdown___markup_raw_inline_group = [
+        "text.html.markdown markup.inline.raw.markdown",
+    ]
+    markdown___markup_raw_inline_punctuation_group = [
+        "text.html.markdown markup.inline.raw.markdown punctuation.definition.raw.markdown",
+    ]
+    markdown___line_break_group = [
+        "text.html.markdown meta.dummy.line-break",
+    ]
+    markdown___heading_group = [
+        "markdown.heading",
+        "markup.heading",
+        "markup.heading | markup.heading entity.name",
+        "markup.heading.markdown punctuation.definition.heading.markdown",
+    ]
+    markup___italic_group = [
+        "markup.italic",
+    ]
+    markup___bold_group = [
+        "markup.bold",
+        "markup.bold string",
+    ]
+    markup___bold_italic_group = [
+        "markup.bold markup.italic",
+        "markup.italic markup.bold",
+        "markup.quote markup.bold",
+        "markup.bold markup.italic string",
+        "markup.italic markup.bold string",
+        "markup.quote markup.bold string",
+    ]
+    markup___underline_group = [
+        "markup.underline",
+    ]
+    markup___strike_group = [
+        "markup.strike",
+    ]
+    markdown___blockquote_group = [
+        "markup.quote punctuation.definition.blockquote.markdown",
+    ]
+    markup___quote_group = [
+        "markup.quote",
+    ]
+    markdown___link_group = [
+        "string.other.link.title.markdown",
+    ]
+    markdown___link_description_group = [
+        "string.other.link.description.title.markdown",
+    ]
+    markdown___link_anchor_group = [
+        "constant.other.reference.link.markdown",
+    ]
+    markup___raw_block_group = [
+        "markup.raw.block",
+    ]
+    markdown___fenced_bode_block_variable_group = [
+        "markup.fenced_code.block.markdown",
+        "markup.inline.raw.string.markdown",
+    ]
+    markdown___fenced_language_group = [
+        "variable.language.fenced.markdown",
+    ]
+    markdown___separator_group = [
+        "meta.separator",
+    ]
+    markup___table_group = [
+        "markup.table",
+    ]
+
+
+# need to fix
 blue_group = [
-    "meta.embedded.assembly entity.name.function",
-    "entity.name.command",
-    "punctuation.definition.arguments.shell",
-    "meta.asm meta.encoding",
-    "punctuation.definition.string.begin.assembly",
-    "punctuation.definition.string.end.assembly",
-    "punctuation.section.parameters.begin.bracket.round",
-    "punctuation.section.parameters.end.bracket.round",
-    "punctuation.section.arguments.begin.bracket.round",
-    "punctuation.section.arguments.end.bracket.round",
-    "punctuation.section.block.begin.bracket.curly.function.definition",
-    "punctuation.section.block.end.bracket.curly.function.definition",
-    "punctuation.section.arguments.begin.bracket.round.function.member",
-    "punctuation.section.arguments.end.bracket.round.function.member",
-    "source.cpp entity.name.function",
-    "source.go punctuation.other.period",
-    "source.go punctuation.definition.begin.bracket.round",
-    "source.go punctuation.definition.end.bracket.round",
-    "punctuation.section.block.begin.bracket.curly.lambda",
-    "punctuation.section.block.end.bracket.curly.lambda",
-    "punctuation.definition.parameters.ruby",
-    "punctuation.section.function",
-    "punctuation.definition.arguments.begin",
-    "punctuation.definition.arguments.end",
-    "punctuation.definition.parameters.begin",
-    "punctuation.definition.parameters.end",
-    "source.cpp meta.function-call punctuation.section.arguments.begin.bracket.round",
-    "source.cpp meta.function-call punctuation.section.arguments.end.bracket.round",
-    "source.cpp entity.name.function",
-    "source.cpp meta.initialization variable.other",
-    "source.cpp punctuation.separator.delimiter",
-    "source.cpp punctuation.section.parens.begin.bracket.round.initialization",
-    "source.cpp punctuation.section.parens.end.bracket.round.initialization",
-    "source.cpp punctuation.section.parameters.begin.bracket.round",
-    "source.cpp punctuation.section.parameters.end.bracket.round",
-    "source.cpp meta.function-call.member punctuation.section.arguments.begin.bracket.round.function.member",
-    "source.cpp meta.function-call.member punctuation.section.arguments.end.bracket.round.function.member",
-    "source.cpp meta.function punctuation.section.arguments.begin.bracket.round",
-    "source.cpp meta.function punctuation.section.arguments.end.bracket.round",
-    "source.cpp meta.function punctuation.section.parameters.begin.bracket.round",
-    "source.cpp meta.function punctuation.section.parameters.end.bracket.round",
-    "source.cpp meta.function punctuation.separator.delimiter",
-    "source.cpp punctuation.definition.parameters.begin",
-    "source.cpp punctuation.definition.parameters.end",
-    "entity.name.function",
-    "support.function.dom.js",
-    "support.variable.property.js",
-    "punctuation.definition.group.shell",
     "source.python meta.function-call.generic.python",
     "support.function",
     "entity.other.attribute-name.js",
@@ -889,9 +816,6 @@ blue_underline_group = [
 blue_bold_group = [
     "punctuation.definition.parameters.begin.lambda",
     "punctuation.definition.parameters.end.lambda",
-]
-blue_italics_group = [
-    "support.function.builtin",
 ]
 dim_green_group = [
     "meta.brace.curly.coffee",
@@ -1013,12 +937,8 @@ orange_group = [
     "source.cpp meta.function.constructor.initializer-list.cpp entity.name.function",
     "source.cpp meta.function.constructor.initializer-list.cpp punctuation.section.parameters.begin.bracket.round",
     "source.cpp meta.function.constructor.initializer-list.cpp punctuation.section.parameters.end.bracket.round",
-    "variable.parameter",
-    "variable.parameter.function",
-    "variable.parameter.function.language.python",
     "keyword.other.unit",
     "variable.other.normal.shell",
-    "variable.parameter.function.coffee",
     "constant.language",
     "constant.language.boolean",
     "constant.language.null",
@@ -1034,7 +954,6 @@ orange_underline_group = [
     "source.shell punctuation.definition.variable",
     "meta.function.method.with-arguments constant.language.symbol.hashkey.parameter.function",
     "constant.other.character-class.regexp",
-    "constant.character.escape",
 ]
 orange_bold_group = [
     "source.python constant.language",
@@ -1128,8 +1047,6 @@ red_underline_group = [
 soft_red_group = [
     "source.cpp constant.language",
 ]
-bubble_group = [
-]
 
 #
 # Mapping
@@ -1139,7 +1056,6 @@ mapping = {
     white => {
         normal: [
             *colors_group,
-            *pure_white_group,
         ],
     },
     gray => {
@@ -1147,7 +1063,8 @@ mapping = {
             *markdown___markup_raw_inline_punctuation_group,
             *markdown___blockquote_group,
             *markdown___fenced_language_group,
-            *gray_group,
+            *markdown[:paragraph],
+            *boring_punctuation,
         ],
         italic: [
             *comment_group,
@@ -1156,29 +1073,25 @@ mapping = {
             *markdown___separator_group,
         ],
         underline: [
-            *gray_underline_group,
         ],
     },
     light_gray => {
         normal: [
-            *variables_group,
             *markdown___plain_group,
             *markup___table_group,
             *markdown___fenced_bode_block_variable_group,
-            *entity_types_group,
-            *css_class_and_support_group,
-            *off_white_group,
+            *normal_variables,
+            *css_properties,
+            *default_text_color,
         ],
         underline: [
-            *off_white_with_underline_group,
         ],
     },
     yellow => {
         normal: [
-            *php_constants_group,
-            *class_support_group,
+            *types,
             *css_classes_group,
-            *json_key___level_1_group,
+            *json_key_level_1_group,
             *markdown___link_anchor_group,
             *yellow_not_cursive_group,
         ],
@@ -1191,25 +1104,25 @@ mapping = {
     },
     violet => {
         normal: [
-            *keyword_storage_group,
             *changed_group,
-            *json_key___level_0_group,
-            *json_key___level_7_group,
+            *json_key_level_0_group,
+            *json_key_level_7_group,
             *markdown___markup_raw_inline_group,
             *markdown___link_description_group,
             *markup___raw_block_group,
         ],
         italic: [
-            *attributes_group,
+            *attributes,
         ],
     },
     no_color => {
         italic: [
-            *keyword_storage_group,
+            *keywords,
             *markup___quote_group,
         ],
         underline: [
             *url_group,
+            "meta.scope-resolution",
         ],
         normal: [
             *markdown___line_break_group,
@@ -1218,15 +1131,15 @@ mapping = {
             *markup___strike_group,
         ],
         bold: [
-            *bubble_group,
         ],
     },
     light_blue => {
         normal: [
-            *operator_misc_group,
+            *keywords,
+            *import_export_keywords,
+            *normal_punctuation,
             *regular_expressions_group,
-            *escape_characters_group,
-            *light_blue_group,
+            *css_property_value,
         ],
         italic: [
             *control_flow,
@@ -1234,17 +1147,16 @@ mapping = {
     },
     blue => {
         normal: [
-            *function_special_method_group,
-            *metamethodjs_group,
+            *functions,
+            *function_punctuation,
             *css_ids_group,
-            *json_key___level_5_group,
+            *json_key_level_5_group,
             *markdown___link_group,
             *blue_group,
+            *regex[:group],
+            *cpp[:assembly_punctuation],
         ],
         italic: [
-            *entitynamemethodjs_group,
-            *decorators_group,
-            *blue_italics_group,
         ],
         underline: [
             *blue_underline_group,
@@ -1255,8 +1167,10 @@ mapping = {
     },
     orange   => {
         normal: [
-            *json_key___level_2_group,
+            *json_key_level_2_group,
             *orange_group,
+            *language_literals,
+            *escape_characters_group,
         ],
         underline: [
             *markup___underline_group,
@@ -1269,7 +1183,7 @@ mapping = {
     lime => {
         normal: [
             *inserted_group,
-            *json_key___level_8_group,
+            *json_key_level_8_group,
             *markdown___heading_group,
             *lime_green_group,
         ],
@@ -1279,42 +1193,45 @@ mapping = {
     },
     rust => {
         normal: [
-            *json_key___level_4_group,
+            *json_key_level_4_group,
         ],
     },
     dark_slate => {
         bold: [
-            *slate_bold_group,
         ],
     },
     light_slate => {
         normal: [
-            *slate_group,
         ],
     },
     pink => {
         normal: [
-            *pink_group,
+            *storage_types,
+            *storage_type_punctuation,
+            *storage_modifiers,
+            *anonymous_function_punctuation,
         ],
         underline: [
-            *pink_underline_group,
         ],
         bold: [
-            *pink_bold_group,
+            *cpp[:assembly_function],
         ],
     },
     light_purple => {
         normal: [
-            *purple_group,
+            *namespace,
+            *attributes,
+            *operators,
+            *secondary_punctuation,
         ],
         italic: [
-            *purple_cursive_group,
+            *tag_attributes,
         ],
         underline: [
-            *purple_underline_group,
         ],
         bold: [
-            *purple_bold_group,
+            *special_punctuation,
+            *shell[:seperator],
         ],
     },
     dim_green => {
@@ -1331,6 +1248,7 @@ mapping = {
     teal => {
         normal: [
             *green_group,
+            *unknown_entites,
         ],
     },
     teal_1 => {
@@ -1349,14 +1267,14 @@ mapping = {
     red => {
         normal: [
             *invalid_group,
-            *sub_methods_group,
             *deleted_group,
-            *json_key___level_3_group,
+            *json_key_level_3_group,
             *red_group,
+            *assignment_operators,
+            *unusual_variables,
         ],
         italic: [
-            *language_methods_group,
-            *es7_bind_operator_group,
+            *special_variables,
         ],
         underline: [
             *red_underline_group,
@@ -1364,11 +1282,10 @@ mapping = {
     },
     soft_red => {
         normal: [
-            *tag_group,
-            *c_related_block_level_variables_group,
-            *variables_constant_group,
-            *other_variable_string_link_group,
-            *json_key___level_6_group,
+            *tags,
+            *constants,
+            *markdown___link,
+            *json_key_level_6_group,
             *soft_red_group,
             *number_literals,
         ],

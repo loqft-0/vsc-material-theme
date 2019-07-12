@@ -291,7 +291,7 @@ def convert_to_json_theme(theme_info, ui_colors, mapping)
         for each_style, all_scopes in each_style_hash
             token_colors.push({
                 "name" => "#{each_color} #{each_style}",
-                "scope" => all_scopes,
+                "scope" => all_scopes.flatten,
                 "settings" => {
                     "fontStyle"  => each_style.to_s,
                     "foreground" => each_color.to_s
