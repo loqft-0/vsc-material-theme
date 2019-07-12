@@ -26,7 +26,8 @@
         "punctuation.definition.lambda.return-type",
         "punctuation.separator.scope-resolution",
         "punctuation.definition.capture",
-        "meta.lambda.capture punctuation.separator.delimiter.comma"
+        "meta.lambda.capture punctuation.separator.delimiter.comma",
+        "entity.name.scope-resolution"
       ],
       "settings": {
         "fontStyle": "normal",
@@ -428,9 +429,7 @@
         "constant.language",
         "constant.language.symbol",
         "constant.other.symbol",
-        "constant.other.key",
-        "constant.character.escape",
-        "string constant.other.placeholder"
+        "constant.other.key"
       ],
       "settings": {
         "fontStyle": "normal",
@@ -462,7 +461,9 @@
         "source.shell variable.parameter.positional punctuation.definition.variable.shell",
         "source.shell punctuation.definition.variable",
         "meta.function.method.with-arguments constant.language.symbol.hashkey.parameter.function",
-        "constant.other.character-class.regexp"
+        "constant.other.character-class.regexp",
+        "constant.character.escape",
+        "string constant.other.placeholder"
       ],
       "settings": {
         "fontStyle": "underline",

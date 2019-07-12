@@ -658,6 +658,9 @@ colors_group = [ # like css/html colors
 default_text_color = [
     "source"
 ]
+unimportant = [
+    "entity.name.scope-resolution"
+]
 
 
 # C++
@@ -1081,6 +1084,7 @@ mapping = {
             *markdown___fenced_language_group,
             *markdown[:paragraph],
             *boring_punctuation,
+            *unimportant,
         ],
         italic: [
             *comment_group,
@@ -1187,7 +1191,6 @@ mapping = {
             *json_key_level_2_group,
             *orange_group,
             *language_literals,
-            *escape_characters_group,
         ],
         italic: [
             *value_literals,
@@ -1195,6 +1198,7 @@ mapping = {
         underline: [
             *markup___underline_group,
             *orange_underline_group,
+            *escape_characters_group,
         ],
         bold: [
             *orange_bold_group,
