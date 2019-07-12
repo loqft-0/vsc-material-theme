@@ -414,11 +414,11 @@ normal_variables = [
     "variable.other",
     "variable.assignment.coffee",
     "variable.other.constant",
-    "variable.other.object.js",
     "variable.other.readwrite.ts",
     "variable.other.readwrite.js",
     "variable.other.readwrite.global",
     "support.variable.object.process.js",
+    "variable.other.constant.js", # yes, it says constant, but its not a constant, its a non-const variable
 ]
 constants = [
     "variable.other.constant",
@@ -429,6 +429,12 @@ parameter_variables = [
     "variable.parameter.function",
     "variable.parameter.function.language.python",
     "variable.parameter.function.coffee",
+]
+dictionary_keys = [
+    "variable.assignment.coffee", # I'm not sure why its called this, but it is a dictionary key
+]
+first_property = [
+    "variable.other.object.js",
 ]
 middle_property = [
     "support.variable.property"
@@ -462,6 +468,8 @@ function_punctuation = [
     "punctuation.definition.arguments.end",
     "punctuation.definition.parameters.begin",
     "punctuation.definition.parameters.end",
+    "storage.type.function.arrow", # arrow functions
+    "punctuation.separator.parameter", # commas inside the function
 ]
 anonymous_function_punctuation = [
     "punctuation.section.block.begin.bracket.curly.lambda.cpp",
@@ -477,6 +485,14 @@ tag_attributes = [
 ]
 number_literals = [
     "constant.numeric",
+]
+value_literals = [
+    "constant.language.boolean",
+    "constant.language.true",
+    "constant.language.false",
+    "constant.language.null",
+    "constant.language.nil",
+    "constant.language.undefined",
 ]
 strings = [
     "string"
@@ -553,6 +569,7 @@ types = [
     "entity.other.inherited-class",
     "support.type",
     "support.class",
+    "storage.type.built-in",
 ]
 namespace = [
     "entity.name.namespace",
@@ -567,10 +584,15 @@ unknown_entites = [
     "entity.other",
 ]
 assignment_operators = [
-    "keyword.operator.assignment"
+    "keyword.operator.assignment",
+    "meta.embedded.expression keyword.operator.assignment", # for overriding the jsx attribute assignment
+    "meta.tag.attributes meta.embedded.expression keyword.operator.assignment", # for overriding the jsx attribute assignment
 ]
 operators = [
     "keyword.operator",
+    "keyword.operator.assignment.coffee", # this is the : 
+    "meta.tag.attributes keyword.operator.assignment", # jsx attribute assignment
+    "meta.embedded.expression meta.tag.attributes keyword.operator.assignment", # jsx attribute assignment
     # function-like operators
     "punctuation.section.arguments.begin.bracket.round.operator",
     "punctuation.section.arguments.end.bracket.round.operator",
@@ -596,7 +618,6 @@ normal_punctuation = [
     "punctuation.separator.inheritance.php",
 ]
 secondary_punctuation = [
-    "storage.type.function.arrow", # arrow functions
     "punctuation.separator", # commas
     # punctuation for embedding javascript inside jsx
     "punctuation.section.embedded.begin.js",
@@ -787,14 +808,16 @@ default_text_color = [
     ]
 
 
+
+#
 # need to fix
+#
 blue_group = [
     "source.python meta.function-call.generic.python",
     "support.function",
     "entity.other.attribute-name.js",
     "keyword.other.special-method",
     "support.function.kernel.ruby",
-    "variable.other.constant.js",
     "variable.other.constant.object.js",
     "string.regexp.group punctuation.definition.group",
     "punctuation.definition.character-class",
@@ -836,6 +859,7 @@ dim_green_group = [
     "string.regexp",
     "meta.objectliteral.js",
     "meta.object.member.js",
+    "meta.brace.square",
 ]
 dim_green_with_underline_group = [
     "punctuation.separator.dot-access.c",
@@ -852,7 +876,6 @@ dim_green_with_underline_group = [
     "support.type.property-name.json",
     "support.type.property-name.css",
     "entity.name.tag.yaml",
-    "meta.brace.square.js",
     "meta.array.literal string.quoted",
     "meta.array.literial variable.other.readwrite.js",
     "meta.object-literal.key string.quoted",
@@ -860,17 +883,14 @@ dim_green_with_underline_group = [
     "variable.other.object",
     "variable.other.property.js",
     "variable.other.object.property.js",
-    "meta.brace.square.js - meta.var.expr",
     "meta.object-literal.key.js",
     "meta.method.declaration.js meta.brace.square.js",
     "meta.object-literal.key.js variable.other.readwrite.js - meta.var.expr",
-    "meta.array.literal.js variable.other.readwrite.js",
     "variable.other.constant.property.js",
     "support.variable.property.process.js",
     "variable.other.readwrite.global.perl",
 ]
 dim_green_with_italics_group = [
-    "variable.other.constant.js",
 ]
 green_group = [
     "meta.encoding",
@@ -940,10 +960,6 @@ orange_group = [
     "keyword.other.unit",
     "variable.other.normal.shell",
     "constant.language",
-    "constant.language.boolean",
-    "constant.language.null",
-    "constant.language.nil",
-    "constant.language.undefined",
     "constant.language.symbol",
 ]
 orange_underline_group = [
@@ -1085,6 +1101,7 @@ mapping = {
             *default_text_color,
         ],
         underline: [
+            *first_property
         ],
     },
     yellow => {
@@ -1172,6 +1189,9 @@ mapping = {
             *language_literals,
             *escape_characters_group,
         ],
+        italic: [
+            *value_literals,
+        ],
         underline: [
             *markup___underline_group,
             *orange_underline_group,
@@ -1240,6 +1260,7 @@ mapping = {
         ],
         underline: [
             *dim_green_with_underline_group,
+            *dictionary_keys,
         ],
         italic: [
             *dim_green_with_italics_group,
