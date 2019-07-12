@@ -16,7 +16,7 @@
   },
   "scripts": {
     "build": "ruby theme_generator.rb",
-    "publish": "npm run build && git add -A && git commit -m \"commit\" && git pull && git push && vsce publish patch"
+    "publish": "npm run build && git add -A && git commit -m \"commit\" && git pull && git push && vsce publish patch && git push"
   },
   "categories": [
     "Themes",
