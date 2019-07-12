@@ -583,6 +583,7 @@ storage_type_punctuation = [
     "punctuation.section.block.end.bracket.curly.extern",
 ]
 storage_modifiers = [
+    "storage.modifier",
     "storage.modifier.lambda",
     "storage.modifier.async",
     "storage.type.modifier.access.control",

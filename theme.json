@@ -593,6 +593,7 @@
         "punctuation.section.block.end.bracket.curly.enum",
         "punctuation.section.block.end.bracket.curly.union",
         "punctuation.section.block.end.bracket.curly.extern",
+        "storage.modifier",
         "storage.modifier.lambda",
         "storage.modifier.async",
         "storage.type.modifier.access.control",
