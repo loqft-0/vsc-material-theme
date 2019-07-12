@@ -343,7 +343,6 @@
         "entity.name.command",
         "keyword.other.special-method",
         "punctuation.definition.arguments",
-        "source.shell punctuation.definition.group",
         "punctuation.section.parameters.begin.bracket.round",
         "punctuation.section.parameters.end.bracket.round",
         "punctuation.section.arguments.begin.bracket.round",
@@ -598,6 +597,7 @@
         "storage.modifier.async",
         "storage.type.modifier.access.control",
         "storage.type.modifier.access",
+        "source.shell punctuation.definition.group",
         "punctuation.section.block.begin.bracket.curly.lambda.cpp",
         "punctuation.section.block.end.bracket.curly.lambda.cpp"
       ],

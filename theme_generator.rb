@@ -470,7 +470,6 @@ functions = [
 ]
 function_punctuation = [
     "punctuation.definition.arguments",
-    "source.shell punctuation.definition.group",
     "punctuation.section.parameters.begin.bracket.round",
     "punctuation.section.parameters.end.bracket.round",
     "punctuation.section.arguments.begin.bracket.round",
@@ -492,6 +491,7 @@ function_punctuation = [
     "meta.parameter punctuation.separator.delimiter.comma"
 ]
 anonymous_function_punctuation = [
+    "source.shell punctuation.definition.group", # brackets in shell function definition
     "punctuation.section.block.begin.bracket.curly.lambda.cpp",
     "punctuation.section.block.end.bracket.curly.lambda.cpp",
 ]
