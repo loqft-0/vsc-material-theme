@@ -412,6 +412,7 @@ comment_group = [
 normal_variables = [
     "variable",
     "variable.other",
+    "variable.other.readwrite",
     "variable.assignment.coffee",
     "variable.other.constant",
     "variable.other.readwrite.ts",
@@ -419,10 +420,14 @@ normal_variables = [
     "variable.other.readwrite.global",
     "support.variable.object.process.js",
     "variable.other.constant.js", # yes, it says constant, but its not a constant, its a non-const variable
+    "variable.other.member", # used by the c++ extension for members that are not being accessed
 ]
 constants = [
     "variable.other.constant",
     "constant.other.php",
+]
+globals = [
+    "support.variable.other.object.node",
 ]
 parameter_variables = [
     "variable.parameter",
@@ -435,14 +440,26 @@ dictionary_keys = [
 ]
 first_property = [
     "variable.other.object.js",
+    "variable.other.object.access",
 ]
 middle_property = [
-    "support.variable.property"
+    "support.variable.property",
+    "variable.other.object.property",
+]
+last_property = [
+    "variable.other.property",
 ]
 unusual_variables = [
     # yaml aliases
     "source.yaml punctuation.definition.alias",
     "source.yaml variable.other.alias",
+    "source.dockerfile variable.other",
+    "variable.other.predefined",
+    "source.perl variable.other.predefined punctuation.definition.variable",
+]
+instance_variables = [
+    "variable.other.readwrite.instance",
+    "punctuation.definition.variable.ruby",
 ]
 functions = [
     "entity.name.function",
@@ -470,6 +487,9 @@ function_punctuation = [
     "punctuation.definition.parameters.end",
     "storage.type.function.arrow", # arrow functions
     "punctuation.separator.parameter", # commas inside the function
+    "punctuation.section.block.function",
+    "punctuation.section.arguments",
+    "meta.parameter punctuation.separator.delimiter.comma"
 ]
 anonymous_function_punctuation = [
     "punctuation.section.block.begin.bracket.curly.lambda.cpp",
@@ -478,6 +498,7 @@ anonymous_function_punctuation = [
 tags = [
     "entity.name.tag",
     "punctuation.definition.tag",
+    "punctuation.definition.tag source.js", # a fix for screwed up html <script> tags
 ]
 tag_attributes = [
     "entity.other.attribute-name.tag.pug",
@@ -533,11 +554,15 @@ keywords = [
 import_export_keywords = [
     "support.type.object.module", # module keyword
 ]
+package_names = [
+    "entity.name.package"
+]
 storage_types = [
     "storage.type",
     "keyword.other.typedef",
     "source.go keyword.function",
     "source.go keyword.var",
+    "source.perl storage.modifier",
 ]
 storage_type_punctuation = [
     "punctuation.section.angle-brackets.start.template.definition.cpp",
@@ -616,6 +641,7 @@ normal_punctuation = [
     "source.python punctuation.section.function.begin",
     "storage.modifier.chomping-indicator.yaml", # the | used for multiline blocks
     "punctuation.separator.inheritance.php",
+    "punctuation.separator.colon.inheritance",
 ]
 secondary_punctuation = [
     "punctuation.separator", # commas
@@ -628,6 +654,7 @@ secondary_punctuation = [
 ]
 special_punctuation = [
     "punctuation.vararg-ellipses",
+    "punctuation.separator.readline",
 ]
 boring_punctuation = [
     # the semicolon
@@ -828,9 +855,7 @@ blue_group = [
     "entity.other.attribute-name.class.pug",
 ]
 blue_underline_group = [
-    "variable.other.property.cpp",
     "meta.object-literal.key.js entity.name.function",
-    "variable.other.member",
     "entity.name.function.member",
     "support.variable.property.js",
     "support.variable.property.dom.js",
@@ -925,6 +950,7 @@ green_group = [
     "variable.parameter.registers",
 ]
 green_bold_group = [
+    "string.regexp punctuation.definition.string",
     "keyword.other.unit.user-defined.cpp",
     "punctuation.section.parens.begin.bracket.round.assembly.inner",
     "punctuation.section.parens.end.bracket.round.assembly.inner",
@@ -1045,8 +1071,6 @@ bananna_yellow_underline_group = [
     "variable.other.readwrite.global.ruby",
     "variable.other.readwrite.global.ruby punctuation.definition.variable.ruby",
     "support.variable",
-    "variable.other.readwrite",
-    "source.cpp variable.other",
 ]
 red_group = [
     "source.ruby meta.function.method.with-arguments punctuation.definition.constant.hashkey",
@@ -1115,12 +1139,14 @@ mapping = {
             *json_key_level_1_group,
             *markdown___link_anchor_group,
             *yellow_not_cursive_group,
+            *package_names,
         ],
         italic: [
             *yellow_cursive_group,
         ],
         underline: [
             *yellow_underline_group,
+            *unusual_variables,
         ],
     },
     violet => {
@@ -1181,6 +1207,7 @@ mapping = {
         ],
         underline: [
             *blue_underline_group,
+            *last_property,
         ],
         bold: [
             *blue_bold_group,
@@ -1191,6 +1218,7 @@ mapping = {
             *json_key_level_2_group,
             *orange_group,
             *language_literals,
+            *parameter_variables,
         ],
         italic: [
             *value_literals,
@@ -1265,6 +1293,7 @@ mapping = {
         underline: [
             *dim_green_with_underline_group,
             *dictionary_keys,
+            *middle_property,
         ],
         italic: [
             *dim_green_with_italics_group,
@@ -1296,7 +1325,6 @@ mapping = {
             *json_key_level_3_group,
             *red_group,
             *assignment_operators,
-            *unusual_variables,
         ],
         italic: [
             *special_variables,
@@ -1313,6 +1341,7 @@ mapping = {
             *json_key_level_6_group,
             *soft_red_group,
             *number_literals,
+            *instance_variables,
         ],
         italic: [
             *markup___italic_group,

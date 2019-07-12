@@ -2,7 +2,7 @@
   "name": "xd-theme",
   "displayName": "XD Theme",
   "description": "A theme because my settings file was too large",
-  "version": "0.0.28",
+  "version": "0.0.33",
   "publisher": "jeff-hykin",
   "license": "MIT",
   "author": "Jeff Hykin",
@@ -15,7 +15,8 @@
     "vscode": "^1.31.0"
   },
   "scripts": {
-    "build": "ruby generate.rb"
+    "build": "ruby theme_generator.rb",
+    "publish": "npm run build && git add -A && git commit -m \"commit\" && git pull && git push && vsce publish patch"
   },
   "categories": [
     "Themes",
