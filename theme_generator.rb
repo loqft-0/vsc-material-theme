@@ -422,6 +422,20 @@ normal_variables = [
     "variable.other.constant.js", # yes, it says constant, but its not a constant, its a non-const variable
     "variable.other.member", # used by the c++ extension for members that are not being accessed
 ]
+semi_special_variables = [
+    "source.ruby variable.other.readwrite.class", # class members in ruby
+]
+first_property = [
+    "variable.other.object.js",
+    "variable.other.object.access",
+]
+middle_property = [
+    "support.variable.property",
+    "variable.other.object.property",
+]
+last_property = [
+    "variable.other.property",
+]
 constants = [
     "variable.other.constant",
     "constant.other.php",
@@ -437,17 +451,6 @@ parameter_variables = [
 ]
 dictionary_keys = [
     "variable.assignment.coffee", # I'm not sure why its called this, but it is a dictionary key
-]
-first_property = [
-    "variable.other.object.js",
-    "variable.other.object.access",
-]
-middle_property = [
-    "support.variable.property",
-    "variable.other.object.property",
-]
-last_property = [
-    "variable.other.property",
 ]
 unusual_variables = [
     # yaml aliases
