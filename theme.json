@@ -26,8 +26,7 @@
         "punctuation.definition.lambda.return-type",
         "punctuation.separator.scope-resolution",
         "punctuation.definition.capture",
-        "meta.lambda.capture punctuation.separator.delimiter.comma",
-        "entity.name.scope-resolution"
+        "meta.lambda.capture punctuation.separator.delimiter.comma"
       ],
       "settings": {
         "fontStyle": "normal",

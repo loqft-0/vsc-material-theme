@@ -687,7 +687,6 @@ default_text_color = [
     "source"
 ]
 unimportant = [
-    "entity.name.scope-resolution"
 ]
 
 
