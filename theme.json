@@ -899,7 +899,8 @@
         "source.cpp constant.language",
         "constant.numeric",
         "variable.other.readwrite.instance",
-        "punctuation.definition.variable.ruby"
+        "punctuation.definition.variable.ruby",
+        "source.ruby variable.other.readwrite.class"
       ],
       "settings": {
         "fontStyle": "normal",
