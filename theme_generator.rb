@@ -719,6 +719,26 @@ ui = {
 
 # Perl
     perl = {
+        scalar: [ 
+            "variable.other.scalar",
+            "punctuation.definition.variable.scalar",
+        ],
+        array: [ 
+            "variable.other.array",
+            "punctuation.definition.variable.array",
+        ],
+        hash: [ 
+            "variable.other.hash",
+            "punctuation.definition.variable.hash",
+        ],
+        reference: [
+            "variable.other.scalar.reference",
+            "punctuation.definition.variable.scalar.reference",
+            "variable.other.array.reference",
+            "punctuation.definition.variable.array.reference",
+            "variable.other.hash.reference",
+            "punctuation.definition.variable.hash.reference",
+        ],
         vars: [
             "source.perl variable.other.readwrite.global",
             "source.perl punctuation.definition.variable",
@@ -1346,10 +1366,11 @@ mapping = {
     },
     bananna_yellow => {
         normal: [
-            *bananna_yellow_group,
+            bananna_yellow_group,
         ],
         underline: [
-            *bananna_yellow_underline_group,
+            globals,
+            bananna_yellow_underline_group,
         ],
     },
     red => {
