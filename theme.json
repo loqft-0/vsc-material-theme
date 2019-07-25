@@ -196,7 +196,9 @@
         "source.yaml variable.other.alias",
         "source.dockerfile variable.other",
         "variable.other.predefined",
-        "source.perl variable.other.predefined punctuation.definition.variable"
+        "source.perl variable.other.predefined punctuation.definition.variable",
+        "source.perl variable.other.readwrite.global.special punctuation.definition.variable",
+        "source.perl variable.other.readwrite.global.special"
       ],
       "settings": {
         "fontStyle": "underline",
@@ -856,8 +858,6 @@
         "support.variable.other.object.node",
         "variable.other.readwrite.global.special punctuation",
         "variable.other.readwrite.global.special",
-        "source.perl variable.other.readwrite.global.special punctuation.definition.variable",
-        "source.perl variable.other.readwrite.global.special",
         "variable.other.readwrite.global.ruby",
         "variable.other.readwrite.global.ruby punctuation.definition.variable.ruby",
         "support.variable"

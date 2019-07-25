@@ -461,8 +461,6 @@ ui = {
             "support.variable.other.object.node",
             "variable.other.readwrite.global.special punctuation",
             "variable.other.readwrite.global.special",
-            "source.perl variable.other.readwrite.global.special punctuation.definition.variable",
-            "source.perl variable.other.readwrite.global.special",
         ]
         # mostly self-reference but occasionally other stuff
         special_variables = [
@@ -742,6 +740,10 @@ ui = {
         vars: [
             "source.perl variable.other.readwrite.global",
             "source.perl punctuation.definition.variable",
+        ],
+        globals: [
+            "source.perl variable.other.readwrite.global.special punctuation.definition.variable",
+            "source.perl variable.other.readwrite.global.special",
         ]
     }
 # C++
@@ -1186,19 +1188,20 @@ mapping = {
     },
     yellow => {
         normal: [
-            *types,
-            *css_classes_group,
-            *json_key_level_1_group,
-            *markdown___link_anchor_group,
-            *yellow_not_cursive_group,
-            *package_names,
+            types,
+            css_classes_group,
+            json_key_level_1_group,
+            markdown___link_anchor_group,
+            yellow_not_cursive_group,
+            package_names,
         ],
         italic: [
-            *yellow_cursive_group,
+            yellow_cursive_group,
         ],
         underline: [
-            *yellow_underline_group,
-            *unusual_variables,
+            yellow_underline_group,
+            unusual_variables,
+            perl[:globals],
         ],
     },
     violet => {
