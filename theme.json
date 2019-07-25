@@ -744,7 +744,9 @@
         "variable.assignment.coffee",
         "punctuation.definition.constant.hashkey",
         "support.variable.property",
-        "variable.other.object.property"
+        "variable.other.object.property",
+        "source.perl variable.other.readwrite.global",
+        "source.perl punctuation.definition.variable"
       ],
       "settings": {
         "fontStyle": "underline",
@@ -754,8 +756,7 @@
     {
       "name": "#80CBC4 italic",
       "scope": [
-        "source.perl variable.other.readwrite.global",
-        "source.perl punctuation.definition.variable"
+
       ],
       "settings": {
         "fontStyle": "italic",

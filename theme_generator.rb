@@ -1326,10 +1326,10 @@ mapping = {
             dim_green_with_underline_group,
             dictionary_keys,
             middle_property,
+            perl[:vars],
         ],
         italic: [
             dim_green_with_italics_group,
-            perl[:vars],
         ],
     },
     teal => {
