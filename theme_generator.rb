@@ -460,7 +460,9 @@ ui = {
         globals = [
             "support.variable.other.object.node",
             "variable.other.readwrite.global.special punctuation",
-            "variable.other.readwrite.global.special"
+            "variable.other.readwrite.global.special",
+            "source.perl variable.other.readwrite.global.special punctuation",
+            "source.perl variable.other.readwrite.global.special",
         ]
         # mostly self-reference but occasionally other stuff
         special_variables = [
