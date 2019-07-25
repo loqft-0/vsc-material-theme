@@ -16,8 +16,8 @@ orange          = '#F78C6C'
 yellow          = '#fec355'
 bananna_yellow  = '#ddd790'
 lime            = '#C3E88D'
-teal            = '#4EC9B0'
-teal_1          = '#4ec9b0d0'
+green            = '#4EC9B0'
+bold_green          = '#4ec9b0d0'
 dim_green       = '#80CBC4'
 light_slate     = '#64bac5'
 dark_slate      = '#3f848d'
@@ -1301,12 +1301,13 @@ mapping = {
         ],
     },
     dark_slate => {
+        underline: [  
+        ],
         bold: [
-            perl[:scalar],
         ],
     },
     light_slate => {
-        normal: [
+        underline: [
             perl[:array],
         ],
     },
@@ -1343,25 +1344,28 @@ mapping = {
     dim_green => {
         normal: [
             dim_green_group,
-            perl[:hash],
         ],
         underline: [
             dim_green_with_underline_group,
             dictionary_keys,
             middle_property,
+            perl[:scalar],
         ],
         italic: [
             dim_green_with_italics_group,
         ],
     },
-    teal => {
+    green => {
         normal: [
             green_group,
             string_preceders,
             unknown_entites,
         ],
+        underline: [
+            perl[:hash],
+        ]
     },
-    teal_1 => {
+    bold_green => {
         bold: [
             *green_bold_group,
         ],
@@ -1410,11 +1414,6 @@ mapping = {
             *soft_red_group,
         ],
     },
-    :no_color => {
-        italic: [
-            perl[:reference]
-        ]
-    }
 }
 
 IO.write("theme.json", convert_to_json_theme(theme_info, ui, mapping) )
