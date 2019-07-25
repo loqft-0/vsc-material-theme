@@ -84,6 +84,7 @@
         "support.variable.object.process.js",
         "variable.other.constant.js",
         "variable.other.member",
+        "punctuation.definition.variable",
         "source.css support.type.property-name",
         "source.sass support.type.property-name",
         "source.scss support.type.property-name",
@@ -744,6 +745,7 @@
         "support.variable.property.process.js",
         "variable.other.readwrite.global.perl",
         "variable.assignment.coffee",
+        "punctuation.definition.constant.hashkey",
         "support.variable.property",
         "variable.other.object.property"
       ],
@@ -792,6 +794,7 @@
         "punctuation.support.type.property-name.begin",
         "punctuation.support.type.property-name.end",
         "variable.parameter.registers",
+        "storage.type.string",
         "entity.name",
         "entity.other"
       ],

@@ -411,6 +411,7 @@ ui = {
     ]
     dictionary_keys = [
         "variable.assignment.coffee", # I'm not sure why its called this, but it is a dictionary key
+        "punctuation.definition.constant.hashkey", # the ruby : for hashkeys in function parameters
     ]
     # 
     # Variables
@@ -427,6 +428,7 @@ ui = {
             "support.variable.object.process.js",
             "variable.other.constant.js", # yes, it says constant, but its not a constant, its a non-const variable
             "variable.other.member", # used by the c++ extension for members that are not being accessed
+            "punctuation.definition.variable"
         ]
         parameter_variables = [
             "variable.parameter",
@@ -458,6 +460,7 @@ ui = {
         ]
         globals = [
             "support.variable.other.object.node",
+            "variable.other.readwrite.global.special punctuation"
         ]
         # mostly self-reference but occasionally other stuff
         special_variables = [
@@ -537,6 +540,9 @@ ui = {
             "constant.language.null",
             "constant.language.nil",
             "constant.language.undefined",
+        ]
+        string_preceders = [
+            "storage.type.string"
         ]
         strings = [
             "string"
@@ -1321,8 +1327,9 @@ mapping = {
     },
     teal => {
         normal: [
-            *green_group,
-            *unknown_entites,
+            green_group,
+            string_preceders,
+            unknown_entites,
         ],
     },
     teal_1 => {
