@@ -1298,15 +1298,16 @@ mapping = {
     rust => {
         normal: [
             json_key_level_4_group,
-            perl[:scalar],
         ],
     },
     dark_slate => {
         bold: [
+            perl[:scalar],
         ],
     },
     light_slate => {
         normal: [
+            perl[:array],
         ],
     },
     pink => {
@@ -1342,7 +1343,7 @@ mapping = {
     dim_green => {
         normal: [
             dim_green_group,
-            perl[:array],
+            perl[:hash],
         ],
         underline: [
             dim_green_with_underline_group,
@@ -1368,7 +1369,6 @@ mapping = {
     bananna_yellow => {
         normal: [
             bananna_yellow_group,
-            perl[:hash],
         ],
         underline: [
             globals,

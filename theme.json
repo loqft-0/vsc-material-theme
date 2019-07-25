@@ -539,9 +539,7 @@
     {
       "name": "#C17E70 normal",
       "scope": [
-        "source.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json support.type.property-name.json",
-        "variable.other.scalar",
-        "punctuation.definition.variable.scalar"
+        "source.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json support.type.property-name.json"
       ],
       "settings": {
         "fontStyle": "normal",
@@ -551,7 +549,8 @@
     {
       "name": "#3f848d bold",
       "scope": [
-
+        "variable.other.scalar",
+        "punctuation.definition.variable.scalar"
       ],
       "settings": {
         "fontStyle": "bold",
@@ -561,7 +560,8 @@
     {
       "name": "#64bac5 normal",
       "scope": [
-
+        "variable.other.array",
+        "punctuation.definition.variable.array"
       ],
       "settings": {
         "fontStyle": "normal",
@@ -708,8 +708,8 @@
         "meta.objectliteral.js",
         "meta.object.member.js",
         "meta.brace.square",
-        "variable.other.array",
-        "punctuation.definition.variable.array"
+        "variable.other.hash",
+        "punctuation.definition.variable.hash"
       ],
       "settings": {
         "fontStyle": "normal",
@@ -821,9 +821,7 @@
       "name": "#ddd790 normal",
       "scope": [
         "keyword.other.unit",
-        "punctuation.separator.constant.numeric",
-        "variable.other.hash",
-        "punctuation.definition.variable.hash"
+        "punctuation.separator.constant.numeric"
       ],
       "settings": {
         "fontStyle": "normal",
