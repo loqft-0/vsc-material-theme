@@ -539,7 +539,9 @@
     {
       "name": "#C17E70 normal",
       "scope": [
-        "source.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json support.type.property-name.json"
+        "source.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json support.type.property-name.json",
+        "variable.other.scalar",
+        "punctuation.definition.variable.scalar"
       ],
       "settings": {
         "fontStyle": "normal",
@@ -705,7 +707,9 @@
         "string.regexp",
         "meta.objectliteral.js",
         "meta.object.member.js",
-        "meta.brace.square"
+        "meta.brace.square",
+        "variable.other.array",
+        "punctuation.definition.variable.array"
       ],
       "settings": {
         "fontStyle": "normal",
@@ -744,9 +748,7 @@
         "variable.assignment.coffee",
         "punctuation.definition.constant.hashkey",
         "support.variable.property",
-        "variable.other.object.property",
-        "source.perl variable.other.readwrite.global",
-        "source.perl punctuation.definition.variable"
+        "variable.other.object.property"
       ],
       "settings": {
         "fontStyle": "underline",
@@ -819,7 +821,9 @@
       "name": "#ddd790 normal",
       "scope": [
         "keyword.other.unit",
-        "punctuation.separator.constant.numeric"
+        "punctuation.separator.constant.numeric",
+        "variable.other.hash",
+        "punctuation.definition.variable.hash"
       ],
       "settings": {
         "fontStyle": "normal",
@@ -940,6 +944,21 @@
       "settings": {
         "fontStyle": "bold",
         "foreground": "#f07178"
+      }
+    },
+    {
+      "name": "no_color italic",
+      "scope": [
+        "variable.other.scalar.reference",
+        "punctuation.definition.variable.scalar.reference",
+        "variable.other.array.reference",
+        "punctuation.definition.variable.array.reference",
+        "variable.other.hash.reference",
+        "punctuation.definition.variable.hash.reference"
+      ],
+      "settings": {
+        "fontStyle": "italic",
+        "foreground": "no_color"
       }
     }
   ],

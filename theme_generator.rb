@@ -1297,7 +1297,8 @@ mapping = {
     },
     rust => {
         normal: [
-            *json_key_level_4_group,
+            json_key_level_4_group,
+            perl[:scalar],
         ],
     },
     dark_slate => {
@@ -1341,12 +1342,12 @@ mapping = {
     dim_green => {
         normal: [
             dim_green_group,
+            perl[:array],
         ],
         underline: [
             dim_green_with_underline_group,
             dictionary_keys,
             middle_property,
-            perl[:vars],
         ],
         italic: [
             dim_green_with_italics_group,
@@ -1367,6 +1368,7 @@ mapping = {
     bananna_yellow => {
         normal: [
             bananna_yellow_group,
+            perl[:hash],
         ],
         underline: [
             globals,
@@ -1408,6 +1410,11 @@ mapping = {
             *soft_red_group,
         ],
     },
+    :no_color => {
+        italic: [
+            perl[:reference]
+        ]
+    }
 }
 
 IO.write("theme.json", convert_to_json_theme(theme_info, ui, mapping) )
