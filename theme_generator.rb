@@ -428,7 +428,6 @@ ui = {
             "support.variable.object.process.js",
             "variable.other.constant.js", # yes, it says constant, but its not a constant, its a non-const variable
             "variable.other.member", # used by the c++ extension for members that are not being accessed
-            "punctuation.definition.variable"
         ]
         parameter_variables = [
             "variable.parameter",
@@ -460,7 +459,8 @@ ui = {
         ]
         globals = [
             "support.variable.other.object.node",
-            "variable.other.readwrite.global.special punctuation"
+            "variable.other.readwrite.global.special punctuation",
+            "variable.other.readwrite.global.special"
         ]
         # mostly self-reference but occasionally other stuff
         special_variables = [
@@ -715,7 +715,13 @@ ui = {
     unimportant = [
     ]
 
-
+# Perl
+    perl = {
+        vars: [
+            "source.perl variable.other.readwrite.global",
+            "source.perl punctuation.definition.variable",
+        ]
+    }
 # C++
     cpp = {
         assembly_function: [
@@ -942,7 +948,6 @@ dim_green_with_underline_group = [
     "meta.object-literal.key.js variable.other.readwrite.js - meta.var.expr",
     "variable.other.constant.property.js",
     "support.variable.property.process.js",
-    "variable.other.readwrite.global.perl",
 ]
 dim_green_with_italics_group = [
 ]
@@ -1056,7 +1061,6 @@ yellow_not_cursive_group = [
     "storage.type.built-in.primitive",
     "source.go storage.type",
     "storage.type.primitive",
-    "variable.other.readwrite.global.special.perl",
     "entity.name.type",
     "meta.angle-brackets.cpp",
     "entity.name.type.template.cpp",
@@ -1314,15 +1318,16 @@ mapping = {
     },
     dim_green => {
         normal: [
-            *dim_green_group,
+            dim_green_group,
         ],
         underline: [
-            *dim_green_with_underline_group,
-            *dictionary_keys,
-            *middle_property,
+            dim_green_with_underline_group,
+            dictionary_keys,
+            middle_property,
         ],
         italic: [
-            *dim_green_with_italics_group,
+            dim_green_with_italics_group,
+            perl
         ],
     },
     teal => {

@@ -84,7 +84,6 @@
         "support.variable.object.process.js",
         "variable.other.constant.js",
         "variable.other.member",
-        "punctuation.definition.variable",
         "source.css support.type.property-name",
         "source.sass support.type.property-name",
         "source.scss support.type.property-name",
@@ -136,7 +135,6 @@
         "storage.type.built-in.primitive",
         "source.go storage.type",
         "storage.type.primitive",
-        "variable.other.readwrite.global.special.perl",
         "entity.name.type",
         "meta.angle-brackets.cpp",
         "entity.name.type.template.cpp",
@@ -743,7 +741,6 @@
         "meta.object-literal.key.js variable.other.readwrite.js - meta.var.expr",
         "variable.other.constant.property.js",
         "support.variable.property.process.js",
-        "variable.other.readwrite.global.perl",
         "variable.assignment.coffee",
         "punctuation.definition.constant.hashkey",
         "support.variable.property",
@@ -757,7 +754,12 @@
     {
       "name": "#80CBC4 italic",
       "scope": [
-
+        {
+          "vars": [
+            "source.perl variable.other.readwrite.global",
+            "source.perl punctuation.definition.variable"
+          ]
+        }
       ],
       "settings": {
         "fontStyle": "italic",
