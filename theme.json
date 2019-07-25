@@ -816,6 +816,8 @@
     {
       "name": "#4EC9B0 underline",
       "scope": [
+        "source.perl variable.other.readwrite.global",
+        "source.perl punctuation.definition.variable",
         "variable.other.hash",
         "punctuation.definition.variable.hash"
       ],

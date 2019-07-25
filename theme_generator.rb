@@ -1362,12 +1362,13 @@ mapping = {
             unknown_entites,
         ],
         underline: [
+            perl[:vars],
             perl[:hash],
         ]
     },
     bold_green => {
         bold: [
-            *green_bold_group,
+            green_bold_group,
         ],
     },
     bananna_yellow => {
