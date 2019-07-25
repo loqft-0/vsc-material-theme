@@ -354,7 +354,7 @@ ui = {
         modifiedBackground: '#e2b93d',
         deletedBackground: '#EF5350',
     },
-    foreground: '#EF5350',
+    foreground: '#FFCB6B',#'#EF5350',
     sideBarTitle: {
         foreground: '#eeffff',
     },

@@ -1145,7 +1145,7 @@
     "editorGutter.addedBackground": "#9CCC65",
     "editorGutter.modifiedBackground": "#e2b93d",
     "editorGutter.deletedBackground": "#EF5350",
-    "foreground": "#EF5350",
+    "foreground": "#FFCB6B",
     "sideBarTitle.foreground": "#eeffff",
     "editorLink.activeForeground": "#EEFFFF",
     "peekViewTitleLabel.foreground": "#eeffff",
