@@ -237,7 +237,13 @@
         "keyword",
         "keyword.other",
         "source.dockerfile keyword.other.special-method",
-        "markup.quote"
+        "markup.quote",
+        "variable.other.scalar.reference",
+        "punctuation.definition.variable.scalar.reference",
+        "variable.other.array.reference",
+        "punctuation.definition.variable.array.reference",
+        "variable.other.hash.reference",
+        "punctuation.definition.variable.hash.reference"
       ],
       "settings": {
         "fontStyle": "italic",

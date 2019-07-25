@@ -1219,8 +1219,9 @@ mapping = {
     },
     no_color => {
         italic: [
-            *keywords,
-            *markup___quote_group,
+            keywords,
+            markup___quote_group,
+            perl[:reference],
         ],
         underline: [
             *url_group,
