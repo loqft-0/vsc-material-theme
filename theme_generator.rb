@@ -354,7 +354,7 @@ ui = {
         modifiedBackground: '#e2b93d',
         deletedBackground: '#EF5350',
     },
-    foreground: '#FFCB6B',#'#EF5350',
+    foreground: '#5e718a',
     sideBarTitle: {
         foreground: '#eeffff',
     },
@@ -1327,7 +1327,7 @@ mapping = {
         ],
         italic: [
             dim_green_with_italics_group,
-            perl
+            perl[:vars],
         ],
     },
     teal => {

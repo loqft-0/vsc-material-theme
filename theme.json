@@ -754,12 +754,8 @@
     {
       "name": "#80CBC4 italic",
       "scope": [
-        {
-          "vars": [
-            "source.perl variable.other.readwrite.global",
-            "source.perl punctuation.definition.variable"
-          ]
-        }
+        "source.perl variable.other.readwrite.global",
+        "source.perl punctuation.definition.variable"
       ],
       "settings": {
         "fontStyle": "italic",
@@ -1145,7 +1141,7 @@
     "editorGutter.addedBackground": "#9CCC65",
     "editorGutter.modifiedBackground": "#e2b93d",
     "editorGutter.deletedBackground": "#EF5350",
-    "foreground": "#FFCB6B",
+    "foreground": "#5e718a",
     "sideBarTitle.foreground": "#eeffff",
     "editorLink.activeForeground": "#EEFFFF",
     "peekViewTitleLabel.foreground": "#eeffff",
