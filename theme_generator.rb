@@ -545,7 +545,8 @@ ui = {
             "storage.type.string"
         ]
         strings = [
-            "string"
+            "string",
+            "string.unquoted"
         ]
         docstring = [
             "string.quoted.docstring",
@@ -1224,14 +1225,13 @@ mapping = {
             perl[:reference],
         ],
         underline: [
-            *url_group,
-            "meta.scope-resolution",
+            url_group,
         ],
         normal: [
-            *markdown___line_break_group,
+            markdown___line_break_group,
         ],
         strike: [
-            *markup___strike_group,
+            markup___strike_group,
         ],
         bold: [
         ],
@@ -1290,13 +1290,14 @@ mapping = {
     },
     lime => {
         normal: [
-            *inserted_group,
-            *json_key_level_8_group,
-            *markdown___heading_group,
-            *lime_green_group,
+            inserted_group,
+            strings,
+            json_key_level_8_group,
+            markdown___heading_group,
+            lime_green_group,
         ],
         underline: [
-            *lime_green_with_underline_group,
+            lime_green_with_underline_group,
         ],
     },
     rust => {

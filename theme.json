@@ -255,8 +255,7 @@
       "scope": [
         "*url*",
         "*link*",
-        "*uri*",
-        "meta.scope-resolution"
+        "*uri*"
       ],
       "settings": {
         "fontStyle": "underline",
@@ -505,6 +504,8 @@
       "name": "#C3E88D normal",
       "scope": [
         "markup.inserted",
+        "string",
+        "string.unquoted",
         "source.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json support.type.property-name.json",
         "markdown.heading",
         "markup.heading",
