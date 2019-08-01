@@ -716,210 +716,225 @@ ui = {
     unimportant = [
     ]
 
-# Perl
-    perl = {
-        scalar: [ 
-            "source.perl variable.other.scalar",
-            "source.perl punctuation.definition.variable.scalar",
-        ],
-        array: [ 
-            "source.perl variable.other.array",
-            "source.perl punctuation.definition.variable.array",
-        ],
-        hash: [ 
-            "source.perl variable.other.hash",
-            "source.perl punctuation.definition.variable.hash",
-        ],
-        subpattern: [
-            "source.perl variable.other.subpattern",
-            "source.perl variable.other.subpattern punctuation.definition.variable",
-        ],
-        reference: [
-            "source.perl variable.other.scalar.reference",
-            "source.perl punctuation.definition.variable.scalar.reference",
-            "source.perl variable.other.array.reference",
-            "source.perl punctuation.definition.variable.array.reference",
-            "source.perl variable.other.hash.reference",
-            "source.perl punctuation.definition.variable.hash.reference",
-        ],
-        vars: [
-            "source.perl variable.other.readwrite.global",
-            "source.perl punctuation.definition.variable",
-        ],
-        globals: [
-            "source.perl variable.other.readwrite.global.special punctuation.definition.variable",
-            "source.perl variable.other.readwrite.global.special",
+# 
+# Language-specific
+# 
+
+    # Yaml
+        yaml = {
+            anchors: [
+                "source.yaml punctuation.definition.anchor",
+                "source.yaml entity.name.type.anchor",
+            ],
+            alias: [
+                "source.yaml punctuation.definition.alias",
+                "source.yaml variable.other.alias",
+            ]
+        }
+    # Perl
+        perl = {
+            scalar: [ 
+                "source.perl variable.other.scalar",
+                "source.perl punctuation.definition.variable.scalar",
+            ],
+            array: [ 
+                "source.perl variable.other.array",
+                "source.perl punctuation.definition.variable.array",
+            ],
+            hash: [ 
+                "source.perl variable.other.hash",
+                "source.perl punctuation.definition.variable.hash",
+            ],
+            subpattern: [
+                "source.perl variable.other.subpattern",
+                "source.perl variable.other.subpattern punctuation.definition.variable",
+            ],
+            reference: [
+                "source.perl variable.other.scalar.reference",
+                "source.perl punctuation.definition.variable.scalar.reference",
+                "source.perl variable.other.array.reference",
+                "source.perl punctuation.definition.variable.array.reference",
+                "source.perl variable.other.hash.reference",
+                "source.perl punctuation.definition.variable.hash.reference",
+            ],
+            vars: [
+                "source.perl variable.other.readwrite.global",
+                "source.perl punctuation.definition.variable",
+            ],
+            globals: [
+                "source.perl variable.other.readwrite.global.special punctuation.definition.variable",
+                "source.perl variable.other.readwrite.global.special",
+            ]
+        }
+    # C++
+        cpp = {
+            assembly_function: [
+                "storage.type.asm",
+                "punctuation.section.parens.begin.bracket.round.assembly",
+                "punctuation.section.parens.end.bracket.round.assembly",
+            ],
+            assembly_punctuation: [
+                "meta.asm meta.encoding",
+                "punctuation.definition.string.begin.assembly",
+                "punctuation.definition.string.end.assembly",
+            ]
+        }
+    # shell
+        shell = {
+            seperator: [
+                "source.shell punctuation.separator.statement",
+                "source.shell keyword.operator.pipe",
+            ]
+        }
+    # powershell
+        powershell = {
+            variables: [
+                "source.powershell variable.other.readwrite",
+                "source.powershell punctuation.definition.variable",
+            ]
+        }
+    # regex
+        regex = {
+            group: [
+                "punctuation.definition.group"
+            ]
+        }
+    # css
+        css_properties = [
+            "source.css support.type.property-name",
+            "source.sass support.type.property-name",
+            "source.scss support.type.property-name",
+            "source.less support.type.property-name",
+            "source.stylus support.type.property-name",
+            "source.postcss support.type.property-name",
         ]
-    }
-# C++
-    cpp = {
-        assembly_function: [
-            "storage.type.asm",
-            "punctuation.section.parens.begin.bracket.round.assembly",
-            "punctuation.section.parens.end.bracket.round.assembly",
-        ],
-        assembly_punctuation: [
-            "meta.asm meta.encoding",
-            "punctuation.definition.string.begin.assembly",
-            "punctuation.definition.string.end.assembly",
+        css_property_value = [
+            "support.constant.property-value.css",
         ]
-    }
-# shell
-    shell = {
-        seperator: [
-            "source.shell punctuation.separator.statement",
-            "source.shell keyword.operator.pipe",
+        css_classes_group = [
+            "entity.other.attribute-name.class",
         ]
-    }
-# powershell
-    powershell = {
-        variables: [
-            "source.powershell variable.other.readwrite",
-            "source.powershell punctuation.definition.variable",
+        css_ids_group = [
+            "source.sass keyword.control",
         ]
-    }
-# regex
-    regex = {
-        group: [
-            "punctuation.definition.group"
+        url_group = [
+            "*url*",
+            "*link*",
+            "*uri*",
         ]
-    }
-# css
-    css_properties = [
-        "source.css support.type.property-name",
-        "source.sass support.type.property-name",
-        "source.scss support.type.property-name",
-        "source.less support.type.property-name",
-        "source.stylus support.type.property-name",
-        "source.postcss support.type.property-name",
-    ]
-    css_property_value = [
-        "support.constant.property-value.css",
-    ]
-    css_classes_group = [
-        "entity.other.attribute-name.class",
-    ]
-    css_ids_group = [
-        "source.sass keyword.control",
-    ]
-    url_group = [
-        "*url*",
-        "*link*",
-        "*uri*",
-    ]
-# Json keys
-    def json_depth(amount)
-        return "source.json" + " meta.structure.dictionary.json"*amount
-    end
-    json = {
-        punctuation: [
-            "source.json punctuation.separator",
-            "source.json punctuation.definition.dictionary"
-        ],
-        keys: [
-            [ "#{json_depth(1)} support.type.property-name", "#{json_depth(1)} punctuation.support.type.property-name", "#{json_depth(1)} punctuation.separator.dictionary.key-value" ],
-            [ "#{json_depth(2)} support.type.property-name", "#{json_depth(2)} punctuation.support.type.property-name", "#{json_depth(2)} punctuation.separator.dictionary.key-value" ],
-            [ "#{json_depth(3)} support.type.property-name", "#{json_depth(3)} punctuation.support.type.property-name", "#{json_depth(3)} punctuation.separator.dictionary.key-value" ],
-            [ "#{json_depth(4)} support.type.property-name", "#{json_depth(4)} punctuation.support.type.property-name", "#{json_depth(4)} punctuation.separator.dictionary.key-value" ],
-            [ "#{json_depth(5)} support.type.property-name", "#{json_depth(5)} punctuation.support.type.property-name", "#{json_depth(5)} punctuation.separator.dictionary.key-value" ],
-            [ "#{json_depth(6)} support.type.property-name", "#{json_depth(6)} punctuation.support.type.property-name", "#{json_depth(6)} punctuation.separator.dictionary.key-value" ],
-            [ "#{json_depth(7)} support.type.property-name", "#{json_depth(7)} punctuation.support.type.property-name", "#{json_depth(7)} punctuation.separator.dictionary.key-value" ],
-            [ "#{json_depth(8)} support.type.property-name", "#{json_depth(8)} punctuation.support.type.property-name", "#{json_depth(8)} punctuation.separator.dictionary.key-value" ],
-            [ "#{json_depth(9)} support.type.property-name", "#{json_depth(9)} punctuation.support.type.property-name", "#{json_depth(9)} punctuation.separator.dictionary.key-value" ],
+    # json
+        def json_depth(amount)
+            return "source.json" + " meta.structure.dictionary.json"*amount
+        end
+        json = {
+            punctuation: [
+                "source.json punctuation.separator",
+                "source.json punctuation.definition.dictionary"
+            ],
+            keys: [
+                [ "#{json_depth(1)} support.type.property-name", "#{json_depth(1)} punctuation.support.type.property-name", "#{json_depth(1)} punctuation.separator.dictionary.key-value" ],
+                [ "#{json_depth(2)} support.type.property-name", "#{json_depth(2)} punctuation.support.type.property-name", "#{json_depth(2)} punctuation.separator.dictionary.key-value" ],
+                [ "#{json_depth(3)} support.type.property-name", "#{json_depth(3)} punctuation.support.type.property-name", "#{json_depth(3)} punctuation.separator.dictionary.key-value" ],
+                [ "#{json_depth(4)} support.type.property-name", "#{json_depth(4)} punctuation.support.type.property-name", "#{json_depth(4)} punctuation.separator.dictionary.key-value" ],
+                [ "#{json_depth(5)} support.type.property-name", "#{json_depth(5)} punctuation.support.type.property-name", "#{json_depth(5)} punctuation.separator.dictionary.key-value" ],
+                [ "#{json_depth(6)} support.type.property-name", "#{json_depth(6)} punctuation.support.type.property-name", "#{json_depth(6)} punctuation.separator.dictionary.key-value" ],
+                [ "#{json_depth(7)} support.type.property-name", "#{json_depth(7)} punctuation.support.type.property-name", "#{json_depth(7)} punctuation.separator.dictionary.key-value" ],
+                [ "#{json_depth(8)} support.type.property-name", "#{json_depth(8)} punctuation.support.type.property-name", "#{json_depth(8)} punctuation.separator.dictionary.key-value" ],
+                [ "#{json_depth(9)} support.type.property-name", "#{json_depth(9)} punctuation.support.type.property-name", "#{json_depth(9)} punctuation.separator.dictionary.key-value" ],
+            ]
+        }
+    # markdown
+        markdown = {
+            paragraph: "meta.paragraph.markdown",
+        }
+        inserted_group = [
+            "markup.inserted",
         ]
-    }
-# markdown
-    markdown = {
-        paragraph: "meta.paragraph.markdown",
-    }
-    inserted_group = [
-        "markup.inserted",
-    ]
-    deleted_group = [
-        "markup.deleted",
-    ]
-    changed_group = [
-        "markup.changed",
-    ]
-    markdown___link = [
-        "string.other.link",
-    ]
-    markdown___plain_group = [
-        "text.html.markdown",
-        "punctuation.definition.list_item.markdown",
-    ]
-    markdown___markup_raw_inline_group = [
-        "text.html.markdown markup.inline.raw.markdown",
-    ]
-    markdown___markup_raw_inline_punctuation_group = [
-        "text.html.markdown markup.inline.raw.markdown punctuation.definition.raw.markdown",
-    ]
-    markdown___line_break_group = [
-        "text.html.markdown meta.dummy.line-break",
-    ]
-    markdown___heading_group = [
-        "markdown.heading",
-        "markup.heading",
-        "markup.heading | markup.heading entity.name",
-        "markup.heading.markdown punctuation.definition.heading.markdown",
-    ]
-    markup___italic_group = [
-        "markup.italic",
-    ]
-    markup___bold_group = [
-        "markup.bold",
-        "markup.bold string",
-    ]
-    markup___bold_italic_group = [
-        "markup.bold markup.italic",
-        "markup.italic markup.bold",
-        "markup.quote markup.bold",
-        "markup.bold markup.italic string",
-        "markup.italic markup.bold string",
-        "markup.quote markup.bold string",
-    ]
-    markup___underline_group = [
-        "markup.underline",
-    ]
-    markup___strike_group = [
-        "markup.strike",
-    ]
-    markdown___blockquote_group = [
-        "markup.quote punctuation.definition.blockquote.markdown",
-    ]
-    markup___quote_group = [
-        "markup.quote",
-    ]
-    markdown___link_group = [
-        "string.other.link.title.markdown",
-    ]
-    markdown___link_description_group = [
-        "string.other.link.description.title.markdown",
-    ]
-    markdown___link_anchor_group = [
-        "constant.other.reference.link.markdown",
-    ]
-    markup___raw_block_group = [
-        "markup.raw.block",
-    ]
-    markdown___fenced_bode_block_variable_group = [
-        "markup.fenced_code.block.markdown",
-        "markup.inline.raw.string.markdown",
-    ]
-    markdown___fenced_language_group = [
-        "variable.language.fenced.markdown",
-    ]
-    markdown___separator_group = [
-        "meta.separator",
-    ]
-    markup___table_group = [
-        "markup.table",
-    ]
+        deleted_group = [
+            "markup.deleted",
+        ]
+        changed_group = [
+            "markup.changed",
+        ]
+        markdown___link = [
+            "string.other.link",
+        ]
+        markdown___plain_group = [
+            "text.html.markdown",
+            "punctuation.definition.list_item.markdown",
+        ]
+        markdown___markup_raw_inline_group = [
+            "text.html.markdown markup.inline.raw.markdown",
+        ]
+        markdown___markup_raw_inline_punctuation_group = [
+            "text.html.markdown markup.inline.raw.markdown punctuation.definition.raw.markdown",
+        ]
+        markdown___line_break_group = [
+            "text.html.markdown meta.dummy.line-break",
+        ]
+        markdown___heading_group = [
+            "markdown.heading",
+            "markup.heading",
+            "markup.heading | markup.heading entity.name",
+            "markup.heading.markdown punctuation.definition.heading.markdown",
+        ]
+        markup___italic_group = [
+            "markup.italic",
+        ]
+        markup___bold_group = [
+            "markup.bold",
+            "markup.bold string",
+        ]
+        markup___bold_italic_group = [
+            "markup.bold markup.italic",
+            "markup.italic markup.bold",
+            "markup.quote markup.bold",
+            "markup.bold markup.italic string",
+            "markup.italic markup.bold string",
+            "markup.quote markup.bold string",
+        ]
+        markup___underline_group = [
+            "markup.underline",
+        ]
+        markup___strike_group = [
+            "markup.strike",
+        ]
+        markdown___blockquote_group = [
+            "markup.quote punctuation.definition.blockquote.markdown",
+        ]
+        markup___quote_group = [
+            "markup.quote",
+        ]
+        markdown___link_group = [
+            "string.other.link.title.markdown",
+        ]
+        markdown___link_description_group = [
+            "string.other.link.description.title.markdown",
+        ]
+        markdown___link_anchor_group = [
+            "constant.other.reference.link.markdown",
+        ]
+        markup___raw_block_group = [
+            "markup.raw.block",
+        ]
+        markdown___fenced_bode_block_variable_group = [
+            "markup.fenced_code.block.markdown",
+            "markup.inline.raw.string.markdown",
+        ]
+        markdown___fenced_language_group = [
+            "variable.language.fenced.markdown",
+        ]
+        markdown___separator_group = [
+            "meta.separator",
+        ]
+        markup___table_group = [
+            "markup.table",
+        ]
 
 
 
 #
-# need to fix
+# need to fix (unsorted code)
 #
 blue_group = [
     "source.python meta.function-call.generic.python",
