@@ -21,8 +21,6 @@
         "meta.paragraph.markdown",
         "punctuation.terminator",
         "constant.character.escape.line-continuation",
-        "source.json punctuation.support.type.property-name.begin",
-        "source.json punctuation.support.type.property-name.end",
         "punctuation.definition.lambda.return-type",
         "punctuation.separator.scope-resolution",
         "punctuation.definition.capture",
@@ -766,7 +764,11 @@
         "support.variable.property",
         "variable.other.object.property",
         "variable.other.scalar",
-        "punctuation.definition.variable.scalar"
+        "punctuation.definition.variable.scalar",
+        "source.perl variable.other.readwrite.global",
+        "source.perl punctuation.definition.variable",
+        "source.powershell variable.other.readwrite",
+        "source.powershell punctuation.definition.variable"
       ],
       "settings": {
         "fontStyle": "underline",
@@ -942,6 +944,16 @@
       ],
       "settings": {
         "fontStyle": "normal",
+        "foreground": "#f07178"
+      }
+    },
+    {
+      "name": "#f07178 underline",
+      "scope": [
+        "variable.other.subpattern"
+      ],
+      "settings": {
+        "fontStyle": "underline",
         "foreground": "#f07178"
       }
     },

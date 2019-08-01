@@ -691,9 +691,6 @@ ui = {
         "punctuation.terminator",
         # the line-continuation
         "constant.character.escape.line-continuation",
-        # the ""'s in json
-        "source.json punctuation.support.type.property-name.begin",
-        "source.json punctuation.support.type.property-name.end",
         # the -> in the lambda return type
         "punctuation.definition.lambda.return-type",
         # the ::'s
@@ -732,6 +729,9 @@ ui = {
             "variable.other.hash",
             "punctuation.definition.variable.hash",
         ],
+        subpattern: [
+            "variable.other.subpattern"
+        ],
         reference: [
             "variable.other.scalar.reference",
             "punctuation.definition.variable.scalar.reference",
@@ -767,6 +767,13 @@ ui = {
         seperator: [
             "source.shell punctuation.separator.statement",
             "source.shell keyword.operator.pipe",
+        ]
+    }
+# powershell
+    powershell = {
+        variables: [
+            "source.powershell variable.other.readwrite",
+            "source.powershell punctuation.definition.variable",
         ]
     }
 # regex
@@ -1357,6 +1364,8 @@ mapping = {
             dictionary_keys,
             middle_property,
             perl[:scalar],
+            perl[:vars],
+            powershell[:variables],
         ],
         italic: [
             dim_green_with_italics_group,
@@ -1389,37 +1398,40 @@ mapping = {
     },
     red => {
         normal: [
-            *invalid_things,
-            *deleted_group,
-            *json_key_level_3_group,
-            *red_group,
-            *assignment_operators,
+            invalid_things,
+            deleted_group,
+            json_key_level_3_group,
+            red_group,
+            assignment_operators,
         ],
         italic: [
-            *special_variables,
+            special_variables,
         ],
         underline: [
-            *red_underline_group,
+            red_underline_group,
         ],
     },
     soft_red => {
         normal: [
-            *tags,
-            *constants,
-            *markdown___link,
-            *json_key_level_6_group,
-            *soft_red_group,
-            *number_literals,
-            *instance_variables,
-            *class_variables,
+            tags,
+            constants,
+            markdown___link,
+            json_key_level_6_group,
+            soft_red_group,
+            number_literals,
+            instance_variables,
+            class_variables,
+        ],
+        underline: [
+            perl[:subpattern],
         ],
         italic: [
-            *markup___italic_group,
+            markup___italic_group,
         ],
         bold: [
-            *markup___bold_group,
-            *markup___bold_italic_group,
-            *soft_red_group,
+            markup___bold_group,
+            markup___bold_italic_group,
+            soft_red_group,
         ],
     },
 }
