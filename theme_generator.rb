@@ -474,8 +474,6 @@ ui = {
         # the "misc" variables that are colored different than the special variables
         unusual_variables = [
             # yaml aliases
-            "source.yaml punctuation.definition.alias",
-            "source.yaml variable.other.alias",
             "source.dockerfile variable.other",
             "variable.other.predefined",
             "source.perl variable.other.predefined punctuation.definition.variable",
@@ -729,6 +727,9 @@ ui = {
             alias: [
                 "source.yaml punctuation.definition.alias",
                 "source.yaml variable.other.alias",
+            ],
+            punctuation: [
+                "constant.language.merge"
             ]
         }
     # Perl
@@ -1210,15 +1211,15 @@ mapping = {
     },
     light_gray => {
         normal: [
-            *markdown___plain_group,
-            *markup___table_group,
-            *markdown___fenced_bode_block_variable_group,
-            *normal_variables,
-            *css_properties,
-            *default_text_color,
+            markdown___plain_group,
+            markup___table_group,
+            markdown___fenced_bode_block_variable_group,
+            normal_variables,
+            css_properties,
+            default_text_color,
         ],
         underline: [
-            *first_property
+            first_property
         ],
     },
     yellow => {
@@ -1229,14 +1230,17 @@ mapping = {
             markdown___link_anchor_group,
             yellow_not_cursive_group,
             package_names,
+            yaml[:anchors],
         ],
         italic: [
             yellow_cursive_group,
+            yaml[:alias],
         ],
         underline: [
             yellow_underline_group,
             unusual_variables,
             perl[:globals],
+            
         ],
     },
     violet => {
@@ -1364,19 +1368,20 @@ mapping = {
     },
     light_purple => {
         normal: [
-            *namespace,
-            *attributes,
-            *operators,
-            *secondary_punctuation,
+            namespace,
+            attributes,
+            operators,
+            secondary_punctuation,
+            yaml[:punctuation],
         ],
         italic: [
-            *tag_attributes,
+            tag_attributes,
         ],
         underline: [
         ],
         bold: [
-            *special_punctuation,
-            *shell[:seperator],
+            special_punctuation,
+            shell[:seperator],
         ],
     },
     dim_green => {

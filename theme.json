@@ -158,7 +158,9 @@
         "entity",
         "entity.other.attribute-name.id.pug",
         "variable.other.constant",
-        "entity.name.package"
+        "entity.name.package",
+        "source.yaml punctuation.definition.anchor",
+        "source.yaml entity.name.type.anchor"
       ],
       "settings": {
         "fontStyle": "normal",
@@ -176,7 +178,9 @@
         "support.class.builtin.js",
         "entity.other.attribute-name.html",
         "support.constant.math",
-        "storage.modifier.glsl"
+        "storage.modifier.glsl",
+        "source.yaml punctuation.definition.alias",
+        "source.yaml variable.other.alias"
       ],
       "settings": {
         "fontStyle": "italic",
@@ -193,8 +197,6 @@
         "variable.other.positional.shell punctuation.definition.variable.shell",
         "variable.other.special.shell punctuation.definition.variable.shell",
         "variable.other.special.shell",
-        "source.yaml punctuation.definition.alias",
-        "source.yaml variable.other.alias",
         "source.dockerfile variable.other",
         "variable.other.predefined",
         "source.perl variable.other.predefined punctuation.definition.variable",
@@ -672,7 +674,8 @@
         "punctuation.section.embedded.begin.js",
         "punctuation.section.embedded.end.js",
         "punctuation.accessor.attribute",
-        "punctuation.section.attribute"
+        "punctuation.section.attribute",
+        "constant.language.merge"
       ],
       "settings": {
         "fontStyle": "normal",
