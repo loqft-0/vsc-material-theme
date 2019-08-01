@@ -2,7 +2,7 @@
   "name": "xd-theme",
   "displayName": "XD Theme",
   "description": "A theme because my settings file was too large",
-  "version": "0.0.60",
+  "version": "0.0.61",
   "publisher": "jeff-hykin",
   "license": "MIT",
   "author": "Jeff Hykin",
@@ -11,17 +11,15 @@
     "color": "#11131C",
     "theme": "dark",
     "a": {
+      "a": {
         "a": {
+          "a": {
             "a": {
-                "a": {
-                    "a": {
-                        "a": {
-                
-                        }
-                    }
-                }
+              "a": {}
             }
+          }
         }
+      }
     }
   },
   "engines": {
