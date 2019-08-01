@@ -675,7 +675,7 @@
         "punctuation.section.embedded.end.js",
         "punctuation.accessor.attribute",
         "punctuation.section.attribute",
-        "constant.language.merge"
+        "source.yaml constant.language.merge"
       ],
       "settings": {
         "fontStyle": "normal",
@@ -907,7 +907,6 @@
         "variable.language.self",
         "variable.language.special.self.python",
         "variable.parameter.function.language.special.self.python",
-        "variable.other.alias.yaml",
         "keyword.operator.assignment",
         "meta.embedded.expression keyword.operator.assignment",
         "meta.tag.attributes meta.embedded.expression keyword.operator.assignment"
