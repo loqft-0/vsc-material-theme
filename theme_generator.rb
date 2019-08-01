@@ -1232,7 +1232,6 @@ mapping = {
         ],
         italic: [
             yellow_cursive_group,
-            yaml[:alias],
         ],
         underline: [
             yellow_underline_group,
@@ -1418,6 +1417,7 @@ mapping = {
         normal: [
             bananna_yellow_group,
             json[:keys][7],
+            yaml[:alias],
         ],
         underline: [
             globals,

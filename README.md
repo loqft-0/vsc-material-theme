@@ -1,6 +1,9 @@
 # XD Theme
 
-Use it if you want `¯\_(ツ)_/¯`
+Use it if you want `¯\_(ツ)_/¯` 
+
+#### Display
+It is optimized for a Macbook Pro display.
 
 #### Font
 I use `Input Mono` (free)
@@ -12,6 +15,9 @@ I use all of the `Better Syntax` extensions, and the Theme is optimized for them
 - [Better Dockerfile Syntax](https://marketplace.visualstudio.com/items?itemName=jeff-hykin.better-dockerfile-syntax)
 - [Better Shell Syntax](https://marketplace.visualstudio.com/items?itemName=jeff-hykin.better-shellscript-syntax)
 - [Better Perl Syntax](https://marketplace.visualstudio.com/items?itemName=jeff-hykin.better-perl-syntax)
+
+#### CSS
+I also use custom CSS, which is applied manually. If you want the same CSS, its stored in the `styles.css` file
 
 <img width="1029" alt="Screen Shot 2019-03-16 at 7 04 13https://marketplace.visualstudio.com/items?itemName=jeff-hykin.better-perl-syntax PM" src="https://user-images.githubusercontent.com/17692058/54483273-83dc9180-481e-11e9-99e5-9c8a81a724d3.png">
 
