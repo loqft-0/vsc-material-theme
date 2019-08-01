@@ -1011,8 +1011,6 @@ green_group = [
     "punctuation.definition.string.end",
     "punctuation.definition.string.template.begin",
     "punctuation.definition.string.template.end",
-    "punctuation.support.type.property-name.begin",
-    "punctuation.support.type.property-name.end",
     "variable.parameter.registers",
 ]
 green_bold_group = [
