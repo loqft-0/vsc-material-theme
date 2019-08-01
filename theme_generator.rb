@@ -729,7 +729,7 @@ ui = {
                 "source.yaml variable.other.alias",
             ],
             punctuation: [
-                "constant.language.merge"
+                "source.yaml constant.language.merge"
             ]
         }
     # Perl
@@ -1169,7 +1169,6 @@ red_group = [
     "variable.language.self",
     "variable.language.special.self.python",
     "variable.parameter.function.language.special.self.python",
-    "variable.other.alias.yaml",
 ]
 red_underline_group = [
     "source.shell punctuation.definition.variable",
