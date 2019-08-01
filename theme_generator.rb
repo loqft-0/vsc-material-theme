@@ -691,6 +691,7 @@ ui = {
         "punctuation.terminator",
         # the line-continuation
         "constant.character.escape.line-continuation",
+        "punctuation.separator.continuation.line",
         # the -> in the lambda return type
         "punctuation.definition.lambda.return-type",
         # the ::'s
@@ -807,15 +808,20 @@ ui = {
         "*uri*",
     ]
 # Json keys
-    json_key_level_0_group = [ "source.json meta.structure.dictionary.json support.type.property-name.json", ]
-    json_key_level_1_group = [ "source.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json support.type.property-name.json", ]
-    json_key_level_2_group = [ "source.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json support.type.property-name.json",]
-    json_key_level_3_group = [ "source.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json support.type.property-name.json",]
-    json_key_level_4_group = [ "source.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json support.type.property-name.json",]
-    json_key_level_5_group = [ "source.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json support.type.property-name.json",]
-    json_key_level_6_group = [ "source.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json support.type.property-name.json",]
-    json_key_level_7_group = [ "source.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json support.type.property-name.json",]
-    json_key_level_8_group = [ "source.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json support.type.property-name.json",]
+    def json_depth(amount)
+        return "source.json" + " meta.structure.dictionary.json"*amount
+    end
+    json_keys = [
+        [ "#{json_depth(1)} support.type.property-name", "#{json_depth(1)} punctuation.support.type.property-name" ],
+        [ "#{json_depth(2)} support.type.property-name", "#{json_depth(2)} punctuation.support.type.property-name" ],
+        [ "#{json_depth(3)} support.type.property-name", "#{json_depth(3)} punctuation.support.type.property-name" ],
+        [ "#{json_depth(4)} support.type.property-name", "#{json_depth(4)} punctuation.support.type.property-name" ],
+        [ "#{json_depth(5)} support.type.property-name", "#{json_depth(5)} punctuation.support.type.property-name" ],
+        [ "#{json_depth(6)} support.type.property-name", "#{json_depth(6)} punctuation.support.type.property-name" ],
+        [ "#{json_depth(7)} support.type.property-name", "#{json_depth(7)} punctuation.support.type.property-name" ],
+        [ "#{json_depth(8)} support.type.property-name", "#{json_depth(8)} punctuation.support.type.property-name" ],
+        [ "#{json_depth(9)} support.type.property-name", "#{json_depth(9)} punctuation.support.type.property-name" ],
+    ]
 # markdown
     markdown = {
         paragraph: "meta.paragraph.markdown",
@@ -1199,7 +1205,7 @@ mapping = {
         normal: [
             types,
             css_classes_group,
-            json_key_level_1_group,
+            json_keys[1],
             markdown___link_anchor_group,
             yellow_not_cursive_group,
             package_names,
@@ -1215,15 +1221,15 @@ mapping = {
     },
     violet => {
         normal: [
-            *changed_group,
-            *json_key_level_0_group,
-            *json_key_level_7_group,
-            *markdown___markup_raw_inline_group,
-            *markdown___link_description_group,
-            *markup___raw_block_group,
+            changed_group,
+            json_keys[0],
+            json_keys[7],
+            markdown___markup_raw_inline_group,
+            markdown___link_description_group,
+            markup___raw_block_group,
         ],
         italic: [
-            *attributes,
+            attributes,
         ],
     },
     no_color => {
@@ -1258,20 +1264,20 @@ mapping = {
     },
     blue => {
         normal: [
-            *functions,
-            *function_punctuation,
-            *css_ids_group,
-            *json_key_level_5_group,
-            *markdown___link_group,
-            *blue_group,
-            *regex[:group],
-            *cpp[:assembly_punctuation],
+            functions,
+            function_punctuation,
+            css_ids_group,
+            json_keys[5],
+            markdown___link_group,
+            blue_group,
+            regex[:group],
+            cpp[:assembly_punctuation],
         ],
         italic: [
         ],
         underline: [
-            *blue_underline_group,
-            *last_property,
+            blue_underline_group,
+            last_property,
         ],
         bold: [
             *blue_bold_group,
@@ -1279,28 +1285,28 @@ mapping = {
     },
     orange   => {
         normal: [
-            *json_key_level_2_group,
-            *orange_group,
-            *language_literals,
-            *parameter_variables,
+            json_keys[2],
+            orange_group,
+            language_literals,
+            parameter_variables,
         ],
         italic: [
-            *value_literals,
+            value_literals,
         ],
         underline: [
-            *markup___underline_group,
-            *orange_underline_group,
-            *escape_characters_group,
+            markup___underline_group,
+            orange_underline_group,
+            escape_characters_group,
         ],
         bold: [
-            *orange_bold_group,
+            orange_bold_group,
         ],
     },
     lime => {
         normal: [
             inserted_group,
             strings,
-            json_key_level_8_group,
+            json_keys[8],
             markdown___heading_group,
             lime_green_group,
         ],
@@ -1310,7 +1316,7 @@ mapping = {
     },
     rust => {
         normal: [
-            json_key_level_4_group,
+            json_keys[4],
         ],
     },
     dark_slate => {
@@ -1398,7 +1404,7 @@ mapping = {
         normal: [
             invalid_things,
             deleted_group,
-            json_key_level_3_group,
+            json_keys[3],
             red_group,
             assignment_operators,
         ],
@@ -1414,7 +1420,7 @@ mapping = {
             tags,
             constants,
             markdown___link,
-            json_key_level_6_group,
+            json_keys[6],
             soft_red_group,
             number_literals,
             instance_variables,
