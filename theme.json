@@ -176,9 +176,7 @@
         "support.class.builtin.js",
         "entity.other.attribute-name.html",
         "support.constant.math",
-        "storage.modifier.glsl",
-        "source.yaml punctuation.definition.alias",
-        "source.yaml variable.other.alias"
+        "storage.modifier.glsl"
       ],
       "settings": {
         "fontStyle": "italic",
@@ -869,7 +867,9 @@
         "punctuation.separator.constant.numeric",
         "source.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json support.type.property-name",
         "source.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json punctuation.support.type.property-name",
-        "source.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json punctuation.separator.dictionary.key-value"
+        "source.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json punctuation.separator.dictionary.key-value",
+        "source.yaml punctuation.definition.alias",
+        "source.yaml variable.other.alias"
       ],
       "settings": {
         "fontStyle": "normal",
