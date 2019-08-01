@@ -301,6 +301,7 @@
         "keyword.other",
         "source.dockerfile keyword.other.special-method",
         "source.json punctuation.separator",
+        "source.json punctuation.definition.dictionary",
         "support.type.object.module",
         "punctuation",
         "punctuation.section.embedded",
@@ -371,9 +372,9 @@
         "punctuation.section.arguments",
         "meta.parameter punctuation.separator.delimiter.comma",
         "source.sass keyword.control",
-        "source.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json support.type.property-name",
-        "source.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json punctuation.support.type.property-name",
-        "source.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json punctuation.separator.dictionary.key-value",
+        "source.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json support.type.property-name",
+        "source.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json punctuation.support.type.property-name",
+        "source.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json punctuation.separator.dictionary.key-value",
         "string.other.link.title.markdown",
         "source.python meta.function-call.generic.python",
         "support.function",
@@ -554,9 +555,9 @@
     {
       "name": "#C17E70 normal",
       "scope": [
-        "source.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json support.type.property-name",
-        "source.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json punctuation.support.type.property-name",
-        "source.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json punctuation.separator.dictionary.key-value"
+        "source.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json support.type.property-name",
+        "source.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json punctuation.support.type.property-name",
+        "source.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json punctuation.separator.dictionary.key-value"
       ],
       "settings": {
         "fontStyle": "normal",
@@ -894,9 +895,9 @@
         "invalid.illegal",
         "invalid.deprecated",
         "markup.deleted",
-        "source.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json support.type.property-name",
-        "source.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json punctuation.support.type.property-name",
-        "source.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json punctuation.separator.dictionary.key-value",
+        "source.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json support.type.property-name",
+        "source.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json punctuation.support.type.property-name",
+        "source.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json punctuation.separator.dictionary.key-value",
         "source.ruby meta.function.method.with-arguments punctuation.definition.constant.hashkey",
         "keyword.operator.assignment",
         "variable.language.this",

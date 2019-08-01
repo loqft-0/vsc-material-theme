@@ -812,8 +812,9 @@ ui = {
         return "source.json" + " meta.structure.dictionary.json"*amount
     end
     json = {
-        commas: [
-            "source.json punctuation.separator"
+        punctuation: [
+            "source.json punctuation.separator",
+            "source.json punctuation.definition.dictionary"
         ],
         keys: [
             [ "#{json_depth(1)} support.type.property-name", "#{json_depth(1)} punctuation.support.type.property-name", "#{json_depth(1)} punctuation.separator.dictionary.key-value" ],
@@ -1256,7 +1257,7 @@ mapping = {
     light_blue => {
         normal: [
             keywords,
-            json[:commas],
+            json[:punctuation],
             import_export_keywords,
             normal_punctuation,
             regular_expressions_group,
@@ -1271,7 +1272,7 @@ mapping = {
             functions,
             function_punctuation,
             css_ids_group,
-            json[:keys][2],
+            json[:keys][4],
             markdown___link_group,
             blue_group,
             regex[:group],
@@ -1319,7 +1320,7 @@ mapping = {
     },
     rust => {
         normal: [
-            json[:keys][4],
+            json[:keys][3],
         ],
     },
     dark_slate => {
@@ -1409,7 +1410,7 @@ mapping = {
         normal: [
             invalid_things,
             deleted_group,
-            json[:keys][3],
+            json[:keys][2],
             red_group,
             assignment_operators,
         ],
