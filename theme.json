@@ -236,12 +236,12 @@
         "keyword.other",
         "source.dockerfile keyword.other.special-method",
         "markup.quote",
-        "variable.other.scalar.reference",
-        "punctuation.definition.variable.scalar.reference",
-        "variable.other.array.reference",
-        "punctuation.definition.variable.array.reference",
-        "variable.other.hash.reference",
-        "punctuation.definition.variable.hash.reference"
+        "source.perl variable.other.scalar.reference",
+        "source.perl punctuation.definition.variable.scalar.reference",
+        "source.perl variable.other.array.reference",
+        "source.perl punctuation.definition.variable.array.reference",
+        "source.perl variable.other.hash.reference",
+        "source.perl punctuation.definition.variable.hash.reference"
       ],
       "settings": {
         "fontStyle": "italic",
@@ -576,8 +576,8 @@
     {
       "name": "#64bac5 underline",
       "scope": [
-        "variable.other.array",
-        "punctuation.definition.variable.array"
+        "source.perl variable.other.array",
+        "source.perl punctuation.definition.variable.array"
       ],
       "settings": {
         "fontStyle": "underline",
@@ -763,8 +763,8 @@
         "punctuation.definition.constant.hashkey",
         "support.variable.property",
         "variable.other.object.property",
-        "variable.other.scalar",
-        "punctuation.definition.variable.scalar",
+        "source.perl variable.other.scalar",
+        "source.perl punctuation.definition.variable.scalar",
         "source.perl variable.other.readwrite.global",
         "source.perl punctuation.definition.variable",
         "source.powershell variable.other.readwrite",
@@ -827,10 +827,8 @@
     {
       "name": "#4EC9B0 underline",
       "scope": [
-        "source.perl variable.other.readwrite.global",
-        "source.perl punctuation.definition.variable",
-        "variable.other.hash",
-        "punctuation.definition.variable.hash"
+        "source.perl variable.other.hash",
+        "source.perl punctuation.definition.variable.hash"
       ],
       "settings": {
         "fontStyle": "underline",
@@ -950,7 +948,8 @@
     {
       "name": "#f07178 underline",
       "scope": [
-        "variable.other.subpattern"
+        "source.perl variable.other.subpattern",
+        "source.perl variable.other.subpattern punctuation.definition.variable"
       ],
       "settings": {
         "fontStyle": "underline",

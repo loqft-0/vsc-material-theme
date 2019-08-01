@@ -718,27 +718,28 @@ ui = {
 # Perl
     perl = {
         scalar: [ 
-            "variable.other.scalar",
-            "punctuation.definition.variable.scalar",
+            "source.perl variable.other.scalar",
+            "source.perl punctuation.definition.variable.scalar",
         ],
         array: [ 
-            "variable.other.array",
-            "punctuation.definition.variable.array",
+            "source.perl variable.other.array",
+            "source.perl punctuation.definition.variable.array",
         ],
         hash: [ 
-            "variable.other.hash",
-            "punctuation.definition.variable.hash",
+            "source.perl variable.other.hash",
+            "source.perl punctuation.definition.variable.hash",
         ],
         subpattern: [
-            "variable.other.subpattern"
+            "source.perl variable.other.subpattern",
+            "source.perl variable.other.subpattern punctuation.definition.variable",
         ],
         reference: [
-            "variable.other.scalar.reference",
-            "punctuation.definition.variable.scalar.reference",
-            "variable.other.array.reference",
-            "punctuation.definition.variable.array.reference",
-            "variable.other.hash.reference",
-            "punctuation.definition.variable.hash.reference",
+            "source.perl variable.other.scalar.reference",
+            "source.perl punctuation.definition.variable.scalar.reference",
+            "source.perl variable.other.array.reference",
+            "source.perl punctuation.definition.variable.array.reference",
+            "source.perl variable.other.hash.reference",
+            "source.perl punctuation.definition.variable.hash.reference",
         ],
         vars: [
             "source.perl variable.other.readwrite.global",
@@ -1378,7 +1379,6 @@ mapping = {
             unknown_entites,
         ],
         underline: [
-            perl[:vars],
             perl[:hash],
         ]
     },
