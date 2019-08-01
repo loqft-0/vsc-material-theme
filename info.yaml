@@ -1,0 +1,34 @@
+(using_atk_version): 1.0
+(project):
+    name: XD Theme
+    description: my theme
+    
+    commands: &commands # if you dont know what the & means, see https://blog.daemonl.com/2016/02/yaml.html
+        run: ruby theme_generator.rb
+    
+    dependencies: &dependencies
+        atk: 0.0.1
+        ruby: 2.5.0
+        {gem: 2.7.3}:
+            colormath: 0.1.2
+    
+    (advanced_setup):
+        (put_new_dependencies_under): [ '(project)', 'basic_info', 'dependencies' ]
+        # caveats for a specific OS
+        when(--os is 'mac'):
+            (project_commands):
+                <<: *commands
+            (dependencies):
+                <<: *dependencies
+            
+        when(--os is 'windows'):
+            (project_commands):
+                <<: *commands
+            (dependencies):
+                <<: *dependencies
+                
+        when(--os is 'linux'):
+            (project_commands):
+                <<: *commands
+            (dependencies):
+                <<: *dependencies

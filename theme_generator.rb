@@ -16,8 +16,8 @@ orange          = '#F78C6C'
 yellow          = '#fec355'
 bananna_yellow  = '#ddd790'
 lime            = '#C3E88D'
-green            = '#4EC9B0'
-bold_green          = '#4ec9b0d0'
+green           = '#4EC9B0'
+bold_green      = '#4ec9b0d0'
 dim_green       = '#80CBC4'
 light_slate     = '#64bac5'
 dark_slate      = '#3f848d'
@@ -31,14 +31,16 @@ soft_red        = '#f07178'
 no_color        = ''
 
 
+
 #
 # UI Colors
 #
+background_color = '#242938'
 ui = {
     menu: {
         selectionBackground: '#00000050',
         selectionBorder: '#00000030',
-        background: '#242938',
+        background: background_color,
         selectionForeground: '#80CBC4',
         foreground: '#EEFFFF',
         separatorBackground: '#EEFFFF',
@@ -63,7 +65,7 @@ ui = {
     editor: {
         findMatchHighlightBorder: '#11729f',
         findMatchHighlightBackground: '#11729f',
-        background: '#242938',
+        background: background_color,
         rangeHighlightBackground: '#2670a15a',
         hoverHighlightBackground: '#2670a15a',
         inactiveSelectionBackground: '#2670a15a',
@@ -80,7 +82,7 @@ ui = {
         activeBackground: '#184967',
         border: '#184967',
         inactiveBackground: '#184967',
-        unfocusedActiveBorder: '#242938',
+        unfocusedActiveBorder: background_color,
         activeModifiedBorder: '#607a86',
         activeBorder: '#C8C8C8',
         unfocusedActiveForeground: '#EEFFFF',
@@ -89,8 +91,8 @@ ui = {
     },
     editorGroupHeader: {
         tabsBackground: '#184967',
-        tabsBorder: '#242938',
-        noTabsBackground: '#242938',
+        tabsBorder: background_color,
+        noTabsBackground: background_color,
     },
     titleBar: {
         activeBackground: '#184967',
@@ -110,47 +112,47 @@ ui = {
         shadow: '#232635',
     },
     statusBarItem: {
-        prominentHoverBackground: '#242938',
-        prominentBackground: '#242938',
-        activeBackground: '#242938',
-        hoverBackground: '#242938',
+        prominentHoverBackground: background_color,
+        prominentBackground: background_color,
+        activeBackground: background_color,
+        hoverBackground: background_color,
     },
     sideBar: {
-        border: '#242938',
-        background: '#242938',
+        border: background_color,
+        background: background_color,
         foreground: '#617396',
     },
     activityBar: {
-        border: '#242938',
-        background: '#242938',
+        border: background_color,
+        background: background_color,
         dropBackground: '#2670a1e3',
         foreground: '#eeffff',
     },
     statusBar: {
-        border: '#242938',
-        debuggingBorder: '#242938',
-        debuggingBackground: '#242938',
-        noFolderBackground: '#242938',
-        background: '#242938',
+        border: background_color,
+        debuggingBorder: background_color,
+        debuggingBackground: background_color,
+        noFolderBackground: background_color,
+        background: background_color,
         noFolderBorder: '#25293A',
         foreground: '#5e718a',
         debuggingForeground: '#FFFFFF',
     },
     scrollbar: {
-        shadow: '#242938',
+        shadow: background_color,
     },
     editorHoverWidget: {
-        background: '#242938',
+        background: background_color,
         border: '#2670a1',
     },
     peekViewTitle: {
-        background: '#242938',
+        background: background_color,
     },
     settings: {
-        checkboxBackground: '#242938',
-        textInputBackground: '#242938',
-        numberInputBackground: '#242938',
-        dropdownBackground: '#242938',
+        checkboxBackground: background_color,
+        textInputBackground: background_color,
+        numberInputBackground: background_color,
+        dropdownBackground: background_color,
         headerForeground: '#80CBC4',
         modifiedItemIndicator: '#80CBC4',
         checkboxForeground: '#EEFFFF',
@@ -159,37 +161,37 @@ ui = {
         dropdownForeground: '#EEFFFF',
     },
     breadcrumb: {
-        background: '#242938',
+        background: background_color,
         foreground: '#69809878',
         activeSelectionForeground: '#80CBC4',
         focusForeground: '#EEFFFF',
     },
     panel: {
-        border: '#242938',
-        background: '#242938',
+        border: background_color,
+        background: background_color,
         dropBackground: '#EEFFFF',
     },
     debugToolBar: {
-        background: '#242938',
+        background: background_color,
     },
     editorWidget: {
-        background: '#242938',
+        background: background_color,
         resizeBorder: '#80CBC4',
     },
     debugExceptionWidget: {
-        background: '#242938',
+        background: background_color,
         border: '#2670a1',
     },
     editorMarkerNavigation: {
-        background: '#242938',
+        background: background_color,
     },
     sideBarSectionHeader: {
-        background: '#242938',
+        background: background_color,
         border: '#26323860',
         foreground: '#eeffff',
     },
     dropdown: {
-        background: '#242938',
+        background: background_color,
         border: '#2670a1',
         foreground: '#eeffffcc',
     },
