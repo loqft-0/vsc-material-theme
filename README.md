@@ -6,24 +6,24 @@ Use it if you want `¯\_(ツ)_/¯`
 
 ![code](https://user-images.githubusercontent.com/17692058/59829511-3da63b00-9303-11e9-8cb5-f99c29abb81f.png)
 
-#### Font
+### Font
 I use `Input Mono` (free)
 https://input.fontbureau.com/download/
 
-#### Display
+### Display
 It is optimized for a Macbook Pro display.
 
-#### Syntax
+### Syntax
 I use all of the `Better Syntax` extensions, and the Theme is optimized for them
 - [Better C++ Syntax](https://marketplace.visualstudio.com/items?itemName=jeff-hykin.better-cpp-syntax)
 - [Better Dockerfile Syntax](https://marketplace.visualstudio.com/items?itemName=jeff-hykin.better-dockerfile-syntax)
 - [Better Shell Syntax](https://marketplace.visualstudio.com/items?itemName=jeff-hykin.better-shellscript-syntax)
 - [Better Perl Syntax](https://marketplace.visualstudio.com/items?itemName=jeff-hykin.better-perl-syntax)
 
-#### CSS
+### CSS
 I also use custom CSS, which is applied manually. If you want the same CSS, its stored in the `styles.css` file
 
-#### Languages
+### Languages
 The theme is taylored for
 - C++
 - Javascript + JSX
@@ -41,6 +41,6 @@ The theme is taylored for
 - WASM
 
 
-#### Caveats
+### Caveats
 The VS Code setting to "show whitespace" will mess up the underline in python strings
 
