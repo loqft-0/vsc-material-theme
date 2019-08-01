@@ -811,17 +811,22 @@ ui = {
     def json_depth(amount)
         return "source.json" + " meta.structure.dictionary.json"*amount
     end
-    json_keys = [
-        [ "#{json_depth(1)} support.type.property-name", "#{json_depth(1)} punctuation.support.type.property-name" ],
-        [ "#{json_depth(2)} support.type.property-name", "#{json_depth(2)} punctuation.support.type.property-name" ],
-        [ "#{json_depth(3)} support.type.property-name", "#{json_depth(3)} punctuation.support.type.property-name" ],
-        [ "#{json_depth(4)} support.type.property-name", "#{json_depth(4)} punctuation.support.type.property-name" ],
-        [ "#{json_depth(5)} support.type.property-name", "#{json_depth(5)} punctuation.support.type.property-name" ],
-        [ "#{json_depth(6)} support.type.property-name", "#{json_depth(6)} punctuation.support.type.property-name" ],
-        [ "#{json_depth(7)} support.type.property-name", "#{json_depth(7)} punctuation.support.type.property-name" ],
-        [ "#{json_depth(8)} support.type.property-name", "#{json_depth(8)} punctuation.support.type.property-name" ],
-        [ "#{json_depth(9)} support.type.property-name", "#{json_depth(9)} punctuation.support.type.property-name" ],
-    ]
+    json = {
+        commas: [
+            "source.json punctuation.separator"
+        ],
+        keys: [
+            [ "#{json_depth(1)} support.type.property-name", "#{json_depth(1)} punctuation.support.type.property-name", "#{json_depth(1)} punctuation.separator.dictionary.key-value" ],
+            [ "#{json_depth(2)} support.type.property-name", "#{json_depth(2)} punctuation.support.type.property-name", "#{json_depth(2)} punctuation.separator.dictionary.key-value" ],
+            [ "#{json_depth(3)} support.type.property-name", "#{json_depth(3)} punctuation.support.type.property-name", "#{json_depth(3)} punctuation.separator.dictionary.key-value" ],
+            [ "#{json_depth(4)} support.type.property-name", "#{json_depth(4)} punctuation.support.type.property-name", "#{json_depth(4)} punctuation.separator.dictionary.key-value" ],
+            [ "#{json_depth(5)} support.type.property-name", "#{json_depth(5)} punctuation.support.type.property-name", "#{json_depth(5)} punctuation.separator.dictionary.key-value" ],
+            [ "#{json_depth(6)} support.type.property-name", "#{json_depth(6)} punctuation.support.type.property-name", "#{json_depth(6)} punctuation.separator.dictionary.key-value" ],
+            [ "#{json_depth(7)} support.type.property-name", "#{json_depth(7)} punctuation.support.type.property-name", "#{json_depth(7)} punctuation.separator.dictionary.key-value" ],
+            [ "#{json_depth(8)} support.type.property-name", "#{json_depth(8)} punctuation.support.type.property-name", "#{json_depth(8)} punctuation.separator.dictionary.key-value" ],
+            [ "#{json_depth(9)} support.type.property-name", "#{json_depth(9)} punctuation.support.type.property-name", "#{json_depth(9)} punctuation.separator.dictionary.key-value" ],
+        ]
+    }
 # markdown
     markdown = {
         paragraph: "meta.paragraph.markdown",
@@ -1204,7 +1209,7 @@ mapping = {
         normal: [
             types,
             css_classes_group,
-            json_keys[1],
+            json[:keys][1],
             markdown___link_anchor_group,
             yellow_not_cursive_group,
             package_names,
@@ -1221,8 +1226,8 @@ mapping = {
     violet => {
         normal: [
             changed_group,
-            json_keys[0],
-            json_keys[7],
+            json[:keys][0],
+            json[:keys][7],
             markdown___markup_raw_inline_group,
             markdown___link_description_group,
             markup___raw_block_group,
@@ -1251,14 +1256,15 @@ mapping = {
     },
     light_blue => {
         normal: [
-            *keywords,
-            *import_export_keywords,
-            *normal_punctuation,
-            *regular_expressions_group,
-            *css_property_value,
+            keywords,
+            json[:commas],
+            import_export_keywords,
+            normal_punctuation,
+            regular_expressions_group,
+            css_property_value,
         ],
         italic: [
-            *control_flow,
+            control_flow,
         ],
     },
     blue => {
@@ -1266,7 +1272,7 @@ mapping = {
             functions,
             function_punctuation,
             css_ids_group,
-            json_keys[5],
+            json[:keys][5],
             markdown___link_group,
             blue_group,
             regex[:group],
@@ -1284,7 +1290,7 @@ mapping = {
     },
     orange   => {
         normal: [
-            json_keys[2],
+            json[:keys][2],
             orange_group,
             language_literals,
             parameter_variables,
@@ -1305,7 +1311,7 @@ mapping = {
         normal: [
             inserted_group,
             strings,
-            json_keys[8],
+            json[:keys][8],
             markdown___heading_group,
             lime_green_group,
         ],
@@ -1315,7 +1321,7 @@ mapping = {
     },
     rust => {
         normal: [
-            json_keys[4],
+            json[:keys][4],
         ],
     },
     dark_slate => {
@@ -1403,7 +1409,7 @@ mapping = {
         normal: [
             invalid_things,
             deleted_group,
-            json_keys[3],
+            json[:keys][3],
             red_group,
             assignment_operators,
         ],
@@ -1419,7 +1425,7 @@ mapping = {
             tags,
             constants,
             markdown___link,
-            json_keys[6],
+            json[:keys][6],
             soft_red_group,
             number_literals,
             instance_variables,
