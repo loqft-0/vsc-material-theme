@@ -1176,18 +1176,18 @@ mapping = {
     },
     gray => {
         normal: [
-            *markdown___markup_raw_inline_punctuation_group,
-            *markdown___blockquote_group,
-            *markdown___fenced_language_group,
-            *markdown[:paragraph],
-            *boring_punctuation,
-            *unimportant,
+            markdown___markup_raw_inline_punctuation_group,
+            markdown___blockquote_group,
+            markdown___fenced_language_group,
+            markdown[:paragraph],
+            boring_punctuation,
+            unimportant,
         ],
         italic: [
-            *comments,
+            comments,
         ],
         bold: [
-            *markdown___separator_group,
+            markdown___separator_group,
         ],
         underline: [
         ],
@@ -1227,7 +1227,6 @@ mapping = {
         normal: [
             changed_group,
             json[:keys][0],
-            json[:keys][7],
             markdown___markup_raw_inline_group,
             markdown___link_description_group,
             markup___raw_block_group,
@@ -1272,7 +1271,7 @@ mapping = {
             functions,
             function_punctuation,
             css_ids_group,
-            json[:keys][5],
+            json[:keys][2],
             markdown___link_group,
             blue_group,
             regex[:group],
@@ -1290,7 +1289,6 @@ mapping = {
     },
     orange   => {
         normal: [
-            json[:keys][2],
             orange_group,
             language_literals,
             parameter_variables,
@@ -1386,6 +1384,7 @@ mapping = {
             green_group,
             string_preceders,
             unknown_entites,
+            json[:keys][5],
         ],
         underline: [
             perl[:hash],
@@ -1399,6 +1398,7 @@ mapping = {
     bananna_yellow => {
         normal: [
             bananna_yellow_group,
+            json[:keys][7],
         ],
         underline: [
             globals,
