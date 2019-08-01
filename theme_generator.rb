@@ -974,7 +974,6 @@ dim_green_with_underline_group = [
     "source.cpp punctuation.separator.dot-access",
     "source.cpp punctuation.separator.pointer-access",
     "source.cpp support.type.posix-reserved",
-    "support.type.property-name.json",
     "support.type.property-name.css",
     "entity.name.tag.yaml",
     "meta.array.literal string.quoted",
