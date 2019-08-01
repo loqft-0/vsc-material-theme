@@ -1230,7 +1230,6 @@ mapping = {
             markdown___link_anchor_group,
             yellow_not_cursive_group,
             package_names,
-            yaml[:anchors],
         ],
         italic: [
             yellow_cursive_group,
@@ -1240,7 +1239,7 @@ mapping = {
             yellow_underline_group,
             unusual_variables,
             perl[:globals],
-            
+            yaml[:anchors],
         ],
     },
     violet => {

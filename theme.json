@@ -158,9 +158,7 @@
         "entity",
         "entity.other.attribute-name.id.pug",
         "variable.other.constant",
-        "entity.name.package",
-        "source.yaml punctuation.definition.anchor",
-        "source.yaml entity.name.type.anchor"
+        "entity.name.package"
       ],
       "settings": {
         "fontStyle": "normal",
@@ -201,7 +199,9 @@
         "variable.other.predefined",
         "source.perl variable.other.predefined punctuation.definition.variable",
         "source.perl variable.other.readwrite.global.special punctuation.definition.variable",
-        "source.perl variable.other.readwrite.global.special"
+        "source.perl variable.other.readwrite.global.special",
+        "source.yaml punctuation.definition.anchor",
+        "source.yaml entity.name.type.anchor"
       ],
       "settings": {
         "fontStyle": "underline",
