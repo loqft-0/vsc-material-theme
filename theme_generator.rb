@@ -792,6 +792,9 @@ ui = {
             variables: [
                 "source.powershell variable.other.readwrite",
                 "source.powershell punctuation.definition.variable",
+            ],
+            constants: [
+                "source.powershell support.constant.variable"
             ]
         }
     # regex
@@ -1229,6 +1232,7 @@ mapping = {
             markdown___link_anchor_group,
             yellow_not_cursive_group,
             package_names,
+            powershell[:constants],
         ],
         italic: [
             yellow_cursive_group,
