@@ -159,7 +159,8 @@
         "entity.other.attribute-name.id.pug",
         "variable.other.constant",
         "entity.name.package",
-        "source.powershell support.constant.variable"
+        "source.powershell support.constant.variable",
+        "source.powershell support.constant.variable punctuation.definition.variable"
       ],
       "settings": {
         "fontStyle": "normal",
