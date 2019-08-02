@@ -796,7 +796,7 @@ ui = {
             constants: [
                 "source.powershell support.constant.variable",
                 "source.powershell support.constant.variable punctuation.definition.variable",
-            ]
+            ],
         }
     # regex
         regex = {
