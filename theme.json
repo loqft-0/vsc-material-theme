@@ -884,6 +884,7 @@
         "support.variable.other.object.node",
         "variable.other.readwrite.global.special punctuation",
         "variable.other.readwrite.global.special",
+        "variable.other.readwrite.global.pre-defined",
         "variable.other.readwrite.global.ruby",
         "variable.other.readwrite.global.ruby punctuation.definition.variable.ruby",
         "support.variable"

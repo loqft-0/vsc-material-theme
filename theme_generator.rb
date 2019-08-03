@@ -463,6 +463,7 @@ ui = {
             "support.variable.other.object.node",
             "variable.other.readwrite.global.special punctuation",
             "variable.other.readwrite.global.special",
+            "variable.other.readwrite.global.pre-defined",
         ]
         # mostly self-reference but occasionally other stuff
         special_variables = [
