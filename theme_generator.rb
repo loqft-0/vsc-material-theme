@@ -718,7 +718,10 @@ ui = {
 # 
 # Language-specific
 # 
-
+    # ruby
+        ruby = {
+            
+        }
     # Yaml
         yaml = {
             anchors: [
