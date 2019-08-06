@@ -982,8 +982,6 @@ dim_green_group = [
     "punctuation.definition.list.end.python",
     "punctuation.definition.begin.bracket.square",
     "punctuation.definition.end.bracket.square",
-    "meta.item-access.python punctuation.definition.arguments.begin.python",
-    "meta.item-access.python punctuation.definition.arguments.end.python",
     "string.regexp",
     "meta.objectliteral.js",
     "meta.object.member.js",

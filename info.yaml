@@ -10,6 +10,7 @@
     dependencies: &dependencies
         atk: 0.0.1
         ruby: 2.5.0
+        npm: 12.7.0
         {gem: 2.7.3}:
             colormath: 0.1.2
     
