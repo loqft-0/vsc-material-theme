@@ -198,6 +198,7 @@
         "source.dockerfile variable.other",
         "variable.other.predefined",
         "source.perl variable.other.predefined punctuation.definition.variable",
+        "variable.other.macro.argument",
         "source.perl variable.other.readwrite.global.special punctuation.definition.variable",
         "source.perl variable.other.readwrite.global.special",
         "source.yaml punctuation.definition.anchor",

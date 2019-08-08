@@ -478,6 +478,7 @@ ui = {
             "source.dockerfile variable.other",
             "variable.other.predefined",
             "source.perl variable.other.predefined punctuation.definition.variable",
+            "variable.other.macro.argument", # C++ macro arguments
         ]
     # 
     # Functions
