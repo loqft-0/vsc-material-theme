@@ -3,6 +3,27 @@ require 'yaml'
 require 'set'
 require 'colormath'
 
+class String
+    def transparency(percentage)
+        if percentage > 100 || percentage < 0
+            raise "\n\nWhen you use .transparency() the value needs to be between 0 and 100.\n100 = 100% transparent (nothing), 0 = 0%"
+        end
+        # flip it 
+        percentage = 100 - percentage
+        # scale it to 255
+        number = ((percentage/100) * 255).to_i
+        # convert to hex
+        hex_value = number.to_s(16)
+        # ensure the first digit is shown 
+        if number < 16
+            hex_value = "0"+hex_value
+        end
+        
+        # get the first values
+        return self[0..6] + hex_value
+    end
+end
+
 def color_to_i(color_string_input)
     color_string = color_string_input.dup
     color_string.sub!(/#/,"")
