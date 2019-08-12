@@ -36,24 +36,29 @@ no_color        = ''
 # UI Colors
 #
 background_color = '#242938'
+black_50 = '#00000050'
+black_30 = '#00000030'
+off_white = '#EEFFFF'
+navy_slate = '#184967'
+solid_blue = '#2670a1'
 ui = {
     menu: {
-        selectionBackground: '#00000050',
-        selectionBorder: '#00000030',
+        selectionBackground: black_50,
+        selectionBorder: black_30,
         background: background_color,
-        selectionForeground: '#80CBC4',
-        foreground: '#EEFFFF',
-        separatorBackground: '#EEFFFF',
+        selectionForeground: dim_green,
+        foreground: off_white,
+        separatorBackground: off_white,
     },
     menubar: {
-        selectionBackground: '#00000030',
-        selectionBorder: '#00000030',
-        selectionForeground: '#80CBC4',
+        selectionBackground: black_30,
+        selectionBorder: black_30,
+        selectionForeground: dim_green,
     },
     listFilterWidget: {
-        noMatchesOutline: '#00000030',
-        outline: '#00000030',
-        background: '#00000030',
+        noMatchesOutline: black_30,
+        outline: black_30,
+        background: black_30,
     },
     gitDecoration: {
         modifiedResourceForeground: '#0c6ce1ca',
@@ -79,23 +84,23 @@ ui = {
         findMatchBorder: '#ff9900',
     },
     tab: {
-        activeBackground: '#184967',
-        border: '#184967',
-        inactiveBackground: '#184967',
+        activeBackground: navy_slate,
+        border: navy_slate,
+        inactiveBackground: navy_slate,
         unfocusedActiveBorder: background_color,
         activeModifiedBorder: '#607a86',
         activeBorder: '#C8C8C8',
-        unfocusedActiveForeground: '#EEFFFF',
-        activeForeground: '#eeffff',
+        unfocusedActiveForeground: off_white,
+        activeForeground: off_white,
         inactiveForeground: '#ffffff4e',
     },
     editorGroupHeader: {
-        tabsBackground: '#184967',
+        tabsBackground: navy_slate,
         tabsBorder: background_color,
         noTabsBackground: background_color,
     },
     titleBar: {
-        activeBackground: '#184967',
+        activeBackground: navy_slate,
         border: '#26323860',
         inactiveBackground: '#263238',
         inactiveForeground: '#607a86',
@@ -126,7 +131,7 @@ ui = {
         border: background_color,
         background: background_color,
         dropBackground: '#2670a1e3',
-        foreground: '#eeffff',
+        foreground: off_white,
     },
     statusBar: {
         border: background_color,
@@ -143,7 +148,7 @@ ui = {
     },
     editorHoverWidget: {
         background: background_color,
-        border: '#2670a1',
+        border: solid_blue,
     },
     peekViewTitle: {
         background: background_color,
@@ -153,34 +158,34 @@ ui = {
         textInputBackground: background_color,
         numberInputBackground: background_color,
         dropdownBackground: background_color,
-        headerForeground: '#80CBC4',
-        modifiedItemIndicator: '#80CBC4',
-        checkboxForeground: '#EEFFFF',
-        textInputForeground: '#EEFFFF',
-        numberInputForeground: '#EEFFFF',
-        dropdownForeground: '#EEFFFF',
+        headerForeground: dim_green,
+        modifiedItemIndicator: dim_green,
+        checkboxForeground: off_white,
+        textInputForeground: off_white,
+        numberInputForeground: off_white,
+        dropdownForeground: off_white,
     },
     breadcrumb: {
         background: background_color,
         foreground: '#69809878',
-        activeSelectionForeground: '#80CBC4',
-        focusForeground: '#EEFFFF',
+        activeSelectionForeground: dim_green,
+        focusForeground: off_white,
     },
     panel: {
         border: background_color,
         background: background_color,
-        dropBackground: '#EEFFFF',
+        dropBackground: off_white,
     },
     debugToolBar: {
         background: background_color,
     },
     editorWidget: {
         background: background_color,
-        resizeBorder: '#80CBC4',
+        resizeBorder: dim_green,
     },
     debugExceptionWidget: {
         background: background_color,
-        border: '#2670a1',
+        border: solid_blue,
     },
     editorMarkerNavigation: {
         background: background_color,
@@ -188,27 +193,27 @@ ui = {
     sideBarSectionHeader: {
         background: background_color,
         border: '#26323860',
-        foreground: '#eeffff',
+        foreground: off_white,
     },
     dropdown: {
         background: background_color,
-        border: '#2670a1',
-        foreground: '#eeffffcc',
+        border: solid_blue,
+        foreground: '#eeefffcc',
     },
     editorOverviewRuler: {
         border: '#263238',
-        commonContentForeground: '#2670a1',
-        incomingContentForeground: '#2670a1',
-        currentContentForeground: '#2670a1',
+        commonContentForeground: solid_blue,
+        incomingContentForeground: solid_blue,
+        currentContentForeground: solid_blue,
     },
     editorBracketMatch: {
         background: '#263238',
         border: '#FFCC0050',
     },
     panelTitle: {
-        activeBorder: '#2670a1',
+        activeBorder: solid_blue,
         inactiveForeground: '#bfc9d580',
-        activeForeground: '#eeffff',
+        activeForeground: off_white,
     },
     editorGroup: {
         dropBackground: '#2670a173',
@@ -220,52 +225,52 @@ ui = {
         currentHeaderBackground: '#2670a15a',
     },
     button: {
-        hoverBackground: '#2670a1',
+        hoverBackground: solid_blue,
         background: '#2670a1cc',
-        foreground: '#eeffffcc',
+        foreground: '#eeefffcc',
     },
     list: {
-        activeSelectionBackground: '#2670a1',
-        focusBackground: '#2670a1',
+        activeSelectionBackground: solid_blue,
+        focusBackground: solid_blue,
         dropBackground: '#2c3b4f',
         hoverBackground: '#2c3b4f',
         inactiveSelectionBackground: '#708aa10d',
         inactiveSelectionForeground: '#708aa1',
-        activeSelectionForeground: '#eeffff',
-        focusForeground: '#eeffff',
-        highlightForeground: '#eeffff',
-        hoverForeground: '#eeffff',
+        activeSelectionForeground: off_white,
+        focusForeground: off_white,
+        highlightForeground: off_white,
+        hoverForeground: off_white,
     },
     peekView: {
-        border: '#2670a1',
+        border: solid_blue,
     },
     badge: {
-        background: '#2670a1',
-        foreground: '#eeffff',
+        background: solid_blue,
+        foreground: off_white,
     },
     editorSuggestWidget: {
-        selectedBackground: '#2670a1',
+        selectedBackground: solid_blue,
         background: '#2c3b4f',
         border: '#2c3b4f',
         foreground: '#bfc9d5',
-        highlightForeground: '#eeffff',
+        highlightForeground: off_white,
     },
     extensionButton: {
         prominentBackground: '#2670a1cc',
-        prominentHoverBackground: '#2670a1',
-        prominentForeground: '#eeffffcc',
+        prominentHoverBackground: solid_blue,
+        prominentForeground: '#eeefffcc',
     },
     peekViewResult: {
         matchHighlightBackground: '#2670a15a',
         background: '#2c3b4f',
         selectionBackground: '#83b2e1b3',
-        fileForeground: '#eeffff',
-        lineForeground: '#eeffff',
-        selectionForeground: '#eeffff',
+        fileForeground: off_white,
+        lineForeground: off_white,
+        selectionForeground: off_white,
     },
     activityBarBadge: {
-        background: '#2670a1',
-        foreground: '#eeffff',
+        background: solid_blue,
+        foreground: off_white,
     },
     editorWhitespace: {
         foreground: '#2a3f4f',
@@ -276,7 +281,7 @@ ui = {
     },
     notifications: {
         background: '#2c3b4f',
-        foreground: '#eeffffcc',
+        foreground: '#eeefffcc',
     },
     pickerGroup: {
         border: '#2c3b4f',
@@ -296,12 +301,12 @@ ui = {
     input: {
         border: '#414863',
         background: '#414863',
-        foreground: '#eeffffcc',
-        placeholderForeground: '#eeffffcc',
+        foreground: '#eeefffcc',
+        placeholderForeground: '#eeefffcc',
     },
     editorLineNumber: {
         foreground: '#4c5374',
-        activeForeground: '#eeffff',
+        activeForeground: off_white,
     },
     terminal: {
         ansiBlack: '#5e718a',
@@ -314,8 +319,8 @@ ui = {
         ansiBrightGreen: '#C3E88D',
         ansiMagenta: '#C792EA',
         ansiBrightMagenta: '#C792EA',
-        ansiBrightWhite: '#eeffff',
-        ansiWhite: '#eeffff',
+        ansiBrightWhite: off_white,
+        ansiWhite: off_white,
         ansiRed: '#ff5572',
         ansiBrightRed: '#ff5572',
         ansiBrightYellow: '#FFCB6B',
@@ -333,14 +338,14 @@ ui = {
         foreground: '#708aa1',
     },
     textLink: {
-        foreground: '#80CBC4',
-        activeForeground: '#EEFFFF',
+        foreground: dim_green,
+        activeForeground: off_white,
     },
     notificationLink: {
-        foreground: '#80CBC4',
+        foreground: dim_green,
     },
     progressBar: {
-        background: '#80CBC4',
+        background: dim_green,
     },
     selection: {
         background: '#83b2e186',
@@ -358,16 +363,16 @@ ui = {
     },
     foreground: '#5e718a',
     sideBarTitle: {
-        foreground: '#eeffff',
+        foreground: off_white,
     },
     editorLink: {
-        activeForeground: '#EEFFFF',
+        activeForeground: off_white,
     },
     peekViewTitleLabel: {
-        foreground: '#eeffff',
+        foreground: off_white,
     },
     inputOption: {
-        activeBorder: '#eeffffcc',
+        activeBorder: '#eeefffcc',
     },
     peekViewEditorGutter: {
         background: '#EEFFFF05',
