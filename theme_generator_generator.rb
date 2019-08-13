@@ -11,7 +11,7 @@ class String
         # flip it 
         percentage = 100 - percentage
         # scale it to 255
-        number = ((percentage/100) * 255).to_i
+        number = ((percentage/100.0) * 255).to_i
         # convert to hex
         hex_value = number.to_s(16)
         # ensure the first digit is shown 
