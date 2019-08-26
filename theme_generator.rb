@@ -684,6 +684,7 @@ ui = {
         "keyword.operator.assignment",
         "meta.embedded.expression keyword.operator.assignment", # for overriding the jsx attribute assignment
         "meta.tag.attributes meta.embedded.expression keyword.operator.assignment", # for overriding the jsx attribute assignment
+        "punctuation.definition.keyValuePair.toml",
     ]
     operators = [
         "keyword.operator",

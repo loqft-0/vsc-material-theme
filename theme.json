@@ -911,7 +911,8 @@
         "variable.parameter.function.language.special.self.python",
         "keyword.operator.assignment",
         "meta.embedded.expression keyword.operator.assignment",
-        "meta.tag.attributes meta.embedded.expression keyword.operator.assignment"
+        "meta.tag.attributes meta.embedded.expression keyword.operator.assignment",
+        "punctuation.definition.keyValuePair.toml"
       ],
       "settings": {
         "fontStyle": "normal",
