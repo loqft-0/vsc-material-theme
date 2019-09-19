@@ -852,6 +852,9 @@ ui = {
                 [ "#{json_depth(9)} support.type.property-name", "#{json_depth(9)} punctuation.support.type.property-name", "#{json_depth(9)} punctuation.separator.dictionary.key-value" ],
             ]
         }
+    # coffeescript
+        # coffeescript missnamed its ()'s
+        normal_punctuation.push("meta.brace.round.coffee")
     # markdown
         markdown = {
             paragraph: "meta.paragraph.markdown",

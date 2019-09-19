@@ -324,6 +324,7 @@
         "storage.modifier.chomping-indicator.yaml",
         "punctuation.separator.inheritance.php",
         "punctuation.separator.colon.inheritance",
+        "meta.brace.round.coffee",
         "string.regexp",
         "support.constant.property-value.css"
       ],
