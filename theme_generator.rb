@@ -1039,6 +1039,8 @@ dim_green_group = [
 ]
 dim_green_with_underline_group = [
     "punctuation.separator.dot-access.c",
+    "punctuation.separator.property.period.coffee",
+    "variable.other.property.coffee",
     "variable.other.property.ts",
     "punctuation.accessor.ts",
     "punctuation.accessor.js",
