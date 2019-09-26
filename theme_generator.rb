@@ -763,7 +763,10 @@ ui = {
 # 
 # Language-specific
 # 
-
+    # ruby
+        ruby = {
+            
+        }
     # Yaml
         yaml = {
             anchors: [
@@ -894,6 +897,9 @@ ui = {
                 [ "#{json_depth(9)} support.type.property-name", "#{json_depth(9)} punctuation.support.type.property-name", "#{json_depth(9)} punctuation.separator.dictionary.key-value" ],
             ]
         }
+    # coffeescript
+        # coffeescript missnamed its ()'s
+        normal_punctuation.push("meta.brace.round.coffee")
     # markdown
         markdown = {
             paragraph: "meta.paragraph.markdown",
@@ -1034,6 +1040,8 @@ dim_green_group = [
 ]
 dim_green_with_underline_group = [
     "punctuation.separator.dot-access.c",
+    "punctuation.separator.property.period.coffee",
+    "variable.other.property.coffee",
     "variable.other.property.ts",
     "punctuation.accessor.ts",
     "punctuation.accessor.js",

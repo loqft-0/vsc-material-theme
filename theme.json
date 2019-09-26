@@ -325,6 +325,7 @@
         "storage.modifier.chomping-indicator.yaml",
         "punctuation.separator.inheritance.php",
         "punctuation.separator.colon.inheritance",
+        "meta.brace.round.coffee",
         "string.regexp",
         "support.constant.property-value.css"
       ],
@@ -748,6 +749,8 @@
       "name": "#80CBC4 underline",
       "scope": [
         "punctuation.separator.dot-access.c",
+        "punctuation.separator.property.period.coffee",
+        "variable.other.property.coffee",
         "variable.other.property.ts",
         "punctuation.accessor.ts",
         "punctuation.accessor.js",
