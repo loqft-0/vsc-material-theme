@@ -535,7 +535,12 @@
         "string.regexp punctuation.definition.string.end",
         "support.constant.color",
         "constant.other.color",
-        "constant.other.color.rgb-value"
+        "constant.other.color.rgb-value",
+        "source.python string.quoted.single",
+        "source.python string",
+        "source.shell string.quoted.single",
+        "source.shell string.unquoted.argument",
+        "source.shell string.quoted.double"
       ],
       "settings": {
         "fontStyle": "normal",
@@ -545,11 +550,7 @@
     {
       "name": "#C3E88D underline",
       "scope": [
-        "source.python string.quoted.single",
-        "source.python string",
-        "source.shell string.quoted.single",
-        "source.shell string.unquoted.argument",
-        "source.shell string.quoted.double"
+
       ],
       "settings": {
         "fontStyle": "underline",

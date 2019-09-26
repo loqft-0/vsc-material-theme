@@ -749,6 +749,7 @@ ui = {
         "punctuation.definition.template-expression.end",
         "punctuation.section.embedded.end",
         "punctuation.section.embedded.begin",
+        "constant.character.format.placeholder.other",
     ]
     colors_group = [ # like css/html colors
         "constant.other.color",
@@ -1116,13 +1117,13 @@ lime_green_group = [
     "support.constant.color",
     "constant.other.color",
     "constant.other.color.rgb-value",
-]
-lime_green_with_underline_group = [
     "source.python string.quoted.single",
     "source.python string",
     "source.shell string.quoted.single",
     "source.shell string.unquoted.argument",
     "source.shell string.quoted.double",
+]
+lime_green_with_underline_group = [
 ]
 orange_group = [
     "constant.other",
