@@ -570,6 +570,7 @@ ui = {
         tag_attributes = [
             "entity.other.attribute-name.tag.pug",
             "entity.other.attribute-name.js",
+            "source.vue entity.other.attribute-name",
         ]
     # 
     # literals

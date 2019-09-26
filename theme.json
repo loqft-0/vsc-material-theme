@@ -689,7 +689,8 @@
       "name": "#c792eaff italic",
       "scope": [
         "entity.other.attribute-name.tag.pug",
-        "entity.other.attribute-name.js"
+        "entity.other.attribute-name.js",
+        "source.vue entity.other.attribute-name"
       ],
       "settings": {
         "fontStyle": "italic",
