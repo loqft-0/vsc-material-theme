@@ -19,6 +19,7 @@ bananna_yellow  = '#ddd790'
 lime            = '#C3E88D'
 green           = '#4EC9B0'
 bold_green      = '#4ec9b0d0'
+vibrant_green   = '#04d895'
 dim_green       = '#80CBC4'
 light_slate     = '#64bac5'
 dark_slate      = '#3f848d'
@@ -1008,6 +1009,10 @@ ui = {
                 "punctuation.definition.bold",
                 "markup.bold.markdown"
             ],
+            italic: [
+                "markup.italic.markdown",
+                "punctuation.definition.italic",
+            ],
             code: [
                 "markup.fenced_code.block.markdown",
                 "markup.inline.raw.string.markdown",
@@ -1533,6 +1538,9 @@ mapping = {
         bold: [
             *cpp[:assembly_function],
         ],
+        italic: [
+            markdown[:italic],
+        ]
     },
     light_purple => {
         normal: [
@@ -1585,6 +1593,10 @@ mapping = {
         underline: [
             perl[:hash],
         ],
+        bold: [
+        ]
+    },
+    vibrant_green => {
         bold: [
             markdown[:bold],
             markdown[:list_symbol],

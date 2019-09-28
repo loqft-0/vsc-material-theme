@@ -708,6 +708,17 @@
       }
     },
     {
+      "name": "#e57eb3 italic",
+      "scope": [
+        "markup.italic.markdown",
+        "punctuation.definition.italic"
+      ],
+      "settings": {
+        "fontStyle": "italic",
+        "foreground": "#e57eb3"
+      }
+    },
+    {
       "name": "#c792eaff normal",
       "scope": [
         "entity.name.namespace",
@@ -908,13 +919,23 @@
     {
       "name": "#4EC9B0 bold",
       "scope": [
+
+      ],
+      "settings": {
+        "fontStyle": "bold",
+        "foreground": "#4EC9B0"
+      }
+    },
+    {
+      "name": "#04d895 bold",
+      "scope": [
         "punctuation.definition.bold",
         "markup.bold.markdown",
         "punctuation.definition.list.begin.markdown"
       ],
       "settings": {
         "fontStyle": "bold",
-        "foreground": "#4EC9B0"
+        "foreground": "#04d895"
       }
     },
     {
