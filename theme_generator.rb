@@ -926,6 +926,11 @@ ui = {
             ]
         }
     # css
+        css = {
+            operator_like: [
+                "source.css entity.name.tag",
+            ]
+        }
         css_properties = [
             "source.css support.type.property-name",
             "source.sass support.type.property-name",
@@ -971,6 +976,22 @@ ui = {
             ]
         }
     # coffeescript
+        coffeescript = {
+            this: [
+                "source.coffee variable.language.this",
+            ],
+            function: [
+                "source.coffee meta.function-call entity.name.function",
+            ],
+            method: [
+                "source.coffee meta.method-call entity.name.function",
+                "source.coffee meta.method-call support.function",
+                "source.coffee punctuation.separator.method",
+            ],
+            support: [
+                "source.coffee support.class",
+            ]
+        }
         # coffeescript missnamed its ()'s
         normal_punctuation.push("meta.brace.round.coffee")
     # markdown
@@ -1403,6 +1424,7 @@ mapping = {
     blue => {
         normal: [
             functions,
+            coffeescript[:function],
             function_punctuation,
             css_ids_group,
             json[:keys][4],
@@ -1418,6 +1440,7 @@ mapping = {
             last_property,
             javascript[:function_property],
             javascript[:member_function_definition],
+            coffeescript[:method],
         ],
         bold: [
             *blue_bold_group,
@@ -1489,6 +1512,7 @@ mapping = {
             operators,
             secondary_punctuation,
             yaml[:punctuation],
+            css[:operator_like],
         ],
         italic: [
             tag_attributes,
@@ -1562,6 +1586,7 @@ mapping = {
         underline: [
             red_underline_group,
             javascript[:this],
+            coffeescript[:this],
         ],
     },
     soft_red => {

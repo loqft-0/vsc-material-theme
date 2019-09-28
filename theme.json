@@ -364,6 +364,7 @@
         "support.function",
         "entity.name.command",
         "keyword.other.special-method",
+        "source.coffee meta.function-call entity.name.function",
         "punctuation.definition.arguments",
         "punctuation.section.parameters.begin.bracket.round",
         "punctuation.section.parameters.end.bracket.round",
@@ -427,7 +428,10 @@
         "variable.other.property",
         "source.vue variable.other.property",
         "source.js support.variable.property",
-        "source.js meta.object.member entity.name.function"
+        "source.js meta.object.member entity.name.function",
+        "source.coffee meta.method-call entity.name.function",
+        "source.coffee meta.method-call support.function",
+        "source.coffee punctuation.separator.method"
       ],
       "settings": {
         "fontStyle": "underline",
@@ -684,7 +688,8 @@
         "punctuation.section.embedded.end.js",
         "punctuation.accessor.attribute",
         "punctuation.section.attribute",
-        "source.yaml constant.language.merge"
+        "source.yaml constant.language.merge",
+        "source.css entity.name.tag"
       ],
       "settings": {
         "fontStyle": "normal",
@@ -953,7 +958,8 @@
         "source.shell variable.language.special.wildcard",
         "source.shell variable.language.special.shell punctuation.definition.variable.shell",
         "source.shell variable.language.special.shell",
-        "source.js variable.language.this"
+        "source.js variable.language.this",
+        "source.coffee variable.language.this"
       ],
       "settings": {
         "fontStyle": "underline",
