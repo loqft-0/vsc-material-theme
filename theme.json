@@ -89,7 +89,9 @@
         "source.less support.type.property-name",
         "source.stylus support.type.property-name",
         "source.postcss support.type.property-name",
-        "source"
+        "source.css support.type.vendored.property-name",
+        "source",
+        "source.js variable.other.readwrite"
       ],
       "settings": {
         "fontStyle": "normal",
@@ -100,7 +102,10 @@
       "name": "#c7cbcd underline",
       "scope": [
         "variable.other.object.js",
-        "variable.other.object.access"
+        "variable.other.object.access",
+        "source.js meta.object.member entity.name.function",
+        "source.js meta.method.declaration.js support.function.dom",
+        "source.js meta.method.declaration.js entity.name.function"
       ],
       "settings": {
         "fontStyle": "underline",
@@ -420,13 +425,8 @@
       "scope": [
         "meta.object-literal.key.js entity.name.function",
         "entity.name.function.member",
-        "support.variable.property.js",
-        "support.variable.property.dom.js",
-        "meta.method.declaration.js support.function.dom.js",
-        "meta.method.declaration.js entity.name.function.js",
-        "support.variable.property.dom.js",
-        "support.function.dom.js",
-        "variable.other.property"
+        "variable.other.property",
+        "source.js support.variable.property"
       ],
       "settings": {
         "fontStyle": "underline",
@@ -759,7 +759,6 @@
         "variable.other.property.coffee",
         "variable.other.property.ts",
         "punctuation.accessor.ts",
-        "punctuation.accessor.js",
         "source.ruby constant.language.symbol punctuation.definition.constant.hashkey",
         "source.ruby constant.language.symbol.hashkey.ruby",
         "source.ruby constant.language.symbol.hashkey",
@@ -770,21 +769,15 @@
         "support.type.property-name.css",
         "entity.name.tag.yaml",
         "meta.array.literal string.quoted",
-        "meta.array.literial variable.other.readwrite.js",
         "meta.object-literal.key string.quoted",
-        "punctuation.definition.group.js",
-        "variable.other.object",
-        "variable.other.property.js",
-        "variable.other.object.property.js",
-        "meta.object-literal.key.js",
-        "meta.method.declaration.js meta.brace.square.js",
         "meta.object-literal.key.js variable.other.readwrite.js - meta.var.expr",
-        "variable.other.constant.property.js",
-        "support.variable.property.process.js",
         "variable.assignment.coffee",
         "punctuation.definition.constant.hashkey",
+        "punctuation.accessor",
         "support.variable.property",
         "variable.other.object.property",
+        "source.js variable.other.object",
+        "source.js variable.other.object.property",
         "source.perl variable.other.scalar",
         "source.perl punctuation.definition.variable.scalar",
         "source.perl variable.other.readwrite.global",
@@ -948,7 +941,8 @@
         "source.shell punctuation.definition.variable",
         "source.shell variable.language.special.wildcard",
         "source.shell variable.language.special.shell punctuation.definition.variable.shell",
-        "source.shell variable.language.special.shell"
+        "source.shell variable.language.special.shell",
+        "source.js variable.language.this"
       ],
       "settings": {
         "fontStyle": "underline",

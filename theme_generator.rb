@@ -696,6 +696,9 @@ ui = {
         "punctuation.section.arguments.begin.bracket.round.operator",
         "punctuation.section.arguments.end.bracket.round.operator",
     ]
+    member_access_punctuation = [
+        "punctuation.accessor"
+    ]
     normal_punctuation = [
         "punctuation",
         "punctuation.section.embedded",
@@ -764,6 +767,42 @@ ui = {
 # 
 # Language-specific
 # 
+    # javascript
+        javascript = {
+            this: [
+                "source.js variable.language.this",
+            ],
+            variable_no_member_access: [
+                "source.js variable.other.readwrite",
+            ],
+            first_property: [
+                "source.js variable.other.object",
+            ],
+            middle_property: [
+                "source.js variable.other.object.property"
+                # "punctuation.accessor.js",
+                # "meta.array.literial variable.other.readwrite.js",
+                # "punctuation.definition.group.js",
+                # "variable.other.object",
+                # "variable.other.property.js",
+                # "variable.other.object.property.js",
+                # "meta.object-literal.key.js",
+                # "meta.method.declaration.js meta.brace.square.js",
+                # "variable.other.constant.property.js",
+                # "support.variable.property.process.js",
+            ],
+            last_property: [
+                "source.js meta.object.member entity.name.function",
+                "source.js meta.method.declaration.js support.function.dom",
+                "source.js meta.method.declaration.js entity.name.function",
+                # "source.js support.variable.property.dom", 
+                # "source.js support.variable.property.dom",
+                # "source.js support.function.dom",
+            ],
+            function_property: [
+                "source.js support.variable.property",
+            ],
+        }
     # ruby
         ruby = {
             
@@ -862,6 +901,7 @@ ui = {
             "source.less support.type.property-name",
             "source.stylus support.type.property-name",
             "source.postcss support.type.property-name",
+            "source.css support.type.vendored.property-name",
         ]
         css_property_value = [
             "support.constant.property-value.css",
@@ -1009,12 +1049,6 @@ blue_group = [
 blue_underline_group = [
     "meta.object-literal.key.js entity.name.function",
     "entity.name.function.member",
-    "support.variable.property.js",
-    "support.variable.property.dom.js",
-    "meta.method.declaration.js support.function.dom.js",
-    "meta.method.declaration.js entity.name.function.js",
-    "support.variable.property.dom.js",
-    "support.function.dom.js",
 ]
 blue_bold_group = [
     "punctuation.definition.parameters.begin.lambda",
@@ -1045,7 +1079,6 @@ dim_green_with_underline_group = [
     "variable.other.property.coffee",
     "variable.other.property.ts",
     "punctuation.accessor.ts",
-    "punctuation.accessor.js",
     "source.ruby constant.language.symbol punctuation.definition.constant.hashkey",
     "source.ruby constant.language.symbol.hashkey.ruby",
     "source.ruby constant.language.symbol.hashkey",
@@ -1056,17 +1089,8 @@ dim_green_with_underline_group = [
     "support.type.property-name.css",
     "entity.name.tag.yaml",
     "meta.array.literal string.quoted",
-    "meta.array.literial variable.other.readwrite.js",
     "meta.object-literal.key string.quoted",
-    "punctuation.definition.group.js",
-    "variable.other.object",
-    "variable.other.property.js",
-    "variable.other.object.property.js",
-    "meta.object-literal.key.js",
-    "meta.method.declaration.js meta.brace.square.js",
     "meta.object-literal.key.js variable.other.readwrite.js - meta.var.expr",
-    "variable.other.constant.property.js",
-    "support.variable.property.process.js",
 ]
 dim_green_with_italics_group = [
 ]
@@ -1273,9 +1297,11 @@ mapping = {
             normal_variables,
             css_properties,
             default_text_color,
+            javascript[:variable_no_member_access],
         ],
         underline: [
-            first_property
+            first_property,
+            javascript[:last_property],
         ],
     },
     yellow => {
@@ -1358,6 +1384,7 @@ mapping = {
         underline: [
             blue_underline_group,
             last_property,
+            javascript[:function_property],
         ],
         bold: [
             *blue_bold_group,
@@ -1447,7 +1474,10 @@ mapping = {
         underline: [
             dim_green_with_underline_group,
             dictionary_keys,
+            member_access_punctuation,
             middle_property,
+            javascript[:first_property],
+            javascript[:middle_property],
             perl[:scalar],
             perl[:vars],
             powershell[:variables],
@@ -1496,6 +1526,7 @@ mapping = {
         ],
         underline: [
             red_underline_group,
+            javascript[:this],
         ],
     },
     soft_red => {
