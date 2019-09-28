@@ -819,6 +819,7 @@ ui = {
         vue = {
             tags: [
                 "source.vue entity.name.tag",
+                "source.vue punctuation.definition.tag",
             ],
             attributes: [
                 "source.vue entity.other.attribute-name.html",

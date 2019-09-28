@@ -163,7 +163,8 @@
         "entity.name.package",
         "source.powershell support.constant.variable",
         "source.powershell support.constant.variable punctuation.definition.variable",
-        "source.vue entity.name.tag"
+        "source.vue entity.name.tag",
+        "source.vue punctuation.definition.tag"
       ],
       "settings": {
         "fontStyle": "normal",
