@@ -700,7 +700,8 @@
         "source.vue entity.other.attribute-name",
         "source.vue entity.other.attribute-name.html",
         "source.vue punctuation.definition.string.begin.html",
-        "source.vue punctuation.definition.string.end.html"
+        "source.vue punctuation.definition.string.end.html",
+        "meta.tag"
       ],
       "settings": {
         "fontStyle": "italic",

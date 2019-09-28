@@ -825,6 +825,7 @@ ui = {
                 "source.vue entity.other.attribute-name.html",
                 "source.vue punctuation.definition.string.begin.html",
                 "source.vue punctuation.definition.string.end.html",
+                "meta.tag", # bad hack to color the un-tagged ='s 
             ],
             main_tags: [
                 "source.vue entity.name.tag",
