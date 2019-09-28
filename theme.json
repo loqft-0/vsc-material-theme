@@ -103,9 +103,7 @@
       "scope": [
         "variable.other.object.js",
         "variable.other.object.access",
-        "source.js meta.object.member entity.name.function",
-        "source.js meta.method.declaration.js support.function.dom",
-        "source.js meta.method.declaration.js entity.name.function"
+        "source.js variable.other.property"
       ],
       "settings": {
         "fontStyle": "underline",
@@ -426,7 +424,8 @@
         "meta.object-literal.key.js entity.name.function",
         "entity.name.function.member",
         "variable.other.property",
-        "source.js support.variable.property"
+        "source.js support.variable.property",
+        "source.js meta.object.member entity.name.function"
       ],
       "settings": {
         "fontStyle": "underline",

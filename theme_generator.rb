@@ -792,12 +792,15 @@ ui = {
                 # "support.variable.property.process.js",
             ],
             last_property: [
-                "source.js meta.object.member entity.name.function",
-                "source.js meta.method.declaration.js support.function.dom",
-                "source.js meta.method.declaration.js entity.name.function",
+                "source.js variable.other.property",
+                # "source.js meta.method.declaration.js support.function.dom",
+                # "source.js meta.method.declaration.js entity.name.function",
                 # "source.js support.variable.property.dom", 
                 # "source.js support.variable.property.dom",
                 # "source.js support.function.dom",
+            ],
+            member_function_definition: [
+                "source.js meta.object.member entity.name.function",
             ],
             function_property: [
                 "source.js support.variable.property",
@@ -1385,6 +1388,7 @@ mapping = {
             blue_underline_group,
             last_property,
             javascript[:function_property],
+            javascript[:member_function_definition],
         ],
         bold: [
             *blue_bold_group,
