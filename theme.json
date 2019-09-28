@@ -71,6 +71,7 @@
       "name": "#c7cbcd normal",
       "scope": [
         "meta.paragraph.markdown",
+        "markup.fenced_code.block.markdown meta.embedded.block",
         "text.html.markdown",
         "punctuation.definition.list_item.markdown",
         "markup.table",
@@ -901,6 +902,18 @@
       ],
       "settings": {
         "fontStyle": "underline",
+        "foreground": "#4EC9B0"
+      }
+    },
+    {
+      "name": "#4EC9B0 bold",
+      "scope": [
+        "punctuation.definition.bold",
+        "markup.bold.markdown",
+        "punctuation.definition.list.begin.markdown"
+      ],
+      "settings": {
+        "fontStyle": "bold",
         "foreground": "#4EC9B0"
       }
     },

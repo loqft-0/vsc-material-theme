@@ -1004,11 +1004,18 @@ ui = {
                 "markup.heading.setext",
                 "punctuation.definition.bold"
             ],
+            bold: [
+                "punctuation.definition.bold",
+                "markup.bold.markdown"
+            ],
             code: [
                 "markup.fenced_code.block.markdown",
                 "markup.inline.raw.string.markdown",
                 "markup.raw.block",
                 "punctuation.definition.raw",
+            ],
+            language_code: [ # like code, but probably shouldn't be colored since it has a language attached to it
+                "markup.fenced_code.block.markdown meta.embedded.block",
             ],
             list_symbol: [
                 "punctuation.definition.list.begin.markdown",
@@ -1355,6 +1362,7 @@ mapping = {
     light_gray => {
         normal: [
             markdown[:paragraph],
+            markdown[:language_code],
             markdown___plain_group,
             markup___table_group,
             normal_variables,
@@ -1576,6 +1584,10 @@ mapping = {
         ],
         underline: [
             perl[:hash],
+        ],
+        bold: [
+            markdown[:bold],
+            markdown[:list_symbol],
         ]
     },
     bold_green => {
