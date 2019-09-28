@@ -1021,6 +1021,7 @@ ui = {
             ],
             url: [
                 "markup.underline.link",
+                "string.other.link.title.markdown",
             ],
             image: [
                 "string.other.link",
@@ -1034,9 +1035,6 @@ ui = {
         ]
         changed_group = [
             "markup.changed",
-        ]
-        markdown___link = [
-            "string.other.link",
         ]
         markdown___plain_group = [
             "text.html.markdown",
@@ -1077,9 +1075,6 @@ ui = {
         ]
         markup___quote_group = [
             "markup.quote",
-        ]
-        markdown___link_group = [
-            "string.other.link.title.markdown",
         ]
         markdown___link_description_group = [
             "string.other.link.description.title.markdown",
@@ -1450,7 +1445,6 @@ mapping = {
             function_punctuation,
             css_ids_group,
             json[:keys][4],
-            markdown___link_group,
             blue_group,
             regex[:group],
             cpp[:assembly_punctuation],
@@ -1463,6 +1457,7 @@ mapping = {
             javascript[:function_property],
             javascript[:member_function_definition],
             coffeescript[:method],
+            markdown[:url],
         ],
         bold: [
             *blue_bold_group,
@@ -1619,7 +1614,6 @@ mapping = {
         normal: [
             tags,
             constants,
-            markdown___link,
             json[:keys][6],
             soft_red_group,
             number_literals,

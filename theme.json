@@ -402,7 +402,6 @@
         "source.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json support.type.property-name",
         "source.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json punctuation.support.type.property-name",
         "source.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json punctuation.separator.dictionary.key-value",
-        "string.other.link.title.markdown",
         "source.python meta.function-call.generic.python",
         "support.function",
         "entity.other.attribute-name.js",
@@ -444,7 +443,9 @@
         "source.js meta.object.member entity.name.function",
         "source.coffee meta.method-call entity.name.function",
         "source.coffee meta.method-call support.function",
-        "source.coffee punctuation.separator.method"
+        "source.coffee punctuation.separator.method",
+        "markup.underline.link",
+        "string.other.link.title.markdown"
       ],
       "settings": {
         "fontStyle": "underline",
@@ -1002,7 +1003,6 @@
         "punctuation.definition.tag source.js",
         "variable.other.constant",
         "constant.other.php",
-        "string.other.link",
         "source.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json support.type.property-name",
         "source.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json punctuation.support.type.property-name",
         "source.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json punctuation.separator.dictionary.key-value",
