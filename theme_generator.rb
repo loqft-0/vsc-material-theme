@@ -1005,6 +1005,12 @@ ui = {
                 "markup.heading.setext",
                 "punctuation.definition.bold"
             ],
+            heading1: "heading.1 entity.name.section.markdown",
+            heading2: "heading.2 entity.name.section.markdown",
+            heading3: "heading.3 entity.name.section.markdown",
+            general_punctuation: [
+                "punctuation.definition.markdown"
+            ],
             bold: [
                 "punctuation.definition.bold",
                 "markup.bold.markdown"
@@ -1036,6 +1042,13 @@ ui = {
             ],
             image: [
                 "string.other.link",
+            ],
+            string: [
+                "string.other.link.description.title.markdown"
+            ],
+            function: [
+                "punctuation.definition.function.katex",
+                "support.function.katex",
             ]
         }
         inserted_group = [
@@ -1086,9 +1099,6 @@ ui = {
         ]
         markup___quote_group = [
             "markup.quote",
-        ]
-        markdown___link_description_group = [
-            "string.other.link.description.title.markdown",
         ]
         markdown___link_anchor_group = [
             "constant.other.reference.link.markdown",
@@ -1410,9 +1420,6 @@ mapping = {
         normal: [
             changed_group,
             json[:keys][0],
-            markdown___markup_raw_inline_group,
-            markdown___link_description_group,
-            markup___raw_block_group,
         ],
         italic: [
             attributes,
@@ -1450,7 +1457,10 @@ mapping = {
             control_flow,
         ],
         bold: [
-            markdown[:list_symbol],
+            markdown[:general_punctuation],
+        ],
+        underline: [
+            markdown[:url],
         ]
     },
     blue => {
@@ -1472,7 +1482,6 @@ mapping = {
             javascript[:function_property],
             javascript[:member_function_definition],
             coffeescript[:method],
-            markdown[:url],
         ],
         bold: [
             *blue_bold_group,
@@ -1502,6 +1511,7 @@ mapping = {
             strings,
             json[:keys][8],
             lime_green_group,
+            markdown[:string],
         ],
         underline: [
             lime_green_with_underline_group,

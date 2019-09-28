@@ -237,10 +237,7 @@
         "markup.changed",
         "source.json meta.structure.dictionary.json support.type.property-name",
         "source.json meta.structure.dictionary.json punctuation.support.type.property-name",
-        "source.json meta.structure.dictionary.json punctuation.separator.dictionary.key-value",
-        "text.html.markdown markup.inline.raw.markdown",
-        "string.other.link.description.title.markdown",
-        "markup.raw.block"
+        "source.json meta.structure.dictionary.json punctuation.separator.dictionary.key-value"
       ],
       "settings": {
         "fontStyle": "normal",
@@ -377,10 +374,20 @@
     {
       "name": "#89DDFF bold",
       "scope": [
-        "punctuation.definition.list.begin.markdown"
+        "punctuation.definition.markdown"
       ],
       "settings": {
         "fontStyle": "bold",
+        "foreground": "#89DDFF"
+      }
+    },
+    {
+      "name": "#89DDFF underline",
+      "scope": [
+        "string.other.link.title.markdown"
+      ],
+      "settings": {
+        "fontStyle": "underline",
         "foreground": "#89DDFF"
       }
     },
@@ -458,8 +465,7 @@
         "source.js meta.object.member entity.name.function",
         "source.coffee meta.method-call entity.name.function",
         "source.coffee meta.method-call support.function",
-        "source.coffee punctuation.separator.method",
-        "string.other.link.title.markdown"
+        "source.coffee punctuation.separator.method"
       ],
       "settings": {
         "fontStyle": "underline",
@@ -574,7 +580,8 @@
         "source.python string",
         "source.shell string.quoted.single",
         "source.shell string.unquoted.argument",
-        "source.shell string.quoted.double"
+        "source.shell string.quoted.double",
+        "string.other.link.description.title.markdown"
       ],
       "settings": {
         "fontStyle": "normal",
