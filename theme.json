@@ -102,7 +102,8 @@
       "name": "#c7cbcd underline",
       "scope": [
         "variable.other.object.access",
-        "source.js variable.other.property"
+        "source.js variable.other.property",
+        "source.js punctuation.accessor"
       ],
       "settings": {
         "fontStyle": "underline",
@@ -774,7 +775,7 @@
         "support.variable.property",
         "variable.other.object.property",
         "source.js variable.other.object",
-        "source.js meta.object.member",
+        "source.js meta.object-literal.key",
         "source.js variable.other.object.property",
         "source.perl variable.other.scalar",
         "source.perl punctuation.definition.variable.scalar",

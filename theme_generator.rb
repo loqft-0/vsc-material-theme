@@ -771,6 +771,9 @@ ui = {
             this: [
                 "source.js variable.language.this",
             ],
+            member_access_operator: [
+                "source.js punctuation.accessor",
+            ],
             variable_no_member_access: [
                 "source.js variable.other.readwrite",
             ],
@@ -778,7 +781,7 @@ ui = {
                 "source.js variable.other.object",
             ],
             middle_property: [
-                "source.js meta.object.member",
+                "source.js meta.object-literal.key",
                 "source.js variable.other.object.property"
                 # "punctuation.accessor.js",
                 # "meta.array.literial variable.other.readwrite.js",
@@ -1304,6 +1307,7 @@ mapping = {
         underline: [
             first_property,
             javascript[:last_property],
+            javascript[:member_access_operator],
         ],
     },
     yellow => {
