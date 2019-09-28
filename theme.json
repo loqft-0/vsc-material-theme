@@ -327,7 +327,12 @@
         "punctuation.separator.colon.inheritance",
         "meta.brace.round.coffee",
         "string.regexp",
-        "support.constant.property-value.css"
+        "support.constant.property-value.css",
+        "punctuation.definition.template-expression.begin",
+        "punctuation.definition.template-expression.end",
+        "punctuation.section.embedded.end",
+        "punctuation.section.embedded.begin",
+        "constant.character.format.placeholder.other"
       ],
       "settings": {
         "fontStyle": "normal",

@@ -1336,6 +1336,7 @@ mapping = {
             normal_punctuation,
             regular_expressions_group,
             css_property_value,
+            interpolated_punctuation,
         ],
         italic: [
             control_flow,
