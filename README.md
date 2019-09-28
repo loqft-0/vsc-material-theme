@@ -27,13 +27,15 @@ I also use custom CSS, which is applied manually. If you want the same CSS, its 
 The theme is taylored for
 - C++
 - Javascript + JSX
+- Vue
 - JSON
-- Ruby
 - Python
+- Ruby
 - Shell
-- Perl
-- Dockerfile
 - HTML
+- Dockerfile
+- CoffeeScript
+- Perl
 - CSS
 - SASS
 - YAML
