@@ -527,7 +527,9 @@
     {
       "name": "#F78C6C underline",
       "scope": [
-        "markup.underline",
+        "constant.other.reference.link.markdown",
+        "punctuation.definition.constant.begin.markdown",
+        "punctuation.definition.constant.end.markdown",
         "source.shell variable.parameter.positional.shell",
         "source.shell variable.parameter.positional",
         "source.shell variable.parameter.positional.shell punctuation.definition.variable.shell",
@@ -744,8 +746,7 @@
         "punctuation.accessor.attribute",
         "punctuation.section.attribute",
         "source.yaml constant.language.merge",
-        "source.css entity.name.tag",
-        "string.other.link"
+        "source.css entity.name.tag"
       ],
       "settings": {
         "fontStyle": "normal",
@@ -812,7 +813,8 @@
         "punctuation.definition.end.bracket.square",
         "string.regexp",
         "meta.objectliteral.js",
-        "meta.brace.square"
+        "meta.brace.square",
+        "string.other.link"
       ],
       "settings": {
         "fontStyle": "normal",

@@ -1008,6 +1008,9 @@ ui = {
             heading1: "heading.1 entity.name.section.markdown",
             heading2: "heading.2 entity.name.section.markdown",
             heading3: "heading.3 entity.name.section.markdown",
+            heading4: "heading.4 entity.name.section.markdown",
+            heading5: "heading.5 entity.name.section.markdown",
+            heading6: "heading.6 entity.name.section.markdown",
             general_punctuation: [
                 "punctuation.definition.markdown"
             ],
@@ -1042,6 +1045,14 @@ ui = {
             ],
             image: [
                 "string.other.link",
+            ],
+            reference: [
+                "constant.other.reference.link.markdown",
+                "punctuation.definition.constant.begin.markdown",
+                "punctuation.definition.constant.end.markdown",
+            ],
+            seperator: [
+                "meta.separator.markdown",
             ],
             string: [
                 "string.other.link.description.title.markdown"
@@ -1497,7 +1508,7 @@ mapping = {
             value_literals,
         ],
         underline: [
-            markup___underline_group,
+            markdown[:reference],
             orange_underline_group,
             escape_characters_group,
         ],
@@ -1560,7 +1571,6 @@ mapping = {
             secondary_punctuation,
             yaml[:punctuation],
             css[:operator_like],
-            markdown[:image],
         ],
         italic: [
             tag_attributes,
@@ -1576,6 +1586,7 @@ mapping = {
     dim_green => {
         normal: [
             dim_green_group,
+            markdown[:image],
         ],
         underline: [
             dim_green_with_underline_group,
