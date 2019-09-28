@@ -101,7 +101,6 @@
     {
       "name": "#c7cbcd underline",
       "scope": [
-        "variable.other.object.js",
         "variable.other.object.access",
         "source.js variable.other.property"
       ],
@@ -742,7 +741,6 @@
         "punctuation.definition.end.bracket.square",
         "string.regexp",
         "meta.objectliteral.js",
-        "meta.object.member.js",
         "meta.brace.square"
       ],
       "settings": {
@@ -776,6 +774,7 @@
         "support.variable.property",
         "variable.other.object.property",
         "source.js variable.other.object",
+        "source.js meta.object.member",
         "source.js variable.other.object.property",
         "source.perl variable.other.scalar",
         "source.perl punctuation.definition.variable.scalar",

@@ -487,7 +487,6 @@ ui = {
             "source.ruby variable.other.readwrite.class", # class members in ruby
         ]
         first_property = [
-            "variable.other.object.js",
             "variable.other.object.access",
         ]
         middle_property = [
@@ -779,6 +778,7 @@ ui = {
                 "source.js variable.other.object",
             ],
             middle_property: [
+                "source.js meta.object.member",
                 "source.js variable.other.object.property"
                 # "punctuation.accessor.js",
                 # "meta.array.literial variable.other.readwrite.js",
@@ -1073,7 +1073,6 @@ dim_green_group = [
     "punctuation.definition.end.bracket.square",
     "string.regexp",
     "meta.objectliteral.js",
-    "meta.object.member.js",
     "meta.brace.square",
 ]
 dim_green_with_underline_group = [
