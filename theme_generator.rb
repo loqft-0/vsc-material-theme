@@ -1014,6 +1014,7 @@ ui = {
             general_punctuation: [
                 "punctuation.definition.markdown",
                 "punctuation.definition.math.display.markdown",
+                "punctuation.definition.math.inline.markdown",
             ],
             bold: [
                 "punctuation.definition.bold",
@@ -1095,10 +1096,6 @@ ui = {
         markup___italic_group = [
             "markup.italic",
         ]
-        markup___bold_group = [
-            "markup.bold",
-            "markup.bold string",
-        ]
         markup___bold_italic_group = [
             "markup.bold markup.italic",
             "markup.italic markup.bold",
@@ -1107,32 +1104,8 @@ ui = {
             "markup.italic markup.bold string",
             "markup.quote markup.bold string",
         ]
-        markup___underline_group = [
-            "markup.underline",
-        ]
         markup___strike_group = [
             "markup.strike",
-        ]
-        markdown___blockquote_group = [
-            "markup.quote punctuation.definition.blockquote.markdown",
-        ]
-        markup___quote_group = [
-            "markup.quote",
-        ]
-        markdown___link_anchor_group = [
-            "constant.other.reference.link.markdown",
-        ]
-        markup___raw_block_group = [
-            "markup.raw.block",
-        ]
-        markdown___fenced_language_group = [
-            "variable.language.fenced.markdown",
-        ]
-        markdown___separator_group = [
-            "meta.separator",
-        ]
-        markup___table_group = [
-            "markup.table",
         ]
 
 
@@ -1377,9 +1350,6 @@ mapping = {
     },
     gray => {
         normal: [
-            markdown___markup_raw_inline_punctuation_group,
-            markdown___blockquote_group,
-            markdown___fenced_language_group,
             boring_punctuation,
             unimportant,
             markdown[:link_punctuation],
@@ -1388,7 +1358,6 @@ mapping = {
             comments,
         ],
         bold: [
-            markdown___separator_group,
         ],
         underline: [
         ],
@@ -1398,7 +1367,6 @@ mapping = {
             markdown[:paragraph],
             markdown[:language_code],
             markdown___plain_group,
-            markup___table_group,
             normal_variables,
             css_properties,
             default_text_color,
@@ -1414,7 +1382,6 @@ mapping = {
             types,
             css_classes_group,
             json[:keys][1],
-            markdown___link_anchor_group,
             yellow_not_cursive_group,
             package_names,
             powershell[:constants],
@@ -1447,7 +1414,6 @@ mapping = {
     no_color => {
         italic: [
             keywords,
-            markup___quote_group,
             perl[:reference],
         ],
         underline: [
@@ -1685,8 +1651,6 @@ mapping = {
             markup___italic_group,
         ],
         bold: [
-            markup___bold_group,
-            markup___bold_italic_group,
             soft_red_group,
         ],
     },

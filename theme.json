@@ -15,9 +15,6 @@
     {
       "name": "#546E7A normal",
       "scope": [
-        "text.html.markdown markup.inline.raw.markdown punctuation.definition.raw.markdown",
-        "markup.quote punctuation.definition.blockquote.markdown",
-        "variable.language.fenced.markdown",
         "punctuation.terminator",
         "constant.character.escape.line-continuation",
         "punctuation.separator.continuation.line",
@@ -50,7 +47,7 @@
     {
       "name": "#546E7A bold",
       "scope": [
-        "meta.separator"
+
       ],
       "settings": {
         "fontStyle": "bold",
@@ -74,7 +71,6 @@
         "markup.fenced_code.block.markdown meta.embedded.block",
         "text.html.markdown",
         "punctuation.definition.list_item.markdown",
-        "markup.table",
         "variable",
         "variable.other",
         "variable.other.readwrite",
@@ -125,7 +121,6 @@
         "source.json meta.structure.dictionary.json meta.structure.dictionary.json support.type.property-name",
         "source.json meta.structure.dictionary.json meta.structure.dictionary.json punctuation.support.type.property-name",
         "source.json meta.structure.dictionary.json meta.structure.dictionary.json punctuation.separator.dictionary.key-value",
-        "constant.other.reference.link.markdown",
         "source.python constant.other.caps",
         "source.python entity.name.function.decorator",
         "source.python punctuation.definition.decorator",
@@ -261,7 +256,6 @@
         "keyword",
         "keyword.other",
         "source.dockerfile keyword.other.special-method",
-        "markup.quote",
         "source.perl variable.other.scalar.reference",
         "source.perl punctuation.definition.variable.scalar.reference",
         "source.perl variable.other.array.reference",
@@ -793,6 +787,7 @@
       "scope": [
         "punctuation.definition.markdown",
         "punctuation.definition.math.display.markdown",
+        "punctuation.definition.math.inline.markdown",
         "meta.separator.markdown",
         "punctuation.definition.quote.begin.markdown",
         "punctuation.vararg-ellipses",
@@ -1104,14 +1099,6 @@
     {
       "name": "#f07178 bold",
       "scope": [
-        "markup.bold",
-        "markup.bold string",
-        "markup.bold markup.italic",
-        "markup.italic markup.bold",
-        "markup.quote markup.bold",
-        "markup.bold markup.italic string",
-        "markup.italic markup.bold string",
-        "markup.quote markup.bold string",
         "source.cpp constant.language"
       ],
       "settings": {
