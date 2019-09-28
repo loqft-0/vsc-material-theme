@@ -101,6 +101,7 @@
       "name": "#c7cbcd underline",
       "scope": [
         "variable.other.object.access",
+        "source.vue variable.other.object",
         "source.js variable.other.object"
       ],
       "settings": {
@@ -161,7 +162,8 @@
         "variable.other.constant",
         "entity.name.package",
         "source.powershell support.constant.variable",
-        "source.powershell support.constant.variable punctuation.definition.variable"
+        "source.powershell support.constant.variable punctuation.definition.variable",
+        "source.vue entity.name.tag"
       ],
       "settings": {
         "fontStyle": "normal",
@@ -423,6 +425,7 @@
         "meta.object-literal.key.js entity.name.function",
         "entity.name.function.member",
         "variable.other.property",
+        "source.vue variable.other.property",
         "source.js support.variable.property",
         "source.js meta.object.member entity.name.function"
       ],
@@ -693,7 +696,8 @@
       "scope": [
         "entity.other.attribute-name.tag.pug",
         "entity.other.attribute-name.js",
-        "source.vue entity.other.attribute-name"
+        "source.vue entity.other.attribute-name",
+        "source.vue entity.other.attribute-name.html"
       ],
       "settings": {
         "fontStyle": "italic",
@@ -778,6 +782,7 @@
         "source.js variable.other.constant.object.property",
         "source.js punctuation.accessor",
         "source.js variable.other.property",
+        "source.js variable.other.constant.property",
         "source.perl variable.other.scalar",
         "source.perl punctuation.definition.variable.scalar",
         "source.perl variable.other.readwrite.global",

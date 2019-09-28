@@ -487,6 +487,7 @@ ui = {
         ]
         first_property = [
             "variable.other.object.access",
+            "source.vue variable.other.object",
         ]
         middle_property = [
             "support.variable.property",
@@ -494,6 +495,7 @@ ui = {
         ]
         last_property = [
             "variable.other.property",
+            "source.vue variable.other.property",
         ]
         constants = [
             "variable.other.constant",
@@ -786,7 +788,6 @@ ui = {
                 "source.js meta.object-literal.key",
                 "source.js variable.other.object.property",
                 "source.js variable.other.constant.object.property",
-                
                 # "punctuation.accessor.js",
                 # "meta.array.literial variable.other.readwrite.js",
                 # "punctuation.definition.group.js",
@@ -800,6 +801,7 @@ ui = {
             ],
             last_property: [
                 "source.js variable.other.property",
+                "source.js variable.other.constant.property",
                 # "source.js meta.method.declaration.js support.function.dom",
                 # "source.js meta.method.declaration.js entity.name.function",
                 # "source.js support.variable.property.dom", 
@@ -812,6 +814,15 @@ ui = {
             function_property: [
                 "source.js support.variable.property",
             ],
+        } 
+    # vue
+        vue = {
+            tags: [
+                "source.vue entity.name.tag",
+            ],
+            attributes: [
+                "source.vue entity.other.attribute-name.html",
+            ]
         }
     # ruby
         ruby = {
@@ -1322,6 +1333,7 @@ mapping = {
             yellow_not_cursive_group,
             package_names,
             powershell[:constants],
+            vue[:tags],
         ],
         italic: [
             yellow_cursive_group,
@@ -1470,6 +1482,7 @@ mapping = {
         ],
         italic: [
             tag_attributes,
+            vue[:attributes],
         ],
         underline: [
         ],
