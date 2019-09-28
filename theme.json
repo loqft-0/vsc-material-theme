@@ -699,7 +699,8 @@
         "entity.other.attribute-name.js",
         "source.vue entity.other.attribute-name",
         "source.vue entity.other.attribute-name.html",
-        "source.vue punctuation.definition.string.begin.html"
+        "source.vue punctuation.definition.string.begin.html",
+        "source.vue punctuation.definition.string.end.html"
       ],
       "settings": {
         "fontStyle": "italic",
