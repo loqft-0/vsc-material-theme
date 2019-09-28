@@ -817,9 +817,9 @@ ui = {
         } 
     # vue
         vue = {
-            tags: [
-                "source.vue entity.name.tag",
-                "source.vue punctuation.definition.tag",
+            template_tags: [
+                "source.vue meta.tag entity.name.tag",
+                "source.vue meta.tag punctuation.definition.tag",
             ],
             attributes: [
                 "source.vue entity.other.attribute-name.html",
@@ -1334,7 +1334,7 @@ mapping = {
             yellow_not_cursive_group,
             package_names,
             powershell[:constants],
-            vue[:tags],
+            vue[:template_tags],
         ],
         italic: [
             yellow_cursive_group,
