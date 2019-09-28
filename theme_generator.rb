@@ -823,6 +823,11 @@ ui = {
             ],
             attributes: [
                 "source.vue entity.other.attribute-name.html",
+                "source.vue punctuation.definition.string.begin.html",
+            ],
+            main_tags: [
+                "source.vue entity.name.tag",
+                "source.vue punctuation.definition.tag",
             ]
         }
     # ruby
@@ -1568,6 +1573,7 @@ mapping = {
         ],
         underline: [
             perl[:subpattern],
+            vue[:main_tags],
         ],
         italic: [
             markup___italic_group,

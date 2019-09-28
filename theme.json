@@ -698,7 +698,8 @@
         "entity.other.attribute-name.tag.pug",
         "entity.other.attribute-name.js",
         "source.vue entity.other.attribute-name",
-        "source.vue entity.other.attribute-name.html"
+        "source.vue entity.other.attribute-name.html",
+        "source.vue punctuation.definition.string.begin.html"
       ],
       "settings": {
         "fontStyle": "italic",
@@ -982,7 +983,9 @@
       "name": "#f07178 underline",
       "scope": [
         "source.perl variable.other.subpattern",
-        "source.perl variable.other.subpattern punctuation.definition.variable"
+        "source.perl variable.other.subpattern punctuation.definition.variable",
+        "source.vue entity.name.tag",
+        "source.vue punctuation.definition.tag"
       ],
       "settings": {
         "fontStyle": "underline",
