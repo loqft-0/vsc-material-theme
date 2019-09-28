@@ -7,8 +7,9 @@ Use it if you want `¯\_(ツ)_/¯`
 ![code](https://user-images.githubusercontent.com/17692058/59829511-3da63b00-9303-11e9-8cb5-f99c29abb81f.png)
 
 ### Font
-I use `Input Mono` (free)
-https://input.fontbureau.com/download/
+I use a customized version of Iosevka: [Here](https://github.com/jeff-hykin/xd-font)
+You can also use the [Original Iosevka](https://github.com/be5invis/Iosevka) free, open source, and customizable
+I used to use [Input Mono](https://input.fontbureau.com/download/) free, not open source, partially customizable
 
 ### Display
 It is optimized for a Macbook Pro display.
