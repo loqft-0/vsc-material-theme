@@ -80,7 +80,6 @@
         "variable.other.readwrite.ts",
         "variable.other.readwrite.js",
         "variable.other.readwrite.global",
-        "support.variable.object.process.js",
         "variable.other.constant.js",
         "variable.other.member",
         "source.css support.type.property-name",
@@ -204,7 +203,8 @@
         "source.perl variable.other.readwrite.global.special punctuation.definition.variable",
         "source.perl variable.other.readwrite.global.special",
         "source.yaml punctuation.definition.anchor",
-        "source.yaml entity.name.type.anchor"
+        "source.yaml entity.name.type.anchor",
+        "source.js support.class"
       ],
       "settings": {
         "fontStyle": "underline",

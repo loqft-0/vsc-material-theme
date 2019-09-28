@@ -469,7 +469,6 @@ ui = {
             "variable.other.readwrite.ts",
             "variable.other.readwrite.js",
             "variable.other.readwrite.global",
-            "support.variable.object.process.js",
             "variable.other.constant.js", # yes, it says constant, but its not a constant, its a non-const variable
             "variable.other.member", # used by the c++ extension for members that are not being accessed
         ]
@@ -776,6 +775,9 @@ ui = {
             ],
             variable_no_member_access: [
                 "source.js variable.other.readwrite",
+            ],
+            class_first_property: [
+                "source.js support.class"
             ],
             first_property: [
                 "source.js variable.other.object",
@@ -1327,6 +1329,7 @@ mapping = {
             unusual_variables,
             perl[:globals],
             yaml[:anchors],
+            javascript[:class_first_property],
         ],
     },
     violet => {
