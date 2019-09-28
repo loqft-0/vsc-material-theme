@@ -18,7 +18,6 @@
         "text.html.markdown markup.inline.raw.markdown punctuation.definition.raw.markdown",
         "markup.quote punctuation.definition.blockquote.markdown",
         "variable.language.fenced.markdown",
-        "meta.paragraph.markdown",
         "punctuation.terminator",
         "constant.character.escape.line-continuation",
         "punctuation.separator.continuation.line",
@@ -67,6 +66,7 @@
     {
       "name": "#c7cbcd normal",
       "scope": [
+        "meta.paragraph.markdown",
         "text.html.markdown",
         "punctuation.definition.list_item.markdown",
         "markup.table",
@@ -529,10 +529,6 @@
         "source.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json support.type.property-name",
         "source.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json punctuation.support.type.property-name",
         "source.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json punctuation.separator.dictionary.key-value",
-        "markdown.heading",
-        "markup.heading",
-        "markup.heading | markup.heading entity.name",
-        "markup.heading.markdown punctuation.definition.heading.markdown",
         "string.quoted",
         "string.template",
         "string.interpolated",
@@ -729,6 +725,8 @@
     {
       "name": "#c792eaff bold",
       "scope": [
+        "punctuation.definition.heading.markdown",
+        "entity.name.section.markdown",
         "punctuation.vararg-ellipses",
         "punctuation.separator.readline",
         "source.shell punctuation.separator.statement",

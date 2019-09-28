@@ -997,6 +997,10 @@ ui = {
     # markdown
         markdown = {
             paragraph: "meta.paragraph.markdown",
+            heading: [
+                "punctuation.definition.heading.markdown",
+                "entity.name.section.markdown"
+            ]
         }
         inserted_group = [
             "markup.inserted",
@@ -1022,12 +1026,6 @@ ui = {
         ]
         markdown___line_break_group = [
             "text.html.markdown meta.dummy.line-break",
-        ]
-        markdown___heading_group = [
-            "markdown.heading",
-            "markup.heading",
-            "markup.heading | markup.heading entity.name",
-            "markup.heading.markdown punctuation.definition.heading.markdown",
         ]
         markup___italic_group = [
             "markup.italic",
@@ -1327,7 +1325,6 @@ mapping = {
             markdown___markup_raw_inline_punctuation_group,
             markdown___blockquote_group,
             markdown___fenced_language_group,
-            markdown[:paragraph],
             boring_punctuation,
             unimportant,
         ],
@@ -1342,6 +1339,7 @@ mapping = {
     },
     light_gray => {
         normal: [
+            markdown[:paragraph],
             markdown___plain_group,
             markup___table_group,
             markdown___fenced_bode_block_variable_group,
@@ -1470,7 +1468,6 @@ mapping = {
             inserted_group,
             strings,
             json[:keys][8],
-            markdown___heading_group,
             lime_green_group,
         ],
         underline: [
@@ -1522,6 +1519,7 @@ mapping = {
         underline: [
         ],
         bold: [
+            markdown[:heading],
             special_punctuation,
             shell[:seperator],
         ],
