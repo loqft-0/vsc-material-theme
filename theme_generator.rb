@@ -1375,6 +1375,7 @@ mapping = {
             perl[:globals],
             yaml[:anchors],
             javascript[:class_first_property],
+            coffeescript[:support],
         ],
     },
     violet => {

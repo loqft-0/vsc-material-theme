@@ -206,7 +206,8 @@
         "source.perl variable.other.readwrite.global.special",
         "source.yaml punctuation.definition.anchor",
         "source.yaml entity.name.type.anchor",
-        "source.js support.class"
+        "source.js support.class",
+        "source.coffee support.class"
       ],
       "settings": {
         "fontStyle": "underline",
