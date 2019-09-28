@@ -217,6 +217,20 @@
       }
     },
     {
+      "name": "#fec355 bold",
+      "scope": [
+        "punctuation.definition.heading.markdown",
+        "entity.name.section.markdown",
+        "markup.heading",
+        "markup.heading.setext",
+        "punctuation.definition.bold"
+      ],
+      "settings": {
+        "fontStyle": "bold",
+        "foreground": "#fec355"
+      }
+    },
+    {
       "name": "#C792EA normal",
       "scope": [
         "markup.changed",
@@ -444,7 +458,6 @@
         "source.coffee meta.method-call entity.name.function",
         "source.coffee meta.method-call support.function",
         "source.coffee punctuation.separator.method",
-        "markup.underline.link",
         "string.other.link.title.markdown"
       ],
       "settings": {
@@ -884,12 +897,7 @@
       "name": "#4EC9B0 underline",
       "scope": [
         "source.perl variable.other.hash",
-        "source.perl punctuation.definition.variable.hash",
-        "punctuation.definition.heading.markdown",
-        "entity.name.section.markdown",
-        "markup.heading",
-        "markup.heading.setext",
-        "punctuation.definition.bold"
+        "source.perl punctuation.definition.variable.hash"
       ],
       "settings": {
         "fontStyle": "underline",

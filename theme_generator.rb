@@ -1020,7 +1020,6 @@ ui = {
                 "markup.underline.link",
             ],
             url: [
-                "markup.underline.link",
                 "string.other.link.title.markdown",
             ],
             image: [
@@ -1390,6 +1389,9 @@ mapping = {
             javascript[:class_first_property],
             coffeescript[:support],
         ],
+        bold: [
+            markdown[:heading],
+        ]
     },
     violet => {
         normal: [
@@ -1574,7 +1576,6 @@ mapping = {
         ],
         underline: [
             perl[:hash],
-            markdown[:heading],
         ]
     },
     bold_green => {
