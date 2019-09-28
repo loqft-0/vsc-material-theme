@@ -999,7 +999,17 @@ ui = {
             paragraph: "meta.paragraph.markdown",
             heading: [
                 "punctuation.definition.heading.markdown",
-                "entity.name.section.markdown"
+                "entity.name.section.markdown",
+            ],
+            code: [
+                "markup.fenced_code.block.markdown",
+                "markup.inline.raw.string.markdown",
+            ],
+            list: [
+                "markup.list",
+            ],
+            url: [
+                "markup.underline.link",
             ]
         }
         inserted_group = [
@@ -1065,10 +1075,6 @@ ui = {
         ]
         markup___raw_block_group = [
             "markup.raw.block",
-        ]
-        markdown___fenced_bode_block_variable_group = [
-            "markup.fenced_code.block.markdown",
-            "markup.inline.raw.string.markdown",
         ]
         markdown___fenced_language_group = [
             "variable.language.fenced.markdown",
@@ -1327,6 +1333,7 @@ mapping = {
             markdown___fenced_language_group,
             boring_punctuation,
             unimportant,
+            markdown[:code],
         ],
         italic: [
             comments,
@@ -1342,7 +1349,6 @@ mapping = {
             markdown[:paragraph],
             markdown___plain_group,
             markup___table_group,
-            markdown___fenced_bode_block_variable_group,
             normal_variables,
             css_properties,
             default_text_color,
@@ -1410,6 +1416,7 @@ mapping = {
         normal: [
             keywords,
             json[:punctuation],
+            markdown[:list],
             import_export_keywords,
             normal_punctuation,
             regular_expressions_group,
@@ -1517,9 +1524,9 @@ mapping = {
             vue[:attributes],
         ],
         underline: [
+            markdown[:heading],
         ],
         bold: [
-            markdown[:heading],
             special_punctuation,
             shell[:seperator],
         ],

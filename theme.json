@@ -24,7 +24,9 @@
         "punctuation.definition.lambda.return-type",
         "punctuation.separator.scope-resolution",
         "punctuation.definition.capture",
-        "meta.lambda.capture punctuation.separator.delimiter.comma"
+        "meta.lambda.capture punctuation.separator.delimiter.comma",
+        "markup.fenced_code.block.markdown",
+        "markup.inline.raw.string.markdown"
       ],
       "settings": {
         "fontStyle": "normal",
@@ -70,8 +72,6 @@
         "text.html.markdown",
         "punctuation.definition.list_item.markdown",
         "markup.table",
-        "markup.fenced_code.block.markdown",
-        "markup.inline.raw.string.markdown",
         "variable",
         "variable.other",
         "variable.other.readwrite",
@@ -310,6 +310,7 @@
         "source.dockerfile keyword.other.special-method",
         "source.json punctuation.separator",
         "source.json punctuation.definition.dictionary",
+        "markup.list",
         "support.type.object.module",
         "punctuation",
         "punctuation.section.embedded",
@@ -715,7 +716,8 @@
     {
       "name": "#c792eaff underline",
       "scope": [
-
+        "punctuation.definition.heading.markdown",
+        "entity.name.section.markdown"
       ],
       "settings": {
         "fontStyle": "underline",
@@ -725,8 +727,6 @@
     {
       "name": "#c792eaff bold",
       "scope": [
-        "punctuation.definition.heading.markdown",
-        "entity.name.section.markdown",
         "punctuation.vararg-ellipses",
         "punctuation.separator.readline",
         "source.shell punctuation.separator.statement",
