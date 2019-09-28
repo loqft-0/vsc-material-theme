@@ -775,6 +775,7 @@
         "variable.other.object.property",
         "source.js meta.object-literal.key",
         "source.js variable.other.object.property",
+        "source.js variable.other.constant.object.property",
         "source.js punctuation.accessor",
         "source.js variable.other.property",
         "source.perl variable.other.scalar",

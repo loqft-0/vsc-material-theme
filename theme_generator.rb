@@ -784,7 +784,9 @@ ui = {
             ],
             middle_property: [
                 "source.js meta.object-literal.key",
-                "source.js variable.other.object.property"
+                "source.js variable.other.object.property",
+                "source.js variable.other.constant.object.property",
+                
                 # "punctuation.accessor.js",
                 # "meta.array.literial variable.other.readwrite.js",
                 # "punctuation.definition.group.js",
