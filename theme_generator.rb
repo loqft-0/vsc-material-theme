@@ -568,6 +568,9 @@ ui = {
             "punctuation.definition.tag source.js", # a fix for screwed up html <script> tags
         ]
         tag_attributes = [
+            "entity.other.attribute-name.html",
+            "punctuation.definition.string.begin.html",
+            "punctuation.definition.string.end.html",
             "entity.other.attribute-name.tag.pug",
             "entity.other.attribute-name.js",
             "source.vue entity.other.attribute-name",
@@ -1210,7 +1213,6 @@ yellow_cursive_group = [
     "support.function.magic.python",
     "support.type.python",
     "support.class.builtin.js",
-    "entity.other.attribute-name.html",
     "support.constant.math",
     "storage.modifier.glsl",
 ]

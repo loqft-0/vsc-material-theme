@@ -180,7 +180,6 @@
         "support.function.magic.python",
         "support.type.python",
         "support.class.builtin.js",
-        "entity.other.attribute-name.html",
         "support.constant.math",
         "storage.modifier.glsl"
       ],
@@ -695,6 +694,9 @@
     {
       "name": "#c792eaff italic",
       "scope": [
+        "entity.other.attribute-name.html",
+        "punctuation.definition.string.begin.html",
+        "punctuation.definition.string.end.html",
         "entity.other.attribute-name.tag.pug",
         "entity.other.attribute-name.js",
         "source.vue entity.other.attribute-name",
