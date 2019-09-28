@@ -959,21 +959,43 @@ ui = {
         def json_depth(amount)
             return "source.json" + " meta.structure.dictionary.json"*amount
         end
+        def embedded_json_depth(amount)
+            return "meta.embedded.block.json" + " meta.structure.dictionary.json"*amount
+        end
+        def embedded_jsonc_depth(amount)
+            return "meta.embedded.block.jsonc" + " meta.structure.dictionary.json"*amount
+        end
+        def json_key(number)
+            return [
+                # normal json
+                "#{json_depth(number)} support.type.property-name",
+                "#{json_depth(number)} punctuation.support.type.property-name",
+                "#{json_depth(number)} punctuation.separator.dictionary.key-value",
+                # embedded json
+                "#{embedded_json_depth(number)} support.type.property-name",
+                "#{embedded_json_depth(number)} punctuation.support.type.property-name",
+                "#{embedded_json_depth(number)} punctuation.separator.dictionary.key-value",
+                # embedded jsonc
+                "#{embedded_jsonc_depth(number)} support.type.property-name",
+                "#{embedded_jsonc_depth(number)} punctuation.support.type.property-name",
+                "#{embedded_jsonc_depth(number)} punctuation.separator.dictionary.key-value",
+            ]
+        end
         json = {
             punctuation: [
                 "source.json punctuation.separator",
                 "source.json punctuation.definition.dictionary"
             ],
             keys: [
-                [ "#{json_depth(1)} support.type.property-name", "#{json_depth(1)} punctuation.support.type.property-name", "#{json_depth(1)} punctuation.separator.dictionary.key-value" ],
-                [ "#{json_depth(2)} support.type.property-name", "#{json_depth(2)} punctuation.support.type.property-name", "#{json_depth(2)} punctuation.separator.dictionary.key-value" ],
-                [ "#{json_depth(3)} support.type.property-name", "#{json_depth(3)} punctuation.support.type.property-name", "#{json_depth(3)} punctuation.separator.dictionary.key-value" ],
-                [ "#{json_depth(4)} support.type.property-name", "#{json_depth(4)} punctuation.support.type.property-name", "#{json_depth(4)} punctuation.separator.dictionary.key-value" ],
-                [ "#{json_depth(5)} support.type.property-name", "#{json_depth(5)} punctuation.support.type.property-name", "#{json_depth(5)} punctuation.separator.dictionary.key-value" ],
-                [ "#{json_depth(6)} support.type.property-name", "#{json_depth(6)} punctuation.support.type.property-name", "#{json_depth(6)} punctuation.separator.dictionary.key-value" ],
-                [ "#{json_depth(7)} support.type.property-name", "#{json_depth(7)} punctuation.support.type.property-name", "#{json_depth(7)} punctuation.separator.dictionary.key-value" ],
-                [ "#{json_depth(8)} support.type.property-name", "#{json_depth(8)} punctuation.support.type.property-name", "#{json_depth(8)} punctuation.separator.dictionary.key-value" ],
-                [ "#{json_depth(9)} support.type.property-name", "#{json_depth(9)} punctuation.support.type.property-name", "#{json_depth(9)} punctuation.separator.dictionary.key-value" ],
+                json_key(1),
+                json_key(2),
+                json_key(3),
+                json_key(4),
+                json_key(5),
+                json_key(6),
+                json_key(7),
+                json_key(8),
+                json_key(9),
             ]
         }
     # coffeescript
