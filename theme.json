@@ -502,7 +502,9 @@
         "variable.parameter",
         "variable.parameter.function",
         "variable.parameter.function.language.python",
-        "variable.parameter.function.coffee"
+        "variable.parameter.function.coffee",
+        "punctuation.definition.function.katex",
+        "support.function.katex"
       ],
       "settings": {
         "fontStyle": "normal",
@@ -790,6 +792,7 @@
       "name": "#c792eaff bold",
       "scope": [
         "punctuation.definition.markdown",
+        "punctuation.definition.math.display.markdown",
         "meta.separator.markdown",
         "punctuation.definition.quote.begin.markdown",
         "punctuation.vararg-ellipses",

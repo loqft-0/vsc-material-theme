@@ -1012,7 +1012,8 @@ ui = {
             heading5: "heading.5 entity.name.section.markdown",
             heading6: "heading.6 entity.name.section.markdown",
             general_punctuation: [
-                "punctuation.definition.markdown"
+                "punctuation.definition.markdown",
+                "punctuation.definition.math.display.markdown",
             ],
             bold: [
                 "punctuation.definition.bold",
@@ -1509,6 +1510,7 @@ mapping = {
             orange_group,
             language_literals,
             parameter_variables,
+            markdown[:function],
         ],
         italic: [
             value_literals,
