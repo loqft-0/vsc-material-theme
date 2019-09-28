@@ -374,7 +374,7 @@
     {
       "name": "#89DDFF bold",
       "scope": [
-        "punctuation.definition.markdown"
+
       ],
       "settings": {
         "fontStyle": "bold",
@@ -530,6 +530,7 @@
         "constant.other.reference.link.markdown",
         "punctuation.definition.constant.begin.markdown",
         "punctuation.definition.constant.end.markdown",
+        "punctuation.definition.constant.markdown",
         "source.shell variable.parameter.positional.shell",
         "source.shell variable.parameter.positional",
         "source.shell variable.parameter.positional.shell punctuation.definition.variable.shell",
@@ -583,6 +584,9 @@
         "source.shell string.quoted.single",
         "source.shell string.unquoted.argument",
         "source.shell string.quoted.double",
+        "string.other.link.description.title.markdown punctuation.definition.string.end.markdown",
+        "string.other.link.description.title.markdown punctuation.definition.string.begin.markdown",
+        "punctuation.definition.string.markdown",
         "string.other.link.description.title.markdown"
       ],
       "settings": {
@@ -785,6 +789,9 @@
     {
       "name": "#c792eaff bold",
       "scope": [
+        "punctuation.definition.markdown",
+        "meta.separator.markdown",
+        "punctuation.definition.quote.begin.markdown",
         "punctuation.vararg-ellipses",
         "punctuation.separator.readline",
         "source.shell punctuation.separator.statement",

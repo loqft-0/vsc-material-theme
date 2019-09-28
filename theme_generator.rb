@@ -1028,6 +1028,9 @@ ui = {
                 "markup.raw.block",
                 "punctuation.definition.raw",
             ],
+            block_quote_punctuation: [
+                "punctuation.definition.quote.begin.markdown"
+            ],
             language_code: [ # like code, but probably shouldn't be colored since it has a language attached to it
                 "markup.fenced_code.block.markdown meta.embedded.block",
             ],
@@ -1050,12 +1053,16 @@ ui = {
                 "constant.other.reference.link.markdown",
                 "punctuation.definition.constant.begin.markdown",
                 "punctuation.definition.constant.end.markdown",
+                "punctuation.definition.constant.markdown",
             ],
             seperator: [
                 "meta.separator.markdown",
             ],
             string: [
-                "string.other.link.description.title.markdown"
+                "string.other.link.description.title.markdown punctuation.definition.string.end.markdown",
+                "string.other.link.description.title.markdown punctuation.definition.string.begin.markdown",
+                "punctuation.definition.string.markdown",
+                "string.other.link.description.title.markdown",
             ],
             function: [
                 "punctuation.definition.function.katex",
@@ -1468,7 +1475,6 @@ mapping = {
             control_flow,
         ],
         bold: [
-            markdown[:general_punctuation],
         ],
         underline: [
             markdown[:url],
@@ -1579,6 +1585,9 @@ mapping = {
         underline: [
         ],
         bold: [
+            markdown[:general_punctuation],
+            markdown[:seperator],
+            markdown[:block_quote_punctuation],
             special_punctuation,
             shell[:seperator],
         ],
