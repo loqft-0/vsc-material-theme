@@ -91,8 +91,7 @@
         "source.postcss support.type.property-name",
         "source.css support.type.vendored.property-name",
         "source",
-        "source.js variable.other.readwrite",
-        "source.js variable.other.object"
+        "source.js variable.other.readwrite"
       ],
       "settings": {
         "fontStyle": "normal",
@@ -102,7 +101,8 @@
     {
       "name": "#c7cbcd underline",
       "scope": [
-        "variable.other.object.access"
+        "variable.other.object.access",
+        "source.js variable.other.object"
       ],
       "settings": {
         "fontStyle": "underline",
@@ -776,6 +776,7 @@
         "source.js meta.object-literal.key",
         "source.js variable.other.object.property",
         "source.js punctuation.accessor",
+        "source.js variable.other.property",
         "source.perl variable.other.scalar",
         "source.perl punctuation.definition.variable.scalar",
         "source.perl variable.other.readwrite.global",
@@ -795,16 +796,6 @@
       ],
       "settings": {
         "fontStyle": "italic",
-        "foreground": "#80CBC4"
-      }
-    },
-    {
-      "name": "#80CBC4 italic underline",
-      "scope": [
-        "source.js variable.other.property"
-      ],
-      "settings": {
-        "fontStyle": "italic underline",
         "foreground": "#80CBC4"
       }
     },

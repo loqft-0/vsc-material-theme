@@ -1303,10 +1303,10 @@ mapping = {
             css_properties,
             default_text_color,
             javascript[:variable_no_member_access],
-            javascript[:first_property],
         ],
         underline: [
             first_property,
+            javascript[:first_property],
         ],
     },
     yellow => {
@@ -1484,6 +1484,7 @@ mapping = {
             middle_property,
             javascript[:middle_property],
             javascript[:member_access_operator],
+            javascript[:last_property],
             perl[:scalar],
             perl[:vars],
             powershell[:variables],
@@ -1491,9 +1492,6 @@ mapping = {
         italic: [
             dim_green_with_italics_group,
         ],
-        'italic underline' => [
-            javascript[:last_property],
-        ]
     },
     green => {
         normal: [
