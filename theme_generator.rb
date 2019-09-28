@@ -1000,16 +1000,30 @@ ui = {
             heading: [
                 "punctuation.definition.heading.markdown",
                 "entity.name.section.markdown",
+                "markup.heading",
+                "markup.heading.setext",
+                "punctuation.definition.bold"
             ],
             code: [
                 "markup.fenced_code.block.markdown",
                 "markup.inline.raw.string.markdown",
+                "markup.raw.block",
+                "punctuation.definition.raw",
             ],
-            list: [
-                "markup.list",
+            list_symbol: [
+                "punctuation.definition.list.begin.markdown",
+            ],
+            link_punctuation: [
+                "punctuation.definition.string.begin.markdown",
+                "punctuation.definition.string.end.markdown",
+                "punctuation.definition.metadata.markdown",
+                "markup.underline.link",
             ],
             url: [
                 "markup.underline.link",
+            ],
+            image: [
+                "string.other.link",
             ]
         }
         inserted_group = [
@@ -1333,7 +1347,7 @@ mapping = {
             markdown___fenced_language_group,
             boring_punctuation,
             unimportant,
-            markdown[:code],
+            markdown[:link_punctuation],
         ],
         italic: [
             comments,
@@ -1416,7 +1430,6 @@ mapping = {
         normal: [
             keywords,
             json[:punctuation],
-            markdown[:list],
             import_export_keywords,
             normal_punctuation,
             regular_expressions_group,
@@ -1426,6 +1439,9 @@ mapping = {
         italic: [
             control_flow,
         ],
+        bold: [
+            markdown[:list_symbol],
+        ]
     },
     blue => {
         normal: [
@@ -1493,6 +1509,9 @@ mapping = {
         ],
     },
     light_slate => {
+        normal: [
+            markdown[:code]
+        ],
         underline: [
             perl[:array],
         ],
@@ -1518,13 +1537,13 @@ mapping = {
             secondary_punctuation,
             yaml[:punctuation],
             css[:operator_like],
+            markdown[:image],
         ],
         italic: [
             tag_attributes,
             vue[:attributes],
         ],
         underline: [
-            markdown[:heading],
         ],
         bold: [
             special_punctuation,
@@ -1560,6 +1579,7 @@ mapping = {
         ],
         underline: [
             perl[:hash],
+            markdown[:heading],
         ]
     },
     bold_green => {

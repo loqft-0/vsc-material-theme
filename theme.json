@@ -25,8 +25,10 @@
         "punctuation.separator.scope-resolution",
         "punctuation.definition.capture",
         "meta.lambda.capture punctuation.separator.delimiter.comma",
-        "markup.fenced_code.block.markdown",
-        "markup.inline.raw.string.markdown"
+        "punctuation.definition.string.begin.markdown",
+        "punctuation.definition.string.end.markdown",
+        "punctuation.definition.metadata.markdown",
+        "markup.underline.link"
       ],
       "settings": {
         "fontStyle": "normal",
@@ -310,7 +312,6 @@
         "source.dockerfile keyword.other.special-method",
         "source.json punctuation.separator",
         "source.json punctuation.definition.dictionary",
-        "markup.list",
         "support.type.object.module",
         "punctuation",
         "punctuation.section.embedded",
@@ -355,6 +356,16 @@
       ],
       "settings": {
         "fontStyle": "italic",
+        "foreground": "#89DDFF"
+      }
+    },
+    {
+      "name": "#89DDFF bold",
+      "scope": [
+        "punctuation.definition.list.begin.markdown"
+      ],
+      "settings": {
+        "fontStyle": "bold",
         "foreground": "#89DDFF"
       }
     },
@@ -598,6 +609,19 @@
       }
     },
     {
+      "name": "#64bac5 normal",
+      "scope": [
+        "markup.fenced_code.block.markdown",
+        "markup.inline.raw.string.markdown",
+        "markup.raw.block",
+        "punctuation.definition.raw"
+      ],
+      "settings": {
+        "fontStyle": "normal",
+        "foreground": "#64bac5"
+      }
+    },
+    {
       "name": "#64bac5 underline",
       "scope": [
         "source.perl variable.other.array",
@@ -687,7 +711,8 @@
         "punctuation.accessor.attribute",
         "punctuation.section.attribute",
         "source.yaml constant.language.merge",
-        "source.css entity.name.tag"
+        "source.css entity.name.tag",
+        "string.other.link"
       ],
       "settings": {
         "fontStyle": "normal",
@@ -716,8 +741,7 @@
     {
       "name": "#c792eaff underline",
       "scope": [
-        "punctuation.definition.heading.markdown",
-        "entity.name.section.markdown"
+
       ],
       "settings": {
         "fontStyle": "underline",
@@ -859,7 +883,12 @@
       "name": "#4EC9B0 underline",
       "scope": [
         "source.perl variable.other.hash",
-        "source.perl punctuation.definition.variable.hash"
+        "source.perl punctuation.definition.variable.hash",
+        "punctuation.definition.heading.markdown",
+        "entity.name.section.markdown",
+        "markup.heading",
+        "markup.heading.setext",
+        "punctuation.definition.bold"
       ],
       "settings": {
         "fontStyle": "underline",
