@@ -295,6 +295,14 @@ end
 
 
 def convert_to_json_theme(theme_info, ui_colors, mapping)
+    # if its a function run it first
+    if mapping.is_a?(Proc)
+        mapping = mapping[]
+    end
+    if ui_colors.is_a?(Proc)
+        ui_colors = ui_colors[]
+    end
+    
     output = {
         name: theme_info[:name],
         type: theme_info[:type],
