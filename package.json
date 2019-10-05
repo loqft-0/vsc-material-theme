@@ -38,7 +38,7 @@
         "uiTheme": "vs-dark"
       },
       {
-        "label": "XD Theme",
+        "label": "XD Theme - lighten",
         "path": "./theme-lighten.json",
         "uiTheme": "vs-dark"
       }
