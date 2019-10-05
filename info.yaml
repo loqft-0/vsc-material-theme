@@ -5,7 +5,7 @@
     
     commands: &commands # if you dont know what the & means, see https://blog.daemonl.com/2016/02/yaml.html
         build: ruby theme_generator.rb
-        publish: npm run build && git add -A && git commit -m \"commit\" && git pull && echo here && git push && vsce publish patch && git push
+        publish: npm run build && git add -A && git commit -m \"commit\" && git pull && git push && vsce publish patch && git push
     
     dependencies: &dependencies
         atk: 0.0.1
