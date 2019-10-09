@@ -427,15 +427,15 @@
         "punctuation.section.arguments",
         "meta.parameter punctuation.separator.delimiter.comma",
         "source.sass keyword.control",
-        "source.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json support.type.property-name",
-        "source.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json punctuation.support.type.property-name",
-        "source.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json punctuation.separator.dictionary.key-value",
-        "meta.embedded.block.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json support.type.property-name",
-        "meta.embedded.block.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json punctuation.support.type.property-name",
-        "meta.embedded.block.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json punctuation.separator.dictionary.key-value",
-        "meta.embedded.block.jsonc meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json support.type.property-name",
-        "meta.embedded.block.jsonc meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json punctuation.support.type.property-name",
-        "meta.embedded.block.jsonc meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json punctuation.separator.dictionary.key-value",
+        "source.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json support.type.property-name",
+        "source.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json punctuation.support.type.property-name",
+        "source.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json punctuation.separator.dictionary.key-value",
+        "meta.embedded.block.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json support.type.property-name",
+        "meta.embedded.block.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json punctuation.support.type.property-name",
+        "meta.embedded.block.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json punctuation.separator.dictionary.key-value",
+        "meta.embedded.block.jsonc meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json support.type.property-name",
+        "meta.embedded.block.jsonc meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json punctuation.support.type.property-name",
+        "meta.embedded.block.jsonc meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json punctuation.separator.dictionary.key-value",
         "source.python meta.function-call.generic.python",
         "support.function",
         "entity.other.attribute-name.js",
@@ -563,7 +563,8 @@
     {
       "name": "#F78C6C bold",
       "scope": [
-        "source.python constant.language"
+        "source.python constant.language",
+        "source.json constant.language"
       ],
       "settings": {
         "fontStyle": "bold",
@@ -627,15 +628,15 @@
     {
       "name": "#C17E70 normal",
       "scope": [
-        "source.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json support.type.property-name",
-        "source.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json punctuation.support.type.property-name",
-        "source.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json punctuation.separator.dictionary.key-value",
-        "meta.embedded.block.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json support.type.property-name",
-        "meta.embedded.block.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json punctuation.support.type.property-name",
-        "meta.embedded.block.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json punctuation.separator.dictionary.key-value",
-        "meta.embedded.block.jsonc meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json support.type.property-name",
-        "meta.embedded.block.jsonc meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json punctuation.support.type.property-name",
-        "meta.embedded.block.jsonc meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json punctuation.separator.dictionary.key-value"
+        "source.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json support.type.property-name",
+        "source.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json punctuation.support.type.property-name",
+        "source.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json punctuation.separator.dictionary.key-value",
+        "meta.embedded.block.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json support.type.property-name",
+        "meta.embedded.block.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json punctuation.support.type.property-name",
+        "meta.embedded.block.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json punctuation.separator.dictionary.key-value",
+        "meta.embedded.block.jsonc meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json support.type.property-name",
+        "meta.embedded.block.jsonc meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json punctuation.support.type.property-name",
+        "meta.embedded.block.jsonc meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json punctuation.separator.dictionary.key-value"
       ],
       "settings": {
         "fontStyle": "normal",
@@ -717,7 +718,16 @@
         "storage.type.modifier.access",
         "source.shell punctuation.definition.group",
         "punctuation.section.block.begin.bracket.curly.lambda.cpp",
-        "punctuation.section.block.end.bracket.curly.lambda.cpp"
+        "punctuation.section.block.end.bracket.curly.lambda.cpp",
+        "source.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json support.type.property-name",
+        "source.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json punctuation.support.type.property-name",
+        "source.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json punctuation.separator.dictionary.key-value",
+        "meta.embedded.block.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json support.type.property-name",
+        "meta.embedded.block.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json punctuation.support.type.property-name",
+        "meta.embedded.block.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json punctuation.separator.dictionary.key-value",
+        "meta.embedded.block.jsonc meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json support.type.property-name",
+        "meta.embedded.block.jsonc meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json punctuation.support.type.property-name",
+        "meta.embedded.block.jsonc meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json punctuation.separator.dictionary.key-value"
       ],
       "settings": {
         "fontStyle": "normal",
@@ -940,15 +950,15 @@
         "storage.type.string",
         "entity.name",
         "entity.other",
-        "source.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json support.type.property-name",
-        "source.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json punctuation.support.type.property-name",
-        "source.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json punctuation.separator.dictionary.key-value",
-        "meta.embedded.block.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json support.type.property-name",
-        "meta.embedded.block.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json punctuation.support.type.property-name",
-        "meta.embedded.block.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json punctuation.separator.dictionary.key-value",
-        "meta.embedded.block.jsonc meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json support.type.property-name",
-        "meta.embedded.block.jsonc meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json punctuation.support.type.property-name",
-        "meta.embedded.block.jsonc meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json punctuation.separator.dictionary.key-value"
+        "source.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json support.type.property-name",
+        "source.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json punctuation.support.type.property-name",
+        "source.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json punctuation.separator.dictionary.key-value",
+        "meta.embedded.block.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json support.type.property-name",
+        "meta.embedded.block.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json punctuation.support.type.property-name",
+        "meta.embedded.block.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json punctuation.separator.dictionary.key-value",
+        "meta.embedded.block.jsonc meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json support.type.property-name",
+        "meta.embedded.block.jsonc meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json punctuation.support.type.property-name",
+        "meta.embedded.block.jsonc meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json punctuation.separator.dictionary.key-value"
       ],
       "settings": {
         "fontStyle": "normal",
@@ -1006,15 +1016,15 @@
       "scope": [
         "keyword.other.unit",
         "punctuation.separator.constant.numeric",
-        "source.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json support.type.property-name",
-        "source.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json punctuation.support.type.property-name",
-        "source.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json punctuation.separator.dictionary.key-value",
-        "meta.embedded.block.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json support.type.property-name",
-        "meta.embedded.block.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json punctuation.support.type.property-name",
-        "meta.embedded.block.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json punctuation.separator.dictionary.key-value",
-        "meta.embedded.block.jsonc meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json support.type.property-name",
-        "meta.embedded.block.jsonc meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json punctuation.support.type.property-name",
-        "meta.embedded.block.jsonc meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json punctuation.separator.dictionary.key-value",
+        "source.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json support.type.property-name",
+        "source.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json punctuation.support.type.property-name",
+        "source.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json punctuation.separator.dictionary.key-value",
+        "meta.embedded.block.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json support.type.property-name",
+        "meta.embedded.block.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json punctuation.support.type.property-name",
+        "meta.embedded.block.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json punctuation.separator.dictionary.key-value",
+        "meta.embedded.block.jsonc meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json support.type.property-name",
+        "meta.embedded.block.jsonc meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json punctuation.support.type.property-name",
+        "meta.embedded.block.jsonc meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json punctuation.separator.dictionary.key-value",
         "source.yaml punctuation.definition.alias",
         "source.yaml variable.other.alias"
       ],
@@ -1046,15 +1056,6 @@
         "invalid.illegal",
         "invalid.deprecated",
         "markup.deleted",
-        "source.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json support.type.property-name",
-        "source.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json punctuation.support.type.property-name",
-        "source.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json punctuation.separator.dictionary.key-value",
-        "meta.embedded.block.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json support.type.property-name",
-        "meta.embedded.block.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json punctuation.support.type.property-name",
-        "meta.embedded.block.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json punctuation.separator.dictionary.key-value",
-        "meta.embedded.block.jsonc meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json support.type.property-name",
-        "meta.embedded.block.jsonc meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json punctuation.support.type.property-name",
-        "meta.embedded.block.jsonc meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json punctuation.separator.dictionary.key-value",
         "source.ruby meta.function.method.with-arguments punctuation.definition.constant.hashkey",
         "keyword.operator.assignment",
         "variable.language.this",
@@ -1068,6 +1069,16 @@
       ],
       "settings": {
         "fontStyle": "normal",
+        "foreground": "#ff5572"
+      }
+    },
+    {
+      "name": "#ff5572 bold",
+      "scope": [
+        "source.json constant.numeric"
+      ],
+      "settings": {
+        "fontStyle": "bold",
         "foreground": "#ff5572"
       }
     },
@@ -1107,15 +1118,6 @@
         "punctuation.definition.tag source.js",
         "variable.other.constant",
         "constant.other.php",
-        "source.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json support.type.property-name",
-        "source.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json punctuation.support.type.property-name",
-        "source.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json punctuation.separator.dictionary.key-value",
-        "meta.embedded.block.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json support.type.property-name",
-        "meta.embedded.block.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json punctuation.support.type.property-name",
-        "meta.embedded.block.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json punctuation.separator.dictionary.key-value",
-        "meta.embedded.block.jsonc meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json support.type.property-name",
-        "meta.embedded.block.jsonc meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json punctuation.support.type.property-name",
-        "meta.embedded.block.jsonc meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json punctuation.separator.dictionary.key-value",
         "source.cpp constant.language",
         "constant.numeric",
         "variable.other.readwrite.instance",
