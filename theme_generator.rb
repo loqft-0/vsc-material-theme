@@ -986,6 +986,12 @@ ui = {
                 "source.json punctuation.separator",
                 "source.json punctuation.definition.dictionary"
             ],
+            numbers: [
+                "source.json constant.numeric",
+            ],
+            literalWords: [
+                "source.json constant.language",
+            ],
             keys: [
                 json_key(1),
                 json_key(2),
@@ -1475,7 +1481,7 @@ mapping = {
             coffeescript[:function],
             function_punctuation,
             css_ids_group,
-            json[:keys][4],
+            json[:keys][3],
             blue_group,
             regex[:group],
             cpp[:assembly_punctuation],
@@ -1510,6 +1516,7 @@ mapping = {
         ],
         bold: [
             orange_bold_group,
+            json[:literalWords],
         ],
     },
     lime => {
@@ -1526,7 +1533,7 @@ mapping = {
     },
     rust => {
         normal: [
-            json[:keys][3],
+            json[:keys][6],
         ],
     },
     dark_slate => {
@@ -1549,6 +1556,7 @@ mapping = {
             *storage_type_punctuation,
             *storage_modifiers,
             *anonymous_function_punctuation,
+            json[:keys][4],
         ],
         underline: [
         ],
@@ -1608,7 +1616,7 @@ mapping = {
             green_group,
             string_preceders,
             unknown_entites,
-            json[:keys][5],
+            json[:keys][2],
         ],
         underline: [
             perl[:hash],
@@ -1630,7 +1638,7 @@ mapping = {
     bananna_yellow => {
         normal: [
             bananna_yellow_group,
-            json[:keys][7],
+            json[:keys][5],
             yaml[:alias],
         ],
         underline: [
@@ -1642,9 +1650,11 @@ mapping = {
         normal: [
             invalid_things,
             deleted_group,
-            json[:keys][2],
             red_group,
             assignment_operators,
+        ],
+        bold: [
+            json[:numbers],
         ],
         italic: [
             special_variables,
@@ -1659,7 +1669,6 @@ mapping = {
         normal: [
             tags,
             constants,
-            json[:keys][6],
             soft_red_group,
             number_literals,
             instance_variables,
