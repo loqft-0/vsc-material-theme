@@ -1,10 +1,5 @@
 require_relative './theme_generator_generator'
 
-theme_info = {
-    name: 'My Theme',
-    type: 'dark',
-}
-
 #
 # Colors
 #
@@ -46,7 +41,7 @@ hover_background = '#2c3b4f'
 scrollbar_color = '#324962'
 editor_selection_color = '#83b2e1'
 
-ui = {
+ui = ->() do {
     foreground: normal_text_color,
     focusBorder: '#00aeffe7', # border when something (panel or input box) is active/focused
     editor: {
@@ -437,6 +432,7 @@ ui = {
     },
     errorForeground: '#FFCA28',
 }
+end
 
 
 
@@ -1370,7 +1366,7 @@ soft_red_group = [
 # Mapping
 #
 
-mapping = {
+mapping = ->() do {
     white => {
         normal: [
             *colors_group,
@@ -1686,5 +1682,11 @@ mapping = {
         ],
     },
 }
+end
 
-IO.write("theme.json", convert_to_json_theme(theme_info, ui, mapping) )
+IO.write("theme.json", convert_to_json_theme({ name: 'XD Theme', type: 'dark', }, ui, mapping) )
+
+# change the background color
+background_color = '#273244'
+navy_slate = '#0a5375'
+IO.write("theme-lighten.json", convert_to_json_theme({ name: 'XD Theme - Lighten', type: 'dark', }, ui, mapping) )

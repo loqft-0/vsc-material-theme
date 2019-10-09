@@ -2,7 +2,7 @@
   "name": "xd-theme",
   "displayName": "XD Theme",
   "description": "A theme because my settings file was too large",
-  "version": "0.0.111",
+  "version": "0.0.115",
   "publisher": "jeff-hykin",
   "license": "MIT",
   "author": "Jeff Hykin",
@@ -35,6 +35,11 @@
       {
         "label": "XD Theme",
         "path": "./theme.json",
+        "uiTheme": "vs-dark"
+      },
+      {
+        "label": "XD Theme - lighten",
+        "path": "./theme-lighten.json",
         "uiTheme": "vs-dark"
       }
     ]
