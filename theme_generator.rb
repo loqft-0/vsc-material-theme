@@ -1650,7 +1650,6 @@ mapping = ->() do {
             assignment_operators,
         ],
         bold: [
-            json[:numbers],
         ],
         italic: [
             special_variables,
