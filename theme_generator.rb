@@ -1548,16 +1548,16 @@ mapping = ->() do {
     },
     pink => {
         normal: [
-            *storage_types,
-            *storage_type_punctuation,
-            *storage_modifiers,
-            *anonymous_function_punctuation,
-            json[:keys][4],
+            storage_types,
+            storage_type_punctuation,
+            storage_modifiers,
+            anonymous_function_punctuation,
+            json[:keys][2],
         ],
         underline: [
         ],
         bold: [
-            *cpp[:assembly_function],
+            cpp[:assembly_function],
         ],
         italic: [
             markdown[:italic],
@@ -1612,7 +1612,7 @@ mapping = ->() do {
             green_group,
             string_preceders,
             unknown_entites,
-            json[:keys][2],
+            json[:keys][4],
         ],
         underline: [
             perl[:hash],
