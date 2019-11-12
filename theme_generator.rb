@@ -277,8 +277,8 @@ ui = ->() do {
     },
 
     quickInput: {
-        # change this back to normal_text_color after this has been fixed: https://github.com/microsoft/vscode/issues/72952 
-        foreground: off_white
+        foreground: normal_text_color,
+        focusForeground: off_white,
     },
     peekView: {
         border: solid_blue,
