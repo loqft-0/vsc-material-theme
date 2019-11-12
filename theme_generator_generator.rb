@@ -234,7 +234,7 @@ def convert_to_ruby(json_theme)
     # Build the string
     # 
     # 
-        output = "require_relative './theme_maker'\n\ntheme_info = {\n    name: 'My Theme',\n    type: 'dark',\n}\n\n"
+        output = "require_relative './#{File.basename(__FILE__)}'\n\ntheme_info = {\n    name: 'My Theme',\n    type: 'dark',\n}\n\n"
         
         # colors
         output = output + "#\n# Colors\n#"
@@ -266,6 +266,11 @@ def convert_to_ruby(json_theme)
                 each_value = []
             end
             value = "["
+            # convert to list if it was a string
+            if each_value.is_a?(String)
+                each_value = each_value.split(',')
+                each_value.map!{|each| each.strip}
+            end
             for each_scope in each_value
                 value = value + "\n    \"#{each_scope}\","
             end
@@ -278,7 +283,11 @@ def convert_to_ruby(json_theme)
         for each_key, each_value in mapping
             output = output + "\n    #{each_key.to_s} => {"
             for each_style, each_group_list in each_value
-                output = output + "\n        #{each_style.to_s}: ["
+                style = each_style.to_s
+                if each_style == nil || each_style.to_s.strip.size == 0
+                    style = "normal"
+                end
+                output = output + "\n        #{style}: ["
                 for each_group in each_group_list
                     output = output + "\n            *#{each_group},"
                 end
