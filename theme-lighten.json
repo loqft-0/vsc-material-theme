@@ -99,6 +99,7 @@
     {
       "name": "#c7cbcd underline",
       "scope": [
+        "variable.other.object.coffee",
         "variable.other.object.access",
         "source.vue variable.other.object",
         "source.js variable.other.object"
@@ -886,7 +887,6 @@
         "meta.array.literal string.quoted",
         "meta.object-literal.key string.quoted",
         "meta.object-literal.key.js variable.other.readwrite.js - meta.var.expr",
-        "variable.assignment.coffee",
         "punctuation.definition.constant.hashkey",
         "punctuation.accessor",
         "support.variable.property",

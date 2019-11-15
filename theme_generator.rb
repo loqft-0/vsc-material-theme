@@ -451,7 +451,6 @@ end
         "punctuation.definition.comment",
     ]
     dictionary_keys = [
-        "variable.assignment.coffee", # I'm not sure why its called this, but it is a dictionary key
         "punctuation.definition.constant.hashkey", # the ruby : for hashkeys in function parameters
     ]
     # 
@@ -483,6 +482,7 @@ end
             "source.ruby variable.other.readwrite.class", # class members in ruby
         ]
         first_property = [
+            "variable.other.object.coffee",
             "variable.other.object.access",
             "source.vue variable.other.object",
         ]
