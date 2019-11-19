@@ -277,8 +277,8 @@ ui = ->() do {
     },
 
     quickInput: {
-        foreground: normal_text_color,
-        focusForeground: off_white,
+        # change this back to normal_text_color after this has been fixed: https://github.com/microsoft/vscode/issues/72952 
+        foreground: off_white
     },
     peekView: {
         border: solid_blue,
@@ -1548,16 +1548,16 @@ mapping = ->() do {
     },
     pink => {
         normal: [
-            storage_types,
-            storage_type_punctuation,
-            storage_modifiers,
-            anonymous_function_punctuation,
-            json[:keys][2],
+            *storage_types,
+            *storage_type_punctuation,
+            *storage_modifiers,
+            *anonymous_function_punctuation,
+            json[:keys][4],
         ],
         underline: [
         ],
         bold: [
-            cpp[:assembly_function],
+            *cpp[:assembly_function],
         ],
         italic: [
             markdown[:italic],
@@ -1612,7 +1612,7 @@ mapping = ->() do {
             green_group,
             string_preceders,
             unknown_entites,
-            json[:keys][4],
+            json[:keys][2],
         ],
         underline: [
             perl[:hash],
