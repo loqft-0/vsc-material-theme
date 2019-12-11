@@ -1024,6 +1024,10 @@ end
         normal_punctuation.push("meta.brace.round.coffee")
     # markdown
         markdown = {
+            plain: [
+                "text.html.markdown",
+                "punctuation.definition.list_item.markdown",
+            ],
             paragraph: "meta.paragraph.markdown",
             heading: [
                 "punctuation.definition.heading.markdown",
@@ -1098,36 +1102,6 @@ end
                 "support.function.katex",
             ]
         }
-        changed_group = [
-            "markup.changed",
-        ]
-        markdown___plain_group = [
-            "text.html.markdown",
-            "punctuation.definition.list_item.markdown",
-        ]
-        markdown___markup_raw_inline_group = [
-            "text.html.markdown markup.inline.raw.markdown",
-        ]
-        markdown___markup_raw_inline_punctuation_group = [
-            "text.html.markdown markup.inline.raw.markdown punctuation.definition.raw.markdown",
-        ]
-        markdown___line_break_group = [
-            "text.html.markdown meta.dummy.line-break",
-        ]
-        markup___italic_group = [
-            "markup.italic",
-        ]
-        markup___bold_italic_group = [
-            "markup.bold markup.italic",
-            "markup.italic markup.bold",
-            "markup.quote markup.bold",
-            "markup.bold markup.italic string",
-            "markup.italic markup.bold string",
-            "markup.quote markup.bold string",
-        ]
-        markup___strike_group = [
-            "markup.strike",
-        ]
 
 
 
@@ -1387,7 +1361,7 @@ mapping = ->() do {
         normal: [
             markdown[:paragraph],
             markdown[:language_code],
-            markdown___plain_group,
+            markdown[:plain],
             normal_variables,
             css_properties,
             default_text_color,
@@ -1425,7 +1399,6 @@ mapping = ->() do {
     },
     violet => {
         normal: [
-            changed_group,
             json[:keys][0],
         ],
         italic: [
@@ -1441,10 +1414,8 @@ mapping = ->() do {
             url_group,
         ],
         normal: [
-            markdown___line_break_group,
         ],
         strike: [
-            markup___strike_group,
         ],
         bold: [
         ],
@@ -1670,7 +1641,6 @@ mapping = ->() do {
             vue[:main_tags],
         ],
         italic: [
-            markup___italic_group,
         ],
         bold: [
             soft_red_group,
