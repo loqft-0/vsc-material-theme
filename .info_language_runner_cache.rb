@@ -1,6 +1,6 @@
 require 'atk_toolbox'
 
-system "_ build"
+system "ruby theme_generator.rb"
 previous_process_finished_successfully = $?.success?
 if previous_process_finished_successfully
     # push build

@@ -89,7 +89,8 @@
         "source.postcss support.type.property-name",
         "source.css support.type.vendored.property-name",
         "source",
-        "source.js variable.other.readwrite"
+        "source.js variable.other.readwrite",
+        "source.cpp variable.parameter"
       ],
       "settings": {
         "fontStyle": "normal",

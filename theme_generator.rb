@@ -1369,7 +1369,7 @@ mapping = ->() do {
             css_properties,
             default_text_color,
             javascript[:variable_no_member_access],
-            body_parameters,
+            cpp[:body_parameters],
         ],
         underline: [
             first_property,
