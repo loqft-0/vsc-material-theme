@@ -903,6 +903,9 @@ end
             seperator: [
                 "source.shell punctuation.separator.statement",
                 "source.shell keyword.operator.pipe",
+            ],
+            builtin: [
+                "source.shell support.function.builtin",
             ]
         }
     # powershell
@@ -1095,12 +1098,6 @@ end
                 "support.function.katex",
             ]
         }
-        inserted_group = [
-            "markup.inserted",
-        ]
-        deleted_group = [
-            "markup.deleted",
-        ]
         changed_group = [
             "markup.changed",
         ]
@@ -1490,6 +1487,7 @@ mapping = ->() do {
             javascript[:function_property],
             javascript[:member_function_definition],
             coffeescript[:method],
+            shell[:builtin],
         ],
         bold: [
             *blue_bold_group,
@@ -1517,7 +1515,6 @@ mapping = ->() do {
     },
     lime => {
         normal: [
-            inserted_group,
             strings,
             json[:keys][8],
             lime_green_group,
@@ -1645,7 +1642,6 @@ mapping = ->() do {
     red => {
         normal: [
             invalid_things,
-            deleted_group,
             red_group,
             assignment_operators,
         ],
