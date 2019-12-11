@@ -901,8 +901,10 @@ end
                 "source.cpp variable.parameter",
             ],
             parameters: [
-                "source.cpp variable.parameter.capture",
+                "source.cpp meta.lambda.capture variable.parameter",
+                "source.cpp meta.function.definition.parameters.lambda variable.parameter",
                 "source.cpp meta.head.function.definition variable.parameter",
+                "meta.function.definition.parameters.lambda"
             ]
         }
     # shell

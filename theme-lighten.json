@@ -519,8 +519,10 @@
         "variable.parameter.function.coffee",
         "punctuation.definition.function.katex",
         "support.function.katex",
-        "source.cpp variable.parameter.capture",
-        "source.cpp meta.head.function.definition variable.parameter"
+        "source.cpp meta.lambda.capture variable.parameter",
+        "source.cpp meta.function.definition.parameters.lambda variable.parameter",
+        "source.cpp meta.head.function.definition variable.parameter",
+        "meta.function.definition.parameters.lambda"
       ],
       "settings": {
         "fontStyle": "normal",
