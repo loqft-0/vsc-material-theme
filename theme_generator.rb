@@ -896,7 +896,10 @@ end
                 "meta.asm meta.encoding",
                 "punctuation.definition.string.begin.assembly",
                 "punctuation.definition.string.end.assembly",
-            ]
+            ],
+            body_parameters: [
+                "source.cpp variable.parameter",
+            ],
         }
     # shell
         shell = {
@@ -1366,6 +1369,7 @@ mapping = ->() do {
             css_properties,
             default_text_color,
             javascript[:variable_no_member_access],
+            body_parameters,
         ],
         underline: [
             first_property,
