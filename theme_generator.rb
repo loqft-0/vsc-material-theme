@@ -900,6 +900,10 @@ end
             body_parameters: [
                 "source.cpp variable.parameter",
             ],
+            parameters: [
+                "source.cpp variable.parameter.capture",
+                "source.cpp meta.head.function.definition variable.parameter",
+            ]
         }
     # shell
         shell = {
@@ -1474,6 +1478,7 @@ mapping = ->() do {
             language_literals,
             parameter_variables,
             markdown[:function],
+            cpp[:parameters],
         ],
         italic: [
             value_literals,

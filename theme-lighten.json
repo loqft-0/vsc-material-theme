@@ -518,7 +518,9 @@
         "variable.parameter.function.language.python",
         "variable.parameter.function.coffee",
         "punctuation.definition.function.katex",
-        "support.function.katex"
+        "support.function.katex",
+        "source.cpp variable.parameter.capture",
+        "source.cpp meta.head.function.definition variable.parameter"
       ],
       "settings": {
         "fontStyle": "normal",
