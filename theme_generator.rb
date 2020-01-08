@@ -303,8 +303,10 @@ ui = ->() do {
         foreground: off_white.transparency(20),
     },
     quickInput: {
-        foreground: ui_text_color,
-        focusForeground: off_white,
+        # change this back to (below) after this has been fixed: https://github.com/microsoft/vscode/issues/72952 
+        #   # foreground: ui_text_color,
+        #   # focusForeground: off_white,
+        foreground: off_white
     },
     peekView: {
         border: solid_blue,
@@ -905,6 +907,15 @@ end
                 "meta.asm meta.encoding",
                 "punctuation.definition.string.begin.assembly",
                 "punctuation.definition.string.end.assembly",
+            ],
+            body_parameters: [
+                "source.cpp variable.parameter",
+            ],
+            parameters: [
+                "source.cpp meta.lambda.capture variable.parameter",
+                "source.cpp meta.function.definition.parameters.lambda variable.parameter",
+                "source.cpp meta.head.function.definition variable.parameter",
+                "meta.function.definition.parameters.lambda"
             ]
         }
     # shell
@@ -912,6 +923,9 @@ end
             seperator: [
                 "source.shell punctuation.separator.statement",
                 "source.shell keyword.operator.pipe",
+            ],
+            builtin: [
+                "source.shell support.function.builtin",
             ]
         }
     # powershell
@@ -1030,6 +1044,10 @@ end
         normal_punctuation.push("meta.brace.round.coffee")
     # markdown
         markdown = {
+            plain: [
+                "text.html.markdown",
+                "punctuation.definition.list_item.markdown",
+            ],
             paragraph: "meta.paragraph.markdown",
             heading: [
                 "punctuation.definition.heading.markdown",
@@ -1104,42 +1122,6 @@ end
                 "support.function.katex",
             ]
         }
-        inserted_group = [
-            "markup.inserted",
-        ]
-        deleted_group = [
-            "markup.deleted",
-        ]
-        changed_group = [
-            "markup.changed",
-        ]
-        markdown___plain_group = [
-            "text.html.markdown",
-            "punctuation.definition.list_item.markdown",
-        ]
-        markdown___markup_raw_inline_group = [
-            "text.html.markdown markup.inline.raw.markdown",
-        ]
-        markdown___markup_raw_inline_punctuation_group = [
-            "text.html.markdown markup.inline.raw.markdown punctuation.definition.raw.markdown",
-        ]
-        markdown___line_break_group = [
-            "text.html.markdown meta.dummy.line-break",
-        ]
-        markup___italic_group = [
-            "markup.italic",
-        ]
-        markup___bold_italic_group = [
-            "markup.bold markup.italic",
-            "markup.italic markup.bold",
-            "markup.quote markup.bold",
-            "markup.bold markup.italic string",
-            "markup.italic markup.bold string",
-            "markup.quote markup.bold string",
-        ]
-        markup___strike_group = [
-            "markup.strike",
-        ]
 
 
 
@@ -1399,11 +1381,12 @@ mapping = ->() do {
         normal: [
             markdown[:paragraph],
             markdown[:language_code],
-            markdown___plain_group,
+            markdown[:plain],
             normal_variables,
             css_properties,
             default_text_color,
             javascript[:variable_no_member_access],
+            cpp[:body_parameters],
         ],
         underline: [
             first_property,
@@ -1444,10 +1427,8 @@ mapping = ->() do {
             url_group,
         ],
         normal: [
-            markdown___line_break_group,
         ],
         strike: [
-            markup___strike_group,
         ],
         bold: [
         ],
@@ -1461,7 +1442,6 @@ mapping = ->() do {
             regular_expressions_group,
             css_property_value,
             interpolated_punctuation,
-            changed_group,
             json[:keys][0],
         ],
         italic: [
@@ -1492,6 +1472,7 @@ mapping = ->() do {
             javascript[:function_property],
             javascript[:member_function_definition],
             coffeescript[:method],
+            shell[:builtin],
         ],
         bold: [
             *blue_bold_group,
@@ -1503,6 +1484,7 @@ mapping = ->() do {
             language_literals,
             parameter_variables,
             markdown[:function],
+            cpp[:parameters],
         ],
         italic: [
             value_literals,
@@ -1519,7 +1501,6 @@ mapping = ->() do {
     },
     lime => {
         normal: [
-            inserted_group,
             strings,
             json[:keys][8],
             lime_green_group,
@@ -1550,16 +1531,16 @@ mapping = ->() do {
     },
     pink => {
         normal: [
-            storage_types,
-            storage_type_punctuation,
-            storage_modifiers,
-            anonymous_function_punctuation,
-            json[:keys][2],
+            *storage_types,
+            *storage_type_punctuation,
+            *storage_modifiers,
+            *anonymous_function_punctuation,
+            json[:keys][4],
         ],
         underline: [
         ],
         bold: [
-            cpp[:assembly_function],
+            *cpp[:assembly_function],
         ],
         italic: [
             markdown[:italic],
@@ -1615,7 +1596,7 @@ mapping = ->() do {
             green_group,
             string_preceders,
             unknown_entites,
-            json[:keys][4],
+            json[:keys][2],
         ],
         underline: [
             perl[:hash],
@@ -1648,7 +1629,6 @@ mapping = ->() do {
     red => {
         normal: [
             invalid_things,
-            deleted_group,
             red_group,
             assignment_operators,
         ],
@@ -1677,7 +1657,6 @@ mapping = ->() do {
             vue[:main_tags],
         ],
         italic: [
-            markup___italic_group,
         ],
         bold: [
             soft_red_group,

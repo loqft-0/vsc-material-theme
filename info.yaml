@@ -4,13 +4,25 @@
     description: my theme
     
     (commands):
-        build: ruby theme_generator.rb
-        publish: npm run build && git add -A && git commit -m \"commit\" && git pull && git push && vsce publish patch && git push
         (setup): ruby '(scripts)/setup.rb'
-        
-    dependencies:
-        atk: 0.0.1
-        ruby: 2.5.0
-        npm: 12.7.0
-        {gem: 2.7.3}:
-            colormath: 0.1.2
+        build: ruby theme_generator.rb
+        publish: !language/ruby |
+            require 'atk_toolbox'
+            
+            system "ruby theme_generator.rb"
+            previous_process_finished_successfully = $?.success?
+            if previous_process_finished_successfully
+                # push build
+                if Console.args[0]
+                    system "project sync --message='#{Console.args[0]}'"
+                else
+                    system "project sync"
+                end
+                
+                if -"npm version patch"
+                    system "project synchronize --message='version bump'"
+                    puts "Publishing"
+                    system "vsce publish"
+                    puts "Finished Publishing"
+                end
+            end
