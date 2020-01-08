@@ -1,7 +1,7 @@
 require_relative './theme_generator_generator'
 
 #
-# Colors
+# Text/Highlighter Color Pallet
 #
 black           = '#000000'
 white           = '#ffffff'
@@ -28,9 +28,8 @@ soft_red        = '#f07178'
 no_color        = ''
 
 
-
 #
-# UI Colors
+# UI Color Pallet
 #
 background_color           = '#242938'
 hover_background           = '#2c3b4f'
@@ -46,6 +45,30 @@ cursor_color               = '#ff9900'
 error_red                  = '#ef5350'
 
 ui = ->() do {
+    # 
+    # Terminal Colors
+    # 
+    terminal: {
+        ansiBlack:         background_color,
+        ansiBrightBlack:   ui_text_color,
+        ansiBlue:          blue,
+        ansiBrightBlue:    blue,
+        ansiCyan:          light_blue,
+        ansiBrightCyan:    light_blue,
+        ansiGreen:         lime,
+        ansiBrightGreen:   lime,
+        ansiMagenta:       light_purple,
+        ansiBrightMagenta: light_purple,
+        ansiWhite:         off_white,
+        ansiBrightWhite:   white,
+        ansiRed:           red,
+        ansiBrightRed:     soft_red,
+        ansiYellow:        yellow,
+        ansiBrightYellow:  bananna_yellow,
+    },
+    # 
+    # Main UI
+    # 
     foreground: ui_text_color,
     focusBorder: electric_blue, # border when something (panel or input box) is active/focused
     editor: {
@@ -347,24 +370,6 @@ ui = ->() do {
     editorLineNumber: {
         foreground: ui_text_color.darken(10),
         activeForeground: off_white,
-    },
-    terminal: {
-        ansiBlack:         background_color,
-        ansiBrightBlack:   ui_text_color,
-        ansiBlue:          blue,
-        ansiBrightBlue:    blue,
-        ansiCyan:          light_blue,
-        ansiBrightCyan:    light_blue,
-        ansiGreen:         lime,
-        ansiBrightGreen:   lime,
-        ansiMagenta:       light_purple,
-        ansiBrightMagenta: light_purple,
-        ansiWhite:         off_white,
-        ansiBrightWhite:   white,
-        ansiRed:           red,
-        ansiBrightRed:     soft_red,
-        ansiYellow:        yellow,
-        ansiBrightYellow:  bananna_yellow,
     },
     inputValidation: {
         infoBorder:        light_blue,
