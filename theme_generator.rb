@@ -57,7 +57,7 @@ ui = ->() do {
         ansiBlack:         background_color,
         ansiBrightBlack:   ui_text_color,
         ansiBlue:          blue,
-        ansiBrightBlue:    blue,
+        ansiBrightBlue:    electric_blue,
         ansiCyan:          light_blue,
         ansiBrightCyan:    light_blue,
         ansiGreen:         lime,
