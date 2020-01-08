@@ -101,7 +101,7 @@ ui = ->() do {
         unfocusedActiveBorder: background_color,
         unfocusedActiveForeground: off_white,
         
-        inactiveForeground: white.transparency(30.58),
+        inactiveForeground: ui_text_color,
         inactiveBackground: navy_slate,
     },
     # this is NOT the scrollbar idk WTF they were thinking when they named it this
@@ -171,7 +171,7 @@ ui = ->() do {
         background: black.transparency(81),
     },
     gitDecoration: {
-        ignoredResourceForeground:     ui_text_color.transparency(45),
+        ignoredResourceForeground:     ui_text_color.transparency(55),
         deletedResourceForeground:     red,
         conflictingResourceForeground: orange,
         modifiedResourceForeground:    green,
@@ -396,13 +396,13 @@ ui = ->() do {
         background: editor_selection_color.transparency(53),
     },
     diffEditor: {
-        insertedTextBackground: lime.darken(10).transparency(13),
-        insertedTextBorder: lime.darken(10).transparency(13),
+        insertedTextBackground: lime.transparency(13),
+        insertedTextBorder: lime.transparency(13),
         removedTextBackground: error_red.transparency(13),
         removedTextBorder: error_red.transparency(13),
     },
     editorGutter: {
-        addedBackground: lime.darken(10),
+        addedBackground: lime,
         modifiedBackground: yellow,
         deletedBackground: red,
     },

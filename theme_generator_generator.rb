@@ -38,12 +38,11 @@ class String
         # convert back to hex
         new_hex_color = ColorMath::HSL.new(color.hue, color.saturation, new_luminance).hex
         # perform the replacement
-        self.sub!(/\A(#?)....../, '\1'+new_hex_color[1..new_hex_color.length])
-        return self
+        return self.sub(/\A(#?)....../, '\1'+new_hex_color[1..new_hex_color.length])
     end
     
     def darken(percentage)
-        self.lighten(-percentage)
+        return self.lighten(-percentage)
     end
 end
 
