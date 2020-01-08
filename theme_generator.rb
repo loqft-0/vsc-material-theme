@@ -44,6 +44,11 @@ navy_slate                 = '#184967'
 cursor_color               = '#ff9900'
 error_red                  = '#ef5350'
 
+# because there is an overlap (and transparency will be double-applied)
+# these colors have to be manually caclulated
+diff_added_background      = '#435349' # this is lime.transparency(79) on background_color
+diff_removed_background    = '#522D3A' # this is error_red.transparency(79) on background_color
+
 ui = ->() do {
     # 
     # Terminal Colors
@@ -398,10 +403,10 @@ ui = ->() do {
         background: editor_selection_color.transparency(53),
     },
     diffEditor: {
-        insertedTextBackground: lime.transparency(13),
-        insertedTextBorder: lime.transparency(13),
-        removedTextBackground: error_red.transparency(13),
-        removedTextBorder: error_red.transparency(13),
+        insertedTextBackground: diff_added_background,
+        insertedTextBorder: lime.transparency(100),
+        removedTextBackground: diff_removed_background,
+        removedTextBorder: error_red.transparency(100),
     },
     editorGutter: {
         addedBackground: lime,
@@ -1665,9 +1670,15 @@ mapping = ->() do {
 }
 end
 
+# 
+# Main theme
+# 
 IO.write("theme.json", convert_to_json_theme({ name: 'XD Theme', type: 'dark', }, ui, mapping) )
 
-# change the background color
+
+# 
+# Variants
+# 
 background_color.replace('#273244') 
 navy_slate.replace('#0a5375')
 IO.write("theme-lighten.json", convert_to_json_theme({ name: 'XD Theme - Lighten', type: 'dark', }, ui, mapping) )
