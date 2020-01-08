@@ -4,24 +4,24 @@ require_relative './theme_generator_generator'
 # Colors
 #
 black           = '#000000'
-white           = '#FFFFFF'
+white           = '#ffffff'
 light_gray      = '#c7cbcd'
-gray            = '#546E7A'
-rust            = '#C17E70'
-orange          = '#F78C6C'
+gray            = '#546e7a'
+rust            = '#c17e70'
+orange          = '#f78c6c'
 yellow          = '#fec355'
 bananna_yellow  = '#ddd790'
-lime            = '#C3E88D'
-green           = '#4EC9B0'
+lime            = '#c3e88d'
+green           = '#4ec9b0'
 bold_green      = '#4ec9b0d0'
 vibrant_green   = '#04d895'
-dim_green       = '#80CBC4'
+dim_green       = '#80cbc4'
 light_slate     = '#64bac5'
 dark_slate      = '#3f848d'
-light_blue      = '#89DDFF'
-blue            = '#82AAFF'
-light_purple    = '#c792eaff'
-violet          = '#C792EA'
+light_blue      = '#89ddff'
+blue            = '#82aaff'
+electric_blue   = '#00aeffe7'
+light_purple    = '#c792ea'
 pink            = '#e57eb3'
 red             = '#ff5572'
 soft_red        = '#f07178'
@@ -32,32 +32,36 @@ no_color        = ''
 #
 # UI Colors
 #
-background_color = '#242938'
-normal_text_color = '#5e718a'
-off_white = '#EEFFFF'
-navy_slate = '#184967'
-solid_blue = '#2670a1'
-hover_background = '#2c3b4f'
-scrollbar_color = '#324962'
-editor_selection_color = '#83b2e1'
+background_color           = '#242938'
+hover_background           = '#2c3b4f'
+scrollbar_color            = '#324962'
+input_box_background       = '#414863'
+ui_text_color              = '#5e718a'
+editor_text_color          = '#bfc9d5'
+off_white                  = '#eeffff'
+editor_selection_color     = '#83b2e1'
+solid_blue                 = '#2670a1'
+navy_slate                 = '#184967'
+cursor_color               = '#ff9900'
+error_red                  = '#ef5350'
 
 ui = ->() do {
-    foreground: normal_text_color,
-    focusBorder: '#00aeffe7', # border when something (panel or input box) is active/focused
+    foreground: ui_text_color,
+    focusBorder: electric_blue, # border when something (panel or input box) is active/focused
     editor: {
-        foreground: '#bfc9d5',
+        foreground: editor_text_color,
         background: background_color,
-        lineHighlightBackground: '#2d3e51',
+        lineHighlightBackground: hover_background, # which line the cursor is on
         selectionBackground: editor_selection_color.transparency(65.88),
         
         wordHighlightBackground: editor_selection_color.transparency(29.8),
         selectionHighlightBackground: editor_selection_color.transparency(29.8),
         wordHighlightStrongBackground: editor_selection_color.transparency(29.8),
         
-        findMatchBorder: '#ff9900',
-        findMatchBackground: '#ff9900a1',
-        findMatchHighlightBorder: '#11729f',
-        findMatchHighlightBackground: '#11729f',
+        findMatchBorder: cursor_color,
+        findMatchBackground: cursor_color.transparency(63.13),
+        findMatchHighlightBorder: solid_blue,
+        findMatchHighlightBackground: solid_blue,
         
         rangeHighlightBackground: solid_blue.transparency(65),
         hoverHighlightBackground: solid_blue.transparency(65),
@@ -68,13 +72,13 @@ ui = ->() do {
         
         activeForeground: off_white,
         activeBackground: navy_slate,
-        activeBorder: '#C8C8C8',
-        activeModifiedBorder: '#607a86',
+        activeBorder: light_gray,
+        activeModifiedBorder: light_gray,
         
         unfocusedActiveBorder: background_color,
         unfocusedActiveForeground: off_white,
         
-        inactiveForeground: '#ffffff4e',
+        inactiveForeground: white.transparency(30.58),
         inactiveBackground: navy_slate,
     },
     # this is NOT the scrollbar idk WTF they were thinking when they named it this
@@ -84,7 +88,7 @@ ui = ->() do {
     },
     # the thing at the bottom of the editor
     statusBar: {
-        foreground: normal_text_color,
+        foreground: ui_text_color,
         background: background_color,
         border: background_color,
         # no folder
@@ -93,7 +97,7 @@ ui = ->() do {
         # debugging
         debuggingBorder: background_color,
         debuggingBackground: background_color,
-        debuggingForeground: normal_text_color,
+        debuggingForeground: ui_text_color,
     },
     # lists are used all over the place,
     # they're in 
@@ -110,8 +114,8 @@ ui = ->() do {
         hoverBackground: hover_background,
         hoverForeground: off_white,
         
-        inactiveSelectionBackground: '#708aa10d',
-        inactiveSelectionForeground: '#708aa1',
+        inactiveSelectionBackground: background_color,
+        inactiveSelectionForeground: ui_text_color,
         
         dropBackground: hover_background,
         
@@ -144,11 +148,11 @@ ui = ->() do {
         background: black.transparency(81),
     },
     gitDecoration: {
-        modifiedResourceForeground: '#0c6ce1ca',
-        ignoredResourceForeground: '#708aa190',
-        untrackedResourceForeground: '#a9c77dff',
-        deletedResourceForeground: '#EF535090',
-        conflictingResourceForeground: '#FFEB95CC',
+        ignoredResourceForeground:     ui_text_color.transparency(45),
+        deletedResourceForeground:     red,
+        conflictingResourceForeground: orange,
+        modifiedResourceForeground:    green,
+        untrackedResourceForeground:   lime,
     },
     editorGroupHeader: {
         tabsBackground: navy_slate,
@@ -157,20 +161,20 @@ ui = ->() do {
     },
     titleBar: {
         activeBackground: navy_slate,
-        border: '#26323860',
-        inactiveBackground: '#263238',
-        inactiveForeground: '#607a86',
-        activeForeground: '#eeefff',
+        border: background_color,
+        inactiveBackground: background_color,
+        inactiveForeground: ui_text_color,
+        activeForeground: off_white,
     },
     walkThrough: {
-        embeddedEditorBackground: '#232635',
+        embeddedEditorBackground: background_color,
     },
     peekViewEditor: {
-        background: '#232635',
+        background: background_color,
         matchHighlightBackground: solid_blue.transparency(65),
     },
     widget: {
-        shadow: '#232635',
+        shadow: background_color,
     },
     statusBarItem: {
         prominentHoverBackground: background_color,
@@ -181,13 +185,13 @@ ui = ->() do {
     sideBar: {
         border: background_color,
         background: background_color,
-        foreground: '#617396',
+        foreground: ui_text_color,
     },
     # this is the thing on the far left (or right) that has big icons
     activityBar: {
         border: background_color,
         background: background_color,
-        dropBackground: '#2670a1e3',
+        dropBackground: solid_blue.transparency(89),
         foreground: off_white,
     },
     editorHoverWidget: {
@@ -211,7 +215,7 @@ ui = ->() do {
     },
     breadcrumb: {
         background: background_color,
-        foreground: '#69809878',
+        foreground: ui_text_color.darken(10),
         activeSelectionForeground: dim_green,
         focusForeground: off_white,
     },
@@ -237,7 +241,7 @@ ui = ->() do {
     },
     sideBarSectionHeader: {
         background: background_color,
-        border: '#26323860',
+        border: background_color,
         foreground: off_white,
     },
     dropdown: {
@@ -246,25 +250,25 @@ ui = ->() do {
         foreground: off_white.transparency(20),
     },
     editorOverviewRuler: {
-        border: '#263238',
+        border: solid_blue,
         commonContentForeground: solid_blue,
         incomingContentForeground: solid_blue,
         currentContentForeground: solid_blue,
     },
     editorBracketMatch: {
-        background: '#263238',
-        border: '#FFCC0050',
+        background: solid_blue,
+        border: solid_blue,
     },
     panelTitle: {
         activeBorder: solid_blue,
-        inactiveForeground: '#bfc9d580',
+        inactiveForeground: ui_text_color.transparency(50),
         activeForeground: off_white,
     },
     # this is the thing that contains all the tabs
     editorGroup: {
-        dropBackground: '#2670a173',
+        dropBackground: solid_blue.transparency(45),
         border: hover_background,
-        background: '#32374C',
+        background: background_color,
     },
     merge: {
         incomingHeaderBackground: solid_blue.transparency(65),
@@ -272,12 +276,11 @@ ui = ->() do {
     },
     button: {
         hoverBackground: solid_blue,
-        background: '#2670a1cc',
+        background: solid_blue.transparency(80),
         foreground: off_white.transparency(20),
     },
-
     quickInput: {
-        foreground: normal_text_color,
+        foreground: ui_text_color,
         focusForeground: off_white,
     },
     peekView: {
@@ -288,7 +291,7 @@ ui = ->() do {
         foreground: off_white,
     },
     editorSuggestWidget: {
-        foreground: '#bfc9d5',
+        foreground: editor_text_color,
         background: hover_background,
         
         border: hover_background,
@@ -296,14 +299,14 @@ ui = ->() do {
         highlightForeground: off_white,
     },
     extensionButton: {
-        prominentBackground: '#2670a1cc',
+        prominentBackground: solid_blue.transparency(80),
         prominentHoverBackground: solid_blue,
         prominentForeground: off_white.transparency(20),
     },
     peekViewResult: {
         matchHighlightBackground: solid_blue.transparency(65),
         background: hover_background,
-        selectionBackground: '#83b2e1b3',
+        selectionBackground: editor_selection_color.transparency(70),
         fileForeground: off_white,
         lineForeground: off_white,
         selectionForeground: off_white,
@@ -313,11 +316,13 @@ ui = ->() do {
         foreground: off_white,
     },
     editorWhitespace: {
-        foreground: '#2a3f4f',
+        foreground: hover_background,
     },
+    
+    # the whitespace-like vertical lines showing levels of indent
     editorIndentGuide: {
-        background: '#2a3f4f',
-        activeBackground: '#37474F',
+        background: hover_background,
+        activeBackground: hover_background,
     },
     notifications: {
         background: hover_background,
@@ -325,53 +330,52 @@ ui = ->() do {
     },
     pickerGroup: {
         border: hover_background,
-        foreground: '#d1aaff',
+        foreground: light_purple,
     },
     breadcrumbPicker: {
         background: hover_background,
     },
-
     editorRuler: {
-        foreground: '#37474F',
+        foreground: hover_background
     },
     input: {
-        border: '#414863',
-        background: '#414863',
+        border: input_box_background,
+        background: input_box_background,
         foreground: off_white.transparency(20),
         placeholderForeground: off_white.transparency(20),
     },
     editorLineNumber: {
-        foreground: '#4c5374',
+        foreground: ui_text_color.darken(10),
         activeForeground: off_white,
     },
     terminal: {
-        ansiBlack: normal_text_color,
-        ansiBrightBlack: normal_text_color,
-        ansiBrightBlue: '#82AAFF',
-        ansiBlue: '#82AAFF',
-        ansiCyan: '#89DDFF',
-        ansiBrightCyan: '#89DDFF',
-        ansiGreen: '#a9c77d',
-        ansiBrightGreen: '#C3E88D',
-        ansiMagenta: '#C792EA',
-        ansiBrightMagenta: '#C792EA',
-        ansiBrightWhite: off_white,
-        ansiWhite: off_white,
-        ansiRed: '#ff5572',
-        ansiBrightRed: '#ff5572',
-        ansiBrightYellow: '#FFCB6B',
-        ansiYellow: '#FFCB6B',
+        ansiBlack:         background_color,
+        ansiBrightBlack:   ui_text_color,
+        ansiBlue:          blue,
+        ansiBrightBlue:    blue,
+        ansiCyan:          light_blue,
+        ansiBrightCyan:    light_blue,
+        ansiGreen:         lime,
+        ansiBrightGreen:   lime,
+        ansiMagenta:       light_purple,
+        ansiBrightMagenta: light_purple,
+        ansiWhite:         off_white,
+        ansiBrightWhite:   white,
+        ansiRed:           red,
+        ansiBrightRed:     soft_red,
+        ansiYellow:        yellow,
+        ansiBrightYellow:  bananna_yellow,
     },
     inputValidation: {
-        infoBackground: '#64b5f6f2',
-        infoBorder: '#64B5F6',
-        errorBorder: '#EF5350',
-        errorBackground: '#ef5350f2',
-        warningBackground: '#ffca28f2',
-        warningBorder: '#FFCA28',
+        infoBorder:        light_blue,
+        infoBackground:    light_blue,
+        errorBorder:       error_red,
+        errorBackground:   error_red,
+        warningBorder:     yellow,
+        warningBackground: yellow,
     },
     peekViewTitleDescription: {
-        foreground: '#708aa1',
+        foreground: ui_text_color,
     },
     textLink: {
         foreground: dim_green,
@@ -384,18 +388,18 @@ ui = ->() do {
         background: dim_green,
     },
     selection: {
-        background: '#83b2e186',
+        background: editor_selection_color.transparency(53),
     },
     diffEditor: {
-        insertedTextBackground: '#99b76d23',
-        insertedTextBorder: '#a9c77d33',
-        removedTextBackground: '#ef535033',
-        removedTextBorder: '#ef53504d',
+        insertedTextBackground: lime.darken(10).transparency(13),
+        insertedTextBorder: lime.darken(10).transparency(13),
+        removedTextBackground: error_red.transparency(13),
+        removedTextBorder: error_red.transparency(13),
     },
     editorGutter: {
-        addedBackground: '#9CCC65',
-        modifiedBackground: '#e2b93d',
-        deletedBackground: '#EF5350',
+        addedBackground: lime.darken(10),
+        modifiedBackground: yellow,
+        deletedBackground: red,
     },
     sideBarTitle: {
         foreground: off_white,
@@ -410,27 +414,27 @@ ui = ->() do {
         activeBorder: off_white.transparency(20),
     },
     peekViewEditorGutter: {
-        background: '#EEFFFF05',
+        background: off_white.transparency(5),
     },
     editorMarkerNavigationError: {
-        background: '#EF5350',
+        background: error_red,
     },
     editorError: {
-        foreground: '#EF5350',
+        foreground: error_red,
     },
     editorCursor: {
-        foreground: '#ff9900',
+        foreground: cursor_color,
     },
     editorWarning: {
-        foreground: '#FFCA28',
+        foreground: yellow,
     },
     editorCodeLens: {
-        foreground: '#FFCA28',
+        foreground: yellow,
     },
     editorMarkerNavigationWarning: {
-        background: '#FFCA28',
+        background: yellow,
     },
-    errorForeground: '#FFCA28',
+    errorForeground: yellow,
 }
 end
 
@@ -1426,15 +1430,6 @@ mapping = ->() do {
             markdown[:heading],
         ]
     },
-    violet => {
-        normal: [
-            changed_group,
-            json[:keys][0],
-        ],
-        italic: [
-            attributes,
-        ],
-    },
     no_color => {
         italic: [
             keywords,
@@ -1461,6 +1456,8 @@ mapping = ->() do {
             regular_expressions_group,
             css_property_value,
             interpolated_punctuation,
+            changed_group,
+            json[:keys][0],
         ],
         italic: [
             control_flow,
@@ -1575,6 +1572,7 @@ mapping = ->() do {
         italic: [
             tag_attributes,
             vue[:attributes],
+            attributes,
         ],
         underline: [
         ],
@@ -1686,6 +1684,6 @@ end
 IO.write("theme.json", convert_to_json_theme({ name: 'XD Theme', type: 'dark', }, ui, mapping) )
 
 # change the background color
-background_color = '#273244'
-navy_slate = '#0a5375'
+background_color.replace('#273244') 
+navy_slate.replace('#0a5375')
 IO.write("theme-lighten.json", convert_to_json_theme({ name: 'XD Theme - Lighten', type: 'dark', }, ui, mapping) )

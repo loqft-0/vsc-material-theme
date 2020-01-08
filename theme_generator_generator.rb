@@ -22,6 +22,29 @@ class String
         # get the first values
         return self[0..6] + hex_value
     end
+    
+    def lighten(percentage)
+        # extract basic hex
+        match = self.match(/\A#?(?<hex>......)/)
+        # convert color to HSL
+        color = ColorMath::hex_color(match[1])
+        # calculate new luminance
+        new_luminance = color.luminance + percentage/100.0
+        if new_luminance > 1
+            new_luminance = 1
+        elsif new_luminance < 0
+            new_luminance = 0
+        end
+        # convert back to hex
+        new_hex_color = ColorMath::HSL.new(color.hue, color.saturation, new_luminance).hex
+        # perform the replacement
+        self.sub!(/\A(#?)....../, '\1'+new_hex_color[1..new_hex_color.length])
+        return self
+    end
+    
+    def darken(percentage)
+        self.lighten(-percentage)
+    end
 end
 
 def color_to_i(color_string_input)
