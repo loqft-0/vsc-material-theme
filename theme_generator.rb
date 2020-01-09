@@ -1447,7 +1447,6 @@ mapping = ->() do {
             regular_expressions_group,
             css_property_value,
             interpolated_punctuation,
-            json[:keys][0],
         ],
         italic: [
             control_flow,
@@ -1559,6 +1558,7 @@ mapping = ->() do {
             secondary_punctuation,
             yaml[:punctuation],
             css[:operator_like],
+            json[:keys][0],
         ],
         italic: [
             tag_attributes,

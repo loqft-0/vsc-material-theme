@@ -329,16 +329,7 @@
         "punctuation.definition.template-expression.end",
         "punctuation.section.embedded.end",
         "punctuation.section.embedded.begin",
-        "constant.character.format.placeholder.other",
-        "source.json meta.structure.dictionary.json support.type.property-name",
-        "source.json meta.structure.dictionary.json punctuation.support.type.property-name",
-        "source.json meta.structure.dictionary.json punctuation.separator.dictionary.key-value",
-        "meta.embedded.block.json meta.structure.dictionary.json support.type.property-name",
-        "meta.embedded.block.json meta.structure.dictionary.json punctuation.support.type.property-name",
-        "meta.embedded.block.json meta.structure.dictionary.json punctuation.separator.dictionary.key-value",
-        "meta.embedded.block.jsonc meta.structure.dictionary.json support.type.property-name",
-        "meta.embedded.block.jsonc meta.structure.dictionary.json punctuation.support.type.property-name",
-        "meta.embedded.block.jsonc meta.structure.dictionary.json punctuation.separator.dictionary.key-value"
+        "constant.character.format.placeholder.other"
       ],
       "settings": {
         "fontStyle": "normal",
@@ -771,7 +762,16 @@
         "punctuation.accessor.attribute",
         "punctuation.section.attribute",
         "source.yaml constant.language.merge",
-        "source.css entity.name.tag"
+        "source.css entity.name.tag",
+        "source.json meta.structure.dictionary.json support.type.property-name",
+        "source.json meta.structure.dictionary.json punctuation.support.type.property-name",
+        "source.json meta.structure.dictionary.json punctuation.separator.dictionary.key-value",
+        "meta.embedded.block.json meta.structure.dictionary.json support.type.property-name",
+        "meta.embedded.block.json meta.structure.dictionary.json punctuation.support.type.property-name",
+        "meta.embedded.block.json meta.structure.dictionary.json punctuation.separator.dictionary.key-value",
+        "meta.embedded.block.jsonc meta.structure.dictionary.json support.type.property-name",
+        "meta.embedded.block.jsonc meta.structure.dictionary.json punctuation.support.type.property-name",
+        "meta.embedded.block.jsonc meta.structure.dictionary.json punctuation.separator.dictionary.key-value"
       ],
       "settings": {
         "fontStyle": "normal",
