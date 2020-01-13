@@ -100,11 +100,11 @@
     {
       "name": "#c7cbcd underline",
       "scope": [
+        "variable.other.object.ts",
         "variable.other.object.coffee",
         "variable.other.object.access",
         "source.vue variable.other.object",
-        "source.js variable.other.object",
-        "source.ts variable.other.object"
+        "source.js variable.other.object"
       ],
       "settings": {
         "fontStyle": "underline",
@@ -861,7 +861,6 @@
         "punctuation.separator.property.period.coffee",
         "variable.other.property.coffee",
         "variable.other.property.ts",
-        "punctuation.accessor.ts",
         "source.ruby constant.language.symbol punctuation.definition.constant.hashkey",
         "source.ruby constant.language.symbol.hashkey.ruby",
         "source.ruby constant.language.symbol.hashkey",

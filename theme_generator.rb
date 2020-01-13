@@ -499,6 +499,7 @@ end
             "source.ruby variable.other.readwrite.class", # class members in ruby
         ]
         first_property = [
+            "variable.other.object.ts",
             "variable.other.object.coffee",
             "variable.other.object.access",
             "source.vue variable.other.object",
@@ -834,7 +835,9 @@ end
         } 
     # typescript
         typescript = {
-            variables: [ "source.ts variable.other.object" ],
+            first_property: [ "source.ts variable.other.object" ],
+            middle_property: [ "source.ts variable.other.object.property" ],
+            accessor: [ "source.ts punctuation.accessor"] ,
         }
     # vue
         vue = {
@@ -1181,7 +1184,6 @@ dim_green_with_underline_group = [
     "punctuation.separator.property.period.coffee",
     "variable.other.property.coffee",
     "variable.other.property.ts",
-    "punctuation.accessor.ts",
     "source.ruby constant.language.symbol punctuation.definition.constant.hashkey",
     "source.ruby constant.language.symbol.hashkey.ruby",
     "source.ruby constant.language.symbol.hashkey",
@@ -1401,7 +1403,6 @@ mapping = ->() do {
         underline: [
             first_property,
             javascript[:first_property],
-            typescript[:variables],
         ],
     },
     yellow => {
