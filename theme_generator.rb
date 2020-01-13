@@ -537,6 +537,10 @@ end
             "source.perl variable.other.predefined punctuation.definition.variable",
             "variable.other.macro.argument", # C++ macro arguments
         ]
+        self_reference = [
+            "variable.language.this",
+            "variable.language.self",
+        ]
     # 
     # Functions
     # 
@@ -1350,8 +1354,6 @@ bananna_yellow_underline_group = [
 red_group = [
     "source.ruby meta.function.method.with-arguments punctuation.definition.constant.hashkey",
     "keyword.operator.assignment",
-    "variable.language.this",
-    "variable.language.self",
     "variable.language.special.self.python",
     "variable.parameter.function.language.special.self.python",
 ]
@@ -1651,6 +1653,7 @@ mapping = ->() do {
         ],
         underline: [
             red_underline_group,
+            self_reference,
             javascript[:this],
             coffeescript[:this],
         ],

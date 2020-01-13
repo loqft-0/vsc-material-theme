@@ -1043,8 +1043,6 @@
         "invalid.deprecated",
         "source.ruby meta.function.method.with-arguments punctuation.definition.constant.hashkey",
         "keyword.operator.assignment",
-        "variable.language.this",
-        "variable.language.self",
         "variable.language.special.self.python",
         "variable.parameter.function.language.special.self.python",
         "keyword.operator.assignment",
@@ -1087,6 +1085,8 @@
         "source.shell variable.language.special.wildcard",
         "source.shell variable.language.special.shell punctuation.definition.variable.shell",
         "source.shell variable.language.special.shell",
+        "variable.language.this",
+        "variable.language.self",
         "source.js variable.language.this",
         "source.coffee variable.language.this"
       ],
