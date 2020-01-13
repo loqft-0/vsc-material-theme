@@ -832,6 +832,10 @@ end
                 "source.js support.variable.property",
             ],
         } 
+    # typescript
+        typescript = {
+            variables: [ "source.ts variable.other.object" ],
+        }
     # vue
         vue = {
             template_tags: [
@@ -1397,6 +1401,7 @@ mapping = ->() do {
         underline: [
             first_property,
             javascript[:first_property],
+            typescript[:variables],
         ],
     },
     yellow => {

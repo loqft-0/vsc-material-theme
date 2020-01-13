@@ -103,7 +103,8 @@
         "variable.other.object.coffee",
         "variable.other.object.access",
         "source.vue variable.other.object",
-        "source.js variable.other.object"
+        "source.js variable.other.object",
+        "source.ts variable.other.object"
       ],
       "settings": {
         "fontStyle": "underline",
