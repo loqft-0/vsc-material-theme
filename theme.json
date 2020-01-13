@@ -1252,6 +1252,7 @@
     "activityBar.background": "#242938",
     "activityBar.dropBackground": "#2670a11c",
     "activityBar.foreground": "#eeffff",
+    "activityBar.activeBackground": "#324962",
     "editorHoverWidget.background": "#242938",
     "editorHoverWidget.border": "#2670a1",
     "peekViewTitle.background": "#242938",

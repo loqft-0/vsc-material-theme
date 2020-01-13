@@ -221,6 +221,7 @@ ui = ->() do {
         background: background_color,
         dropBackground: solid_blue.transparency(89),
         foreground: off_white,
+        activeBackground: scrollbar_color,
     },
     editorHoverWidget: {
         background: background_color,
