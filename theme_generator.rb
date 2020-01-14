@@ -503,6 +503,7 @@ end
             "variable.other.object.coffee",
             "variable.other.object.access",
             "source.vue variable.other.object",
+            "variable.other.constant.object",
         ]
         middle_property = [
             "support.variable.property",
