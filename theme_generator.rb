@@ -656,6 +656,7 @@ end
         "storage.type",
         "keyword.other.typedef",
         "source.go keyword.function",
+        "source.go keyword.struct",
         "source.go keyword.var",
         "source.perl storage.modifier",
     ]
@@ -1306,8 +1307,8 @@ yellow_not_cursive_group = [
     "support.type.built-in.posix-reserved",
     "variable.other.constant.ruby",
     "source.go entity.name.package",
-    "source.go keyword.operator.assignment",
     "storage.type.primitive",
+    "source.go storage.type.string",
     "storage.type.built-in.primitive",
     "source.go storage.type",
     "storage.type.primitive",
@@ -1355,6 +1356,7 @@ bananna_yellow_underline_group = [
 red_group = [
     "source.ruby meta.function.method.with-arguments punctuation.definition.constant.hashkey",
     "keyword.operator.assignment",
+    "source.go keyword.operator.assignment",
     "variable.language.special.self.python",
     "variable.parameter.function.language.special.self.python",
 ]
