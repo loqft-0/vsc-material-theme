@@ -469,6 +469,7 @@ end
     ]
     dictionary_keys = [
         "punctuation.definition.constant.hashkey", # the ruby : for hashkeys in function parameters
+        "constant.language.symbol.hashkey", # the ruby syntax changed
     ]
     # 
     # Variables
@@ -630,6 +631,7 @@ end
         ]
         language_literals = [
             "constant.other.symbol", # ruby symbols
+            "source.ruby punctuation.definition.constant",
             "constant.other.key", # java keys inside of annotations
         ]
     # 
