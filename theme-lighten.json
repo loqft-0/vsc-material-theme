@@ -25,7 +25,10 @@
         "punctuation.definition.string.begin.markdown",
         "punctuation.definition.string.end.markdown",
         "punctuation.definition.metadata.markdown",
-        "markup.underline.link"
+        "markup.underline.link",
+        "source.cs comment.block.documentation punctuation.definition.string.begin",
+        "source.cs comment.block.documentation punctuation.definition.string.end",
+        "source.cs comment.block.documentation punctuation.separator.equals"
       ],
       "settings": {
         "fontStyle": "normal",
@@ -47,7 +50,8 @@
     {
       "name": "#546e7a bold",
       "scope": [
-
+        "source.cs comment.block.documentation entity.name.tag",
+        "source.cs comment.block.documentation punctuation.definition.tag"
       ],
       "settings": {
         "fontStyle": "bold",
@@ -57,7 +61,7 @@
     {
       "name": "#546e7a underline",
       "scope": [
-
+        "source.cs comment.block.documentation entity.other.attribute-name"
       ],
       "settings": {
         "fontStyle": "underline",
@@ -81,6 +85,7 @@
         "variable.other.readwrite.global",
         "variable.other.constant.js",
         "variable.other.member",
+        "source.cs entity.name.variable.local",
         "source.css support.type.property-name",
         "source.sass support.type.property-name",
         "source.scss support.type.property-name",
@@ -105,6 +110,7 @@
         "variable.other.object.access",
         "source.vue variable.other.object",
         "variable.other.constant.object",
+        "source.cs variable.other.object",
         "source.js variable.other.object"
       ],
       "settings": {
@@ -121,6 +127,8 @@
         "support.type",
         "support.class",
         "storage.type.built-in",
+        "source.cs storage.type",
+        "source.cs keyword.type",
         "entity.other.attribute-name.class",
         "source.json meta.structure.dictionary.json meta.structure.dictionary.json support.type.property-name",
         "source.json meta.structure.dictionary.json meta.structure.dictionary.json punctuation.support.type.property-name",
@@ -364,7 +372,9 @@
     {
       "name": "#89ddff underline",
       "scope": [
-        "string.other.link.title.markdown"
+        "string.other.link.title.markdown",
+        "source.cs keyword.other.get",
+        "source.cs keyword.other.set"
       ],
       "settings": {
         "fontStyle": "underline",
@@ -491,6 +501,7 @@
         "variable.parameter.function",
         "variable.parameter.function.language.python",
         "variable.parameter.function.coffee",
+        "source.cs entity.name.variable.parameter",
         "punctuation.definition.function.katex",
         "support.function.katex",
         "source.cpp meta.lambda.capture variable.parameter",
@@ -615,11 +626,22 @@
         "meta.embedded.block.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json punctuation.separator.dictionary.key-value",
         "meta.embedded.block.jsonc meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json support.type.property-name",
         "meta.embedded.block.jsonc meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json punctuation.support.type.property-name",
-        "meta.embedded.block.jsonc meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json punctuation.separator.dictionary.key-value"
+        "meta.embedded.block.jsonc meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json punctuation.separator.dictionary.key-value",
+        "source.cs storage.modifier"
       ],
       "settings": {
         "fontStyle": "normal",
         "foreground": "#c17e70"
+      }
+    },
+    {
+      "name": "#3f848d normal",
+      "scope": [
+
+      ],
+      "settings": {
+        "fontStyle": "normal",
+        "foreground": "#3f848d"
       }
     },
     {
@@ -648,7 +670,8 @@
         "markup.fenced_code.block.markdown",
         "markup.inline.raw.string.markdown",
         "markup.raw.block",
-        "punctuation.definition.raw"
+        "punctuation.definition.raw",
+        "source.cs comment.block.documentation"
       ],
       "settings": {
         "fontStyle": "normal",
@@ -675,6 +698,8 @@
         "source.go keyword.struct",
         "source.go keyword.var",
         "source.perl storage.modifier",
+        "source.cs keyword.other.var",
+        "source.cs keyword.other.class",
         "punctuation.section.angle-brackets.start.template.definition.cpp",
         "punctuation.section.angle-brackets.end.template.definition.cpp",
         "punctuation.section.arguments.begin.bracket.round.decltype.cpp",
@@ -758,6 +783,7 @@
         "keyword.operator.assignment.coffee",
         "meta.tag.attributes keyword.operator.assignment",
         "meta.embedded.expression meta.tag.attributes keyword.operator.assignment",
+        "keyword.other.new",
         "punctuation.section.arguments.begin.bracket.round.operator",
         "punctuation.section.arguments.end.bracket.round.operator",
         "punctuation.separator",
@@ -940,6 +966,7 @@
         "storage.type.string",
         "entity.name",
         "entity.other",
+        "source.cs comment.block.documentation string.quoted.double",
         "source.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json support.type.property-name",
         "source.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json punctuation.support.type.property-name",
         "source.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json punctuation.separator.dictionary.key-value",
@@ -1092,6 +1119,7 @@
         "source.shell variable.language.special.shell",
         "variable.language.this",
         "variable.language.self",
+        "keyword.other.this",
         "source.js variable.language.this",
         "source.coffee variable.language.this"
       ],
@@ -1109,6 +1137,7 @@
         "variable.other.constant",
         "constant.other.php",
         "source.cpp constant.language",
+        "line.negated.ignore",
         "constant.numeric",
         "variable.other.readwrite.instance",
         "punctuation.definition.variable.ruby",
@@ -1145,7 +1174,7 @@
     {
       "name": "#f07178 bold",
       "scope": [
-        "source.cpp constant.language"
+
       ],
       "settings": {
         "fontStyle": "bold",

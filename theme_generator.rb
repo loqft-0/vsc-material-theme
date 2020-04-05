@@ -485,12 +485,14 @@ end
             "variable.other.readwrite.global",
             "variable.other.constant.js", # yes, it says constant, but its not a constant, its a non-const variable
             "variable.other.member", # used by the c++ extension for members that are not being accessed
+            "source.cs entity.name.variable.local", # c-sharp has bad nameing
         ]
         parameter_variables = [
             "variable.parameter",
             "variable.parameter.function",
             "variable.parameter.function.language.python",
             "variable.parameter.function.coffee",
+            "source.cs entity.name.variable.parameter",
         ]
         instance_variables = [
             "variable.other.readwrite.instance",
@@ -505,6 +507,7 @@ end
             "variable.other.object.access",
             "source.vue variable.other.object",
             "variable.other.constant.object",
+            "source.cs variable.other.object",
         ]
         middle_property = [
             "support.variable.property",
@@ -517,6 +520,7 @@ end
         constants = [
             "variable.other.constant",
             "constant.other.php",
+            "source.cpp constant.language",
         ]
         globals = [
             "support.variable.other.object.node",
@@ -542,6 +546,7 @@ end
         self_reference = [
             "variable.language.this",
             "variable.language.self",
+            "keyword.other.this", # C-sharp
         ]
     # 
     # Functions
@@ -661,6 +666,8 @@ end
         "source.go keyword.struct",
         "source.go keyword.var",
         "source.perl storage.modifier",
+        "source.cs keyword.other.var",
+        "source.cs keyword.other.class",
     ]
     storage_type_punctuation = [
         "punctuation.section.angle-brackets.start.template.definition.cpp",
@@ -694,6 +701,8 @@ end
         "support.type",
         "support.class",
         "storage.type.built-in",
+        "source.cs storage.type",
+        "source.cs keyword.type",
     ]
     namespace = [
         "entity.name.namespace",
@@ -718,6 +727,7 @@ end
         "keyword.operator.assignment.coffee", # this is the : 
         "meta.tag.attributes keyword.operator.assignment", # jsx attribute assignment
         "meta.embedded.expression meta.tag.attributes keyword.operator.assignment", # jsx attribute assignment
+        "keyword.other.new", # new operator in c-sharp
         # function-like operators
         "punctuation.section.arguments.begin.bracket.round.operator",
         "punctuation.section.arguments.end.bracket.round.operator",
@@ -1143,6 +1153,40 @@ end
                 "support.function.katex",
             ]
         }
+    # gitignore
+        gitignore = {
+            negated: [
+                "line.negated.ignore"
+            ]
+        }
+    # c-sharp
+        c_sharp = {
+            documentation_tags: [
+                "source.cs comment.block.documentation entity.name.tag",
+                "source.cs comment.block.documentation punctuation.definition.tag",
+            ],
+            documentation_attributes: [
+                "source.cs comment.block.documentation entity.other.attribute-name",
+            ],
+            documentation_punctuation: [
+                "source.cs comment.block.documentation punctuation.definition.string.begin",
+                "source.cs comment.block.documentation punctuation.definition.string.end",
+                "source.cs comment.block.documentation punctuation.separator.equals",
+            ],
+            documentation_strings: [
+                "source.cs comment.block.documentation string.quoted.double"
+            ],
+            documentation_content: [
+                "source.cs comment.block.documentation",
+            ],
+            storage_modifiers: [
+                "source.cs storage.modifier",
+            ],
+            get_and_set: [
+                "source.cs keyword.other.get",
+                "source.cs keyword.other.set",
+            ]
+        }
 
 
 
@@ -1368,9 +1412,6 @@ red_underline_group = [
     "source.shell variable.language.special.shell punctuation.definition.variable.shell",
     "source.shell variable.language.special.shell",
 ]
-soft_red_group = [
-    "source.cpp constant.language",
-]
 
 #
 # Mapping
@@ -1379,7 +1420,7 @@ soft_red_group = [
 mapping = ->() do {
     white => {
         normal: [
-            *colors_group,
+            colors_group,
         ],
     },
     gray => {
@@ -1387,13 +1428,16 @@ mapping = ->() do {
             boring_punctuation,
             unimportant,
             markdown[:link_punctuation],
+            c_sharp[:documentation_punctuation],
         ],
         italic: [
             comments,
         ],
         bold: [
+            c_sharp[:documentation_tags],
         ],
         underline: [
+            c_sharp[:documentation_attributes],
         ],
     },
     light_gray => {
@@ -1469,6 +1513,7 @@ mapping = ->() do {
         ],
         underline: [
             markdown[:url],
+            c_sharp[:get_and_set],
         ]
     },
     blue => {
@@ -1531,9 +1576,12 @@ mapping = ->() do {
     rust => {
         normal: [
             json[:keys][6],
+            c_sharp[:storage_modifiers],
         ],
     },
     dark_slate => {
+        normal: [
+        ],
         underline: [  
         ],
         bold: [
@@ -1541,7 +1589,8 @@ mapping = ->() do {
     },
     light_slate => {
         normal: [
-            markdown[:code]
+            markdown[:code],
+            c_sharp[:documentation_content],
         ],
         underline: [
             perl[:array],
@@ -1549,16 +1598,16 @@ mapping = ->() do {
     },
     pink => {
         normal: [
-            *storage_types,
-            *storage_type_punctuation,
-            *storage_modifiers,
-            *anonymous_function_punctuation,
+            storage_types,
+            storage_type_punctuation,
+            storage_modifiers,
+            anonymous_function_punctuation,
             json[:keys][4],
         ],
         underline: [
         ],
         bold: [
-            *cpp[:assembly_function],
+            cpp[:assembly_function],
         ],
         italic: [
             markdown[:italic],
@@ -1615,6 +1664,7 @@ mapping = ->() do {
             green_group,
             string_preceders,
             unknown_entites,
+            c_sharp[:documentation_strings],
             json[:keys][2],
         ],
         underline: [
@@ -1667,7 +1717,7 @@ mapping = ->() do {
         normal: [
             tags,
             constants,
-            soft_red_group,
+            gitignore[:negated],
             number_literals,
             instance_variables,
             class_variables,
@@ -1679,7 +1729,6 @@ mapping = ->() do {
         italic: [
         ],
         bold: [
-            soft_red_group,
         ],
     },
 }
