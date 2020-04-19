@@ -668,6 +668,7 @@ end
         "source.perl storage.modifier",
         "source.cs keyword.other.var",
         "source.cs keyword.other.class",
+        "source.cs keyword.other.event",
     ]
     storage_type_punctuation = [
         "punctuation.section.angle-brackets.start.template.definition.cpp",

@@ -700,6 +700,7 @@
         "source.perl storage.modifier",
         "source.cs keyword.other.var",
         "source.cs keyword.other.class",
+        "source.cs keyword.other.event",
         "punctuation.section.angle-brackets.start.template.definition.cpp",
         "punctuation.section.angle-brackets.end.template.definition.cpp",
         "punctuation.section.arguments.begin.bracket.round.decltype.cpp",
