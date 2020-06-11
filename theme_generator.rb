@@ -877,7 +877,11 @@ end
         }
     # ruby
         ruby = {
-            
+            symbols: [
+                "source.ruby punctuation.definition.symbol.begin",
+                "source.ruby punctuation.definition.symbol.end",
+                "source.ruby constant.language.symbol punctuation.definition.constant",
+            ]
         }
     # Yaml
         yaml = {
@@ -1312,7 +1316,6 @@ orange_group = [
     "constant.other",
     "constant.other.decimal",
     "punctuation.separator.variable.ruby",
-    "source.ruby constant.language.symbol punctuation.definition.constant",
     "source.cpp meta.function.constructor.initializer-list.cpp entity.name.function",
     "source.cpp meta.function.constructor.initializer-list.cpp punctuation.section.parameters.begin.bracket.round",
     "source.cpp meta.function.constructor.initializer-list.cpp punctuation.section.parameters.end.bracket.round",
@@ -1549,6 +1552,7 @@ mapping = ->() do {
             parameter_variables,
             markdown[:function],
             cpp[:parameters],
+            ruby[:symbols]
         ],
         italic: [
             value_literals,

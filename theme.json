@@ -486,7 +486,6 @@
         "constant.other",
         "constant.other.decimal",
         "punctuation.separator.variable.ruby",
-        "source.ruby constant.language.symbol punctuation.definition.constant",
         "source.cpp meta.function.constructor.initializer-list.cpp entity.name.function",
         "source.cpp meta.function.constructor.initializer-list.cpp punctuation.section.parameters.begin.bracket.round",
         "source.cpp meta.function.constructor.initializer-list.cpp punctuation.section.parameters.end.bracket.round",
@@ -507,7 +506,10 @@
         "source.cpp meta.lambda.capture variable.parameter",
         "source.cpp meta.function.definition.parameters.lambda variable.parameter",
         "source.cpp meta.head.function.definition variable.parameter",
-        "meta.function.definition.parameters.lambda"
+        "meta.function.definition.parameters.lambda",
+        "source.ruby punctuation.definition.symbol.begin",
+        "source.ruby punctuation.definition.symbol.end",
+        "source.ruby constant.language.symbol punctuation.definition.constant"
       ],
       "settings": {
         "fontStyle": "normal",
