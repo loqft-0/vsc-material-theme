@@ -855,8 +855,11 @@ end
     # typescript
         typescript = {
             first_property: [ "source.ts variable.other.object" ],
-            middle_property: [ "source.ts variable.other.object.property" ],
-            accessor: [ "source.ts punctuation.accessor"] ,
+            middle_property: [
+                "source.ts meta.object-literal.key",
+                "source.ts variable.other.object.property",
+            ],
+            accessor: [ "source.ts punctuation.accessor"],
         }
     # vue
         vue = {
@@ -952,7 +955,15 @@ end
                 "source.cpp meta.function.definition.parameters.lambda variable.parameter",
                 "source.cpp meta.head.function.definition variable.parameter",
                 "meta.function.definition.parameters.lambda"
-            ]
+            ],
+            types: [
+                "source.cpp storage.modifier",
+                "source.cpp support.type.posix-reserved",
+                "source.cpp storage.type.return-type",
+                "source.cpp storage.type.primitive",
+                "source.cpp storage.type.c",
+                "source.cpp storage.type.user-defined",
+            ],
         }
     # shell
         shell = {
@@ -1204,7 +1215,6 @@ blue_group = [
     "entity.other.attribute-name.js",
     "keyword.other.special-method",
     "support.function.kernel.ruby",
-    "variable.other.constant.object.js",
     "string.regexp.group punctuation.definition.group",
     "punctuation.definition.character-class",
     "entity.other.attribute-name.class.css",
@@ -1355,24 +1365,16 @@ yellow_not_cursive_group = [
     "source.c support.type.posix-reserved",
     "source.shell variable.other",
     "support.type.built-in.posix-reserved",
-    "variable.other.constant.ruby",
     "source.go entity.name.package",
-    "storage.type.primitive",
     "source.go storage.type.string",
-    "storage.type.built-in.primitive",
     "source.go storage.type",
+    "storage.type.primitive",
+    "storage.type.built-in.primitive",
     "storage.type.primitive",
     "entity.name.type",
     "meta.angle-brackets.cpp",
     "entity.name.type.template.cpp",
     "meta.function.definition.parameters",
-    "source.cpp meta.function.definition.parameters.operator-overload",
-    "source.cpp support.type.posix-reserved",
-    "source.cpp storage.modifier",
-    "source.cpp storage.type.return-type",
-    "source.cpp storage.type.primitive",
-    "source.cpp storage.type.c",
-    "source.cpp storage.type.user-defined",
     "meta.tag.js",
     "entity.name.tag.js",
     "support.class.component.js",
@@ -1383,7 +1385,6 @@ yellow_not_cursive_group = [
     "keyword.label.assembly",
     "entity",
     "entity.other.attribute-name.id.pug",
-    "variable.other.constant",
 ]
 yellow_underline_group = [
     "source.shell variable.other.normal.shell",
@@ -1469,6 +1470,7 @@ mapping = ->() do {
             package_names,
             powershell[:constants],
             vue[:template_tags],
+            cpp[:types],
         ],
         italic: [
             yellow_cursive_group,
@@ -1582,6 +1584,7 @@ mapping = ->() do {
         normal: [
             json[:keys][6],
             c_sharp[:storage_modifiers],
+            constants,
         ],
     },
     dark_slate => {
@@ -1721,7 +1724,6 @@ mapping = ->() do {
     soft_red => {
         normal: [
             tags,
-            constants,
             gitignore[:negated],
             number_literals,
             instance_variables,

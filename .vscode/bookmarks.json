@@ -1,0 +1,222 @@
+[
+	{
+		"path": "$ROOTPATH$/theme_generator.rb",
+		"bookmarks": [
+			{
+				"line": 462,
+				"column": 13,
+				"label": "Groups"
+			},
+			{
+				"line": 476,
+				"column": 24,
+				"label": "    normal_variables"
+			},
+			{
+				"line": 519,
+				"column": 17,
+				"label": "    constants"
+			},
+			{
+				"line": 545,
+				"column": 22,
+				"label": "    self/this"
+			},
+			{
+				"line": 553,
+				"column": 17,
+				"label": "    functions"
+			},
+			{
+				"line": 590,
+				"column": 12,
+				"label": "    tags"
+			},
+			{
+				"line": 620,
+				"column": 15,
+				"label": "    strings"
+			},
+			{
+				"line": 650,
+				"column": 16,
+				"label": "    keywords"
+			},
+			{
+				"line": 804,
+				"column": 10,
+				"label": "Languages"
+			},
+			{
+				"line": 807,
+				"column": 18,
+				"label": "    javascript"
+			},
+			{
+				"line": 855,
+				"column": 18,
+				"label": "    typescript"
+			},
+			{
+				"line": 864,
+				"column": 11,
+				"label": "    vue"
+			},
+			{
+				"line": 880,
+				"column": 10,
+				"label": "    ruby"
+			},
+			{
+				"line": 889,
+				"column": 12,
+				"label": "    yaml"
+			},
+			{
+				"line": 903,
+				"column": 12,
+				"label": "    perl"
+			},
+			{
+				"line": 938,
+				"column": 11,
+				"label": "    cpp"
+			},
+			{
+				"line": 968,
+				"column": 13,
+				"label": "    shell"
+			},
+			{
+				"line": 978,
+				"column": 18,
+				"label": "    powershell"
+			},
+			{
+				"line": 994,
+				"column": 9,
+				"label": "    css"
+			},
+			{
+				"line": 1023,
+				"column": 10,
+				"label": "    json"
+			},
+			{
+				"line": 1073,
+				"column": 20,
+				"label": "    coffeescript"
+			},
+			{
+				"line": 1092,
+				"column": 16,
+				"label": "    markdown"
+			},
+			{
+				"line": 1172,
+				"column": 17,
+				"label": "    gitignore"
+			},
+			{
+				"line": 1178,
+				"column": 15,
+				"label": "    c_sharp"
+			},
+			{
+				"line": 1421,
+				"column": 9,
+				"label": "Colors"
+			},
+			{
+				"line": 1425,
+				"column": 9,
+				"label": "    white"
+			},
+			{
+				"line": 1430,
+				"column": 8,
+				"label": "    gray"
+			},
+			{
+				"line": 1463,
+				"column": 10,
+				"label": "    yellow"
+			},
+			{
+				"line": 1489,
+				"column": 12,
+				"label": "    no_color"
+			},
+			{
+				"line": 1504,
+				"column": 14,
+				"label": "    light_blue"
+			},
+			{
+				"line": 1524,
+				"column": 8,
+				"label": "    blue"
+			},
+			{
+				"line": 1549,
+				"column": 10,
+				"label": "    orange"
+			},
+			{
+				"line": 1571,
+				"column": 8,
+				"label": "    lime"
+			},
+			{
+				"line": 1582,
+				"column": 8,
+				"label": "    rust"
+			},
+			{
+				"line": 1589,
+				"column": 14,
+				"label": "    dark_slate"
+			},
+			{
+				"line": 1597,
+				"column": 15,
+				"label": "    light_slate"
+			},
+			{
+				"line": 1606,
+				"column": 8,
+				"label": "    pink"
+			},
+			{
+				"line": 1623,
+				"column": 16,
+				"label": "    light_purple"
+			},
+			{
+				"line": 1648,
+				"column": 13,
+				"label": "    dim_green"
+			},
+			{
+				"line": 1669,
+				"column": 9,
+				"label": "    green"
+			},
+			{
+				"line": 1683,
+				"column": 17,
+				"label": "    vibrant_green"
+			},
+			{
+				"line": 1694,
+				"column": 18,
+				"label": "    bananna_yellow"
+			},
+			{
+				"line": 1705,
+				"column": 7,
+				"label": "    red"
+			}
+		]
+	}
+]
