@@ -523,7 +523,6 @@ end
             "source.cpp constant.language",
         ]
         globals = [
-            "support.variable.other.object.node",
             "variable.other.readwrite.global.special punctuation",
             "variable.other.readwrite.global.special",
             "variable.other.readwrite.global.pre-defined",
@@ -844,6 +843,10 @@ end
                 # "source.js support.variable.property.dom", 
                 # "source.js support.variable.property.dom",
                 # "source.js support.function.dom",
+            ],
+            globals: [
+                "support.variable.other.object.node",
+                "support.type.object.module",
             ],
             member_function_definition: [
                 "source.js meta.object.member entity.name.function",
@@ -1700,6 +1703,7 @@ mapping = ->() do {
         ],
         underline: [
             globals,
+            javascript[:globals],
             bananna_yellow_underline_group,
         ],
     },

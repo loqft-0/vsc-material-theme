@@ -1055,10 +1055,11 @@
     {
       "name": "#ddd790 underline",
       "scope": [
-        "support.variable.other.object.node",
         "variable.other.readwrite.global.special punctuation",
         "variable.other.readwrite.global.special",
         "variable.other.readwrite.global.pre-defined",
+        "support.variable.other.object.node",
+        "support.type.object.module",
         "variable.other.readwrite.global.ruby",
         "variable.other.readwrite.global.ruby punctuation.definition.variable.ruby",
         "support.variable"
