@@ -1660,6 +1660,7 @@ mapping = ->() do {
             member_access_punctuation,
             middle_property,
             javascript[:middle_property],
+            typescript[:middle_property],
             javascript[:member_access_operator],
             javascript[:last_property],
             perl[:scalar],

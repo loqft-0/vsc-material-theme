@@ -912,6 +912,8 @@
         "source.js meta.object-literal.key",
         "source.js variable.other.object.property",
         "source.js variable.other.constant.object.property",
+        "source.ts meta.object-literal.key",
+        "source.ts variable.other.object.property",
         "source.js punctuation.accessor",
         "source.js variable.other.property",
         "source.js variable.other.constant.property",
