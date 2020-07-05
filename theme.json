@@ -932,7 +932,7 @@
     {
       "name": "#80cbc4 italic",
       "scope": [
-
+        "source.js variable.other.readwrite meta.object.member meta.objectliteral"
       ],
       "settings": {
         "fontStyle": "italic",

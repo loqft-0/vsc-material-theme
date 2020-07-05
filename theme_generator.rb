@@ -820,6 +820,9 @@ end
             first_property: [
                 "source.js variable.other.object",
             ],
+            member_shorthand: [
+                "source.js variable.other.readwrite meta.object.member meta.objectliteral",
+            ],
             middle_property: [
                 "source.js meta.object-literal.key",
                 "source.js variable.other.object.property",
@@ -1267,8 +1270,6 @@ dim_green_with_underline_group = [
     "meta.object-literal.key string.quoted",
     "meta.object-literal.key.js variable.other.readwrite.js - meta.var.expr",
 ]
-dim_green_with_italics_group = [
-]
 green_group = [
     "meta.encoding",
     "constant.other.option",
@@ -1668,7 +1669,7 @@ mapping = ->() do {
             powershell[:variables],
         ],
         italic: [
-            dim_green_with_italics_group,
+            javascript[:member_shorthand],
         ],
     },
     green => {

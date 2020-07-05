@@ -53,167 +53,167 @@
 				"label": "    javascript"
 			},
 			{
-				"line": 858,
+				"line": 861,
 				"column": 18,
 				"label": "    typescript"
 			},
 			{
-				"line": 867,
+				"line": 870,
 				"column": 11,
 				"label": "    vue"
 			},
 			{
-				"line": 883,
+				"line": 886,
 				"column": 10,
 				"label": "    ruby"
 			},
 			{
-				"line": 892,
+				"line": 895,
 				"column": 12,
 				"label": "    yaml"
 			},
 			{
-				"line": 906,
+				"line": 909,
 				"column": 12,
 				"label": "    perl"
 			},
 			{
-				"line": 941,
+				"line": 944,
 				"column": 11,
 				"label": "    cpp"
 			},
 			{
-				"line": 971,
+				"line": 974,
 				"column": 13,
 				"label": "    shell"
 			},
 			{
-				"line": 981,
+				"line": 984,
 				"column": 18,
 				"label": "    powershell"
 			},
 			{
-				"line": 997,
+				"line": 1000,
 				"column": 9,
 				"label": "    css"
 			},
 			{
-				"line": 1026,
+				"line": 1029,
 				"column": 10,
 				"label": "    json"
 			},
 			{
-				"line": 1076,
+				"line": 1079,
 				"column": 20,
 				"label": "    coffeescript"
 			},
 			{
-				"line": 1095,
+				"line": 1098,
 				"column": 16,
 				"label": "    markdown"
 			},
 			{
-				"line": 1175,
+				"line": 1178,
 				"column": 17,
 				"label": "    gitignore"
 			},
 			{
-				"line": 1181,
+				"line": 1184,
 				"column": 15,
 				"label": "    c_sharp"
 			},
 			{
-				"line": 1424,
+				"line": 1425,
 				"column": 9,
 				"label": "Colors"
 			},
 			{
-				"line": 1428,
+				"line": 1429,
 				"column": 9,
 				"label": "    white"
 			},
 			{
-				"line": 1433,
+				"line": 1434,
 				"column": 8,
 				"label": "    gray"
 			},
 			{
-				"line": 1466,
+				"line": 1467,
 				"column": 10,
 				"label": "    yellow"
 			},
 			{
-				"line": 1492,
+				"line": 1493,
 				"column": 12,
 				"label": "    no_color"
 			},
 			{
-				"line": 1507,
+				"line": 1508,
 				"column": 14,
 				"label": "    light_blue"
 			},
 			{
-				"line": 1527,
+				"line": 1528,
 				"column": 8,
 				"label": "    blue"
 			},
 			{
-				"line": 1552,
+				"line": 1553,
 				"column": 10,
 				"label": "    orange"
 			},
 			{
-				"line": 1574,
+				"line": 1575,
 				"column": 8,
 				"label": "    lime"
 			},
 			{
-				"line": 1585,
+				"line": 1586,
 				"column": 8,
 				"label": "    rust"
 			},
 			{
-				"line": 1592,
+				"line": 1593,
 				"column": 14,
 				"label": "    dark_slate"
 			},
 			{
-				"line": 1600,
+				"line": 1601,
 				"column": 15,
 				"label": "    light_slate"
 			},
 			{
-				"line": 1609,
+				"line": 1610,
 				"column": 8,
 				"label": "    pink"
 			},
 			{
-				"line": 1626,
+				"line": 1627,
 				"column": 16,
 				"label": "    light_purple"
 			},
 			{
-				"line": 1651,
+				"line": 1652,
 				"column": 13,
 				"label": "    dim_green"
 			},
 			{
-				"line": 1673,
+				"line": 1674,
 				"column": 9,
 				"label": "    green"
 			},
 			{
-				"line": 1687,
+				"line": 1688,
 				"column": 17,
 				"label": "    vibrant_green"
 			},
 			{
-				"line": 1698,
+				"line": 1699,
 				"column": 18,
 				"label": "    bananna_yellow"
 			},
 			{
-				"line": 1710,
+				"line": 1711,
 				"column": 7,
 				"label": "    red"
 			}
