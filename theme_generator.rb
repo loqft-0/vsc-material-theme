@@ -40,14 +40,13 @@ editor_text_color          = '#bfc9d5'
 off_white                  = '#eeffff'
 editor_selection_color     = '#83b2e1'
 solid_blue                 = '#2670a1'
+FINDME                     = '#e100ffc0'
 navy_slate                 = '#184967'
 cursor_color               = '#ff9900'
 error_red                  = '#ef5350'
 
-# because there is an overlap (and transparency will be double-applied)
-# these colors have to be manually caclulated
-diff_added_background      = '#435349' # this is lime.transparency(79) on background_color
-diff_removed_background    = '#522D3A' # this is error_red.transparency(79) on background_color
+strong_shadow = black.transparency(70)
+weak_shadow   = "#202531" # used in places where transparency doesn't work
 
 ui = ->() do {
     # 
@@ -109,8 +108,8 @@ ui = ->() do {
         inactiveForeground: ui_text_color,
         inactiveBackground: navy_slate,
     },
-    # this is NOT the scrollbar idk WTF they were thinking when they named it this
-    # this shadow is the shadow underneath the tabs
+    # this is NOT the scrollbar idk WTF they were thinking when they named it this.
+    # This shadow is the shadow underneath the tabs
     scrollbar: {
         shadow: black,
     },
@@ -126,6 +125,12 @@ ui = ->() do {
         debuggingBorder: background_color,
         debuggingBackground: background_color,
         debuggingForeground: ui_text_color,
+    },
+    statusBarItem: {
+        prominentHoverBackground: background_color,
+        prominentBackground: background_color,
+        activeBackground: background_color,
+        hoverBackground: background_color,
     },
     # lists are used all over the place,
     # they're in 
@@ -189,7 +194,7 @@ ui = ->() do {
     },
     titleBar: {
         activeBackground: navy_slate,
-        border: background_color,
+        border: navy_slate,
         inactiveBackground: background_color,
         inactiveForeground: ui_text_color,
         activeForeground: off_white,
@@ -204,16 +209,15 @@ ui = ->() do {
     widget: {
         shadow: background_color,
     },
-    statusBarItem: {
-        prominentHoverBackground: background_color,
-        prominentBackground: background_color,
-        activeBackground: background_color,
-        hoverBackground: background_color,
-    },
     sideBar: {
-        border: background_color,
+        border: strong_shadow,
         background: background_color,
         foreground: ui_text_color,
+    },
+    sideBarSectionHeader: {
+        background: background_color,
+        border: background_color,
+        foreground: off_white,
     },
     # this is the thing on the far left (or right) that has big icons
     activityBar: {
@@ -250,7 +254,7 @@ ui = ->() do {
     },
     # this is the thing that pops up from the bottom (terminal area)
     panel: {
-        border: background_color,
+        border: "#202531",
         background: background_color,
         dropBackground: off_white,
     },
@@ -268,18 +272,14 @@ ui = ->() do {
     editorMarkerNavigation: {
         background: background_color,
     },
-    sideBarSectionHeader: {
-        background: background_color,
-        border: background_color,
-        foreground: off_white,
-    },
     dropdown: {
         background: background_color,
         border: solid_blue,
         foreground: off_white.transparency(20),
     },
     editorOverviewRuler: {
-        border: solid_blue,
+        # the left border of the scrollbar for some reason
+        border: solid_blue.transparency(100),
         commonContentForeground: solid_blue,
         incomingContentForeground: solid_blue,
         currentContentForeground: solid_blue,
@@ -404,9 +404,9 @@ ui = ->() do {
         background: editor_selection_color.transparency(53),
     },
     diffEditor: {
-        insertedTextBackground: diff_added_background,
+        insertedTextBackground: lime.transparency(79),
         insertedTextBorder: lime.transparency(100),
-        removedTextBackground: diff_removed_background,
+        removedTextBackground: error_red.transparency(79),
         removedTextBorder: error_red.transparency(100),
     },
     editorGutter: {
