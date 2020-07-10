@@ -479,11 +479,9 @@ end
             "variable.other",
             "variable.other.readwrite",
             "variable.assignment.coffee",
-            "variable.other.constant",
             "variable.other.readwrite.ts",
             "variable.other.readwrite.js",
             "variable.other.readwrite.global",
-            "variable.other.constant.js", # yes, it says constant, but its not a constant, its a non-const variable
             "variable.other.member", # used by the c++ extension for members that are not being accessed
             "source.cs entity.name.variable.local", # c-sharp has bad nameing
         ]
@@ -866,6 +864,7 @@ end
                 "source.ts variable.other.object.property",
             ],
             accessor: [ "source.ts punctuation.accessor"],
+            constants: [ "source.ts variable.other.constant" ]
         }
     # vue
         vue = {
@@ -1475,6 +1474,7 @@ mapping = ->() do {
             powershell[:constants],
             vue[:template_tags],
             cpp[:types],
+            constants,
         ],
         italic: [
             yellow_cursive_group,
@@ -1588,7 +1588,7 @@ mapping = ->() do {
         normal: [
             json[:keys][6],
             c_sharp[:storage_modifiers],
-            constants,
+            typescript[:constants],
         ],
     },
     dark_slate => {

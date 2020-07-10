@@ -79,11 +79,9 @@
         "variable.other",
         "variable.other.readwrite",
         "variable.assignment.coffee",
-        "variable.other.constant",
         "variable.other.readwrite.ts",
         "variable.other.readwrite.js",
         "variable.other.readwrite.global",
-        "variable.other.constant.js",
         "variable.other.member",
         "source.cs entity.name.variable.local",
         "source.css support.type.property-name",
@@ -177,7 +175,10 @@
         "source.cpp storage.type.return-type",
         "source.cpp storage.type.primitive",
         "source.cpp storage.type.c",
-        "source.cpp storage.type.user-defined"
+        "source.cpp storage.type.user-defined",
+        "variable.other.constant",
+        "constant.other.php",
+        "source.cpp constant.language"
       ],
       "settings": {
         "fontStyle": "normal",
@@ -626,9 +627,7 @@
         "meta.embedded.block.jsonc meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json punctuation.support.type.property-name",
         "meta.embedded.block.jsonc meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json punctuation.separator.dictionary.key-value",
         "source.cs storage.modifier",
-        "variable.other.constant",
-        "constant.other.php",
-        "source.cpp constant.language"
+        "source.ts variable.other.constant"
       ],
       "settings": {
         "fontStyle": "normal",

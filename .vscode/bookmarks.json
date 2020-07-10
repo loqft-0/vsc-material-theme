@@ -13,132 +13,132 @@
 				"label": "    normal_variables"
 			},
 			{
-				"line": 519,
+				"line": 517,
 				"column": 17,
 				"label": "    constants"
 			},
 			{
-				"line": 544,
+				"line": 542,
 				"column": 22,
 				"label": "    self/this"
 			},
 			{
-				"line": 552,
+				"line": 550,
 				"column": 17,
 				"label": "    functions"
 			},
 			{
-				"line": 589,
+				"line": 587,
 				"column": 12,
 				"label": "    tags"
 			},
 			{
-				"line": 619,
+				"line": 617,
 				"column": 15,
 				"label": "    strings"
 			},
 			{
-				"line": 649,
+				"line": 647,
 				"column": 16,
 				"label": "    keywords"
 			},
 			{
-				"line": 803,
+				"line": 801,
 				"column": 10,
 				"label": "Languages"
 			},
 			{
-				"line": 806,
+				"line": 804,
 				"column": 18,
 				"label": "    javascript"
 			},
 			{
-				"line": 861,
+				"line": 859,
 				"column": 18,
 				"label": "    typescript"
 			},
 			{
-				"line": 870,
+				"line": 869,
 				"column": 11,
 				"label": "    vue"
 			},
 			{
-				"line": 886,
+				"line": 885,
 				"column": 10,
 				"label": "    ruby"
 			},
 			{
-				"line": 895,
+				"line": 894,
 				"column": 12,
 				"label": "    yaml"
 			},
 			{
-				"line": 909,
+				"line": 908,
 				"column": 12,
 				"label": "    perl"
 			},
 			{
-				"line": 944,
+				"line": 943,
 				"column": 11,
 				"label": "    cpp"
 			},
 			{
-				"line": 974,
+				"line": 973,
 				"column": 13,
 				"label": "    shell"
 			},
 			{
-				"line": 984,
+				"line": 983,
 				"column": 18,
 				"label": "    powershell"
 			},
 			{
-				"line": 1000,
+				"line": 999,
 				"column": 9,
 				"label": "    css"
 			},
 			{
-				"line": 1029,
+				"line": 1028,
 				"column": 10,
 				"label": "    json"
 			},
 			{
-				"line": 1079,
+				"line": 1078,
 				"column": 20,
 				"label": "    coffeescript"
 			},
 			{
-				"line": 1098,
+				"line": 1097,
 				"column": 16,
 				"label": "    markdown"
 			},
 			{
-				"line": 1178,
+				"line": 1177,
 				"column": 17,
 				"label": "    gitignore"
 			},
 			{
-				"line": 1184,
+				"line": 1183,
 				"column": 15,
 				"label": "    c_sharp"
 			},
 			{
-				"line": 1425,
+				"line": 1424,
 				"column": 9,
 				"label": "Colors"
 			},
 			{
-				"line": 1429,
+				"line": 1428,
 				"column": 9,
 				"label": "    white"
 			},
 			{
-				"line": 1434,
+				"line": 1433,
 				"column": 8,
 				"label": "    gray"
 			},
 			{
-				"line": 1467,
+				"line": 1466,
 				"column": 10,
 				"label": "    yellow"
 			},
