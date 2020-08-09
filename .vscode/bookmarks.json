@@ -3,217 +3,217 @@
 		"path": "$ROOTPATH$/theme_generator.rb",
 		"bookmarks": [
 			{
-				"line": 462,
+				"line": 465,
 				"column": 13,
 				"label": "Groups"
 			},
 			{
-				"line": 476,
+				"line": 479,
 				"column": 24,
 				"label": "    normal_variables"
 			},
 			{
-				"line": 517,
+				"line": 520,
 				"column": 17,
 				"label": "    constants"
 			},
 			{
-				"line": 542,
+				"line": 545,
 				"column": 22,
 				"label": "    self/this"
 			},
 			{
-				"line": 550,
+				"line": 553,
 				"column": 17,
 				"label": "    functions"
 			},
 			{
-				"line": 587,
+				"line": 590,
 				"column": 12,
 				"label": "    tags"
 			},
 			{
-				"line": 617,
+				"line": 620,
 				"column": 15,
 				"label": "    strings"
 			},
 			{
-				"line": 647,
+				"line": 650,
 				"column": 16,
 				"label": "    keywords"
 			},
 			{
-				"line": 801,
+				"line": 804,
 				"column": 10,
 				"label": "Languages"
 			},
 			{
-				"line": 804,
+				"line": 807,
 				"column": 18,
 				"label": "    javascript"
 			},
 			{
-				"line": 859,
+				"line": 862,
 				"column": 18,
 				"label": "    typescript"
 			},
 			{
-				"line": 869,
+				"line": 872,
 				"column": 11,
 				"label": "    vue"
 			},
 			{
-				"line": 885,
+				"line": 888,
 				"column": 10,
 				"label": "    ruby"
 			},
 			{
-				"line": 894,
+				"line": 897,
 				"column": 12,
 				"label": "    yaml"
 			},
 			{
-				"line": 908,
+				"line": 911,
 				"column": 12,
 				"label": "    perl"
 			},
 			{
-				"line": 943,
+				"line": 946,
 				"column": 11,
 				"label": "    cpp"
 			},
 			{
-				"line": 973,
+				"line": 976,
 				"column": 13,
 				"label": "    shell"
 			},
 			{
-				"line": 983,
+				"line": 986,
 				"column": 18,
 				"label": "    powershell"
 			},
 			{
-				"line": 999,
+				"line": 1002,
 				"column": 9,
 				"label": "    css"
 			},
 			{
-				"line": 1028,
+				"line": 1031,
 				"column": 10,
 				"label": "    json"
 			},
 			{
-				"line": 1078,
+				"line": 1081,
 				"column": 20,
 				"label": "    coffeescript"
 			},
 			{
-				"line": 1097,
+				"line": 1100,
 				"column": 16,
 				"label": "    markdown"
 			},
 			{
-				"line": 1177,
+				"line": 1180,
 				"column": 17,
 				"label": "    gitignore"
 			},
 			{
-				"line": 1183,
+				"line": 1186,
 				"column": 15,
 				"label": "    c_sharp"
 			},
 			{
-				"line": 1424,
+				"line": 1427,
 				"column": 9,
 				"label": "Colors"
 			},
 			{
-				"line": 1428,
+				"line": 1431,
 				"column": 9,
 				"label": "    white"
 			},
 			{
-				"line": 1433,
+				"line": 1436,
 				"column": 8,
 				"label": "    gray"
 			},
 			{
-				"line": 1466,
+				"line": 1469,
 				"column": 10,
 				"label": "    yellow"
 			},
 			{
-				"line": 1493,
+				"line": 1496,
 				"column": 12,
 				"label": "    no_color"
 			},
 			{
-				"line": 1508,
+				"line": 1511,
 				"column": 14,
 				"label": "    light_blue"
 			},
 			{
-				"line": 1528,
+				"line": 1531,
 				"column": 8,
 				"label": "    blue"
 			},
 			{
-				"line": 1553,
+				"line": 1556,
 				"column": 10,
 				"label": "    orange"
 			},
 			{
-				"line": 1575,
+				"line": 1578,
 				"column": 8,
 				"label": "    lime"
 			},
 			{
-				"line": 1586,
+				"line": 1589,
 				"column": 8,
 				"label": "    rust"
 			},
 			{
-				"line": 1593,
+				"line": 1596,
 				"column": 14,
 				"label": "    dark_slate"
 			},
 			{
-				"line": 1601,
+				"line": 1604,
 				"column": 15,
 				"label": "    light_slate"
 			},
 			{
-				"line": 1610,
+				"line": 1613,
 				"column": 8,
 				"label": "    pink"
 			},
 			{
-				"line": 1627,
+				"line": 1630,
 				"column": 16,
 				"label": "    light_purple"
 			},
 			{
-				"line": 1652,
+				"line": 1655,
 				"column": 13,
 				"label": "    dim_green"
 			},
 			{
-				"line": 1674,
+				"line": 1677,
 				"column": 9,
 				"label": "    green"
 			},
 			{
-				"line": 1688,
+				"line": 1691,
 				"column": 17,
 				"label": "    vibrant_green"
 			},
 			{
-				"line": 1699,
+				"line": 1702,
 				"column": 18,
 				"label": "    bananna_yellow"
 			},
 			{
-				"line": 1711,
+				"line": 1714,
 				"column": 7,
 				"label": "    red"
 			}

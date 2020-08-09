@@ -32,6 +32,8 @@ no_color        = ''
 # UI Color Pallet
 #
 background_color           = '#242938'
+secondary_background_color = '#293342'
+accent_color               = dim_green
 hover_background           = '#2c3b4f'
 scrollbar_color            = '#324962'
 input_box_background       = '#414863'
@@ -74,7 +76,7 @@ ui = ->() do {
     # Main UI
     # 
     foreground: ui_text_color,
-    focusBorder: electric_blue, # border when something (panel or input box) is active/focused
+    focusBorder: accent_color, # border when something (panel or input box) is active/focused
     editor: {
         foreground: editor_text_color,
         background: background_color,
@@ -239,8 +241,8 @@ ui = ->() do {
         textInputBackground: background_color,
         numberInputBackground: background_color,
         dropdownBackground: background_color,
-        headerForeground: dim_green,
-        modifiedItemIndicator: dim_green,
+        headerForeground: accent_color,
+        modifiedItemIndicator: accent_color,
         checkboxForeground: off_white,
         textInputForeground: off_white,
         numberInputForeground: off_white,
@@ -254,7 +256,7 @@ ui = ->() do {
     },
     # this is the thing that pops up from the bottom (terminal area)
     panel: {
-        border: "#202531",
+        border: weak_shadow,
         background: background_color,
         dropBackground: off_white,
     },
@@ -308,6 +310,7 @@ ui = ->() do {
         background: solid_blue.transparency(80),
         foreground: off_white.transparency(20),
     },
+    # command-pallet top-panel etc
     quickInput: {
         # change this back to (below) after this has been fixed: https://github.com/microsoft/vscode/issues/72952 
         #   # foreground: ui_text_color,
@@ -1754,8 +1757,34 @@ IO.write("theme.json", convert_to_json_theme({ name: 'XD Theme', type: 'dark', }
 
 
 # 
+# 
 # Variants
 # 
-background_color.replace('#273244') 
-navy_slate.replace('#0a5375')
-IO.write("theme-lighten.json", convert_to_json_theme({ name: 'XD Theme - Lighten', type: 'dark', }, ui, mapping) )
+# 
+
+    # 
+    # XD - Two Tone
+    # 
+    two_tone_mapping = mapping[]
+    two_tone_ui = ui[]
+    two_tone_ui[:quickInput][:background]           = secondary_background_color
+    two_tone_ui[:terminal][:ansiBlack]              = secondary_background_color
+    two_tone_ui[:statusBar][:background]            = secondary_background_color
+    two_tone_ui[:statusBar][:border]                = secondary_background_color
+    two_tone_ui[:statusBar][:noFolderBackground]    = secondary_background_color
+    two_tone_ui[:statusBar][:noFolderBorder]        = secondary_background_color
+    two_tone_ui[:statusBar][:debuggingBorder]       = secondary_background_color
+    two_tone_ui[:statusBar][:debuggingBackground]   = secondary_background_color
+    two_tone_ui[:sideBar][:background]              = secondary_background_color
+    two_tone_ui[:sideBarSectionHeader][:background] = secondary_background_color
+    two_tone_ui[:sideBarSectionHeader][:border]     = secondary_background_color
+    two_tone_ui[:activityBar][:activeBackground]    = secondary_background_color
+    two_tone_ui[:panel][:background]                = secondary_background_color
+    IO.write("theme-two-tone.json", convert_to_json_theme({ name: 'XD Theme - Two Tone', type: 'dark', }, two_tone_ui, two_tone_mapping) )
+    
+    # 
+    # XD - Lighten
+    # 
+    background_color.replace('#273244') 
+    navy_slate.replace('#0a5375')
+    IO.write("theme-lighten.json", convert_to_json_theme({ name: 'XD Theme - Lighten', type: 'dark', }, ui, mapping) )

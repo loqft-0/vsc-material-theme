@@ -1201,7 +1201,7 @@
     "terminal.ansiYellow": "#fec355",
     "terminal.ansiBrightYellow": "#ddd790",
     "foreground": "#5e718a",
-    "focusBorder": "#00aeffe7",
+    "focusBorder": "#80cbc4",
     "editor.foreground": "#bfc9d5",
     "editor.background": "#273244",
     "editor.lineHighlightBackground": "#2c3b4f",
