@@ -19,11 +19,10 @@
                     system "project sync"
                 end
                 
-                if -"npm version patch"
-                    system "project synchronize --message='version bump'"
-                    puts "Publishing"
-                    system "vsce publish"
-                    puts "Finished Publishing"
-                    puts "patched version"
-                end
+                system("npm version patch")
+                system "project synchronize --message='version bump'"
+                puts "Publishing"
+                system "vsce publish"
+                puts "Finished Publishing"
+                puts "patched version"
             end
