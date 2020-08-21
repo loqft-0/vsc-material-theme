@@ -1403,6 +1403,8 @@ yellow_underline_group = [
 ]
 bananna_yellow_group = [
     "keyword.other.unit",
+    "keyword.control.unit",
+    "souce keyword.control.unit",
     "punctuation.separator.constant.numeric",
 ]
 bananna_yellow_underline_group = [
