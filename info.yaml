@@ -20,10 +20,10 @@
                 end
                 
                 if -"npm version patch"
-                    puts "patching version"
-                    # system "project synchronize --message='version bump'"
-                    # puts "Publishing"
-                    # system "vsce publish"
-                    # puts "Finished Publishing"
+                    system "project synchronize --message='version bump'"
+                    puts "Publishing"
+                    system "vsce publish"
+                    puts "Finished Publishing"
+                    puts "patched version"
                 end
             end
