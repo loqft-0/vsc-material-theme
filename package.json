@@ -56,5 +56,6 @@
   "bugs": {
     "url": "https://github.com/jeff-hykin/vsc-material-theme/issues"
   },
-  "homepage": "https://github.com/jeff-hykin/vsc-material-theme#readme"
+  "homepage": "https://github.com/jeff-hykin/vsc-material-theme#readme",
+  "dependencies": {}
 }
