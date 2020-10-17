@@ -996,6 +996,7 @@ end
             "variable.other.constant",
             "constant.other.php",
             "source.cpp constant.language",
+            python[:constants],
         ]
         globals = [
             "variable.other.readwrite.global.special punctuation",
@@ -1031,6 +1032,7 @@ end
             "support.function",
             "entity.name.command",
             "keyword.other.special-method",
+            python[:functions],
         ]
         function_punctuation = [
             "punctuation.definition.arguments",
@@ -1098,8 +1100,7 @@ end
         ]
         docstring = [
             "string.quoted.docstring",
-            "source.python string.quoted.docstring punctuation.definition.string.begin",
-            "source.python string.quoted.docstring punctuation.definition.string.end",
+            python[:docstring],
         ]
         escape_characters_group = [
             "constant.character.escape",
@@ -1225,8 +1226,7 @@ end
         "source.cpp punctuation.section.block.begin.bracket.curly",
         "source.cpp punctuation.section.block.end.bracket.curly",
         "source.shell punctuation.definition.evaluation",
-        "source.python punctuation.separator.colon",
-        "source.python punctuation.section.function.begin",
+        python[:normal_punctuation],
         "storage.modifier.chomping-indicator.yaml", # the | used for multiline blocks
         "punctuation.separator.inheritance.php",
         "punctuation.separator.colon.inheritance",
@@ -1280,7 +1280,6 @@ end
 # need to fix (unsorted code)
 #
 blue_group = [
-    "source.python meta.function-call.generic.python",
     "support.function",
     "entity.other.attribute-name.js",
     "keyword.other.special-method",
@@ -1306,10 +1305,7 @@ dim_green_group = [
     "variable.other.property.coffee",
     "punctuation.definition.dictionary",
     "punctuation.section.property-list",
-    "punctuation.definition.dict.begin.python",
-    "punctuation.definition.dict.end.python",
-    "punctuation.definition.list.begin.python",
-    "punctuation.definition.list.end.python",
+    python[:dictionary],
     "punctuation.definition.begin.bracket.square",
     "punctuation.definition.end.bracket.square",
     "string.regexp",
@@ -1341,8 +1337,6 @@ green_group = [
     "punctuation.definition.string.end",
     "keyword.other.special-method.ruby",
     "entity.name",
-    "source.python support.function.magic.python",
-    "source.python support.variable.magic.python",
     "string.regexp",
     "punctuation.section.regexp",
     "punctuation.separator.variable.ruby",
@@ -1382,8 +1376,6 @@ lime_green_group = [
     "support.constant.color",
     "constant.other.color",
     "constant.other.color.rgb-value",
-    "source.python string.quoted.single",
-    "source.python string",
     "source.shell string.quoted.single",
     "source.shell string.unquoted.argument",
     "source.shell string.quoted.double",
@@ -1411,9 +1403,6 @@ orange_underline_group = [
     "meta.function.method.with-arguments constant.language.symbol.hashkey.parameter.function",
     "constant.other.character-class.regexp",
 ]
-orange_bold_group = [
-    "source.python constant.language",
-]
 yellow_cursive_group = [
     "text.haml entity.other.attribute-name.id",
     "support.variable.dom",
@@ -1425,11 +1414,6 @@ yellow_cursive_group = [
     "storage.modifier.glsl",
 ]
 yellow_not_cursive_group = [
-    "source.python constant.other.caps",
-    "source.python entity.name.function.decorator",
-    "source.python punctuation.definition.decorator",
-    "source.python meta.function.decorator punctuation.definition.arguments.begin",
-    "source.python meta.function.decorator punctuation.definition.arguments.end",
     "source.c support.type.posix-reserved",
     "source.shell variable.other",
     "support.type.built-in.posix-reserved",
@@ -1537,6 +1521,7 @@ mapping = ->() do {
             css_classes_group,
             json[:keys][1],
             yellow_not_cursive_group,
+            python[:decorators],
             package_names,
             powershell[:constants],
             vue[:template_tags],
@@ -1636,7 +1621,7 @@ mapping = ->() do {
             escape_characters_group,
         ],
         bold: [
-            orange_bold_group,
+            python[:literal_keyword],
             json[:literalWords],
         ],
     },
@@ -1645,6 +1630,7 @@ mapping = ->() do {
             strings,
             json[:keys][8],
             lime_green_group,
+            python[:magic],
             markdown[:string],
         ],
         underline: [
