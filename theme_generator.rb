@@ -454,353 +454,6 @@ ui = ->() do {
 }
 end
 
-
-
-#
-# Code Groups
-#
-
-    invalid_things = [
-        "invalid",
-        "invalid.illegal",
-        "invalid.deprecated",
-    ]
-    comments = [
-        "comment",
-        "comment.line.double-slash",
-        "punctuation.definition.comment",
-    ]
-    dictionary_keys = [
-        "punctuation.definition.constant.hashkey", # the ruby : for hashkeys in function parameters
-        "constant.language.symbol.hashkey", # the ruby syntax changed
-    ]
-    # 
-    # Variables
-    # 
-        normal_variables = [
-            "variable",
-            "variable.other",
-            "variable.other.readwrite",
-            "variable.assignment.coffee",
-            "variable.other.readwrite.ts",
-            "variable.other.readwrite.js",
-            "variable.other.readwrite.global",
-            "variable.other.member", # used by the c++ extension for members that are not being accessed
-            "source.cs entity.name.variable.local", # c-sharp has bad nameing
-        ]
-        parameter_variables = [
-            "variable.parameter",
-            "variable.parameter.function",
-            "variable.parameter.function.language.python",
-            "variable.parameter.function.coffee",
-            "source.cs entity.name.variable.parameter",
-        ]
-        instance_variables = [
-            "variable.other.readwrite.instance",
-            "punctuation.definition.variable.ruby",
-        ]
-        class_variables = [
-            "source.ruby variable.other.readwrite.class", # class members in ruby
-        ]
-        first_property = [
-            "variable.other.object.ts",
-            "variable.other.object.coffee",
-            "variable.other.object.access",
-            "source.vue variable.other.object",
-            "variable.other.constant.object",
-            "source.cs variable.other.object",
-        ]
-        middle_property = [
-            "support.variable.property",
-            "variable.other.object.property",
-        ]
-        last_property = [
-            "variable.other.property",
-            "source.vue variable.other.property",
-        ]
-        constants = [
-            "variable.other.constant",
-            "constant.other.php",
-            "source.cpp constant.language",
-        ]
-        globals = [
-            "variable.other.readwrite.global.special punctuation",
-            "variable.other.readwrite.global.special",
-            "variable.other.readwrite.global.pre-defined",
-        ]
-        # mostly self-reference but occasionally other stuff
-        special_variables = [
-            "variable.language",
-            "variable.language.this",
-            "variable.language.self",
-            "variable.language.super",
-        ]
-        # the "misc" variables that are colored different than the special variables
-        unusual_variables = [
-            # yaml aliases
-            "source.dockerfile variable.other",
-            "variable.other.predefined",
-            "source.perl variable.other.predefined punctuation.definition.variable",
-            "variable.other.macro.argument", # C++ macro arguments
-        ]
-        self_reference = [
-            "variable.language.this",
-            "variable.language.self",
-            "keyword.other.this", # C-sharp
-        ]
-    # 
-    # Functions
-    # 
-        functions = [
-            "entity.name.function",
-            "variable.function",
-            "support.function",
-            "entity.name.command",
-            "keyword.other.special-method",
-        ]
-        function_punctuation = [
-            "punctuation.definition.arguments",
-            "punctuation.section.parameters.begin.bracket.round",
-            "punctuation.section.parameters.end.bracket.round",
-            "punctuation.section.arguments.begin.bracket.round",
-            "punctuation.section.arguments.end.bracket.round",
-            "punctuation.section.block.begin.bracket.curly.function.definition",
-            "punctuation.section.block.end.bracket.curly.function.definition",
-            "punctuation.section.arguments.begin.bracket.round.function.member",
-            "punctuation.section.arguments.end.bracket.round.function.member",
-            "punctuation.definition.parameters.ruby",
-            "punctuation.section.function",
-            "punctuation.definition.arguments.begin",
-            "punctuation.definition.arguments.end",
-            "punctuation.definition.parameters.begin",
-            "punctuation.definition.parameters.end",
-            "storage.type.function.arrow", # arrow functions
-            "punctuation.separator.parameter", # commas inside the function
-            "punctuation.section.block.function",
-            "punctuation.section.arguments",
-            "meta.parameter punctuation.separator.delimiter.comma"
-        ]
-        anonymous_function_punctuation = [
-            "source.shell punctuation.definition.group", # brackets in shell function definition
-            "punctuation.section.block.begin.bracket.curly.lambda.cpp",
-            "punctuation.section.block.end.bracket.curly.lambda.cpp",
-        ]
-    # 
-    # tags (jsx/html)
-    # 
-        tags = [
-            "entity.name.tag",
-            "punctuation.definition.tag",
-            "punctuation.definition.tag source.js", # a fix for screwed up html <script> tags
-        ]
-        tag_attributes = [
-            "entity.other.attribute-name.html",
-            "punctuation.definition.string.begin.html",
-            "punctuation.definition.string.end.html",
-            "entity.other.attribute-name.tag.pug",
-            "entity.other.attribute-name.js",
-            "source.vue entity.other.attribute-name",
-        ]
-    # 
-    # literals
-    # 
-        number_literals = [
-            "constant.numeric",
-        ]
-        value_literals = [
-            "constant.language.boolean",
-            "constant.language.true",
-            "constant.language.false",
-            "constant.language.null",
-            "constant.language.nil",
-            "constant.language.undefined",
-        ]
-        string_preceders = [
-            "storage.type.string"
-        ]
-        strings = [
-            "string",
-            "string.unquoted"
-        ]
-        docstring = [
-            "string.quoted.docstring",
-            "source.python string.quoted.docstring punctuation.definition.string.begin",
-            "source.python string.quoted.docstring punctuation.definition.string.end",
-        ]
-        escape_characters_group = [
-            "constant.character.escape",
-            "string constant.other.placeholder",
-        ]
-        regular_expressions_group = [
-            "string.regexp",
-        ]
-        language_literals = [
-            "constant.other.symbol", # ruby symbols
-            "source.ruby punctuation.definition.constant",
-            "constant.other.key", # java keys inside of annotations
-        ]
-    # 
-    # Keywords and keyword-ish things
-    # 
-        control_flow = [
-            "keyword.control",
-            "keyword.control.conditional",
-            "keyword.control.loop",
-            "keyword.control.directive",
-        ]
-        keywords = [
-            "keyword",
-            "keyword.other",
-            "source.dockerfile keyword.other.special-method",
-        ]
-        import_export_keywords = [
-            "support.type.object.module", # module keyword
-        ]
-        package_names = [
-            "entity.name.package"
-        ]
-    storage_types = [
-        "storage.type",
-        "keyword.other.typedef",
-        "source.go keyword.function",
-        "source.go keyword.struct",
-        "source.go keyword.var",
-        "source.perl storage.modifier",
-        "source.cs keyword.other.var",
-        "source.cs keyword.other.class",
-        "source.cs keyword.other.event",
-    ]
-    storage_type_punctuation = [
-        "punctuation.section.angle-brackets.start.template.definition.cpp",
-        "punctuation.section.angle-brackets.end.template.definition.cpp",
-        "punctuation.section.arguments.begin.bracket.round.decltype.cpp",
-        "punctuation.section.arguments.end.bracket.round.decltype.cpp",
-        "punctuation.section.block.begin.bracket.curly.namespace",
-        "punctuation.section.block.begin.bracket.curly.struct",
-        "punctuation.section.block.begin.bracket.curly.class",
-        "punctuation.section.block.begin.bracket.curly.enum",
-        "punctuation.section.block.begin.bracket.curly.union",
-        "punctuation.section.block.begin.bracket.curly.extern",
-        "punctuation.section.block.end.bracket.curly.namespace",
-        "punctuation.section.block.end.bracket.curly.struct",
-        "punctuation.section.block.end.bracket.curly.class",
-        "punctuation.section.block.end.bracket.curly.enum",
-        "punctuation.section.block.end.bracket.curly.union",
-        "punctuation.section.block.end.bracket.curly.extern",
-    ]
-    storage_modifiers = [
-        "storage.modifier",
-        "storage.modifier.lambda",
-        "storage.modifier.async",
-        "storage.type.modifier.access.control",
-        "storage.type.modifier.access",
-    ]
-    types = [
-        "entity.name.type",
-        "entity.name.type.class",
-        "entity.other.inherited-class",
-        "support.type",
-        "support.class",
-        "storage.type.built-in",
-        "source.cs storage.type",
-        "source.cs keyword.type",
-    ]
-    namespace = [
-        "entity.name.namespace",
-        "support.other.namespace.php",
-    ]
-    attributes = [
-        "entity.other.attribute-name",
-        "entity.other.attribute",
-    ]
-    unknown_entites = [
-        "entity.name",
-        "entity.other",
-    ]
-    assignment_operators = [
-        "keyword.operator.assignment",
-        "meta.embedded.expression keyword.operator.assignment", # for overriding the jsx attribute assignment
-        "meta.tag.attributes meta.embedded.expression keyword.operator.assignment", # for overriding the jsx attribute assignment
-        "punctuation.definition.keyValuePair.toml",
-    ]
-    operators = [
-        "keyword.operator",
-        "keyword.operator.assignment.coffee", # this is the : 
-        "meta.tag.attributes keyword.operator.assignment", # jsx attribute assignment
-        "meta.embedded.expression meta.tag.attributes keyword.operator.assignment", # jsx attribute assignment
-        "keyword.other.new", # new operator in c-sharp
-        # function-like operators
-        "punctuation.section.arguments.begin.bracket.round.operator",
-        "punctuation.section.arguments.end.bracket.round.operator",
-    ]
-    member_access_punctuation = [
-        "punctuation.accessor"
-    ]
-    normal_punctuation = [
-        "punctuation",
-        "punctuation.section.embedded",
-        "punctuation.section.scope.begin",
-        "punctuation.section.scope.end",
-        "meta.brace.round.ts",
-        "meta.brace.round.js",
-        "meta.block.js",
-        "punctuation.definition.block.js",
-        "source.cpp punctuation.range-based",
-        "source.cpp punctuation.section.parens.begin.bracket.round",
-        "source.cpp punctuation.section.parens.end.bracket.round",
-        "source.cpp punctuation.section.block.begin.bracket.curly",
-        "source.cpp punctuation.section.block.end.bracket.curly",
-        "source.shell punctuation.definition.evaluation",
-        "source.python punctuation.separator.colon",
-        "source.python punctuation.section.function.begin",
-        "storage.modifier.chomping-indicator.yaml", # the | used for multiline blocks
-        "punctuation.separator.inheritance.php",
-        "punctuation.separator.colon.inheritance",
-    ]
-    secondary_punctuation = [
-        "punctuation.separator", # commas
-        # punctuation for embedding javascript inside jsx
-        "punctuation.section.embedded.begin.js",
-        "punctuation.section.embedded.end.js",
-        # gcc attributes
-        "punctuation.accessor.attribute",
-        "punctuation.section.attribute",
-    ]
-    special_punctuation = [
-        "punctuation.vararg-ellipses",
-        "punctuation.separator.readline",
-    ]
-    boring_punctuation = [
-        # the semicolon
-        "punctuation.terminator",
-        # the line-continuation
-        "constant.character.escape.line-continuation",
-        "punctuation.separator.continuation.line",
-        # the -> in the lambda return type
-        "punctuation.definition.lambda.return-type",
-        # the ::'s
-        "punctuation.separator.scope-resolution",
-        # lambda capture
-        "punctuation.definition.capture",
-        "meta.lambda.capture punctuation.separator.delimiter.comma",
-        # everything leading up to a scope resolution
-    ]
-    interpolated_punctuation = [
-        "punctuation.definition.template-expression.begin",
-        "punctuation.definition.template-expression.end",
-        "punctuation.section.embedded.end",
-        "punctuation.section.embedded.begin",
-        "constant.character.format.placeholder.other",
-    ]
-    colors_group = [ # like css/html colors
-        "constant.other.color",
-    ]
-    default_text_color = [
-        "source"
-    ]
-    unimportant = [
-    ]
-
 # 
 # Language-specific
 # 
@@ -1212,6 +865,351 @@ end
             ]
         }
 
+
+#
+# Code Groups
+#
+
+    invalid_things = [
+        "invalid",
+        "invalid.illegal",
+        "invalid.deprecated",
+    ]
+    comments = [
+        "comment",
+        "comment.line.double-slash",
+        "punctuation.definition.comment",
+    ]
+    dictionary_keys = [
+        "punctuation.definition.constant.hashkey", # the ruby : for hashkeys in function parameters
+        "constant.language.symbol.hashkey", # the ruby syntax changed
+    ]
+    # 
+    # Variables
+    # 
+        normal_variables = [
+            "variable",
+            "variable.other",
+            "variable.other.readwrite",
+            "variable.assignment.coffee",
+            "variable.other.readwrite.ts",
+            "variable.other.readwrite.js",
+            "variable.other.readwrite.global",
+            "variable.other.member", # used by the c++ extension for members that are not being accessed
+            "source.cs entity.name.variable.local", # c-sharp has bad nameing
+        ]
+        parameter_variables = [
+            "variable.parameter",
+            "variable.parameter.function",
+            "variable.parameter.function.language.python",
+            "variable.parameter.function.coffee",
+            "source.cs entity.name.variable.parameter",
+        ]
+        instance_variables = [
+            "variable.other.readwrite.instance",
+            "punctuation.definition.variable.ruby",
+        ]
+        class_variables = [
+            "source.ruby variable.other.readwrite.class", # class members in ruby
+        ]
+        first_property = [
+            "variable.other.object.ts",
+            "variable.other.object.coffee",
+            "variable.other.object.access",
+            "source.vue variable.other.object",
+            "variable.other.constant.object",
+            "source.cs variable.other.object",
+        ]
+        middle_property = [
+            "support.variable.property",
+            "variable.other.object.property",
+        ]
+        last_property = [
+            "variable.other.property",
+            "source.vue variable.other.property",
+        ]
+        constants = [
+            "variable.other.constant",
+            "constant.other.php",
+            "source.cpp constant.language",
+        ]
+        globals = [
+            "variable.other.readwrite.global.special punctuation",
+            "variable.other.readwrite.global.special",
+            "variable.other.readwrite.global.pre-defined",
+        ]
+        # mostly self-reference but occasionally other stuff
+        special_variables = [
+            "variable.language",
+            "variable.language.this",
+            "variable.language.self",
+            "variable.language.super",
+        ]
+        # the "misc" variables that are colored different than the special variables
+        unusual_variables = [
+            # yaml aliases
+            "source.dockerfile variable.other",
+            "variable.other.predefined",
+            "source.perl variable.other.predefined punctuation.definition.variable",
+            "variable.other.macro.argument", # C++ macro arguments
+        ]
+        self_reference = [
+            "variable.language.this",
+            "variable.language.self",
+            "keyword.other.this", # C-sharp
+        ]
+    # 
+    # Functions
+    # 
+        functions = [
+            "entity.name.function",
+            "variable.function",
+            "support.function",
+            "entity.name.command",
+            "keyword.other.special-method",
+        ]
+        function_punctuation = [
+            "punctuation.definition.arguments",
+            "punctuation.section.parameters.begin.bracket.round",
+            "punctuation.section.parameters.end.bracket.round",
+            "punctuation.section.arguments.begin.bracket.round",
+            "punctuation.section.arguments.end.bracket.round",
+            "punctuation.section.block.begin.bracket.curly.function.definition",
+            "punctuation.section.block.end.bracket.curly.function.definition",
+            "punctuation.section.arguments.begin.bracket.round.function.member",
+            "punctuation.section.arguments.end.bracket.round.function.member",
+            "punctuation.definition.parameters.ruby",
+            "punctuation.section.function",
+            "punctuation.definition.arguments.begin",
+            "punctuation.definition.arguments.end",
+            "punctuation.definition.parameters.begin",
+            "punctuation.definition.parameters.end",
+            "storage.type.function.arrow", # arrow functions
+            "punctuation.separator.parameter", # commas inside the function
+            "punctuation.section.block.function",
+            "punctuation.section.arguments",
+            "meta.parameter punctuation.separator.delimiter.comma"
+        ]
+        anonymous_function_punctuation = [
+            "source.shell punctuation.definition.group", # brackets in shell function definition
+            "punctuation.section.block.begin.bracket.curly.lambda.cpp",
+            "punctuation.section.block.end.bracket.curly.lambda.cpp",
+        ]
+    # 
+    # tags (jsx/html)
+    # 
+        tags = [
+            "entity.name.tag",
+            "punctuation.definition.tag",
+            "punctuation.definition.tag source.js", # a fix for screwed up html <script> tags
+        ]
+        tag_attributes = [
+            "entity.other.attribute-name.html",
+            "punctuation.definition.string.begin.html",
+            "punctuation.definition.string.end.html",
+            "entity.other.attribute-name.tag.pug",
+            "entity.other.attribute-name.js",
+            "source.vue entity.other.attribute-name",
+        ]
+    # 
+    # literals
+    # 
+        number_literals = [
+            "constant.numeric",
+        ]
+        value_literals = [
+            "constant.language.boolean",
+            "constant.language.true",
+            "constant.language.false",
+            "constant.language.null",
+            "constant.language.nil",
+            "constant.language.undefined",
+        ]
+        string_preceders = [
+            "storage.type.string"
+        ]
+        strings = [
+            "string",
+            "string.unquoted"
+        ]
+        docstring = [
+            "string.quoted.docstring",
+            "source.python string.quoted.docstring punctuation.definition.string.begin",
+            "source.python string.quoted.docstring punctuation.definition.string.end",
+        ]
+        escape_characters_group = [
+            "constant.character.escape",
+            "string constant.other.placeholder",
+        ]
+        regular_expressions_group = [
+            "string.regexp",
+        ]
+        language_literals = [
+            "constant.other.symbol", # ruby symbols
+            "source.ruby punctuation.definition.constant",
+            "constant.other.key", # java keys inside of annotations
+        ]
+    # 
+    # Keywords and keyword-ish things
+    # 
+        control_flow = [
+            "keyword.control",
+            "keyword.control.conditional",
+            "keyword.control.loop",
+            "keyword.control.directive",
+        ]
+        keywords = [
+            "keyword",
+            "keyword.other",
+            "source.dockerfile keyword.other.special-method",
+        ]
+        import_export_keywords = [
+            "support.type.object.module", # module keyword
+        ]
+        package_names = [
+            "entity.name.package"
+        ]
+    storage_types = [
+        "storage.type",
+        "keyword.other.typedef",
+        "source.go keyword.function",
+        "source.go keyword.struct",
+        "source.go keyword.var",
+        "source.perl storage.modifier",
+        "source.cs keyword.other.var",
+        "source.cs keyword.other.class",
+        "source.cs keyword.other.event",
+    ]
+    storage_type_punctuation = [
+        "punctuation.section.angle-brackets.start.template.definition.cpp",
+        "punctuation.section.angle-brackets.end.template.definition.cpp",
+        "punctuation.section.arguments.begin.bracket.round.decltype.cpp",
+        "punctuation.section.arguments.end.bracket.round.decltype.cpp",
+        "punctuation.section.block.begin.bracket.curly.namespace",
+        "punctuation.section.block.begin.bracket.curly.struct",
+        "punctuation.section.block.begin.bracket.curly.class",
+        "punctuation.section.block.begin.bracket.curly.enum",
+        "punctuation.section.block.begin.bracket.curly.union",
+        "punctuation.section.block.begin.bracket.curly.extern",
+        "punctuation.section.block.end.bracket.curly.namespace",
+        "punctuation.section.block.end.bracket.curly.struct",
+        "punctuation.section.block.end.bracket.curly.class",
+        "punctuation.section.block.end.bracket.curly.enum",
+        "punctuation.section.block.end.bracket.curly.union",
+        "punctuation.section.block.end.bracket.curly.extern",
+    ]
+    storage_modifiers = [
+        "storage.modifier",
+        "storage.modifier.lambda",
+        "storage.modifier.async",
+        "storage.type.modifier.access.control",
+        "storage.type.modifier.access",
+    ]
+    types = [
+        "entity.name.type",
+        "entity.name.type.class",
+        "entity.other.inherited-class",
+        "support.type",
+        "support.class",
+        "storage.type.built-in",
+        "source.cs storage.type",
+        "source.cs keyword.type",
+    ]
+    namespace = [
+        "entity.name.namespace",
+        "support.other.namespace.php",
+    ]
+    attributes = [
+        "entity.other.attribute-name",
+        "entity.other.attribute",
+    ]
+    unknown_entites = [
+        "entity.name",
+        "entity.other",
+    ]
+    assignment_operators = [
+        "keyword.operator.assignment",
+        "meta.embedded.expression keyword.operator.assignment", # for overriding the jsx attribute assignment
+        "meta.tag.attributes meta.embedded.expression keyword.operator.assignment", # for overriding the jsx attribute assignment
+        "punctuation.definition.keyValuePair.toml",
+    ]
+    operators = [
+        "keyword.operator",
+        "keyword.operator.assignment.coffee", # this is the : 
+        "meta.tag.attributes keyword.operator.assignment", # jsx attribute assignment
+        "meta.embedded.expression meta.tag.attributes keyword.operator.assignment", # jsx attribute assignment
+        "keyword.other.new", # new operator in c-sharp
+        # function-like operators
+        "punctuation.section.arguments.begin.bracket.round.operator",
+        "punctuation.section.arguments.end.bracket.round.operator",
+    ]
+    member_access_punctuation = [
+        "punctuation.accessor"
+    ]
+    normal_punctuation = [
+        "punctuation",
+        "punctuation.section.embedded",
+        "punctuation.section.scope.begin",
+        "punctuation.section.scope.end",
+        "meta.brace.round.ts",
+        "meta.brace.round.js",
+        "meta.block.js",
+        "punctuation.definition.block.js",
+        "source.cpp punctuation.range-based",
+        "source.cpp punctuation.section.parens.begin.bracket.round",
+        "source.cpp punctuation.section.parens.end.bracket.round",
+        "source.cpp punctuation.section.block.begin.bracket.curly",
+        "source.cpp punctuation.section.block.end.bracket.curly",
+        "source.shell punctuation.definition.evaluation",
+        "source.python punctuation.separator.colon",
+        "source.python punctuation.section.function.begin",
+        "storage.modifier.chomping-indicator.yaml", # the | used for multiline blocks
+        "punctuation.separator.inheritance.php",
+        "punctuation.separator.colon.inheritance",
+    ]
+    secondary_punctuation = [
+        "punctuation.separator", # commas
+        # punctuation for embedding javascript inside jsx
+        "punctuation.section.embedded.begin.js",
+        "punctuation.section.embedded.end.js",
+        # gcc attributes
+        "punctuation.accessor.attribute",
+        "punctuation.section.attribute",
+    ]
+    special_punctuation = [
+        "punctuation.vararg-ellipses",
+        "punctuation.separator.readline",
+    ]
+    boring_punctuation = [
+        # the semicolon
+        "punctuation.terminator",
+        # the line-continuation
+        "constant.character.escape.line-continuation",
+        "punctuation.separator.continuation.line",
+        # the -> in the lambda return type
+        "punctuation.definition.lambda.return-type",
+        # the ::'s
+        "punctuation.separator.scope-resolution",
+        # lambda capture
+        "punctuation.definition.capture",
+        "meta.lambda.capture punctuation.separator.delimiter.comma",
+        # everything leading up to a scope resolution
+    ]
+    interpolated_punctuation = [
+        "punctuation.definition.template-expression.begin",
+        "punctuation.definition.template-expression.end",
+        "punctuation.section.embedded.end",
+        "punctuation.section.embedded.begin",
+        "constant.character.format.placeholder.other",
+    ]
+    colors_group = [ # like css/html colors
+        "constant.other.color",
+    ]
+    default_text_color = [
+        "source"
+    ]
+    unimportant = [
+    ]
 
 
 #
