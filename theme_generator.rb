@@ -746,10 +746,12 @@ end
             ],
             support: [
                 "source.coffee support.class",
+            ],
+            normal_punctuation: [
+                # coffeescript missnamed its ()'s
+                "meta.brace.round.coffee"
             ]
         }
-        # coffeescript missnamed its ()'s
-        normal_punctuation.push("meta.brace.round.coffee")
     # markdown
         markdown = {
             plain: [
@@ -1227,6 +1229,7 @@ end
         "source.cpp punctuation.section.block.end.bracket.curly",
         "source.shell punctuation.definition.evaluation",
         python[:normal_punctuation],
+        coffeescript[:normal_punctuation],
         "storage.modifier.chomping-indicator.yaml", # the | used for multiline blocks
         "punctuation.separator.inheritance.php",
         "punctuation.separator.colon.inheritance",
