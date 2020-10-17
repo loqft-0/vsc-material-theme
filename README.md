@@ -44,6 +44,7 @@ The theme is taylored for
 - YAML
 - Markdown
 - WASM
+- Cython
 
 ### Recommended Settings
 ```jsonc
