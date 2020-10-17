@@ -864,7 +864,71 @@ end
                 "source.cs keyword.other.set",
             ]
         }
-
+    # python
+        python = {
+            functions: [
+                "source.python meta.function-call.generic",
+                
+                "source.cython meta.function-call.generic",
+            ],
+            magic: [
+                "source.python support.function.magic",
+                "source.python support.variable.magic",
+                
+                "source.cython support.function.magic",
+                "source.cython support.variable.magic",
+            ],
+            docstring: [
+                "source.python string.quoted.docstring punctuation.definition.string.begin",
+                "source.python string.quoted.docstring punctuation.definition.string.end",
+                
+                "source.cython string.quoted.docstring punctuation.definition.string.begin",
+                "source.cython string.quoted.docstring punctuation.definition.string.end",
+            ],
+            constants: [
+                "source.python constant.other.caps",
+                "source.cython constant.other.caps",
+            ],
+            decorators: [
+                "source.python entity.name.function.decorator",
+                "source.python punctuation.definition.decorator",
+                "source.python meta.function.decorator punctuation.definition.arguments.begin",
+                "source.python meta.function.decorator punctuation.definition.arguments.end",
+                
+                "source.cython entity.name.function.decorator",
+                "source.cython punctuation.definition.decorator",
+                "source.cython meta.function.decorator punctuation.definition.arguments.begin",
+                "source.cython meta.function.decorator punctuation.definition.arguments.end",
+            ],
+            literal_keyword: [
+                "source.python constant.language",
+                
+                "source.cython constant.language",
+            ],
+            normal_punctuation: [
+                "source.python punctuation.separator.colon",
+                "source.python punctuation.section.function.begin",
+                
+                "source.cython punctuation.separator.colon",
+                "source.cython punctuation.section.function.begin",
+            ],
+            dictionary: [
+                "punctuation.definition.dict.begin.python",
+                "punctuation.definition.dict.end.python",
+                "punctuation.definition.list.begin.python",
+                "punctuation.definition.list.end.python",
+                
+                "punctuation.definition.dict.begin.cython",
+                "punctuation.definition.dict.end.cython",
+                "punctuation.definition.list.begin.cython",
+                "punctuation.definition.list.end.cython",
+            ],
+            parameters: [
+                "variable.parameter.function.language.python",
+                
+                "variable.parameter.function.language.cython",
+            ]
+        }
 
 #
 # Code Groups
