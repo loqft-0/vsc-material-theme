@@ -28,7 +28,11 @@
         "markup.underline.link",
         "source.cs comment.block.documentation punctuation.definition.string.begin",
         "source.cs comment.block.documentation punctuation.definition.string.end",
-        "source.cs comment.block.documentation punctuation.separator.equals"
+        "source.cs comment.block.documentation punctuation.separator.equals",
+        "text.tex.latex support.class.math.block constant.character.escape punctuation.definition.keyword",
+        "text.tex.latex support.class.math constant.character.escape punctuation.definition.keyword",
+        "source.latex support.class.math.block constant.character.escape punctuation.definition.keyword",
+        "source.latex support.class.math constant.character.escape punctuation.definition.keyword"
       ],
       "settings": {
         "fontStyle": "normal",
@@ -226,7 +230,11 @@
         "source.yaml punctuation.definition.anchor",
         "source.yaml entity.name.type.anchor",
         "source.js support.class",
-        "source.coffee support.class"
+        "source.coffee support.class",
+        "text.tex.latex variable.parameter.definition.label",
+        "text.tex.latex entity.name.section",
+        "source.latex variable.parameter.definition.label",
+        "source.latex entity.name.section"
       ],
       "settings": {
         "fontStyle": "underline",
@@ -334,7 +342,7 @@
         "source.python punctuation.section.function.begin",
         "source.cython punctuation.separator.colon",
         "source.cython punctuation.section.function.begin",
-        "meta.brace.round.coffee",
+        "source.coffee meta.brace.round.coffee",
         "storage.modifier.chomping-indicator.yaml",
         "punctuation.separator.inheritance.php",
         "punctuation.separator.colon.inheritance",
@@ -344,7 +352,15 @@
         "punctuation.definition.template-expression.end",
         "punctuation.section.embedded.end",
         "punctuation.section.embedded.begin",
-        "constant.character.format.placeholder.other"
+        "constant.character.format.placeholder.other",
+        "text.tex.latex keyword.other.item punctuation.definition.keyword.latex",
+        "text.tex.latex keyword.control.ref punctuation.definition.keyword.latex",
+        "text.tex.latex meta.reference.label punctuation.definition.arguments.begin",
+        "text.tex.latex meta.reference.label punctuation.definition.arguments.end",
+        "source.latex keyword.other.item punctuation.definition.keyword.latex",
+        "source.latex keyword.control.ref punctuation.definition.keyword.latex",
+        "source.latex meta.reference.label punctuation.definition.arguments.begin",
+        "source.latex meta.reference.label punctuation.definition.arguments.end"
       ],
       "settings": {
         "fontStyle": "normal",
@@ -436,9 +452,23 @@
         "entity.other.attribute-name.class.css",
         "entity.other.attribute-name.class.pug",
         "punctuation.definition.group",
-        "meta.asm meta.encoding",
-        "punctuation.definition.string.begin.assembly",
-        "punctuation.definition.string.end.assembly"
+        "source.cpp meta.asm meta.encoding",
+        "source.cpp punctuation.definition.string.begin.assembly",
+        "source.cpp punctuation.definition.string.end.assembly",
+        "text.tex.latex keyword.control.label",
+        "text.tex.latex punctuation.definition",
+        "text.tex.latex punctuation.definition.function",
+        "text.tex.latex punctuation.support.function.begin",
+        "text.tex.latex punctuation.support.function.end",
+        "text.tex.latex punctuation.bracket.curly.begin.unknown",
+        "text.tex.latex punctuation.bracket.curly.end.unknown",
+        "source.latex keyword.control.label",
+        "source.latex punctuation.definition",
+        "source.latex punctuation.definition.function",
+        "source.latex punctuation.support.function.begin",
+        "source.latex punctuation.support.function.end",
+        "source.latex punctuation.bracket.curly.begin.unknown",
+        "source.latex punctuation.bracket.curly.end.unknown"
       ],
       "settings": {
         "fontStyle": "normal",
@@ -511,10 +541,18 @@
         "source.cpp meta.lambda.capture variable.parameter",
         "source.cpp meta.function.definition.parameters.lambda variable.parameter",
         "source.cpp meta.head.function.definition variable.parameter",
-        "meta.function.definition.parameters.lambda",
+        "source.cpp meta.function.definition.parameters.lambda",
         "source.ruby punctuation.definition.symbol.begin",
         "source.ruby punctuation.definition.symbol.end",
-        "source.ruby constant.language.symbol punctuation.definition.constant"
+        "source.ruby constant.language.symbol punctuation.definition.constant",
+        "text.tex.latex punctuation.definition.string.end",
+        "text.tex.latex punctuation.definition.string.begin",
+        "text.tex.latex punctuation.math.begin.bracket.curly",
+        "text.tex.latex punctuation.math.end.bracket.curly",
+        "source.latex punctuation.definition.string.end",
+        "source.latex punctuation.definition.string.begin",
+        "source.latex punctuation.math.begin.bracket.curly",
+        "source.latex punctuation.math.end.bracket.curly"
       ],
       "settings": {
         "fontStyle": "normal",
@@ -551,7 +589,21 @@
         "meta.function.method.with-arguments constant.language.symbol.hashkey.parameter.function",
         "constant.other.character-class.regexp",
         "constant.character.escape",
-        "string constant.other.placeholder"
+        "string constant.other.placeholder",
+        "text.tex.latex support.class.math constant.character.math",
+        "text.tex.latex support.class.math.block constant.character.math",
+        "text.tex.latex support.class.math constant.character.math punctuation.definition.constant.math",
+        "text.tex.latex support.class.math punctuation.definition",
+        "text.tex.latex support.class.math constant.other.math",
+        "text.tex.latex support.class.math constant.other.general.math punctuation.definition.constant.math",
+        "text.tex.latex support.class.math constant.other.general.math",
+        "source.latex support.class.math constant.character.math",
+        "source.latex support.class.math.block constant.character.math",
+        "source.latex support.class.math constant.character.math punctuation.definition.constant.math",
+        "source.latex support.class.math punctuation.definition",
+        "source.latex support.class.math constant.other.math",
+        "source.latex support.class.math constant.other.general.math punctuation.definition.constant.math",
+        "source.latex support.class.math constant.other.general.math"
       ],
       "settings": {
         "fontStyle": "underline",
@@ -563,7 +615,9 @@
       "scope": [
         "source.python constant.language",
         "source.cython constant.language",
-        "source.json constant.language"
+        "source.json constant.language",
+        "text.tex.latex support.class.math punctuation.special",
+        "source.latex support.class.math punctuation.special"
       ],
       "settings": {
         "fontStyle": "bold",
@@ -608,10 +662,23 @@
         "string.other.link.description.title.markdown punctuation.definition.string.end.markdown",
         "string.other.link.description.title.markdown punctuation.definition.string.begin.markdown",
         "punctuation.definition.string.markdown",
-        "string.other.link.description.title.markdown"
+        "string.other.link.description.title.markdown",
+        "text.tex.latex meta.support.function",
+        "source.latex meta.support.function"
       ],
       "settings": {
         "fontStyle": "normal",
+        "foreground": "#c3e88d"
+      }
+    },
+    {
+      "name": "#c3e88d italic",
+      "scope": [
+        "text.tex.latex markup.italic",
+        "source.latex markup.italic"
+      ],
+      "settings": {
+        "fontStyle": "italic",
         "foreground": "#c3e88d"
       }
     },
@@ -744,7 +811,23 @@
         "meta.embedded.block.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json punctuation.separator.dictionary.key-value",
         "meta.embedded.block.jsonc meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json support.type.property-name",
         "meta.embedded.block.jsonc meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json punctuation.support.type.property-name",
-        "meta.embedded.block.jsonc meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json punctuation.separator.dictionary.key-value"
+        "meta.embedded.block.jsonc meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json punctuation.separator.dictionary.key-value",
+        "text.tex.latex punctuation.definition.optional.arguments",
+        "text.tex.latex storage.type.function punctuation.definition.function",
+        "text.tex.latex keyword.control.preamble punctuation.definition.function",
+        "text.tex.latex punctuation.definition.begin",
+        "text.tex.latex punctuation.definition.end",
+        "text.tex.latex keyword.control.preamble",
+        "text.tex.latex meta.preamble punctuation.definition.arguments.begin",
+        "text.tex.latex meta.preamble punctuation.definition.arguments.end",
+        "source.latex punctuation.definition.optional.arguments",
+        "source.latex storage.type.function punctuation.definition.function",
+        "source.latex keyword.control.preamble punctuation.definition.function",
+        "source.latex punctuation.definition.begin",
+        "source.latex punctuation.definition.end",
+        "source.latex keyword.control.preamble",
+        "source.latex meta.preamble punctuation.definition.arguments.begin",
+        "source.latex meta.preamble punctuation.definition.arguments.end"
       ],
       "settings": {
         "fontStyle": "normal",
@@ -764,9 +847,9 @@
     {
       "name": "#e57eb3 bold",
       "scope": [
-        "storage.type.asm",
-        "punctuation.section.parens.begin.bracket.round.assembly",
-        "punctuation.section.parens.end.bracket.round.assembly"
+        "source.cpp storage.type.asm",
+        "source.cpp punctuation.section.parens.begin.bracket.round.assembly",
+        "source.cpp punctuation.section.parens.end.bracket.round.assembly"
       ],
       "settings": {
         "fontStyle": "bold",
@@ -832,7 +915,7 @@
         "source.vue entity.other.attribute-name.html",
         "source.vue punctuation.definition.string.begin.html",
         "source.vue punctuation.definition.string.end.html",
-        "meta.tag",
+        "source.vue meta.tag",
         "entity.other.attribute-name",
         "entity.other.attribute"
       ],
@@ -844,7 +927,8 @@
     {
       "name": "#c792ea underline",
       "scope": [
-
+        "text.tex.latex variable.parameter.function",
+        "source.latex variable.parameter.function"
       ],
       "settings": {
         "fontStyle": "underline",
@@ -879,14 +963,22 @@
         "variable.other.property.coffee",
         "punctuation.definition.dictionary",
         "punctuation.section.property-list",
-        "punctuation.definition.dict.begin.python",
-        "punctuation.definition.dict.end.python",
-        "punctuation.definition.list.begin.python",
-        "punctuation.definition.list.end.python",
-        "punctuation.definition.dict.begin.cython",
-        "punctuation.definition.dict.end.cython",
-        "punctuation.definition.list.begin.cython",
-        "punctuation.definition.list.end.cython",
+        "source.python punctuation.definition.dict.begin.python",
+        "source.python punctuation.definition.dict.end.python",
+        "source.python punctuation.definition.list.begin.python",
+        "source.python punctuation.definition.list.end.python",
+        "source.python punctuation.definition.dict.begin.cython",
+        "source.python punctuation.definition.dict.end.cython",
+        "source.python punctuation.definition.list.begin.cython",
+        "source.python punctuation.definition.list.end.cython",
+        "source.cython punctuation.definition.dict.begin.python",
+        "source.cython punctuation.definition.dict.end.python",
+        "source.cython punctuation.definition.list.begin.python",
+        "source.cython punctuation.definition.list.end.python",
+        "source.cython punctuation.definition.dict.begin.cython",
+        "source.cython punctuation.definition.dict.end.cython",
+        "source.cython punctuation.definition.list.begin.cython",
+        "source.cython punctuation.definition.list.end.cython",
         "punctuation.definition.begin.bracket.square",
         "punctuation.definition.end.bracket.square",
         "string.regexp",
@@ -936,7 +1028,13 @@
         "source.perl variable.other.readwrite.global",
         "source.perl punctuation.definition.variable",
         "source.powershell variable.other.readwrite",
-        "source.powershell punctuation.definition.variable"
+        "source.powershell punctuation.definition.variable",
+        "text.tex.latex constant.character.escape",
+        "text.tex.latex constant.character.math",
+        "text.tex.latex constant.character.math punctuation.definition.constant.math",
+        "source.latex constant.character.escape",
+        "source.latex constant.character.math",
+        "source.latex constant.character.math punctuation.definition.constant.math"
       ],
       "settings": {
         "fontStyle": "underline",
@@ -991,7 +1089,11 @@
         "meta.embedded.block.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json punctuation.separator.dictionary.key-value",
         "meta.embedded.block.jsonc meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json support.type.property-name",
         "meta.embedded.block.jsonc meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json punctuation.support.type.property-name",
-        "meta.embedded.block.jsonc meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json punctuation.separator.dictionary.key-value"
+        "meta.embedded.block.jsonc meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json punctuation.separator.dictionary.key-value",
+        "text.tex.latex variable.parameter",
+        "text.tex.latex markup.raw",
+        "source.latex variable.parameter",
+        "source.latex markup.raw"
       ],
       "settings": {
         "fontStyle": "normal",
@@ -1037,7 +1139,9 @@
         "string.regexp punctuation.definition.string",
         "keyword.other.unit.user-defined.cpp",
         "punctuation.section.parens.begin.bracket.round.assembly.inner",
-        "punctuation.section.parens.end.bracket.round.assembly.inner"
+        "punctuation.section.parens.end.bracket.round.assembly.inner",
+        "text.tex.latex markup.bold.textbf",
+        "source.latex markup.bold.textbf"
       ],
       "settings": {
         "fontStyle": "bold",
@@ -1074,11 +1178,13 @@
         "variable.other.readwrite.global.special punctuation",
         "variable.other.readwrite.global.special",
         "variable.other.readwrite.global.pre-defined",
-        "support.variable.other.object.node",
-        "support.type.object.module",
+        "source.js support.variable.other.object.node",
+        "source.js support.type.object.module",
         "variable.other.readwrite.global.ruby",
         "variable.other.readwrite.global.ruby punctuation.definition.variable.ruby",
-        "support.variable"
+        "support.variable",
+        "text.tex.latex constant.other.reference",
+        "source.latex constant.other.reference"
       ],
       "settings": {
         "fontStyle": "underline",
@@ -1099,7 +1205,29 @@
         "keyword.operator.assignment",
         "meta.embedded.expression keyword.operator.assignment",
         "meta.tag.attributes meta.embedded.expression keyword.operator.assignment",
-        "punctuation.definition.keyValuePair.toml"
+        "punctuation.definition.keyValuePair.toml",
+        "text.tex.latex support.class.math.block",
+        "text.tex.latex support.class.math.block punctuation.math.begin.bracket.round",
+        "text.tex.latex support.class.math.block punctuation.math.end.bracket.round",
+        "text.tex.latex support.class.math.block constant.numeric.math",
+        "text.tex.latex support.class.math",
+        "text.tex.latex support.class.math punctuation.math.begin.bracket.round",
+        "text.tex.latex support.class.math punctuation.math.end.bracket.round",
+        "text.tex.latex support.class.math constant.numeric.math",
+        "text.tex.latex support.class.math punctuation.definition.brackets",
+        "text.tex.latex support.class.math.block constant.character.escape",
+        "text.tex.latex support.class.math constant.character.escape",
+        "source.latex support.class.math.block",
+        "source.latex support.class.math.block punctuation.math.begin.bracket.round",
+        "source.latex support.class.math.block punctuation.math.end.bracket.round",
+        "source.latex support.class.math.block constant.numeric.math",
+        "source.latex support.class.math",
+        "source.latex support.class.math punctuation.math.begin.bracket.round",
+        "source.latex support.class.math punctuation.math.end.bracket.round",
+        "source.latex support.class.math constant.numeric.math",
+        "source.latex support.class.math punctuation.definition.brackets",
+        "source.latex support.class.math.block constant.character.escape",
+        "source.latex support.class.math constant.character.escape"
       ],
       "settings": {
         "fontStyle": "normal",
@@ -1109,7 +1237,16 @@
     {
       "name": "#ff5572 bold",
       "scope": [
-
+        "text.tex.latex keyword.control.newline",
+        "text.tex.latex keyword.control.table.newline",
+        "text.tex.latex punctuation.special",
+        "text.tex.latex keyword.control.table",
+        "text.tex.latex keyword.control.equation",
+        "source.latex keyword.control.newline",
+        "source.latex keyword.control.table.newline",
+        "source.latex punctuation.special",
+        "source.latex keyword.control.table",
+        "source.latex keyword.control.equation"
       ],
       "settings": {
         "fontStyle": "bold",

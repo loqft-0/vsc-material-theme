@@ -457,30 +457,41 @@ end
 # 
 # Language-specific
 # 
+    def language_source(sources, groups_hashmap)
+        return groups_hashmap.transform_values! do |each_group|
+            result = []
+            for each_source in sources
+                result += each_group.flatten.map do |each_pattern|
+                    "#{each_source} #{each_pattern}"
+                end
+            end
+            result
+        end
+    end
     # javascript
-        javascript = {
+        javascript = language_source ["source.js"], {
             this: [
-                "source.js variable.language.this",
+                "variable.language.this",
             ],
             member_access_operator: [
-                "source.js punctuation.accessor",
+                "punctuation.accessor",
             ],
             variable_no_member_access: [
-                "source.js variable.other.readwrite",
+                "variable.other.readwrite",
             ],
             class_first_property: [
-                "source.js support.class"
+                "support.class"
             ],
             first_property: [
-                "source.js variable.other.object",
+                "variable.other.object",
             ],
             member_shorthand: [
-                "source.js variable.other.readwrite meta.object.member meta.objectliteral",
+                "variable.other.readwrite meta.object.member meta.objectliteral",
             ],
             middle_property: [
-                "source.js meta.object-literal.key",
-                "source.js variable.other.object.property",
-                "source.js variable.other.constant.object.property",
+                "meta.object-literal.key",
+                "variable.other.object.property",
+                "variable.other.constant.object.property",
                 # "punctuation.accessor.js",
                 # "meta.array.literial variable.other.readwrite.js",
                 # "punctuation.definition.group.js",
@@ -493,111 +504,111 @@ end
                 # "support.variable.property.process.js",
             ],
             last_property: [
-                "source.js variable.other.property",
-                "source.js variable.other.constant.property",
-                # "source.js meta.method.declaration.js support.function.dom",
-                # "source.js meta.method.declaration.js entity.name.function",
-                # "source.js support.variable.property.dom", 
-                # "source.js support.variable.property.dom",
-                # "source.js support.function.dom",
+                "variable.other.property",
+                "variable.other.constant.property",
+                # "meta.method.declaration.js support.function.dom",
+                # "meta.method.declaration.js entity.name.function",
+                # "support.variable.property.dom", 
+                # "support.variable.property.dom",
+                # "support.function.dom",
             ],
             globals: [
                 "support.variable.other.object.node",
                 "support.type.object.module",
             ],
             member_function_definition: [
-                "source.js meta.object.member entity.name.function",
+                "meta.object.member entity.name.function",
             ],
             function_property: [
-                "source.js support.variable.property",
+                "support.variable.property",
             ],
         } 
     # typescript
-        typescript = {
-            first_property: [ "source.ts variable.other.object" ],
+        typescript = language_source ["source.ts"], {
+            first_property: [ "variable.other.object" ],
             middle_property: [
-                "source.ts meta.object-literal.key",
-                "source.ts variable.other.object.property",
+                "meta.object-literal.key",
+                "variable.other.object.property",
             ],
-            accessor: [ "source.ts punctuation.accessor"],
-            constants: [ "source.ts variable.other.constant" ]
+            accessor: [ "punctuation.accessor"],
+            constants: [ "variable.other.constant" ]
         }
     # vue
-        vue = {
+        vue = language_source ["source.vue"], {
             template_tags: [
-                "source.vue meta.tag entity.name.tag",
-                "source.vue meta.tag punctuation.definition.tag",
+                "meta.tag entity.name.tag",
+                "meta.tag punctuation.definition.tag",
             ],
             attributes: [
-                "source.vue entity.other.attribute-name.html",
-                "source.vue punctuation.definition.string.begin.html",
-                "source.vue punctuation.definition.string.end.html",
+                "entity.other.attribute-name.html",
+                "punctuation.definition.string.begin.html",
+                "punctuation.definition.string.end.html",
                 "meta.tag", # bad hack to color the un-tagged ='s 
             ],
             main_tags: [
-                "source.vue entity.name.tag",
-                "source.vue punctuation.definition.tag",
+                "entity.name.tag",
+                "punctuation.definition.tag",
             ]
         }
     # ruby
-        ruby = {
+        ruby = language_source ["source.ruby"], {
             symbols: [
-                "source.ruby punctuation.definition.symbol.begin",
-                "source.ruby punctuation.definition.symbol.end",
-                "source.ruby constant.language.symbol punctuation.definition.constant",
+                "punctuation.definition.symbol.begin",
+                "punctuation.definition.symbol.end",
+                "constant.language.symbol punctuation.definition.constant",
             ]
         }
     # Yaml
-        yaml = {
+        yaml = language_source ["source.yaml"], {
             anchors: [
-                "source.yaml punctuation.definition.anchor",
-                "source.yaml entity.name.type.anchor",
+                "punctuation.definition.anchor",
+                "entity.name.type.anchor",
             ],
             alias: [
-                "source.yaml punctuation.definition.alias",
-                "source.yaml variable.other.alias",
+                "punctuation.definition.alias",
+                "variable.other.alias",
             ],
             punctuation: [
-                "source.yaml constant.language.merge"
+                "constant.language.merge"
             ]
         }
     # Perl
-        perl = {
+        perl = language_source ["source.perl"], {
             scalar: [ 
-                "source.perl variable.other.scalar",
-                "source.perl punctuation.definition.variable.scalar",
+                "variable.other.scalar",
+                "punctuation.definition.variable.scalar",
             ],
             array: [ 
-                "source.perl variable.other.array",
-                "source.perl punctuation.definition.variable.array",
+                "variable.other.array",
+                "punctuation.definition.variable.array",
             ],
             hash: [ 
-                "source.perl variable.other.hash",
-                "source.perl punctuation.definition.variable.hash",
+                "variable.other.hash",
+                "punctuation.definition.variable.hash",
             ],
             subpattern: [
-                "source.perl variable.other.subpattern",
-                "source.perl variable.other.subpattern punctuation.definition.variable",
+                "variable.other.subpattern",
+                "variable.other.subpattern punctuation.definition.variable",
             ],
             reference: [
-                "source.perl variable.other.scalar.reference",
-                "source.perl punctuation.definition.variable.scalar.reference",
-                "source.perl variable.other.array.reference",
-                "source.perl punctuation.definition.variable.array.reference",
-                "source.perl variable.other.hash.reference",
-                "source.perl punctuation.definition.variable.hash.reference",
+                "variable.other.scalar.reference",
+                "punctuation.definition.variable.scalar.reference",
+                "variable.other.array.reference",
+                "punctuation.definition.variable.array.reference",
+                "variable.other.hash.reference",
+                "punctuation.definition.variable.hash.reference",
             ],
             vars: [
-                "source.perl variable.other.readwrite.global",
-                "source.perl punctuation.definition.variable",
+                "variable.other.readwrite.global",
+                "punctuation.definition.variable",
             ],
             globals: [
-                "source.perl variable.other.readwrite.global.special punctuation.definition.variable",
-                "source.perl variable.other.readwrite.global.special",
+                "variable.other.readwrite.global.special punctuation.definition.variable",
+                "variable.other.readwrite.global.special",
             ]
         }
     # C++
-        cpp = {
+        cpp = language_source ["source.cpp"], {
             assembly_function: [
                 "storage.type.asm",
                 "punctuation.section.parens.begin.bracket.round.assembly",
@@ -609,42 +620,42 @@ end
                 "punctuation.definition.string.end.assembly",
             ],
             body_parameters: [
-                "source.cpp variable.parameter",
+                "variable.parameter",
             ],
             parameters: [
-                "source.cpp meta.lambda.capture variable.parameter",
-                "source.cpp meta.function.definition.parameters.lambda variable.parameter",
-                "source.cpp meta.head.function.definition variable.parameter",
+                "meta.lambda.capture variable.parameter",
+                "meta.function.definition.parameters.lambda variable.parameter",
+                "meta.head.function.definition variable.parameter",
                 "meta.function.definition.parameters.lambda"
             ],
             types: [
-                "source.cpp storage.modifier",
-                "source.cpp support.type.posix-reserved",
-                "source.cpp storage.type.return-type",
-                "source.cpp storage.type.primitive",
-                "source.cpp storage.type.c",
-                "source.cpp storage.type.user-defined",
+                "storage.modifier",
+                "support.type.posix-reserved",
+                "storage.type.return-type",
+                "storage.type.primitive",
+                "storage.type.c",
+                "storage.type.user-defined",
             ],
         }
     # shell
-        shell = {
+        shell = language_source ["source.shell"], {
             seperator: [
-                "source.shell punctuation.separator.statement",
-                "source.shell keyword.operator.pipe",
+                "punctuation.separator.statement",
+                "keyword.operator.pipe",
             ],
             builtin: [
-                "source.shell support.function.builtin",
+                "support.function.builtin",
             ]
         }
     # powershell
-        powershell = {
+        powershell = language_source ["source.powershell"], {
             variables: [
-                "source.powershell variable.other.readwrite",
-                "source.powershell punctuation.definition.variable",
+                "variable.other.readwrite",
+                "punctuation.definition.variable",
             ],
             constants: [
-                "source.powershell support.constant.variable",
-                "source.powershell support.constant.variable punctuation.definition.variable",
+                "support.constant.variable",
+                "support.constant.variable punctuation.definition.variable",
             ],
         }
     # regex
@@ -732,20 +743,20 @@ end
             ]
         }
     # coffeescript
-        coffeescript = {
+        coffeescript = language_source ["source.coffee"], {
             this: [
-                "source.coffee variable.language.this",
+                "variable.language.this",
             ],
             function: [
-                "source.coffee meta.function-call entity.name.function",
+                "meta.function-call entity.name.function",
             ],
             method: [
-                "source.coffee meta.method-call entity.name.function",
-                "source.coffee meta.method-call support.function",
-                "source.coffee punctuation.separator.method",
+                "meta.method-call entity.name.function",
+                "meta.method-call support.function",
+                "punctuation.separator.method",
             ],
             support: [
-                "source.coffee support.class",
+                "support.class",
             ],
             normal_punctuation: [
                 # coffeescript missnamed its ()'s
@@ -839,80 +850,61 @@ end
             ]
         }
     # c-sharp
-        c_sharp = {
+        c_sharp = language_source ["source.cs"], {
             documentation_tags: [
-                "source.cs comment.block.documentation entity.name.tag",
-                "source.cs comment.block.documentation punctuation.definition.tag",
+                "comment.block.documentation entity.name.tag",
+                "comment.block.documentation punctuation.definition.tag",
             ],
             documentation_attributes: [
-                "source.cs comment.block.documentation entity.other.attribute-name",
+                "comment.block.documentation entity.other.attribute-name",
             ],
             documentation_punctuation: [
-                "source.cs comment.block.documentation punctuation.definition.string.begin",
-                "source.cs comment.block.documentation punctuation.definition.string.end",
-                "source.cs comment.block.documentation punctuation.separator.equals",
+                "comment.block.documentation punctuation.definition.string.begin",
+                "comment.block.documentation punctuation.definition.string.end",
+                "comment.block.documentation punctuation.separator.equals",
             ],
             documentation_strings: [
-                "source.cs comment.block.documentation string.quoted.double"
+                "comment.block.documentation string.quoted.double"
             ],
             documentation_content: [
-                "source.cs comment.block.documentation",
+                "comment.block.documentation",
             ],
             storage_modifiers: [
-                "source.cs storage.modifier",
+                "storage.modifier",
             ],
             get_and_set: [
-                "source.cs keyword.other.get",
-                "source.cs keyword.other.set",
+                "keyword.other.get",
+                "keyword.other.set",
             ]
         }
     # python
-        python = {
+        python = language_source [ "source.python", "source.cython", ], {
             functions: [
-                "source.python meta.function-call.generic",
-                
-                "source.cython meta.function-call.generic",
+                "meta.function-call.generic",
             ],
             magic: [
-                "source.python support.function.magic",
-                "source.python support.variable.magic",
-                
-                "source.cython support.function.magic",
-                "source.cython support.variable.magic",
+                "support.function.magic",
+                "support.variable.magic",
             ],
             docstring: [
-                "source.python string.quoted.docstring punctuation.definition.string.begin",
-                "source.python string.quoted.docstring punctuation.definition.string.end",
-                
-                "source.cython string.quoted.docstring punctuation.definition.string.begin",
-                "source.cython string.quoted.docstring punctuation.definition.string.end",
+                "string.quoted.docstring punctuation.definition.string.begin",
+                "string.quoted.docstring punctuation.definition.string.end",
             ],
             constants: [
-                "source.python constant.other.caps",
-                "source.cython constant.other.caps",
+                "constant.other.caps",
             ],
             decorators: [
-                "source.python entity.name.function.decorator",
-                "source.python punctuation.definition.decorator",
-                "source.python meta.function.decorator punctuation.definition.arguments.begin",
-                "source.python meta.function.decorator punctuation.definition.arguments.end",
-                
-                "source.cython entity.name.function.decorator",
-                "source.cython punctuation.definition.decorator",
-                "source.cython meta.function.decorator punctuation.definition.arguments.begin",
-                "source.cython meta.function.decorator punctuation.definition.arguments.end",
+                "entity.name.function.decorator",
+                "punctuation.definition.decorator",
+                "meta.function.decorator punctuation.definition.arguments.begin",
+                "meta.function.decorator punctuation.definition.arguments.end",
             ],
             literal_keyword: [
-                "source.python constant.language",
-                
-                "source.cython constant.language",
+                "constant.language",
             ],
             normal_punctuation: [
-                "source.python punctuation.separator.colon",
-                "source.python punctuation.section.function.begin",
-                
-                "source.cython punctuation.separator.colon",
-                "source.cython punctuation.section.function.begin",
+                "punctuation.separator.colon",
+                "punctuation.section.function.begin",
             ],
             dictionary: [
                 "punctuation.definition.dict.begin.python",
@@ -931,7 +923,105 @@ end
                 "variable.parameter.function.language.cython",
             ]
         }
-
+    # Latex
+        latex = language_source ["text.tex.latex", "source.latex" ], {
+            unimportant: [
+                "support.class.math.block constant.character.escape punctuation.definition.keyword",
+                "support.class.math constant.character.escape punctuation.definition.keyword",
+            ],
+            control_flow_like: [
+                "keyword.other.item punctuation.definition.keyword.latex",
+                "keyword.control.ref punctuation.definition.keyword.latex",
+                "meta.reference.label punctuation.definition.arguments.begin",
+                "meta.reference.label punctuation.definition.arguments.end",
+            ],
+            special_function: [
+                "punctuation.definition.optional.arguments",
+                "storage.type.function punctuation.definition.function",
+                "keyword.control.preamble punctuation.definition.function",
+                "punctuation.definition.begin",
+                "punctuation.definition.end",
+                "keyword.control.preamble",
+                "meta.preamble punctuation.definition.arguments.begin",
+                "meta.preamble punctuation.definition.arguments.end",
+            ],
+            parameter: [
+                "variable.parameter.function"
+            ],
+            named_parameter: [
+                "variable.parameter",
+                "markup.raw",
+            ],
+            function_like: [
+                "keyword.control.label",
+                "punctuation.definition",
+                "punctuation.definition.function",
+                "punctuation.support.function.begin",
+                "punctuation.support.function.end",
+                "punctuation.bracket.curly.begin.unknown",
+                "punctuation.bracket.curly.end.unknown",
+            ],
+            math_punctuation: [
+                "constant.character.escape",
+                "constant.character.math",
+                "constant.character.math punctuation.definition.constant.math",
+            ],
+            math_symbols: [
+                "punctuation.definition.string.end",
+                "punctuation.definition.string.begin",
+                "punctuation.math.begin.bracket.curly",
+                "punctuation.math.end.bracket.curly",
+            ],
+            math_support: [
+                "support.class.math constant.character.math",
+                "support.class.math.block constant.character.math",
+                "support.class.math constant.character.math punctuation.definition.constant.math",
+                "support.class.math punctuation.definition",
+                "support.class.math constant.other.math",
+                "support.class.math constant.other.general.math punctuation.definition.constant.math",
+                "support.class.math constant.other.general.math",
+            ],
+            math_keyterm: [
+                "support.class.math punctuation.special"
+            ],
+            main_sections: [
+                "variable.parameter.definition.label",
+                "entity.name.section",
+            ],
+            bold: [
+                "markup.bold.textbf"
+            ],
+            italic: [
+                "markup.italic"
+            ],
+            support_function: [
+                "meta.support.function",
+            ],
+            special_math_punctuation: [
+                "support.class.math.block",
+                "support.class.math.block punctuation.math.begin.bracket.round",
+                "support.class.math.block punctuation.math.end.bracket.round",
+                "support.class.math.block constant.numeric.math",
+                "support.class.math",
+                "support.class.math punctuation.math.begin.bracket.round",
+                "support.class.math punctuation.math.end.bracket.round",
+                "support.class.math constant.numeric.math",
+                
+                "support.class.math punctuation.definition.brackets",
+                "support.class.math.block constant.character.escape",
+                "support.class.math constant.character.escape",
+            ],
+            key_punctuation: [
+                "keyword.control.newline",
+                "keyword.control.table.newline",
+                "punctuation.special",
+                "keyword.control.table",
+                "keyword.control.equation",
+            ],
+            reference: [
+                "constant.other.reference"
+            ],
+        }
 #
 # Code Groups
 #
@@ -1491,6 +1581,7 @@ mapping = ->() do {
             unimportant,
             markdown[:link_punctuation],
             c_sharp[:documentation_punctuation],
+            latex[:unimportant],
         ],
         italic: [
             comments,
@@ -1541,9 +1632,11 @@ mapping = ->() do {
             yaml[:anchors],
             javascript[:class_first_property],
             coffeescript[:support],
+            latex[:main_sections],
         ],
         bold: [
             markdown[:heading],
+            
         ]
     },
     no_color => {
@@ -1570,6 +1663,7 @@ mapping = ->() do {
             regular_expressions_group,
             css_property_value,
             interpolated_punctuation,
+            latex[:control_flow_like],
         ],
         italic: [
             control_flow,
@@ -1591,6 +1685,7 @@ mapping = ->() do {
             blue_group,
             regex[:group],
             cpp[:assembly_punctuation],
+            latex[:function_like],
         ],
         italic: [
         ],
@@ -1606,14 +1701,15 @@ mapping = ->() do {
             *blue_bold_group,
         ],
     },
-    orange   => {
+    orange => {
         normal: [
             orange_group,
             language_literals,
             parameter_variables,
             markdown[:function],
             cpp[:parameters],
-            ruby[:symbols]
+            ruby[:symbols],
+            latex[:math_symbols],
         ],
         italic: [
             value_literals,
@@ -1622,10 +1718,12 @@ mapping = ->() do {
             markdown[:reference],
             orange_underline_group,
             escape_characters_group,
+            latex[:math_support],
         ],
         bold: [
             python[:literal_keyword],
             json[:literalWords],
+            latex[:math_keyterm],
         ],
     },
     lime => {
@@ -1635,6 +1733,10 @@ mapping = ->() do {
             lime_green_group,
             python[:magic],
             markdown[:string],
+            latex[:support_function],
+        ],
+        italic: [
+            latex[:italic],
         ],
         underline: [
             lime_green_with_underline_group,
@@ -1671,6 +1773,7 @@ mapping = ->() do {
             storage_modifiers,
             anonymous_function_punctuation,
             json[:keys][4],
+            latex[:special_function],
         ],
         underline: [
         ],
@@ -1697,6 +1800,7 @@ mapping = ->() do {
             attributes,
         ],
         underline: [
+            latex[:parameter],
         ],
         bold: [
             markdown[:general_punctuation],
@@ -1723,6 +1827,7 @@ mapping = ->() do {
             perl[:scalar],
             perl[:vars],
             powershell[:variables],
+            latex[:math_punctuation],
         ],
         italic: [
             javascript[:member_shorthand],
@@ -1735,6 +1840,7 @@ mapping = ->() do {
             unknown_entites,
             c_sharp[:documentation_strings],
             json[:keys][2],
+            latex[:named_parameter],
         ],
         underline: [
             perl[:hash],
@@ -1751,6 +1857,7 @@ mapping = ->() do {
     bold_green => {
         bold: [
             green_bold_group,
+            latex[:bold],
         ],
     },
     bananna_yellow => {
@@ -1763,6 +1870,7 @@ mapping = ->() do {
             globals,
             javascript[:globals],
             bananna_yellow_underline_group,
+            latex[:reference],
         ],
     },
     red => {
@@ -1770,8 +1878,10 @@ mapping = ->() do {
             invalid_things,
             red_group,
             assignment_operators,
+            latex[:special_math_punctuation],
         ],
         bold: [
+            latex[:key_punctuation],
         ],
         italic: [
             special_variables,
