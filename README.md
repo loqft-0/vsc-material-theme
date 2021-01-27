@@ -76,3 +76,6 @@ The theme is taylored for
 
 ### Caveats
 The VS Code setting to "show whitespace" will mess up the underline in python strings
+
+# Setup
+Everything is detailed in the `documentation/SETUP.md`!
