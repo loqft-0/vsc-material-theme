@@ -1340,6 +1340,7 @@ end
     boring_punctuation = [
         # the semicolon
         "punctuation.terminator",
+        "punctuation.semi.rust",
         # the line-continuation
         "constant.character.escape.line-continuation",
         "punctuation.separator.continuation.line",
