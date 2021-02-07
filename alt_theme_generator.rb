@@ -83,6 +83,32 @@ red             = '#ff5572'
 soft_red        = '#f07178'
 no_color        = ''
 
+correct_colors = {
+    black:            '#000000',
+    white:            '#ffffff',
+    light_gray:       '#c7cbcd',
+    gray:             '#546e7a',
+    rust:             '#c17e70',
+    orange:           '#f78c6c',
+    yellow:           '#fec355',
+    bananna_yellow:   '#ddd790',
+    lime:             '#c3e88d',
+    green:            '#4ec9b0',
+    bold_green:       '#4ec9b0d0',
+    vibrant_green:    '#04d895',
+    dim_green:        '#80cbc4',
+    light_slate:      '#64bac5',
+    dark_slate:       '#3f848d',
+    light_blue:       '#89ddff',
+    blue:             '#82aaff',
+    electric_blue:    '#00aeffe7',
+    light_purple:     '#c792ea',
+    pink:             '#e57eb3',
+    red:              '#ff5572',
+    soft_red:         '#f07178',
+    no_color:         '',
+}
+
 #
 # UI Color Pallet
 #
@@ -110,22 +136,22 @@ ui = ->() do {
     # Terminal Colors
     # 
     terminal: {
-        ansiBlack:         background_color,
-        ansiBrightBlack:   ui_text_color,
-        ansiBlue:          blue,
-        ansiBrightBlue:    electric_blue,
-        ansiCyan:          light_blue,
-        ansiBrightCyan:    light_blue,
-        ansiGreen:         lime,
-        ansiBrightGreen:   lime,
-        ansiMagenta:       light_purple,
-        ansiBrightMagenta: light_purple,
-        ansiWhite:         off_white,
-        ansiBrightWhite:   white,
-        ansiRed:           red,
-        ansiBrightRed:     soft_red,
-        ansiYellow:        yellow,
-        ansiBrightYellow:  bananna_yellow,
+        ansiBlack:         correct_colors[:background_color],
+        ansiBrightBlack:   correct_colors[:ui_text_color],
+        ansiBlue:          correct_colors[:blue],
+        ansiBrightBlue:    correct_colors[:electric_blue],
+        ansiCyan:          correct_colors[:light_blue],
+        ansiBrightCyan:    correct_colors[:light_blue],
+        ansiGreen:         correct_colors[:lime],
+        ansiBrightGreen:   correct_colors[:lime],
+        ansiMagenta:       correct_colors[:light_purple],
+        ansiBrightMagenta: correct_colors[:light_purple],
+        ansiWhite:         correct_colors[:off_white],
+        ansiBrightWhite:   correct_colors[:white],
+        ansiRed:           correct_colors[:red],
+        ansiBrightRed:     correct_colors[:soft_red],
+        ansiYellow:        correct_colors[:yellow],
+        ansiBrightYellow:  correct_colors[:bananna_yellow],
     },
     # 
     # Main UI
@@ -537,6 +563,9 @@ end
             class_first_property: [
                 "support.class"
             ],
+            class: [
+                "entity.name.type.class"
+            ],
             first_property: [
                 "variable.other.object",
             ],
@@ -547,6 +576,7 @@ end
                 "meta.object-literal.key",
                 "variable.other.object.property",
                 "variable.other.constant.object.property",
+                "support.variable.property",
                 # "punctuation.accessor.js",
                 # "meta.array.literial variable.other.readwrite.js",
                 # "punctuation.definition.group.js",
@@ -575,7 +605,6 @@ end
                 "meta.object.member entity.name.function",
             ],
             function_property: [
-                "support.variable.property",
             ],
         } 
     # typescript
@@ -1649,6 +1678,7 @@ mapping = ->() do {
             powershell[:constants],
             vue[:template_tags],
             constants,
+            types,
             [
                 "source.go entity.name.package",
                 "meta.tag.js",
@@ -1821,7 +1851,6 @@ mapping = ->() do {
             anonymous_function_punctuation,
             json[:keys][4],
             latex[:special_function],
-            types,
         ],
         underline: [
         ],
