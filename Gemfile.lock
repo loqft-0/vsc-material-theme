@@ -1,12 +1,15 @@
 GEM
   remote: http://rubygems.org/
   specs:
+    colormath (0.1.2)
+    deep_clone (0.0.1)
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
-  bundler
+  colormath
+  deep_clone
 
 BUNDLED WITH
    2.1.4
