@@ -2000,7 +2000,24 @@ mapping = ->() do {
 }
 end
 
+background_color.replace('#273244') 
+navy_slate.replace('#0a5375')
+two_tone_mapping = mapping[]
+two_tone_ui = ui[]
+two_tone_ui[:quickInput][:background]           = secondary_background_color
+two_tone_ui[:terminal][:ansiBlack]              = secondary_background_color
+two_tone_ui[:statusBar][:background]            = secondary_background_color
+two_tone_ui[:statusBar][:border]                = secondary_background_color
+two_tone_ui[:statusBar][:noFolderBackground]    = secondary_background_color
+two_tone_ui[:statusBar][:noFolderBorder]        = secondary_background_color
+two_tone_ui[:statusBar][:debuggingBorder]       = secondary_background_color
+two_tone_ui[:statusBar][:debuggingBackground]   = secondary_background_color
+two_tone_ui[:sideBar][:background]              = secondary_background_color
+two_tone_ui[:sideBarSectionHeader][:background] = secondary_background_color
+two_tone_ui[:sideBarSectionHeader][:border]     = secondary_background_color
+two_tone_ui[:activityBar][:activeBackground]    = secondary_background_color
+two_tone_ui[:panel][:background]                = secondary_background_color
 # 
 # Main theme
 # 
-IO.write("theme-mix-it-up.json", convert_to_json_theme({ name: 'XD Theme - MixItUp', type: 'dark', }, ui, mapping) )
+IO.write("theme-mix-it-up.json", convert_to_json_theme({ name: 'XD Theme - MixItUp', type: 'dark', }, two_tone_ui, mapping) )
