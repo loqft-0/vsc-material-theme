@@ -97,10 +97,10 @@ ui = ->() do {
         inactiveSelectionBackground: solid_blue.transparency(65),
     },
     tab: {
-        border: navy_slate,
+        border: background_color,
         
         activeForeground: off_white,
-        activeBackground: navy_slate,
+        activeBackground: background_color,
         activeBorder: light_gray,
         activeModifiedBorder: light_gray,
         
@@ -108,7 +108,7 @@ ui = ->() do {
         unfocusedActiveForeground: off_white,
         
         inactiveForeground: ui_text_color,
-        inactiveBackground: navy_slate,
+        inactiveBackground: background_color,
     },
     # this is NOT the scrollbar idk WTF they were thinking when they named it this.
     # This shadow is the shadow underneath the tabs
@@ -190,13 +190,13 @@ ui = ->() do {
         untrackedResourceForeground:   lime,
     },
     editorGroupHeader: {
-        tabsBackground: navy_slate,
+        tabsBackground: background_color,
         tabsBorder: background_color,
         noTabsBackground: background_color,
     },
     titleBar: {
-        activeBackground: navy_slate,
-        border: navy_slate,
+        activeBackground: background_color,
+        border: background_color,
         inactiveBackground: background_color,
         inactiveForeground: ui_text_color,
         activeForeground: off_white,
@@ -1950,5 +1950,5 @@ IO.write("theme.json", convert_to_json_theme({ name: 'XD Theme', type: 'dark', }
     # XD - Lighten
     # 
     background_color.replace('#273244') 
-    navy_slate.replace('#0a5375')
+    background_color.replace('#0a5375')
     IO.write("theme-lighten.json", convert_to_json_theme({ name: 'XD Theme - Lighten', type: 'dark', }, ui, mapping) )

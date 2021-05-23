@@ -124,7 +124,7 @@ off_white                  = '#eeffff'
 editor_selection_color     = '#83b2e1'
 solid_blue                 = '#2670a1'
 FINDME                     = '#e100ffc0'
-navy_slate                 = '#184967'
+background_color                 = '#184967'
 cursor_color               = '#ff9900'
 error_red                  = '#ef5350'
 
@@ -178,10 +178,10 @@ ui = ->() do {
         inactiveSelectionBackground: solid_blue.transparency(65),
     },
     tab: {
-        border: navy_slate,
+        border: background_color,
         
         activeForeground: off_white,
-        activeBackground: navy_slate,
+        activeBackground: background_color,
         activeBorder: light_gray,
         activeModifiedBorder: light_gray,
         
@@ -189,7 +189,7 @@ ui = ->() do {
         unfocusedActiveForeground: off_white,
         
         inactiveForeground: ui_text_color,
-        inactiveBackground: navy_slate,
+        inactiveBackground: background_color,
     },
     # this is NOT the scrollbar idk WTF they were thinking when they named it this.
     # This shadow is the shadow underneath the tabs
@@ -271,13 +271,13 @@ ui = ->() do {
         untrackedResourceForeground:   lime,
     },
     editorGroupHeader: {
-        tabsBackground: navy_slate,
+        tabsBackground: background_color,
         tabsBorder: background_color,
         noTabsBackground: background_color,
     },
     titleBar: {
-        activeBackground: navy_slate,
-        border: navy_slate,
+        activeBackground: background_color,
+        border: background_color,
         inactiveBackground: background_color,
         inactiveForeground: ui_text_color,
         activeForeground: off_white,
@@ -2001,7 +2001,7 @@ mapping = ->() do {
 end
 
 background_color.replace('#273244') 
-navy_slate.replace('#0a5375')
+background_color.replace('#0a5375')
 # two_tone_mapping = mapping[]
 # two_tone_ui = ui[]
 # two_tone_ui[:quickInput][:background]           = secondary_background_color
