@@ -8,7 +8,7 @@ require_relative './theme_generator_generator'
 # Literal numbers are pink 
 # Literal strings are dim green
 # Literal regex is lime green
-# Types/Classes are pink 
+# Types/Classes are pink
 
 # Parameters are bold blue
 # Literal escapes are orange
@@ -124,7 +124,7 @@ off_white                  = '#eeffff'
 editor_selection_color     = '#83b2e1'
 solid_blue                 = '#2670a1'
 FINDME                     = '#e100ffc0'
-background_color                 = '#184967'
+navy_slate                 = '#184967'
 cursor_color               = '#ff9900'
 error_red                  = '#ef5350'
 
@@ -2001,7 +2001,7 @@ mapping = ->() do {
 end
 
 background_color.replace('#273244') 
-background_color.replace('#0a5375')
+navy_slate.replace('#0a5375')
 # two_tone_mapping = mapping[]
 # two_tone_ui = ui[]
 # two_tone_ui[:quickInput][:background]           = secondary_background_color

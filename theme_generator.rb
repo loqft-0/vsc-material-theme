@@ -1950,5 +1950,5 @@ IO.write("theme.json", convert_to_json_theme({ name: 'XD Theme', type: 'dark', }
     # XD - Lighten
     # 
     background_color.replace('#273244') 
-    background_color.replace('#0a5375')
+    navy_slate.replace('#0a5375')
     IO.write("theme-lighten.json", convert_to_json_theme({ name: 'XD Theme - Lighten', type: 'dark', }, ui, mapping) )
